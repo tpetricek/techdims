@@ -1,0 +1,248 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>xx</title>
+  <meta name="description" content="xx">
+  <meta name="author" content="xx">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <article>
+    <section data-file="index" data-id="main">
+<h1>Technical dimensions of programming systems</h1>
+<p><embed type="application/transclusion" src="title=Abstract,link=paper;abstract" />
+Programming is done in a stateful environment, by interacting with a system through a
+graphical user interface. The stateful, interactive and graphical environment is more
+important than the programming language(s) used through it. Yet, most research focuses on comparing and
+studying <em>programming languages</em> and only little has been said about <em>programming systems</em>.</p>
+<p><embed type="application/transclusion" src="content=paper;definition,link=paper;programming-systems" /></p>
+<p><embed type="application/transclusion" src="title=Introduction,link=paper;introduction" />
+Technical dimensions is a framework that captures the characteristics of programming
+systems. It makes it possible to compare programming systems, better understand them,
+as well as to find interesting unexplored points in the design space of programming systems.
+We hope that technical dimensions will help designers of programming systems to evaluate,
+compare and guide their work and, ultimately, stand on the shoulders of giants.</p>
+<h2>Dimensions catalogue</h2>
+<p><embed type="application/transclusion" src="content=dimensions/interaction;summary,link=dimensions/interaction;index" />
+x</p>
+<p>x</p>
+<p>x</p>
+<p>x</p>
+</section>
+<section data-file="index" data-id="bar">
+<p>bar</p>
+</section>
+<section data-file="paper" data-id="abstract" data-title="Abstract">
+<h1>Abstract</h1>
+<p>Programming requires much more than just writing code in a programming language. It is usually done in the context of a stateful environment, by interacting with a system through a graphical user interface. Yet, this wide space of possibilities lacks a common structure for navigation. Work on programming systems fails to form a coherent body of research, making it hard to improve on past work and advance the state of the art.</p>
+<p>In computer science, much has been said and done to allow comparison of <em>programming languages</em>, yet no similar theory exists for <em>programming systems</em>; we believe that programming systems deserve a theory too.</p>
+<p>We present a framework of <em>technical dimensions</em> which capture the underlying characteristics of programming systems and provide a means for conceptualizing and comparing them.</p>
+<p>We identify technical dimensions by examining past influential programming systems and reviewing their design principles, technical capabilities, and styles of user interaction. Technical dimensions capture characteristics that may be studied, compared and advanced independently. This makes it possible to talk about programming systems in a way that can be shared and constructively debated rather than relying solely on personal impressions.</p>
+<p>Our framework is derived using a qualitative analysis of past programming systems. We outline two concrete ways of using our framework. First, we show how it can analyze a recently developed novel programming system. Then, we use it to identify an interesting unexplored point in the design space of programming systems.</p>
+<p>Much research effort focuses on building programming systems that are easier to use, accessible to non-experts, moldable and/or powerful, but such efforts are disconnected. They are informal, guided by the personal vision of their authors and thus are only evaluable and comparable on the basis of individual experience using them. By providing foundations for more systematic research, we can help programming systems researchers to stand, at last, on the shoulders of giants.</p>
+</section>
+<section data-file="paper" data-id="introduction" data-title="Introduction">
+<p>A systematic presentation removes ideas from the ground that made them grow and arranges them in an artificial pattern.
+The Tyranny of Science, Paul Feyerabend</p>
+<p>Irony is said to allow the artist to continue his creative production while immersed in a sociocultural context of which he is critical.
+Irony; or, the Self-Critical Opacity of Postmodernist Architecture, Emmanuel Petit</p>
+<h1>Introduction</h1>
+<p>Many forms of software have been developed to enable programming. The classic form consists of a <em>programming language</em>, a text editor to enter source code, and a compiler to turn it into an executable program. Instances of this form are differentiated by the syntax and semantics of the language, along with the implementation techniques in the compiler or runtime environment. Since the advent of graphical user interfaces (GUIs), programming languages can be found embedded within graphical environments that increasingly define how programmers work with the language---for instance, by directly supporting debugging or refactoring. Beyond this, the rise of GUIs also permits diverse visual forms of programming, including visual languages and GUI-based end-user programming tools.</p>
+<p>This paper advocates a shift of attention from <em>programming languages</em> to the more general notion of "software that enables programming"---in other words, <em>programming systems</em>.</p>
+<p>\begin{defn}[Programming System]
+A \emph{programming system} is an integrated and complete set of tools sufficient for creating, modifying, and executing programs. These will include notations for structuring programs and data, facilities for running and debugging programs, and interfaces for performing all of these tasks. Facilities for testing, analysis, packaging, or version control may also be present. Notations include programming languages and interfaces include text editors, but are not limited to these.
+\end{defn}</p>
+<p>This notion covers classic programming languages together with their editors, debuggers, compilers, and other tools. Yet it is intentionally broad enough to accommodate image-based programming environments like Smalltalk, operating systems like UNIX, and hypermedia authoring systems like Hypercard, in addition to various other examples we will mention.</p>
+<h2>The problem: no systematic framework for systems</h2>
+<p>There is a growing interest in broader forms of <em>programming systems</em>, both in the programming research community and in industry. Researchers are studying topics such as <em>programming experience</em> and <em>live programming</em> that require considering not just the <em>language</em>, but further aspects of a given system. At the same time, commercial companies are building new programming environments like Replit\ \cite{ReplitWeb} or low-code tools like Dark\ \cite{DarkWeb} and Glide\ \cite{GlideWeb}. Yet, such topics remain at the sidelines of mainstream programming research. While <em>programming languages</em> are a well-established concept, analysed and compared in a common vocabulary, no similar foundation exists for the wider range of <em>programming systems</em>.</p>
+<p>The academic research on programming suffers from this lack of common vocabulary. While we may thoroughly assess programming <em>languages</em>, as soon as we add interaction or graphics into the picture, evaluation beyond subjective "coolness" becomes fraught with difficulty.^[The same difficulty in the context of user interface systems has been analyzed by Olsen\ \cite{EvUISR}. Interesting future work would be a detailed analysis of publications on programming systems to understand this issue in depth. One notable characteristic is that publications tend to present (parts of) new systems. This is the case for 5/6 and 6/7 papers in the LIVE 2020 and 2021 workshops respectively\ \cite{LIVE20, LIVE21}. In contrast, publications in the field of programming <em>languages</em> often address specific issues of interest to a greater number of languages.] Moreover, when designing new systems, inspiration is often drawn from the same few standalone sources of ideas. These might be influential past systems like Smalltalk, programmable end-user applications like spreadsheets, or motivational illustrations like those of Bret Victor\ \cite{BretVictor}.</p>
+<p>Instead of forming a solid body of work, the ideas that emerge are difficult to relate to each other. The research methods used to study programming systems lack the rigorous structure of programming language research methods. They tend to rely on singleton examples, which demonstrate their author's ideas, but are inadequate methods for comparing new ideas with the work of others. This makes it hard to build on top and thereby advance the state of the art.</p>
+<p>Studying <em>programming systems</em> is not merely about taking a programming language and looking at the tools that surround it. It presents a <em>paradigm shift</em> to a perspective that is, at least partly, <em>incommensurable</em> with that of languages. When studying programming languages, everything that matters is in the program code; when studying programming systems, everything that matters is in the <em>interaction</em> between the programmer and the system. As documented by Gabriel\ \cite{PLrev}, looking at a <em>system</em> from a <em>language</em> perspective makes it impossible to think about concepts that arise from interaction with a system, but are not reflected in the language. Thus, we must proceed with some caution. As we will see, when we talk about Lisp as a programming system, we mean something very different from a parenthesis-heavy programming language!</p>
+<h2>Contributions</h2>
+<p>We propose a common language as an initial step towards a more progressive research on programming systems. Our set of <em>technical dimensions</em> seeks to break down the holistic view of systems along various specific "axes". The dimensions identify a range of possible design choices, characterized by two extreme points in the design space. They are not quantitative, but they allow comparison by locating systems on a common axis. We do not intend for the extreme points to represent "good" or "bad" designs; we expect any position to be a result of design trade-offs. At this early stage in the life of such a framework, we encourage agreement on descriptions of systems first in order to settle any normative judgements later.</p>
+<p>The set of dimensions can be understood as a map of the design space of programming systems (Figure\ \ref{fig:tech-dims-diagram}). Past and present systems will serve as landmarks, and with enough of them, we may reveal unexplored or overlooked possibilities. So far, the field has not been able to establish a virtuous cycle of feedback; it is hard for practitioners to situate their work in the context of others' so that subsequent work can improve on it. Our aim is to provide foundations for the study of programming systems that would allow such development.</p>
+<p>This paper is intended as a reference on the current state of the technical dimensions framework and it is meant to be <em>used</em> rather than <em>read</em>. We present the dimensions in detail, but encourage the reader to skim through the details on the first read. Subsequently, we suggest revisiting dimensions which seem relevant to a concrete system known to the reader. The main contributions of this paper are organized as follows:</p>
+<ol>
+<li>In Section\ \ref{programming-systems}, we characterize what a programming system is and review landmark programming systems of the past that are used as examples throughout this paper, as well as to delineate our notion of a programming system.</li>
+<li>We present the technical dimensions in detail, organised into related clusters: <em>interaction</em>, <em>notation</em>, <em>conceptual structure</em>, <em>customizability</em>, <em>complexity</em>, <em>errors</em>, and <em>adoptability</em>. For each dimension, we give examples that illustrate the range of values along its axis. We intend this as a reference to be used as needed rather than something to be read from start to finish, so we recommend skimming the catalogue on the first reading.</li>
+<li>In Section\ \ref{evaluation}, we sketch two ways of using the technical dimensions framework. In Section\ \ref{evaluating-the-dark-programming-system}, we use it to evaluate a recent interesting programming system; in Section\ \ref{exploring-the-design-space}, we use it to identify an unexplored point in the design space and envision a potential novel programming system.</li>
+</ol>
+<p>\begin{figure}
+\centering
+\includegraphics[width=0.6\linewidth]{plot-figure0.pdf}
+\caption{One 2-dimensional slice of the space of possible systems, to be examined in more detail in Section\ \ref{exploring-the-design-space}.\label{fig:tech-dims-diagram}}
+\end{figure}</p>
+</section>
+<section data-file="paper" data-id="definition" data-title="What is a Programming System?">
+<p>A <em>programming system</em> is an integrated and complete set of tools sufficient for creating, modifying, and executing programs. These will include notations for structuring programs and data, facilities for running and debugging programs, and interfaces for performing all of these tasks. Facilities for testing, analysis, packaging, or version control may also be present. Notations include programming languages and interfaces include text editors, but are not limited to these.</p>
+</section>
+<section data-file="paper" data-id="programming-systems">
+<p><embed type="application/transclusion" src="content=paper;definition,link=paper;programming-systems" /></p>
+<p>We introduce the notion of a <em>programming system</em> through a number of example systems. We draw them from three broad reference classes:</p>
+<ul>
+<li><p>Software ecosystems built around a text-based programming <em>language</em>. They consist of a set of tools such as compilers, debuggers, and profilers. These tools may exist as separate command-line programs, or within an Integrated Development Environment.</p></li>
+<li><p>Those that resemble an <em>operating system</em> (OS) in that they structure the execution environment and encompass the resources of an entire machine (physical or virtual). They provide a common interface for communication, both between the user and the computer, and between programs themselves.</p></li>
+<li><p>Programmable <em>applications</em>, typically optimized for a specific domain, offering a limited degree of programmability which may be increased with newer versions.</p></li>
+</ul>
+<p>We will proceed to detail some systems under this grouping. This will provide an intuition for the notion of a programming system and establish a collection of go-to examples for the rest of the paper.</p>
+<h2>Systems based around languages</h2>
+<p>Text-based programming languages sit within programming systems whose boundaries are not explicitly defined. To speak of a programming system, we need to consider a language with, at minimum, an editor and a compiler or interpreter. However, the exact boundaries are a design choice that significantly affects our analysis.</p>
+<p>\paragraph{Java with the Eclipse ecosystem.}
+Java\ \cite{Java} cannot be viewed as a programming system on its own, but it is one if we consider it as embedded in an ecosystem of tools. There are multiple ways to delineate this, resulting in different analyses. A minimalistic programming system would consist of a text editor to write Java code and a command line compiler. A more realistic system is Java as embedded in the Eclipse IDE\ \cite{Eclipse}. The programming systems view allows us to see all there is beyond the textual code. In the case of Eclipse, this includes the debugger, refactoring tools, testing and modelling tools, GUI designers, and so on. This delineation yields a programming system that is powerful and convenient, but has a large number of concepts and secondary notations.</p>
+<p>\paragraph{Haskell tools ecosystem.}
+Haskell is an even more language-focused programming system. It is used through the command-line <em>GHC</em>  compiler\ \cite{GHC} and <em>GHCi</em> REPL, alongside a text editor that provides features like syntax highlighting and auto-completion. Any editor that supports the Language Server Protocol\ \cite{LSP} will suffice to complete the programming system.</p>
+<p>Haskell is mathematically rooted and relies on mathematical intuition for understanding many of its concepts. This background is also reflected in the notations it uses. In addition to the concrete language syntax for writing code, the ecosystem also uses an informal mathematical notation for writing about Haskell (e.g. in academic papers or on the whiteboard). This provides an additional tool for manipulating Haskell programs. Experiments on paper can provide a kind of rapid feedback that other systems may provide through live programming.</p>
+<p>\paragraph{From REPLs to notebooks.}
+A different kind of developer ecosystem that evolved around a programming language is the Jupyter notebook platform\ \cite{Jupyter}. In Jupyter, data scientists write scripts divided into notebook cells, execute them interactively and see the resulting data and visualizations directly in the notebook itself. This brings together the REPL, which dates back to conversational implementations of Lisp in the 1960s, with literate programming\ \cite{LiterateProg} used in the late 1980s in Mathematica 1.0\ \cite{Mathematica}.</p>
+<p>As a programming system, Jupyter has a number of interesting characteristics. The primary outcome of programming is the notebook itself, rather than a separate application to be compiled and run. The code lives in a document format, interleaved with other notations. Code is written in small parts that are executed quickly, offering the user more rapid feedback than in conventional programming. A notebook can be seen as a trace of how the result has been obtained, yet one often problematic feature of notebooks is that some allow the user to run code blocks out-of-order. The code manipulates mutable state that exists in a "kernel" running in the background. Thus, retracing one's steps in a notebook is more subtle than in, say, Common Lisp\ \cite{CommonLisp}, where the <code>dribble</code> function would directly record the user's session to a file.</p>
+<h2>OS-like programming systems</h2>
+<p>"OS-likes" begin from the 1960s when it became possible to interact one-on-one with a computer. First, time-sharing systems enabled interactive shared use of a computer via a teletype; smaller computers such as the PDP-1 and PDP-8 provided similar direct interaction, while 1970s workstations such as the Alto and Lisp Machines added graphical displays and mouse input. These <em>OS-like</em> systems stand out as having the totalising scope of <em>operating systems</em>, whether or not they are ordinarily seen as taking this role.</p>
+<p>\paragraph{MacLisp and Interlisp.}
+LISP 1.5\ \cite{LISP15} arrived before the rise of interactive computers, but the existence of an interpreter and the absence of declarations made it natural to use Lisp interactively, with the first such implementations appearing in the early 1960s. Two branches of the Lisp family\ \cite{LispEvolve}, MacLisp and the later Interlisp, embraced the interactive "conversational" way of working, first through a teletype and later using the screen and keyboard.</p>
+<p>Both MacLisp and Interlisp adopted the idea of <em>persistent address space</em>. Both program code and program state were preserved when powering off the system, and could be accessed and modified interactively as well as programmatically using the <em>same means</em>. Lisp Machines embraced the idea that the machine runs continually and saves the state to disk when needed. Today, this is widely seen in cloud-based services like Google Docs and online IDEs. Another idea pioneered in MacLisp and Interlisp was the use of <em>structure editors</em>. These let programmers work with Lisp data structures not as sequences of characters, but as nested lists. In Interlisp, the programmer would use commands such as <code>*P</code> to print the current expression, or <code>*(2 (X Y))</code> to replace its second element with the argument <code>(X Y)</code>. The PILOT system\ \cite{Pilot} offered even more sophisticated conversational features. For typographical errors and other slips, it would offer an automatic fix for the user to interactively accept, modifying the program in memory and resuming execution.</p>
+<p>\paragraph{Smalltalk.}
+Smalltalk appeared in the 1970s with a distinct ambition of providing "dynamic media which can be used by human beings of all ages"\ \cite{PersonalDynMedia}. The authors saw computers as <em>meta-media</em> that could become a range of other media for education, discourse, creative arts, simulation and other applications not yet invented. Smalltalk was designed for single-user workstations with a graphical display, and pioneered this display not just for applications but also for programming itself. In Smalltalk 72, one wrote code in the bottom half of the screen using a structure editor controlled by a mouse, and menus to edit definitions. In Smalltalk-76 and later, this had switched to text editing embedded in a <em>class browser</em> for navigating through classes and their methods.</p>
+<p>Similarly to Lisp systems, Smalltalk adopts the persistent address space model of programming where all objects remain in memory, but based on <em>objects</em> and <em>message passing</em> rather than <em>lists</em>. Any changes made to the system state by programming or execution are preserved when the computer is turned off. Lastly, the fact that much of the Smalltalk environment is implemented in itself makes it possible to extensively modify the system from within.</p>
+<p>We include Lisp and Smalltalk in the OS-likes because they function as operating systems in many ways. On specialized machines, like the Xerox Alto and Lisp machines, the user started their machine directly in the Lisp or Smalltalk environment and was able to do everything they needed from <em>within</em> the system. Nowadays, however, this experience is associated with UNIX and its descendants on a vast range of commodity machines.</p>
+<p>\paragraph{UNIX.}
+UNIX illustrates the fact that many aspects of programming systems are shaped by their intended target audience. Built for computer hackers\ \cite{Hackers}, its abstractions and interface are close to the machine. Although historically linked to the C language, UNIX developed a language-agnostic set of abstractions that make it possible to use multiple programming languages in a single system. While everything is an object in Smalltalk, the ontology of the UNIX system consists of files, memory, executable programs, and running processes. Note the explicit "stage" distinction here: UNIX distinguishes between volatile <em>memory</em> structures, which are lost when the system is shut down, and non-volatile <em>disk</em> structures that are preserved. This distinction between types of memory is considered, by Lisp and Smalltalk, to be an implementation detail to be abstracted over by their persistent address space. Still, this did not prevent the UNIX ontology from supporting a pluralistic ecosystem of different languages and tools.</p>
+<p>\paragraph{Early and modern Web.}
+The Web evolved\ \cite{DotCom} from a system for sharing and organizing information to a <em>programming system</em>. Today, it consists of a wide range of server-side programming tools, JavaScript and languages that compile to it, and notations like HTML and CSS. As a programming system, the "modern 2020s web" is reasonably distinct from the "early 1990s web". In the early web, JavaScript code was distributed in a form that made it easy to copy and re-use existing scripts, which led to enthusiastic adoption by non-experts---recalling the birth of microcomputers like Commodore 64 with BASIC a decade earlier.</p>
+<p>In the "modern web", multiple programming languages treat JavaScript as a compilation target, and JavaScript is also used as a language on the server-side. This web is no longer simple enough to encourage copy-and-paste remixing of code from different sites. However, it does come with advanced developer tools that provide functionality resembling early interactive programming systems like Lisp and Smalltalk. The <em>Document Object Model (DOM)</em> structure created by a web page is transparent, accessible to the user and modifiable through the built-in browser inspector tools. Third-party code to modify the DOM can be injected via extensions. The DOM almost resembles the tree/graph model of Smalltalk and Lisp images, lacking the key persistence property. This limitation, however, is being addressed by Webstrates\ \cite{Webstrates}.</p>
+<h2>Application-focused systems</h2>
+<p>The previously discussed programming systems were either universal, not focusing on any particular kind of application, or targeted at broad fields, such as Artificial Intelligence and symbolic data manipulation in Lisp's case. In contrast, the following examples focus on more narrow kinds of applications that need to be built. Many support programming based on rich interactions with specialized visual and textual notations.</p>
+<p>\paragraph{Spreadsheets.}
+The first spreadsheets became available in 1979 in VisiCalc\ \cite{VisiCalc, VisiCalc2} and helped analysts perform budget calculations. As programming systems, spreadsheets are notable for their programming substrate (a two-dimensional grid) and evaluation model (automatic re-evaluation). The programmability of spreadsheets developed over time, acquiring features that made them into powerful programming systems in a way VisiCalc was not. The final step was the 1993 inclusion of <em>macros</em> in Excel, later further extended with <em>Visual Basic for Applications</em>.</p>
+<p>\paragraph{Graphical "languages".}
+Efforts to support programming without relying on textual code can only be called "languages" in a metaphorical sense. In these programming systems, programs are made out of graphical structures as in LabView\ \cite{LabView} or Programming-By-Example\ \cite{PBE}.</p>
+<p>\paragraph{HyperCard.}
+While spreadsheets were designed to solve problems in a specific application area, HyperCard\ \cite{HyperCard} was designed around a particular application format. Programs are "stacks of cards" containing multimedia components and controls such as buttons. These controls can be programmed with pre-defined operations like "navigate to another card", or via the HyperTalk scripting language for anything more sophisticated.</p>
+<p>As a programming system, HyperCard is interesting for a couple of reasons. It effectively combines visual and textual notation. Programs appear the same way during editing as they do during execution. Most notably, HyperCard supports gradual progression from the "user" role to "developer": a user may first use stacks, then go on to edit the visual aspects or choose pre-defined logic until, eventually, they learn to program in HyperTalk.</p>
+</section>
+<section data-file="dimensions/interaction" data-id="summary" data-title="Interaction">
+<p>How do users manifest their ideas, evaluate the result, and generate new ideas in response?</p>
+<p>Dimensions</p>
+<ul>
+<li><embed type="application/transclusion" src="link=feedback-loops" /></li>
+<li><embed type="application/transclusion" src="link=modes-of-interaction" /></li>
+<li><embed type="application/transclusion" src="link=abstraction-construction" /></li>
+</ul>
+<p>Examples</p>
+<ul>
+<li><embed type="application/transclusion" src="link=immediate-feedback" /></li>
+<li><embed type="application/transclusion" src="link=direct-manipulation" /></li>
+</ul>
+</section>
+<section data-file="dimensions/interaction" data-id="index" data-summary="How do users manifest their ideas, evaluate the result, and generate new ideas in response?" data-title="Interaction">
+<h2>Interaction</h2>
+<p>An essential aspect of programming systems is how the user interacts with them when creating programs. Take the standard form of statically typed, compiled languages with straightforward library linking: here, programmers write their code in a text editor, invoke the compiler, and read through error messages they get. After fixing the code to pass compilation, a similar process might happen with runtime errors.</p>
+<p>Other forms are yet possible. On the one hand, some typical interactions like compilation or execution of a program  may not be perceptible at all. On the other hand, the system may provide various interfaces to support the plethora of other interactions that are often important in programming, such as looking up documentation, managing dependencies, refactoring or pair programming.</p>
+<p>We focus on the interactions where programmer interacts with the system to construct a program with a desired behavior. To analyze those, we use the concepts of <em>gulf of execution</em> and <em>gulf of evaluation</em> from <em>The Design of Everyday Things</em>\ \cite{Norman}.</p>
+<p><embed type="application/transclusion" src="content=summary,link=feedback-loops" /></p>
+<h3>Relations</h3>
+<ul>
+<li><em>Errors</em> (Section \ref{errors}) A longer evaluation gulf delays the detection of errors. A longer execution gulf can increase the <em>likelihood</em> of errors (e.g. writing a lot of code or taking a long time to write it). By turning runtime bugs into statically detected bugs, the combined evaluation gulfs can be reduced.</li>
+<li><em>Adoptability</em> (Section \ref{adoptability}): The <em>execution</em> gulf is concerned with software using and programming in general. The time taken to realize an idea in software is affected by the user's familiarity and the system's <em>learnability</em>.</li>
+<li><em>Notation</em> (Section \ref{notation}): Feedback loops are related to <em>notational structures</em>. In a system with multiple notations, each notation may have different associated feedback loops. The motto "The thing on the screen is supposed to be the actual thing" \cite{NakedObjects}, adopted in the context of live programming, relates <em>liveness</em> to a direct connection between surface and internal notations. The idea is that interactable objects should be equipped with faithful behavior, instead of being intangible shadows cast by the hidden <em>real</em> object.</li>
+</ul>
+</section>
+<section data-file="dimensions/interaction" data-id="feedback-loops" data-title="Dimension: Feedback loops">
+<h3>Dimension: feedback loops</h3>
+<p>In using a system, one first has some idea and attempts to make it exist in the software; the gap between the user's goal and the means to execute the goal is known as the <em>gulf of execution</em>. Then, one compares the result actually achieved to the original goal in mind; this crosses the <em>gulf of evaluation</em>. These two activities comprise the <em>feedback loop</em> through which a user gradually realises their desires in the imagination, or refines those desires to find out "what they actually want".</p>
+<p>A system must contain at least one such feedback loop, but may contain several at different levels or specialized to certain domains. For each of them, we can separate the gulf of execution and evaluation as independent legs of the journey, with possibly different manners and speeds of crossing them.</p>
+<p>\begin{figure}
+\centering
+\includegraphics[width=0.5\linewidth]{feedback-loops.png}
+\caption{The nested feedback loops of a statically-checked programming language.\label{fig:feedback-loops}}
+\end{figure}</p>
+<p>For example, we can analyze statically checked <em>programming languages</em> (e.g. Java, Haskell) into several feedback loops (Figure \ref{fig:feedback-loops}):</p>
+<ol>
+<li><p>Programmers often think about design details and calculations on a whiteboard or notebook, even before writing code. This <em>supplementary medium</em> has its own feedback loop, even though this is often not automatic.</p></li>
+<li>
+<p>The code is written and is then put through the static checker. An error sends the user back to writing code. In the case of success, they are "allowed" to run the program, leading into cycle 3.</p>
+<ul>
+<li>The execution gulf comprises multiple cycles of the supplementary medium, plus whatever overhead is needed to invoke the compiler (such as build systems).</li>
+<li>The evaluation gulf is essentially the waiting period before static errors or a successful termination are observed. Hence this is bounded by some function of the length of the code (the same cannot be said for the following cycle 3.)</li>
+</ul>
+</li>
+<li>
+<p>With a runnable program, the user now evaluates the <em>runtime</em> behavior. Runtime errors can send the user back to writing code to be checked, or to tweak dynamically loaded data files in a similar cycle.</p>
+<ul>
+<li>The execution gulf here may include multiple iterations of cycle 2, each with its own nested cycle 1.</li>
+<li><p>The <em>evaluation</em> gulf here is theoretically unbounded; one may have to wait a very long time, or create very specific conditions, to rule out certain bugs (like race conditions) or simply to consider the program as fit for purpose.</p></li>
+<li><p>By imposing <em>static checks</em>, some bugs can be pushed earlier to the evaluation stage of cycle 2, reducing the likely size of the cycle 3 <em>evaluation</em> gulf.</p></li>
+<li><p>On the other hand, this can make it harder to write statically valid code, which may increase the number of level-2 cycles, thus increasing the total <em>execution</em> gulf at level 3.</p></li>
+<li>Depending on how these balance out, the total top-level feedback loop may grow longer or shorter.</li>
+</ul>
+</li>
+</ol>
+</section>
+<section data-file="dimensions/interaction" data-id="immediate-feedback" data-title="Example: Immediate feedback">
+<h3>Example: immediate feedback</h3>
+<p>The specific case where the <em>evaluation</em> gulf is minimized to be imperceptible is known as <em>immediate feedback</em>. Once the user has caused some change to the system, its effects (including errors) are immediately visible. This is a key ingredient of <em>liveness</em>, though it is not sufficient on its own. (See <em>Relations</em>)</p>
+<p>The ease of achieving immediate feedback is obviously constrained by the computational load of the user's effects on the system, and the system's performance on such tasks. However, such "loading time" is not the only way feedback can be delayed: a common situation is where the user has to manually ask for (or "poll") the relevant state of the system after their actions, even if the system finished the task quickly. Here, the feedback could be described as <em>immediate upon demand</em> yet not <em>automatically demanded</em>. For convenience, we choose to include the latter criterion---automatic demand of result---in our definition of immediate feedback.</p>
+<p>In a <em>REPL</em> or <em>shell</em>, there is a <em>main</em> cycle of typing commands and seeing their output, and a <em>secondary</em> cycle of typing and checking the command line itself. The output of commands can be immediate, but usually reflects only part of the total effects or even none at all. The user must manually issue further commands afterwards, to check the relevant state bit by bit. The secondary cycle, like all typing, provides immediate feedback in the form of character "echo", but things like syntax errors generally only get reported <em>after</em> the entire line is submitted. This evaluation gulf has been reduced in the JavaScript console of web browsers, where the line is "run" in a limited manner on every keystroke. Simple commands without side-effects,^[Of course, these are detected via some conservative over-approximation which excludes expressions that <em>might</em> side-effect.] such as calls to pure functions, can give instantly previewed results---though partially typed expressions and syntax errors will not trigger previews.</p>
+</section>
+<section data-file="dimensions/interaction" data-id="direct-manipulation" data-title="Example: Direct manipulation">
+<h3>Example: direct manipulation</h3>
+<p>Direct manipulation \cite{DirectManip} is a special case of an immediate feedback loop. The user sees and interacts with an artefact in a way that is as similar as possible to real life; this typically includes dragging with a cursor or finger in order to physically move a visual item, and is limited by the particular haptic technology in use.</p>
+<p>Naturally, because moving real things with one's hands does not involve any waiting for the object to "catch up",^[In some situations, such as steering a boat with a rudder, there is a delay between input and effect. But on closer inspection, this delay is between the rudder and the boat; we do not see the hand pass through the wheel like a hologram, followed by the wheel turning a second later. In real life, objects touched directly give immediate feedback; objects controlled further down the line might not!] direct manipulation is necessarily an immediate-feedback cycle. If, on the other hand, one were to move a figure on screen by typing new co-ordinates in a text box, then this could still give <em>immediate feedback</em> (if the update appears instant and automatic) but would <em>not</em> be an example of direct manipulation.</p>
+<p><em>Spreadsheets</em> contain a feedback loop for direct manipulation of values and formatting, as in any other WYSIWYG application. Here, there is feedback for every character typed and every change of style. This is not the case in the other loop for formula editing and formula invocation. There, we see a larger execution gulf for designing and typing formulas, where feedback is only given upon committing the formula by pressing enter. This makes it an "immediate feedback" loop only <em>on-demand</em>, as defined above.</p>
+</section>
+<section data-file="dimensions/interaction" data-id="modes-of-interaction" data-title="Dimension: Modes of interaction">
+<h3>Dimension: modes of interaction</h3>
+<p>The possible interactions in a programming system are typically structured so that interactions, and the associated feedback loops, are only available in certain <em>modes</em>. For example, when creating a new project, the user may be able to configure the project through a conversational interface like <code>npm init</code> in modern JavaScript. Such interactions are no longer available once the project is created. This idea of interaction modes goes beyond just programming systems, appearing in software engineering methodologies. In particular, having a separate <em>implementation</em> and <em>maintenance</em> phase would be an example of two modes.</p>
+<p><em>Editing vs debugging.</em> A good example is the distinction between <em>editing</em> and <em>debugging</em> mode. When debugging a program, the user can modify the program state and get (more) immediate feedback on what individual operations do. In some systems, one can even modify the program itself during debugging. Such feedback loops are not available outside of debugging mode.</p>
+<p><em>Lisp systems</em> sometimes distinguish between <em>interpreted</em> and <em>compiled</em> mode. The two modes do not differ just in the efficiency of code execution, but also in the interactions they enable. In the interpreted mode, code can be tested interactively and errors may be corrected during the code execution (see <em>Error response</em>). In the compiled mode, the program can only be tested as a whole. The same two modes also exist, for example, in some Haskell systems where the REPL uses an interpreter (GHCi) distinct from the compiler (GHC).</p>
+<p><em>Jupyter notebooks.</em> A programming system may also unify modes that are typically distinct. The Jupyter notebook environment does not have a distinct debugging mode; the user runs blocks of code and receives the result. The single mode can be used to quickly try things out, and to generate the final result, partly playing the role of both debugging and editing modes. However, even Jupyter notebooks distinguish between editing a document and running code.</p>
+</section>
+<section data-file="dimensions/interaction" data-id="abstraction-construction" data-title="Dimension: Abstraction construction">
+<h3>Dimension: abstraction construction</h3>
+<p>A necessary activity in programming is going between abstract schemas and concrete instances. Abstractions can be constructed from concrete examples, first principles or through other methods. A part of the process may happen in the programmer's mind: they think of concrete cases and come up with an abstract concept, which they then directly encode in the system. Alternatively, a system can support these different methods directly.</p>
+<p>One option is to construct abstractions <em>from first principles</em>. Here, the programmer starts by defining an abstract entity such as an interface in object-oriented programming languages. To do this, they have to think what the required abstraction will be (in the mind) and then encode it (in the system).</p>
+<p>Another option is to construct abstractions <em>from concrete cases</em>. Here, the programmer uses the system to solve one or more concrete problems and, when they are satisfied, the system guides them in creating an abstraction based on their concrete case(s). In a programming language IDE this manifests as the "extract function" refactor, whereas in other systems we see approaches like macro recording.</p>
+<p><em>Pygmalion.</em> In Pygmalion \cite{Pygmalion}, all programming is done by manipulating concrete icons that represent concrete things. To create an abstraction, you can use "Remember mode", which records the operations done on icons and makes it possible to bind this recording to a new icon.</p>
+<p><em>Jupyter notebook.</em> In Jupyter notebooks, you are inclined to work with concrete things, because you see previews after individual cells. This discourages creating abstractions, because then you would not be able to look inside at such a fine grained level.</p>
+<p><em>Spreadsheets.</em> Up until the recent introduction of lambda expressions into Excel, spreadsheets have been relentlessly concrete, without any way to abstract and reuse patterns of computation other than copy-and-paste.</p>
+</section>
+
+  </article>
+  <div id="display">
+    <div id="display1" class="display"></div>
+    <div id="display2" class="display"></div>
+  </div>
+  <script type="application/template" id="display-template">    
+    <div class="display-title">
+      <a href="[CLOSE]"><i class="fa fa-xmark"></i></a>
+    </div>
+    <div class="display-body">
+      [CONTENT]
+    </div>
+  </script>
+  <script type="application/template" id="transclusion-ref-template">
+    <span class="tlink">
+      <a href="[HASH1]">[TITLE]</a>
+      <a href="[HASH2]"><i class="fa fa-arrow-up-right-from-square"></i></a>
+    </span>
+  </script>
+  <script type="application/template" id="transclusion-content-template">    
+    <div class="transclusion">
+      <div class="title">
+        <a href="[HASH2]"><i class="fa fa-arrow-up-right-from-square"></i></a>
+        <a href="[HASH1]">[TITLE]</a>
+      </div>
+      <div class="body">
+        [CONTENT]
+      </div>
+    </div>
+  </script>
+  <script src="bundle.js"></script>
+</body>
+</html>

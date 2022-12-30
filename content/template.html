@@ -1,0 +1,51 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>xx</title>
+  <meta name="description" content="xx">
+  <meta name="author" content="xx">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <article>
+    [BODY]
+  </article>
+  <div id="display">
+    <div id="display1" class="display"></div>
+    <div id="display2" class="display"></div>
+  </div>
+  <script type="application/template" id="display-template">    
+    <div class="display-title">
+      <a href="[CLOSE]"><i class="fa fa-xmark"></i></a>
+    </div>
+    <div class="display-body">
+      [CONTENT]
+    </div>
+  </script>
+  <script type="application/template" id="transclusion-ref-template">
+    <span class="tlink">
+      <a href="[HASH1]">[TITLE]</a>
+      <a href="[HASH2]"><i class="fa fa-arrow-up-right-from-square"></i></a>
+    </span>
+  </script>
+  <script type="application/template" id="transclusion-content-template">    
+    <div class="transclusion">
+      <div class="title">
+        <a href="[HASH2]"><i class="fa fa-arrow-up-right-from-square"></i></a>
+        <a href="[HASH1]">[TITLE]</a>
+      </div>
+      <div class="body">
+        [CONTENT]
+      </div>
+    </div>
+  </script>
+  <script src="bundle.js"></script>
+</body>
+</html>

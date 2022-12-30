@@ -1,0 +1,27 @@
+{
+  "private": true,
+  "scripts": {
+    "postinstall": "dotnet tool restore",
+    "start": "concurrently --kill-others \"dotnet fable watch src --run webpack-dev-server\" \"npm-watch updatehtml\"",
+    "build": "dotnet fable src && webpack",
+    "updatehtml": "dotnet fsi build.fsx"
+  },
+  "watch": {
+    "updatehtml": {
+      "patterns": [
+        "content"
+      ],
+      "extensions": "md,html"
+    }
+  },
+  "devDependencies": {
+    "concurrently": "^7.6.0",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^4.10.0",
+    "webpack-dev-server": "^4.11.1"
+  },
+  "version": "1.0.0",
+  "dependencies": {
+    "npm-watch": "^0.11.0"
+  }
+}
