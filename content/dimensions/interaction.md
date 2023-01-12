@@ -4,16 +4,19 @@
 
 How do users manifest their ideas, evaluate the result, and generate new ideas in response?
 
-Dimensions
+## Dimensions
 
-- ![$](link=feedback-loops)
-- ![$](link=modes-of-interaction)
-- ![$](link=abstraction-construction)
+- What are the gulfs of execution and evaluation and how are they related?  
+  [!](-> #left=.;right=dimensions/interaction,feedback-loops!)
+- Which sets of feedback loops only occur together?  
+  [!](-> #left=.;right=dimensions/interaction,modes-of-interaction!)
+- How do we go from abstractions to concrete examples and vice versa?  
+  [!](-> #left=.;right=dimensions/interaction,abstraction-construction!)
 
-Examples
+## Examples
 
-- ![$](link=immediate-feedback)
-- ![$](link=direct-manipulation)
+- [!](-> #left=.;right=dimensions/interaction,immediate-feedback!)
+- [!](-> #left=.;right=dimensions/interaction,direct-manipulation!)
 
 
 ----------------------------------------------------------------------------------------------------

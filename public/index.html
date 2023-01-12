@@ -15,29 +15,95 @@
 </head>
 <body>
   <article>
-    <section data-file="index" data-id="main">
+    <section data-class="welcome" data-file="index" data-id="welcome" data-title="Technical dimensions of programming systems">
 <h1>Technical dimensions of programming systems</h1>
-<p><embed type="application/transclusion" src="title=Abstract,link=paper;abstract" />
-Programming is done in a stateful environment, by interacting with a system through a
+<blockquote>
+<p>by <a href="https://programmingmadecomplicated.wordpress.com/">Joel Jakubovic</a>, <a href="https://alarmingdevelopment.org/">Jonathan Edwards</a> and <a href="https://tomasp.net">Tomas Petricek</a></p>
+</blockquote>
+<p><a href="#image=index,smalltalk-76"><img src="img/smalltalk-76.png" alt="A screenshot of the Smalltalk 76 programming environment" /></a></p>
+<p>Programming is done in a stateful environment, by interacting with a system through a
 graphical user interface. The stateful, interactive and graphical environment is more
 important than the programming language(s) used through it. Yet, most research focuses on comparing and
 studying <em>programming languages</em> and only little has been said about <em>programming systems</em>.</p>
-<p><embed type="application/transclusion" src="content=paper;definition,link=paper;programming-systems" /></p>
-<p><embed type="application/transclusion" src="title=Introduction,link=paper;introduction" />
-Technical dimensions is a framework that captures the characteristics of programming
+<p>Technical dimensions is a framework that captures the characteristics of programming
 systems. It makes it possible to compare programming systems, better understand them,
-as well as to find interesting unexplored points in the design space of programming systems.
-We hope that technical dimensions will help designers of programming systems to evaluate,
+and to find interesting new points in the design space of programming systems.
+We created technical dimensions to help designers of programming systems to evaluate,
 compare and guide their work and, ultimately, stand on the shoulders of giants.</p>
-<h2>Dimensions catalogue</h2>
-<p><embed type="application/transclusion" src="content=dimensions/interaction;summary,link=dimensions/interaction;index" />
-x</p>
-<p>x</p>
-<p>x</p>
-<p>x</p>
+<h2>Where to start to learn more</h2>
+<ul>
+<li>
+Want to delve into the details and analyse your system?<br />
+<a class="tlink" href="#left=index,catalogue"><i class="fa fa-arrow-right"></i>Start from the catalogue of technical dimensions</a>
+</li>
+<li>
+Want to explore our framework by example?<br />
+<a class="tlink" href="#left=index,systems"><i class="fa fa-arrow-right"></i>Start from good old programming systems</a>
+</li>
+<li>
+Want to see how this helps us understand programming systems?<br />
+<a class="tlink" href="#big=index,matrix"><i class="fa fa-arrow-right"></i>Start from a summary dimensions and systems matrix</a>
+</li>
+<li>
+Want to understand our motivation and methodology?<br />
+<a class="tlink" href="#left=paper,main"><i class="fa fa-arrow-right"></i>Start from our paper about technical dimensions</a>
+</li>
+</ul>
 </section>
-<section data-file="index" data-id="bar">
-<p>bar</p>
+<section data-file="index" data-id="smalltalk-76" data-title="Smalltalk 76 programming environment">
+<blockquote>
+<p><img src="img/smalltalk-76.png" alt="A screenshot of the Smalltalk 76 programming environment" /></p>
+<p><strong>Smalltalk 76 programming environment.</strong> An example of a stateful programming environment with
+rich graphical user interface. In Smalltalk, the developer environment is a part of an executing
+program and the state of the program can be edited through object browser.</p>
+</blockquote>
+</section>
+<section data-file="index" data-id="navigation" data-title="Where to start to learn more">
+<div>
+<ul>
+<li>
+Want to delve into the details and analyse your system?<br />
+<a class="tlink" href="#left=index,catalogue"><i class="fa fa-arrow-right"></i>Start from the catalogue of technical dimensions</a>
+</li>
+<li>
+Want to explore our framework by example?<br />
+<a class="tlink" href="#left=index,systems"><i class="fa fa-arrow-right"></i>Start from good old programming systems</a>
+</li>
+<li>
+Want to see how this helps us understand programming systems?<br />
+<a class="tlink" href="#big=index,matrix"><i class="fa fa-arrow-right"></i>Start from a summary dimensions and systems matrix</a>
+</li>
+<li>
+Want to understand our motivation and methodology?<br />
+<a class="tlink" href="#left=paper,main"><i class="fa fa-arrow-right"></i>Start from our paper about technical dimensions</a>
+</li>
+</ul>
+</div>
+</section>
+<section data-file="index" data-id="catalogue" data-title="Ya">
+<h1>Catalogue of technical dimensions</h1>
+<p><embed type="application/transclusion" src="dimensions/interaction,summary" data-links="#left=.;right=dimensions/interaction,index" /></p>
+<p><embed type="application/transclusion" src="index,navigation" data-links="#splash=index,welcome" /></p>
+</section>
+<section data-class="matrix" data-file="index" data-id="matrix" data-title="Ya">
+<h1>Matrix</h1>
+<p><div class="table-wrapper"><table><tr><th></th><th>LISP machines<th>Smalltalk<th>UNIX<th>Spreadsheets<th>Web platform<th>Hypercard<th>Boxer<th>Notebooks<th>Haskell</tr><tr><th>Interaction</th><td><embed type="application/transclusion" src="systems/lisp-machines,dims-interaction" data-links="#left=systems/lisp-machines],index" /></td><td><embed type="application/transclusion" src="systems/smalltalk,dims-interaction" data-links="#left=systems/smalltalk],index" /></td><td><embed type="application/transclusion" src="systems/unix,dims-interaction" data-links="#left=systems/unix],index" /></td><td><embed type="application/transclusion" src="systems/spreadsheets,dims-interaction" data-links="#left=systems/spreadsheets],index" /></td><td><embed type="application/transclusion" src="systems/web,dims-interaction" data-links="#left=systems/web],index" /></td><td><embed type="application/transclusion" src="systems/hypercard,dims-interaction" data-links="#left=systems/hypercard],index" /></td><td><embed type="application/transclusion" src="systems/boxer,dims-interaction" data-links="#left=systems/boxer],index" /></td><td><embed type="application/transclusion" src="systems/notebooks,dims-interaction" data-links="#left=systems/notebooks],index" /></td><td><embed type="application/transclusion" src="systems/haskell,dims-interaction" data-links="#left=systems/haskell],index" /></td></tr><tr><th>Notation</th><td><embed type="application/transclusion" src="systems/lisp-machines,dims-notation" data-links="#left=systems/lisp-machines],index" /></td><td><embed type="application/transclusion" src="systems/smalltalk,dims-notation" data-links="#left=systems/smalltalk],index" /></td><td><embed type="application/transclusion" src="systems/unix,dims-notation" data-links="#left=systems/unix],index" /></td><td><embed type="application/transclusion" src="systems/spreadsheets,dims-notation" data-links="#left=systems/spreadsheets],index" /></td><td><embed type="application/transclusion" src="systems/web,dims-notation" data-links="#left=systems/web],index" /></td><td><embed type="application/transclusion" src="systems/hypercard,dims-notation" data-links="#left=systems/hypercard],index" /></td><td><embed type="application/transclusion" src="systems/boxer,dims-notation" data-links="#left=systems/boxer],index" /></td><td><embed type="application/transclusion" src="systems/notebooks,dims-notation" data-links="#left=systems/notebooks],index" /></td><td><embed type="application/transclusion" src="systems/haskell,dims-notation" data-links="#left=systems/haskell],index" /></td></tr><tr><th>Conceptual structure</th><td><embed type="application/transclusion" src="systems/lisp-machines,dims-conceptual" data-links="#left=systems/lisp-machines],index" /></td><td><embed type="application/transclusion" src="systems/smalltalk,dims-conceptual" data-links="#left=systems/smalltalk],index" /></td><td><embed type="application/transclusion" src="systems/unix,dims-conceptual" data-links="#left=systems/unix],index" /></td><td><embed type="application/transclusion" src="systems/spreadsheets,dims-conceptual" data-links="#left=systems/spreadsheets],index" /></td><td><embed type="application/transclusion" src="systems/web,dims-conceptual" data-links="#left=systems/web],index" /></td><td><embed type="application/transclusion" src="systems/hypercard,dims-conceptual" data-links="#left=systems/hypercard],index" /></td><td><embed type="application/transclusion" src="systems/boxer,dims-conceptual" data-links="#left=systems/boxer],index" /></td><td><embed type="application/transclusion" src="systems/notebooks,dims-conceptual" data-links="#left=systems/notebooks],index" /></td><td><embed type="application/transclusion" src="systems/haskell,dims-conceptual" data-links="#left=systems/haskell],index" /></td></tr><tr><th>Customizability</th><td><embed type="application/transclusion" src="systems/lisp-machines,dims-customizability" data-links="#left=systems/lisp-machines],index" /></td><td><embed type="application/transclusion" src="systems/smalltalk,dims-customizability" data-links="#left=systems/smalltalk],index" /></td><td><embed type="application/transclusion" src="systems/unix,dims-customizability" data-links="#left=systems/unix],index" /></td><td><embed type="application/transclusion" src="systems/spreadsheets,dims-customizability" data-links="#left=systems/spreadsheets],index" /></td><td><embed type="application/transclusion" src="systems/web,dims-customizability" data-links="#left=systems/web],index" /></td><td><embed type="application/transclusion" src="systems/hypercard,dims-customizability" data-links="#left=systems/hypercard],index" /></td><td><embed type="application/transclusion" src="systems/boxer,dims-customizability" data-links="#left=systems/boxer],index" /></td><td><embed type="application/transclusion" src="systems/notebooks,dims-customizability" data-links="#left=systems/notebooks],index" /></td><td><embed type="application/transclusion" src="systems/haskell,dims-customizability" data-links="#left=systems/haskell],index" /></td></tr><tr><th>Complexity</th><td><embed type="application/transclusion" src="systems/lisp-machines,dims-complexity" data-links="#left=systems/lisp-machines],index" /></td><td><embed type="application/transclusion" src="systems/smalltalk,dims-complexity" data-links="#left=systems/smalltalk],index" /></td><td><embed type="application/transclusion" src="systems/unix,dims-complexity" data-links="#left=systems/unix],index" /></td><td><embed type="application/transclusion" src="systems/spreadsheets,dims-complexity" data-links="#left=systems/spreadsheets],index" /></td><td><embed type="application/transclusion" src="systems/web,dims-complexity" data-links="#left=systems/web],index" /></td><td><embed type="application/transclusion" src="systems/hypercard,dims-complexity" data-links="#left=systems/hypercard],index" /></td><td><embed type="application/transclusion" src="systems/boxer,dims-complexity" data-links="#left=systems/boxer],index" /></td><td><embed type="application/transclusion" src="systems/notebooks,dims-complexity" data-links="#left=systems/notebooks],index" /></td><td><embed type="application/transclusion" src="systems/haskell,dims-complexity" data-links="#left=systems/haskell],index" /></td></tr><tr><th>Errors</th><td><embed type="application/transclusion" src="systems/lisp-machines,dims-errors" data-links="#left=systems/lisp-machines],index" /></td><td><embed type="application/transclusion" src="systems/smalltalk,dims-errors" data-links="#left=systems/smalltalk],index" /></td><td><embed type="application/transclusion" src="systems/unix,dims-errors" data-links="#left=systems/unix],index" /></td><td><embed type="application/transclusion" src="systems/spreadsheets,dims-errors" data-links="#left=systems/spreadsheets],index" /></td><td><embed type="application/transclusion" src="systems/web,dims-errors" data-links="#left=systems/web],index" /></td><td><embed type="application/transclusion" src="systems/hypercard,dims-errors" data-links="#left=systems/hypercard],index" /></td><td><embed type="application/transclusion" src="systems/boxer,dims-errors" data-links="#left=systems/boxer],index" /></td><td><embed type="application/transclusion" src="systems/notebooks,dims-errors" data-links="#left=systems/notebooks],index" /></td><td><embed type="application/transclusion" src="systems/haskell,dims-errors" data-links="#left=systems/haskell],index" /></td></tr><tr><th>Adoptability</th><td><embed type="application/transclusion" src="systems/lisp-machines,dims-adoptability" data-links="#left=systems/lisp-machines],index" /></td><td><embed type="application/transclusion" src="systems/smalltalk,dims-adoptability" data-links="#left=systems/smalltalk],index" /></td><td><embed type="application/transclusion" src="systems/unix,dims-adoptability" data-links="#left=systems/unix],index" /></td><td><embed type="application/transclusion" src="systems/spreadsheets,dims-adoptability" data-links="#left=systems/spreadsheets],index" /></td><td><embed type="application/transclusion" src="systems/web,dims-adoptability" data-links="#left=systems/web],index" /></td><td><embed type="application/transclusion" src="systems/hypercard,dims-adoptability" data-links="#left=systems/hypercard],index" /></td><td><embed type="application/transclusion" src="systems/boxer,dims-adoptability" data-links="#left=systems/boxer],index" /></td><td><embed type="application/transclusion" src="systems/notebooks,dims-adoptability" data-links="#left=systems/notebooks],index" /></td><td><embed type="application/transclusion" src="systems/haskell,dims-adoptability" data-links="#left=systems/haskell],index" /></td></tr></table></div></p>
+</section>
+<section data-class="systems" data-file="index" data-id="systems" data-title="Systems">
+<h1>Programming systems</h1>
+<p><embed type="application/transclusion" src="paper,definition" data-links="#left=.;right=paper,programming-systems" /></p>
+<p><embed type="application/transclusion" src="systems/lisp-machines,summary" data-links="#left=.;right=systems/lisp-machines,index" /></p>
+<p><embed type="application/transclusion" src="systems/smalltalk,summary" data-links="#left=.;right=systems/smalltalk,index" /></p>
+<p><embed type="application/transclusion" src="systems/unix,summary" data-links="#left=.;right=systems/unix,index" /></p>
+<p><embed type="application/transclusion" src="systems/spreadsheets,summary" data-links="#left=.;right=systems/spreadsheets,index" /></p>
+<p><embed type="application/transclusion" src="systems/web,summary" data-links="#left=.;right=systems/web,index" /></p>
+<p><embed type="application/transclusion" src="systems/hypercard,summary" data-links="#left=.;right=systems/hypercard,index" /></p>
+<p><embed type="application/transclusion" src="systems/boxer,summary" data-links="#left=.;right=systems/boxer,index" /></p>
+<p><embed type="application/transclusion" src="systems/notebooks,summary" data-links="#left=.;right=systems/notebooks,index" /></p>
+<p><embed type="application/transclusion" src="systems/haskell,summary" data-links="#left=.;right=systems/haskell,index" /></p>
+</section>
+<section data-file="paper" data-id="main" data-title="Paper">
+<p>paper....</p>
 </section>
 <section data-file="paper" data-id="abstract" data-title="Abstract">
 <h1>Abstract</h1>
@@ -84,7 +150,7 @@ A \emph{programming system} is an integrated and complete set of tools sufficien
 <p>A <em>programming system</em> is an integrated and complete set of tools sufficient for creating, modifying, and executing programs. These will include notations for structuring programs and data, facilities for running and debugging programs, and interfaces for performing all of these tasks. Facilities for testing, analysis, packaging, or version control may also be present. Notations include programming languages and interfaces include text editors, but are not limited to these.</p>
 </section>
 <section data-file="paper" data-id="programming-systems">
-<p><embed type="application/transclusion" src="content=paper;definition,link=paper;programming-systems" /></p>
+<p><embed type="application/transclusion" src="" data-links="content=paper;definition,link=paper;programming-systems" /></p>
 <p>We introduce the notion of a <em>programming system</em> through a number of example systems. We draw them from three broad reference classes:</p>
 <ul>
 <li><p>Software ecosystems built around a text-based programming <em>language</em>. They consist of a set of tools such as compilers, debuggers, and profilers. These tools may exist as separate command-line programs, or within an Integrated Development Environment.</p></li>
@@ -128,16 +194,25 @@ While spreadsheets were designed to solve problems in a specific application are
 </section>
 <section data-file="dimensions/interaction" data-id="summary" data-title="Interaction">
 <p>How do users manifest their ideas, evaluate the result, and generate new ideas in response?</p>
-<p>Dimensions</p>
+<h2>Dimensions</h2>
 <ul>
-<li><embed type="application/transclusion" src="link=feedback-loops" /></li>
-<li><embed type="application/transclusion" src="link=modes-of-interaction" /></li>
-<li><embed type="application/transclusion" src="link=abstraction-construction" /></li>
+<li>
+What are the gulfs of execution and evaluation and how are they related?<br />
+<a class="tlink" href="#left=.;right=dimensions/interaction,feedback-loops!"><i class="fa fa-arrow-right"></i>!</a>
+</li>
+<li>
+Which sets of feedback loops only occur together?<br />
+<a class="tlink" href="#left=.;right=dimensions/interaction,modes-of-interaction!"><i class="fa fa-arrow-right"></i>!</a>
+</li>
+<li>
+How do we go from abstractions to concrete examples and vice versa?<br />
+<a class="tlink" href="#left=.;right=dimensions/interaction,abstraction-construction!"><i class="fa fa-arrow-right"></i>!</a>
+</li>
 </ul>
-<p>Examples</p>
+<h2>Examples</h2>
 <ul>
-<li><embed type="application/transclusion" src="link=immediate-feedback" /></li>
-<li><embed type="application/transclusion" src="link=direct-manipulation" /></li>
+<li><a class="tlink" href="#left=.;right=dimensions/interaction,immediate-feedback!"><i class="fa fa-arrow-right"></i>!</a></li>
+<li><a class="tlink" href="#left=.;right=dimensions/interaction,direct-manipulation!"><i class="fa fa-arrow-right"></i>!</a></li>
 </ul>
 </section>
 <section data-file="dimensions/interaction" data-id="index" data-summary="How do users manifest their ideas, evaluate the result, and generate new ideas in response?" data-title="Interaction">
@@ -145,7 +220,7 @@ While spreadsheets were designed to solve problems in a specific application are
 <p>An essential aspect of programming systems is how the user interacts with them when creating programs. Take the standard form of statically typed, compiled languages with straightforward library linking: here, programmers write their code in a text editor, invoke the compiler, and read through error messages they get. After fixing the code to pass compilation, a similar process might happen with runtime errors.</p>
 <p>Other forms are yet possible. On the one hand, some typical interactions like compilation or execution of a program  may not be perceptible at all. On the other hand, the system may provide various interfaces to support the plethora of other interactions that are often important in programming, such as looking up documentation, managing dependencies, refactoring or pair programming.</p>
 <p>We focus on the interactions where programmer interacts with the system to construct a program with a desired behavior. To analyze those, we use the concepts of <em>gulf of execution</em> and <em>gulf of evaluation</em> from <em>The Design of Everyday Things</em>\ \cite{Norman}.</p>
-<p><embed type="application/transclusion" src="content=summary,link=feedback-loops" /></p>
+<p><embed type="application/transclusion" src="" data-links="content=summary,link=feedback-loops" /></p>
 <h3>Relations</h3>
 <ul>
 <li><em>Errors</em> (Section \ref{errors}) A longer evaluation gulf delays the detection of errors. A longer execution gulf can increase the <em>likelihood</em> of errors (e.g. writing a lot of code or taking a long time to write it). By turning runtime bugs into statically detected bugs, the combined evaluation gulfs can be reduced.</li>
@@ -212,34 +287,301 @@ While spreadsheets were designed to solve problems in a specific application are
 <p><em>Jupyter notebook.</em> In Jupyter notebooks, you are inclined to work with concrete things, because you see previews after individual cells. This discourages creating abstractions, because then you would not be able to look inside at such a fine grained level.</p>
 <p><em>Spreadsheets.</em> Up until the recent introduction of lambda expressions into Excel, spreadsheets have been relentlessly concrete, without any way to abstract and reuse patterns of computation other than copy-and-paste.</p>
 </section>
+<section data-file="systems/boxer" data-id="dims-interaction" data-title="<i class='fa fa-cog'></i>">
+<p>x</p>
+</section>
+<section data-file="systems/boxer" data-id="dims-notation" data-title="<i class='fa fa-cog'></i>">
+<p>x</p>
+</section>
+<section data-file="systems/boxer" data-id="dims-conceptual" data-title="<i class='fa fa-cog'></i>">
+<p>x</p>
+</section>
+<section data-file="systems/boxer" data-id="dims-customizability" data-title="<i class='fa fa-cog'></i>">
+<p>x</p>
+</section>
+<section data-file="systems/boxer" data-id="dims-complexity" data-title="<i class='fa fa-cog'></i>">
+<p>x</p>
+</section>
+<section data-file="systems/boxer" data-id="dims-errors" data-title="<i class='fa fa-cog'></i>">
+<p>x</p>
+</section>
+<section data-file="systems/boxer" data-id="dims-adoptability" data-title="<i class='fa fa-cog'></i>">
+<p>x</p>
+</section>
+<section data-file="systems/boxer" data-id="summary" data-title="Boxer">
+<p>yadda</p>
+<p><img src="img/boxer.gif" alt="" /></p>
+</section>
+<section data-class="systems" data-file="systems/boxer" data-id="index">
+<h1>Boxer</h1>
+<p><embed type="application/transclusion" src="" data-links="content=summary,link=index" /></p>
+<p>more here</p>
+</section>
+<section data-file="systems/haskell" data-id="dims-interaction" data-title="<i class='fa fa-cog'></i>">
+<p>x</p>
+</section>
+<section data-file="systems/haskell" data-id="dims-notation" data-title="<i class='fa fa-cog'></i>">
+<p>x</p>
+</section>
+<section data-file="systems/haskell" data-id="dims-conceptual" data-title="<i class='fa fa-cog'></i>">
+<p>x</p>
+</section>
+<section data-file="systems/haskell" data-id="dims-customizability" data-title="<i class='fa fa-cog'></i>">
+<p>x</p>
+</section>
+<section data-file="systems/haskell" data-id="dims-complexity" data-title="<i class='fa fa-cog'></i>">
+<p>x</p>
+</section>
+<section data-file="systems/haskell" data-id="dims-errors" data-title="<i class='fa fa-cog'></i>">
+<p>x</p>
+</section>
+<section data-file="systems/haskell" data-id="dims-adoptability" data-title="<i class='fa fa-cog'></i>">
+<p>x</p>
+</section>
+<section data-file="systems/haskell" data-id="summary" data-title="Haskell">
+<p>yadda</p>
+<p><img src="img/haskell.png" alt="" /></p>
+</section>
+<section data-class="systems" data-file="systems/haskell" data-id="index">
+<h1>Haskell</h1>
+<p><embed type="application/transclusion" src="" data-links="content=summary,link=index" /></p>
+<p>more here</p>
+</section>
+<section data-file="systems/hypercard" data-id="dims-interaction" data-title="<i class='fa fa-cog'></i>">
+<p>x</p>
+</section>
+<section data-file="systems/hypercard" data-id="dims-notation" data-title="<i class='fa fa-cog'></i>">
+<p>x</p>
+</section>
+<section data-file="systems/hypercard" data-id="dims-conceptual" data-title="<i class='fa fa-cog'></i>">
+<p>x</p>
+</section>
+<section data-file="systems/hypercard" data-id="dims-customizability" data-title="<i class='fa fa-cog'></i>">
+<p>x</p>
+</section>
+<section data-file="systems/hypercard" data-id="dims-complexity" data-title="<i class='fa fa-cog'></i>">
+<p>x</p>
+</section>
+<section data-file="systems/hypercard" data-id="dims-errors" data-title="<i class='fa fa-cog'></i>">
+<p>x</p>
+</section>
+<section data-file="systems/hypercard" data-id="dims-adoptability" data-title="<i class='fa fa-cog'></i>">
+<p>x</p>
+</section>
+<section data-file="systems/hypercard" data-id="summary" data-title="Hypercard">
+<p>yadda</p>
+<p><img src="img/hypercard.jpg" alt="" /></p>
+</section>
+<section data-class="systems" data-file="systems/hypercard" data-id="index">
+<h1>Hypercard</h1>
+<p><embed type="application/transclusion" src="" data-links="content=summary,link=index" /></p>
+<p>more here</p>
+</section>
+<section data-file="systems/lisp-machines" data-id="dims-interaction" data-title="<i class='fa fa-cog'></i>">
+<p>x</p>
+</section>
+<section data-file="systems/lisp-machines" data-id="dims-notation" data-title="<i class='fa fa-cog'></i>">
+<p>x</p>
+</section>
+<section data-file="systems/lisp-machines" data-id="dims-conceptual" data-title="<i class='fa fa-cog'></i>">
+<p>x</p>
+</section>
+<section data-file="systems/lisp-machines" data-id="dims-customizability" data-title="<i class='fa fa-cog'></i>">
+<p>x</p>
+</section>
+<section data-file="systems/lisp-machines" data-id="dims-complexity" data-title="<i class='fa fa-cog'></i>">
+<p>x</p>
+</section>
+<section data-file="systems/lisp-machines" data-id="dims-errors" data-title="<i class='fa fa-cog'></i>">
+<p>x</p>
+</section>
+<section data-file="systems/lisp-machines" data-id="dims-adoptability" data-title="<i class='fa fa-cog'></i>">
+<p>x</p>
+</section>
+<section data-file="systems/lisp-machines" data-id="summary" data-title="LISP machines">
+<p>yadda</p>
+<p><img src="img/lisp-genera.gif" alt="" /></p>
+</section>
+<section data-class="systems" data-file="systems/lisp-machines" data-id="index">
+<h1>LISP machines</h1>
+<p><embed type="application/transclusion" src="" data-links="content=summary,link=index" /></p>
+<p>more here</p>
+</section>
+<section data-file="systems/notebooks" data-id="dims-interaction" data-title="<i class='fa fa-cog'></i>">
+<p>x</p>
+</section>
+<section data-file="systems/notebooks" data-id="dims-notation" data-title="<i class='fa fa-cog'></i>">
+<p>x</p>
+</section>
+<section data-file="systems/notebooks" data-id="dims-conceptual" data-title="<i class='fa fa-cog'></i>">
+<p>x</p>
+</section>
+<section data-file="systems/notebooks" data-id="dims-customizability" data-title="<i class='fa fa-cog'></i>">
+<p>x</p>
+</section>
+<section data-file="systems/notebooks" data-id="dims-complexity" data-title="<i class='fa fa-cog'></i>">
+<p>x</p>
+</section>
+<section data-file="systems/notebooks" data-id="dims-errors" data-title="<i class='fa fa-cog'></i>">
+<p>x</p>
+</section>
+<section data-file="systems/notebooks" data-id="dims-adoptability" data-title="<i class='fa fa-cog'></i>">
+<p>x</p>
+</section>
+<section data-file="systems/notebooks" data-id="summary" data-title="Notebooks">
+<p>yadda</p>
+<p><img src="img/ipython.png" alt="" /></p>
+</section>
+<section data-class="systems" data-file="systems/notebooks" data-id="index">
+<h1>Notebooks</h1>
+<p><embed type="application/transclusion" src="" data-links="content=summary,link=index" /></p>
+<p>more here</p>
+</section>
+<section data-file="systems/smalltalk" data-id="dims-interaction" data-title="<i class='fa fa-cog'></i>">
+<p>Integrated execution and editing mode. Abstractions are transparent.</p>
+</section>
+<section data-file="systems/smalltalk" data-id="dims-notation" data-title="<i class='fa fa-cog'></i>">
+<p>x</p>
+</section>
+<section data-file="systems/smalltalk" data-id="dims-conceptual" data-title="<i class='fa fa-cog'></i>">
+<p>x</p>
+</section>
+<section data-file="systems/smalltalk" data-id="dims-customizability" data-title="<i class='fa fa-cog'></i>">
+<p>x</p>
+</section>
+<section data-file="systems/smalltalk" data-id="dims-complexity" data-title="<i class='fa fa-cog'></i>">
+<p>x</p>
+</section>
+<section data-file="systems/smalltalk" data-id="dims-errors" data-title="<i class='fa fa-cog'></i>">
+<p>x</p>
+</section>
+<section data-file="systems/smalltalk" data-id="dims-adoptability" data-title="<i class='fa fa-cog'></i>">
+<p>x</p>
+</section>
+<section data-file="systems/smalltalk" data-id="summary" data-title="Smalltalk">
+<p>yadda</p>
+<p><img src="img/smalltalk-78.png" alt="" /></p>
+</section>
+<section data-class="systems" data-file="systems/smalltalk" data-id="index">
+<h1>Smalltalk</h1>
+<p><embed type="application/transclusion" src="" data-links="content=summary,link=index" /></p>
+<p>more here</p>
+</section>
+<section data-file="systems/spreadsheets" data-id="dims-interaction" data-title="<i class='fa fa-cog'></i>">
+<p>x</p>
+</section>
+<section data-file="systems/spreadsheets" data-id="dims-notation" data-title="<i class='fa fa-cog'></i>">
+<p>x</p>
+</section>
+<section data-file="systems/spreadsheets" data-id="dims-conceptual" data-title="<i class='fa fa-cog'></i>">
+<p>x</p>
+</section>
+<section data-file="systems/spreadsheets" data-id="dims-customizability" data-title="<i class='fa fa-cog'></i>">
+<p>x</p>
+</section>
+<section data-file="systems/spreadsheets" data-id="dims-complexity" data-title="<i class='fa fa-cog'></i>">
+<p>x</p>
+</section>
+<section data-file="systems/spreadsheets" data-id="dims-errors" data-title="<i class='fa fa-cog'></i>">
+<p>x</p>
+</section>
+<section data-file="systems/spreadsheets" data-id="dims-adoptability" data-title="<i class='fa fa-cog'></i>">
+<p>x</p>
+</section>
+<section data-file="systems/spreadsheets" data-id="summary" data-title="Spreadsheets">
+<p>yadda</p>
+<p><img src="img/visicalc.png" alt="" /></p>
+</section>
+<section data-class="systems" data-file="systems/spreadsheets" data-id="index">
+<h1>Spreadsheets</h1>
+<p><embed type="application/transclusion" src="" data-links="content=summary,link=index" /></p>
+<p>more here</p>
+</section>
+<section data-file="systems/unix" data-id="dims-interaction" data-title="<i class='fa fa-cog'></i>">
+<p>x</p>
+</section>
+<section data-file="systems/unix" data-id="dims-notation" data-title="<i class='fa fa-cog'></i>">
+<p>x</p>
+</section>
+<section data-file="systems/unix" data-id="dims-conceptual" data-title="<i class='fa fa-cog'></i>">
+<p>x</p>
+</section>
+<section data-file="systems/unix" data-id="dims-customizability" data-title="<i class='fa fa-cog'></i>">
+<p>x</p>
+</section>
+<section data-file="systems/unix" data-id="dims-complexity" data-title="<i class='fa fa-cog'></i>">
+<p>x</p>
+</section>
+<section data-file="systems/unix" data-id="dims-errors" data-title="<i class='fa fa-cog'></i>">
+<p>x</p>
+</section>
+<section data-file="systems/unix" data-id="dims-adoptability" data-title="<i class='fa fa-cog'></i>">
+<p>x</p>
+</section>
+<section data-file="systems/unix" data-id="summary" data-title="UNIX">
+<p>yadda</p>
+<p><img src="img/unix-6.png" alt="" /></p>
+</section>
+<section data-class="systems" data-file="systems/unix" data-id="index">
+<h1>UNIX</h1>
+<p><embed type="application/transclusion" src="" data-links="content=summary,link=index" /></p>
+<p>more here</p>
+</section>
+<section data-file="systems/web" data-id="dims-interaction" data-title="<i class='fa fa-cog'></i>">
+<p>x</p>
+</section>
+<section data-file="systems/web" data-id="dims-notation" data-title="<i class='fa fa-cog'></i>">
+<p>x</p>
+</section>
+<section data-file="systems/web" data-id="dims-conceptual" data-title="<i class='fa fa-cog'></i>">
+<p>x</p>
+</section>
+<section data-file="systems/web" data-id="dims-customizability" data-title="<i class='fa fa-cog'></i>">
+<p>x</p>
+</section>
+<section data-file="systems/web" data-id="dims-complexity" data-title="<i class='fa fa-cog'></i>">
+<p>x</p>
+</section>
+<section data-file="systems/web" data-id="dims-errors" data-title="<i class='fa fa-cog'></i>">
+<p>x</p>
+</section>
+<section data-file="systems/web" data-id="dims-adoptability" data-title="<i class='fa fa-cog'></i>">
+<p>x</p>
+</section>
+<section data-file="systems/web" data-id="summary" data-title="Web platform">
+<p>yadda</p>
+<p><img src="img/web-ie5.png" alt="" /></p>
+</section>
+<section data-class="systems" data-file="systems/web" data-id="index">
+<h1>Web platform</h1>
+<p><embed type="application/transclusion" src="" data-links="content=summary,link=index" /></p>
+<p>more here</p>
+</section>
 
   </article>
   <div id="display">
-    <div id="display1" class="display"></div>
-    <div id="display2" class="display"></div>
+    <div id="splash" class="display"></div>
+    <div id="image" class="display"></div>
+    <div id="left" class="display"></div>
+    <div id="right" class="display"></div>
+    <div id="big" class="display"></div>
   </div>
   <script type="application/template" id="display-template">    
     <div class="display-title">
-      <a href="[CLOSE]"><i class="fa fa-xmark"></i></a>
+      [TITLE]
     </div>
-    <div class="display-body">
+    <div class="display-body [CLASS]">
       [CONTENT]
     </div>
-  </script>
-  <script type="application/template" id="transclusion-ref-template">
-    <span class="tlink">
-      <a href="[HASH1]">[TITLE]</a>
-      <a href="[HASH2]"><i class="fa fa-arrow-up-right-from-square"></i></a>
-    </span>
   </script>
   <script type="application/template" id="transclusion-content-template">    
     <div class="transclusion">
       <div class="title">
-        <a href="[HASH2]"><i class="fa fa-arrow-up-right-from-square"></i></a>
-        <a href="[HASH1]">[TITLE]</a>
+        <a href="[LINK]"><i class="fa fa-arrow-right"></i>[TITLE]</a>
       </div>
       <div class="body">
         [CONTENT]
+        <div style="clear:both"></div>
       </div>
     </div>
   </script>

@@ -2,3 +2,4 @@ node_modules
 src/fable_modules
 src/bin
 src/obj
+.fake

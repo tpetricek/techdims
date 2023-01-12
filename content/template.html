@@ -18,31 +18,28 @@
     [BODY]
   </article>
   <div id="display">
-    <div id="display1" class="display"></div>
-    <div id="display2" class="display"></div>
+    <div id="splash" class="display"></div>
+    <div id="image" class="display"></div>
+    <div id="left" class="display"></div>
+    <div id="right" class="display"></div>
+    <div id="big" class="display"></div>
   </div>
   <script type="application/template" id="display-template">    
     <div class="display-title">
-      <a href="[CLOSE]"><i class="fa fa-xmark"></i></a>
+      [TITLE]
     </div>
-    <div class="display-body">
+    <div class="display-body [CLASS]">
       [CONTENT]
     </div>
-  </script>
-  <script type="application/template" id="transclusion-ref-template">
-    <span class="tlink">
-      <a href="[HASH1]">[TITLE]</a>
-      <a href="[HASH2]"><i class="fa fa-arrow-up-right-from-square"></i></a>
-    </span>
   </script>
   <script type="application/template" id="transclusion-content-template">    
     <div class="transclusion">
       <div class="title">
-        <a href="[HASH2]"><i class="fa fa-arrow-up-right-from-square"></i></a>
-        <a href="[HASH1]">[TITLE]</a>
+        <a href="[LINK]"><i class="fa fa-arrow-right"></i>[TITLE]</a>
       </div>
       <div class="body">
         [CONTENT]
+        <div style="clear:both"></div>
       </div>
     </div>
   </script>
