@@ -1,6 +1,6 @@
 import { FSharpRef, Record } from "./fable_modules/fable-library.3.7.20/Types.js";
 import { record_type, class_type, string_type } from "./fable_modules/fable-library.3.7.20/Reflection.js";
-import { find, append, tryFind, singleton, map, collect, delay, toList } from "./fable_modules/fable-library.3.7.20/Seq.js";
+import { filter, find, append, tryFind, singleton, map, collect, delay, toList } from "./fable_modules/fable-library.3.7.20/Seq.js";
 import { FSharpMap__TryGetValue, FSharpMap__TryFind, map as map_2, FSharpMap__get_Item, ofSeq } from "./fable_modules/fable-library.3.7.20/Map.js";
 import { rangeDouble } from "./fable_modules/fable-library.3.7.20/Range.js";
 import { toText, replace, substring, printf, toFail, join } from "./fable_modules/fable-library.3.7.20/String.js";
@@ -213,9 +213,40 @@ export function render(state) {
         if (found) {
             renderWindow(state, displ, sec);
         }
+        if (found) {
+            const inputs = filter((el) => {
+                if (el.tagName === "INPUT") {
+                    if (el.id.indexOf("cd") === 0) {
+                        return true;
+                    }
+                    else {
+                        return el.id.indexOf("cs") === 0;
+                    }
+                }
+                else {
+                    return false;
+                }
+            }, getAllChildren(displ));
+            const enumerator = getEnumerator(inputs);
+            try {
+                while (enumerator["System.Collections.IEnumerator.MoveNext"]()) {
+                    const inp = enumerator["System.Collections.Generic.IEnumerator`1.get_Current"]();
+                    const inp_1 = inp;
+                    inp_1.onchange = ((_arg) => {
+                        const els = document.getElementsByClassName(substring(inp_1.id, 1));
+                        for (let i_1 = 0; i_1 <= (els.length - 1); i_1++) {
+                            (els[i_1]).style.display = (inp_1.checked ? "" : "none");
+                        }
+                    });
+                }
+            }
+            finally {
+                disposeSafe(enumerator);
+            }
+        }
         if (found && (displ.id === "image")) {
-            const img = find((el) => (el.tagName === "IMG"), getAllChildren(displ));
-            img.onload = ((_arg) => {
+            const img = find((el_1) => (el_1.tagName === "IMG"), getAllChildren(displ));
+            img.onload = ((_arg_1) => {
                 const w = ((~(~img.clientWidth)) + 200) | 0;
                 const l = (~(~(max(comparePrimitives, 0, (~(~window.document.body.clientWidth)) - w) / 2))) | 0;
                 displ.style = toText(printf("max-width:100vw;width:%dpx;left:%dpx;"))(w)(l);

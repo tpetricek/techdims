@@ -38,22 +38,27 @@ let extractSections pars =
         List.rev acc
   loop [] [] [] pars
   
-let genreateSummaryTable () = 
+let genreateSummaryTableAndChecks () = 
   let systems = 
     List.zip [ "LISP machines"; "Smalltalk"; "UNIX"; "Spreadsheets"; "Web platform"; "Hypercard"; "Boxer"; "Notebooks"; "Haskell" ]
              [ "lisp-machines"; "smalltalk"; "unix"; "spreadsheets"; "web"; "hypercard"; "boxer"; "notebooks"; "haskell" ]
   let dims = 
     List.zip [ "Interaction"; "Notation"; "Conceptual structure"; "Customizability"; "Complexity"; "Errors"; "Adoptability" ]
              [ "interaction"; "notation"; "conceptual"; "customizability"; "complexity"; "errors"; "adoptability" ]
-  let header = "<th></th>" + String.concat "" [ for n, _ in systems -> $"<th>{n}" ]
+  let header = "<th></th>" + String.concat "" [ for n, id in systems -> $"<th class='s{id}'>{n}</th>" ]
   let rows = [
-    for dimName, dimId in dims -> $"<th>{dimName}</th>" + String.concat "" [
+    for dimName, dimId in dims -> dimId, $"<th>{dimName}</th>" + String.concat "" [
       for sysName, sysId in systems -> 
-        $"<td><embed type=\"application/transclusion\" src=\"systems/{sysId},dims-{dimId}\" data-links=\"#left=systems/{sysId}],index\" /></td>"
+        $"<td class='s{sysId}'><embed type=\"application/transclusion\" src=\"systems/{sysId},dims-{dimId}\" data-links=\"#left=index,matrix;right=systems/{sysId},index\" /></td>"
     ]
   ]
-  let body = String.concat "" [ for r in rows -> $"<tr>{r}</tr>" ]
-  $"<div class=\"table-wrapper\"><table><tr>{header}</tr>{body}</table></div>"
+  let body = String.concat "" [ for id, r in rows -> $"<tr class='d{id}'>{r}</tr>" ]
+  let systems = String.concat "" [ 
+    for n, id in systems -> $"""<label><input type="checkbox" class="csys" id="cs{id}" name="cs{id}" checked>{n}</label>""" ]
+  let dims = String.concat "" [
+    for n, id in dims -> $"""<label><input type="checkbox" class="cdim" id="cd{id}" name="cd{id}" checked>{n}</label>""" ]
+  {| Table = $"""<div class="table-wrapper"><table><tr>{header}</tr>{body}</table></div>""";
+     SysChecks = systems; DimChecks = dims |}
 
 let rec replaceTransclusions = function
   | MarkdownPatterns.ParagraphNested(p, ps) -> 
@@ -64,8 +69,12 @@ let rec replaceTransclusions = function
             [ yield Literal($"<a class=\"tlink\" href=\"{link.Substring(3)}\"><i class=\"fa fa-arrow-right\"></i>", None)
               yield! body
               yield Literal("</a>", None) ]
-        | DirectImage("$$", "summary-table", _, _) ->
-            [ Literal(genreateSummaryTable(), None) ]
+        | DirectImage("$$", "matrix-table", _, _) ->
+            [ Literal(genreateSummaryTableAndChecks().Table, None) ]
+        | DirectImage("$$", "matrix-dimchecks", _, _) ->
+            [ Literal(genreateSummaryTableAndChecks().DimChecks, None) ]
+        | DirectImage("$$", "matrix-syschecks", _, _) ->
+            [ Literal(genreateSummaryTableAndChecks().SysChecks, None) ]
         | DirectImage(cnt, links, _, _) when cnt.StartsWith("$") ->
             [ Literal($"<embed type=\"application/transclusion\" src=\"{cnt.Substring(1)}\" data-links=\"{links}\" />", None) ]
         | s -> [ s ])

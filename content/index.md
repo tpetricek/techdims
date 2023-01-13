@@ -23,11 +23,11 @@ compare and guide their work and, ultimately, stand on the shoulders of giants.
 ## Where to start to learn more
 
 - Want to delve into the details and analyse your system?  
-  [Start from the catalogue of technical dimensions](-> #left=index,catalogue)
+  [Start from the catalogue of technical dimensions](-> #left=index,catalogue;footer=index,navigation)
 - Want to explore our framework by example?  
   [Start from good old programming systems](-> #left=index,systems)
 - Want to see how this helps us understand programming systems?  
-  [Start from a summary dimensions and systems matrix](-> #big=index,matrix)
+  [Start from a summary matrix of system and dimensions](-> #left=index,matrix-intro;big=index,matrix-body;footer=index,navigation)
 - Want to understand our motivation and methodology?  
   [Start from our paper about technical dimensions](-> #left=paper,main)
 
@@ -48,11 +48,11 @@ compare and guide their work and, ultimately, stand on the shoulders of giants.
 <div>
 
 - Want to delve into the details and analyse your system?  
-  [Start from the catalogue of technical dimensions](-> #left=index,catalogue)
+  [Start from the catalogue of technical dimensions](-> #left=index,catalogue;footer=index,navigation)
 - Want to explore our framework by example?  
   [Start from good old programming systems](-> #left=index,systems)
 - Want to see how this helps us understand programming systems?  
-  [Start from a summary dimensions and systems matrix](-> #big=index,matrix)
+  [Start from a summary matrix of system and dimensions](-> #left=index,matrix-intro;big=index,matrix-body;footer=index,navigation)
 - Want to understand our motivation and methodology?  
   [Start from our paper about technical dimensions](-> #left=paper,main)
 
@@ -66,17 +66,52 @@ compare and guide their work and, ultimately, stand on the shoulders of giants.
 
 ![$dimensions/interaction,summary](#left=.;right=dimensions/interaction,index)
 
-![$index,navigation](#splash=index,welcome)
+----------------------------------------------------------------------------------------------------
+- id:matrix-intro
+- title:Summary matrix of systems and dimensions
+
+# Matrix of systems and dimensions
+
+The matrix shows the differences between [good old programming systems](#left=index,systems) 
+along the dimensions identified by our framework. For conciseness, the table shows only one 
+row for each cluster of dimensions, which consists of multiple separate dimensions each.
+
+The header colors are used to mark systems that are similar (in an informal sense) 
+for a given dimension. Icons indicate a speficic characteristics and should help you
+find connections between systems. You can click on the header to go to a relevant 
+paper section, but note that not all cases are discussed in the paper. 
 
 ----------------------------------------------------------------------------------------------------
-- id:matrix
-- title:Ya
+- id:matrix-body
+- title:Detailed matrix of systems and dimensions
 - class:matrix
 
-# Matrix
+![$$](matrix-table)
 
-![$$](summary-table)
+## Select systems and dimensions to compare in the table
 
+<div class="checksgroup">
+<div class="checks">
+
+<p>
+<button onclick="[...document.getElementsByClassName('csys')].forEach(function(e) { e.checked=true; if (e.onchange) e.onchange(); });">Select all</button> 
+<button onclick="[...document.getElementsByClassName('csys')].forEach(function(e) { e.checked=false; if (e.onchange) e.onchange(); });">Select none</button> 
+</p>
+
+![$$](matrix-syschecks)
+
+</div>
+<div class="checks">
+
+<p>
+<button onclick="[...document.getElementsByClassName('cdim')].forEach(function(e) { e.checked=true; if (e.onchange) e.onchange(); });">Select all</button> 
+<button onclick="[...document.getElementsByClassName('cdim')].forEach(function(e) { e.checked=false; if (e.onchange) e.onchange(); });">Select none</button> 
+</p>
+
+![$$](matrix-dimchecks)
+
+</div>
+</div>
 
 ----------------------------------------------------------------------------------------------------
 - id:systems

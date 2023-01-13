@@ -1,26 +1,29 @@
 ----------------------------------------------------------------------------------------------------
 - id:dims-interaction
-- title:<i class='fa fa-cog'></i>
+- title:<div class='shade4'><i class='fa fa-circle-play'></i> <i class='fa fa-rotate-right'></i> <i class='fa fa-lock'></i> <i class='fa fa-lock-open'></i> <i class='fa fa-subscript'></i></div>
 
-x
+Edit and refresh mode with state visible in DOM browser and live developer tools.
+Code abstractions are closed, but style abstractions more transparent.
 
 ----------------------------------------------------------------------------------------------------
 - id:dims-notation
-- title:<i class='fa fa-cog'></i>
+- title:<div class='shade3'><i class='fa fa-handshake'></i> <i class='fa fa-bars-staggered'></i></div>
 
-x
+Diversity of text-based highly non-uniform notations (HTML, JavaScript, CSS) with limited structure editing for debugging (DOM).
 
 ----------------------------------------------------------------------------------------------------
 - id:dims-conceptual
-- title:<i class='fa fa-cog'></i>
+- title:<div class='shade1'><i class='fa fa-file'></i><i class='fa fa-shapes'></i><i class='fa fa-flask'></i><i class='fa fa-toolbox'></i></div>
 
-x
+Improvised mix of open "large" concepts (HTTP) and specific ones (DOM).
+Many convenient libraries and tools with low commonality and varying composability.
 
 ----------------------------------------------------------------------------------------------------
 - id:dims-customizability
-- title:<i class='fa fa-cog'></i>
+- title:<div class='shade4'><i class='fa fa-car-on'></i><i class='fa fa-square-xmark'></i><i class='fa fa-list-ol'></i><i class='fa fa-file-cirlce-plus'></i></div>
 
-x
+Basic infrastructure (browser, protocols) are fixed. Individual applications can have
+a large degree of modifiability (via dynamic scripting). CSS provides powerful addressing.
 
 ----------------------------------------------------------------------------------------------------
 - id:dims-complexity

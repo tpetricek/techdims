@@ -113,6 +113,14 @@ let render state =
     displ.classList.remove("visible")
     displ.classList.add(if found then "visible" else "hidden")
     if found then renderWindow state displ sec
+    if found then 
+      let inputs = getAllChildren displ |> Seq.filter (fun el -> el.tagName = "INPUT" && (el.id.StartsWith("cd") || el.id.StartsWith("cs")))
+      for inp in inputs do 
+        let inp = inp :?> HTMLInputElement
+        inp.onchange <- fun _ -> 
+          let els = document.getElementsByClassName(inp.id.Substring(1)) 
+          for i in 0 .. els.length-1 do els.[i]?style?display <- if inp.``checked`` then "" else "none"
+
     if found && displ.id = "image" then
       let img = getAllChildren displ |> Seq.find (fun el -> el.tagName = "IMG") 
       img.onload <- fun _ ->

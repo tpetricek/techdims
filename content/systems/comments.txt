@@ -1,0 +1,41 @@
+INTERACTION
+
+fa-screwdriver-wrench - some kind of build phase
+fa-circle-play - REPL-like execution
+fa-rotate-right - some kind of live feedback
+fa-hand-pointer - some kind of direct manipulation
+fa-lock-open - open abstractions
+fa-lock - closed abstractiosn
+fa-subscript - abstraction from first principles
+fa-eye - abstraction from concrete
+
+NOTATIONS
+
+fa-trophy - has primary notation
+fa-handshake - has complementing notation
+fa-arrow-pointer - some structure editing 
+fa-bars - uniform notation
+fa-bars-staggered - non-uniform notation
+fa-bug - concise error-prone
+fa-image - some graphical notation
+
+CONCEPTUAL STRUCTURE
+
+fa-file - large concepts
+fa-gem - small number of concepts
+fa-shapes - variety of diverse concepts
+fa-flask - domain specific concepts
+fa-link-slash - lacks composability
+fa-link - high composability
+fa-hand-fist - lacks convenience
+fa-toolbox - high convenience 
+
+CUSTOMIZABILITY
+
+fa-code-pull-request - modifiable as oss
+fa-square-xmark - not modifieable at all
+fa-car-on - modifiable while running
+fa-flag-checkered - stage distinction 
+fa-list-ol - clever addressing mechanism
+fa-file-circle-plus - additive authoring
+fa-arrows-spin - self-sustainable

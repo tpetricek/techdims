@@ -1,26 +1,30 @@
 ----------------------------------------------------------------------------------------------------
 - id:dims-interaction
-- title:<i class='fa fa-cog'></i>
+- title:<div class='shade1'><i class='fa fa-circle-play'></i> <i class='fa fa-lock-open'></i> <i class='fa fa-subscript'></i></div>
 
-Integrated execution and editing mode. Abstractions are transparent.
+Integrated execution and editing mode, giving feedback at runtime. 
+Abstractions constructed using objects are accessible via a browser.
 
 ----------------------------------------------------------------------------------------------------
 - id:dims-notation
-- title:<i class='fa fa-cog'></i>
+- title:<div class='shade2'><i class='fa fa-trophy'></i> <i class='fa fa-arrow-pointer'></i> <i class='fa fa-bars'></i></div>
 
-x
+Primary source code notation with graphical structure editor for object structure.
+Secondary overlapping notations can be developed in-system. Small language.
 
 ----------------------------------------------------------------------------------------------------
 - id:dims-conceptual
-- title:<i class='fa fa-cog'></i>
+- title:<div class='shade2'><i class='fa fa-gem'></i><i class='fa fa-link'></i><i class='fa fa-hand-fist'></i></div>
 
-x
+Small number of unified concepts ("everything is an object") at odds with outside world.
+Everything is composed from small number of primitives, but limits convenience. Structural commonality.
 
 ----------------------------------------------------------------------------------------------------
 - id:dims-customizability
-- title:<i class='fa fa-cog'></i>
+- title:<div class='shade3'><i class='fa fa-car-on'></i><i class='fa fa-list-ol'></i><i class='fa fa-file-circle-plus'></i><i class='fa fa-arrows-spin'></i></div>
 
-x
+System can be customized at runtime. Much of the system is written in itself and can be
+modified from within itself. Extensibility achieved via object-oriented programming.
 
 ----------------------------------------------------------------------------------------------------
 - id:dims-complexity
