@@ -53,23 +53,28 @@ div.display .display-body { padding:30px; }
 .matrix .shade2 { background:#303281; }
 .matrix .shade3 { background:#494CAD; }
 .matrix .shade4 { background:#7A7CBC; }
-.matrix tr:nth-child(4n+1) .shade1 { background:#415717; }
-.matrix tr:nth-child(4n+1) .shade2 { background:#6A8030; }
-.matrix tr:nth-child(4n+1) .shade3 { background:#6A8030; }
-.matrix tr:nth-child(4n+1) .shade4 { background:#ACB97A; }
-.matrix tr:nth-child(4n+2) .shade1 { background:#6A4B0F; }
-.matrix tr:nth-child(4n+2) .shade2 { background:#9B7C17; }
-.matrix tr:nth-child(4n+2) .shade3 { background:#C59830; }
-.matrix tr:nth-child(4n+2) .shade4 { background:#C5A972; }
-.matrix tr:nth-child(4n+3) .shade1 { background:#621A17; }
-.matrix tr:nth-child(4n+3) .shade2 { background:#8B2728; }
-.matrix tr:nth-child(4n+3) .shade3 { background:#B43F49; }
-.matrix tr:nth-child(4n+3) .shade4 { background:#C5747A; }
+.matrix tr:nth-child(5n+1) .shade1 { background:#415717; }
+.matrix tr:nth-child(5n+1) .shade2 { background:#6A8030; }
+.matrix tr:nth-child(5n+1) .shade3 { background:#93AD49; }
+.matrix tr:nth-child(5n+1) .shade4 { background:#ACB97A; }
+.matrix tr:nth-child(5n+2) .shade1 { background:#6A4B0F; }
+.matrix tr:nth-child(5n+2) .shade2 { background:#9B7C17; }
+.matrix tr:nth-child(5n+2) .shade3 { background:#C59830; }
+.matrix tr:nth-child(5n+2) .shade4 { background:#C5A972; }
+.matrix tr:nth-child(5n+3) .shade1 { background:#621A17; }
+.matrix tr:nth-child(5n+3) .shade2 { background:#8B2728; }
+.matrix tr:nth-child(5n+3) .shade3 { background:#B43F49; }
+.matrix tr:nth-child(5n+3) .shade4 { background:#C5747A; }
+.matrix tr:nth-child(5n+4) .shade1 { background:#591F51; }
+.matrix tr:nth-child(5n+4) .shade2 { background:#832F72; }
+.matrix tr:nth-child(5n+4) .shade3 { background:#AC4B9B; }
+.matrix tr:nth-child(5n+4) .shade4 { background:#BC7CB4; }
 .matrix .checksgroup { display:flex; }
 .matrix .checks { padding:0px 20px 0px 20px; }
 .matrix .checks button { padding:2px 8px 2px 8px; text-align:center; margin-right:10px; border-radius:4px; border:3px solid black; background:white; width:100px; }
 .matrix input { margin:0px 5px 0px 0px; }
 .matrix label { font-size:14pt; display: block; margin-left:10px;}
+.matrix .matrix-footer p { max-width: 700px; margin-bottom:30px; }
 
 div.transclusion { border:3px solid black; }
 div.transclusion .title { font-size:12pt; background:black; font-weight:bold; padding:1px 2px 3px 5px; }

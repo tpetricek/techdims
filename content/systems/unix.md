@@ -29,21 +29,24 @@ modifiability at runtime.
 
 ----------------------------------------------------------------------------------------------------
 - id:dims-complexity
-- title:<i class='fa fa-cog'></i>
+- title:<div class='shade4'><i class='fa fa-wrench'></i><i class='fa fa-gears'></i></div>
 
-x
+Defines low-level infrastructure (hardware abstractions) and large object structure (files, processes);
+small-scale factoring and automation left to the user and/or application.
 
 ----------------------------------------------------------------------------------------------------
 - id:dims-errors
-- title:<i class='fa fa-cog'></i>
+- title:<div class='shade4'><i class='fa fa-gun'></i><i class='fa fa-person-rays'></i></div>
 
-x
+Error detection left to the system user. Low-level primitives make it possible to 
+automate detection and response via custom mechanisms.
 
 ----------------------------------------------------------------------------------------------------
 - id:dims-adoptability
-- title:<i class='fa fa-cog'></i>
+- title:<div class='shade2'><i class='fa fa-infinity'></i><i class='fa fa-globe'></i><i class='fa fa-podcast'></i></div>
 
-x
+Requires background knowledge (system-level), but supported by active community.
+Openness allows integration with the external world; diversity of packages available.
 
 ----------------------------------------------------------------------------------------------------
 - id:summary

@@ -28,22 +28,24 @@ modified from within itself. Extensibility achieved via object-oriented programm
 
 ----------------------------------------------------------------------------------------------------
 - id:dims-complexity
-- title:<i class='fa fa-cog'></i>
+- title:<div class='shade3'><i class='fa fa-recycle'></i><i class='fa fa-building-columns'></i></div>
 
-x
+Factoring using a rich class-based system covering system and application-level features.
+Basic automation (garbage collection) with more possible through libraries & via reflection.
 
 ----------------------------------------------------------------------------------------------------
 - id:dims-errors
-- title:<i class='fa fa-cog'></i>
+- title:<div class='shade1'><i class='fa fa-person-running'></i><i class='fa fa-bug-slash'></i></div>
 
-x
+Errors detected at runtime and can be corrected immediately in interactive editor/debugger.
+Further detection possible via engineering testing tools.
 
 ----------------------------------------------------------------------------------------------------
 - id:dims-adoptability
-- title:<i class='fa fa-cog'></i>
+- title:<div class='shade1'><i class='fa fa-table-cells-large'></i><i class='fa fa-user'></i><i class='fa fa-podcast'></i></div>
 
-x
-
+Steep learning curve, but uniform design makes understanding reusable. End-users can progressively become programmers.
+Active community, but closed world and limited packages.
 
 ----------------------------------------------------------------------------------------------------
 - id:summary

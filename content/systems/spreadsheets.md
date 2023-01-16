@@ -28,21 +28,24 @@ Adding only appends computations, but cannot modify existing ones.
 
 ----------------------------------------------------------------------------------------------------
 - id:dims-complexity
-- title:<i class='fa fa-cog'></i>
+- title:<div class='shade1'><i class='fa fa-wand-magic-sparkles'></i><i class='fa fa-receipt'></i></div>
 
-x
+Fixed structure of formulas and grid. High-level language for formulas with automated re-computation.
+Programming-by-example provides next-step automation.
 
 ----------------------------------------------------------------------------------------------------
 - id:dims-errors
-- title:<i class='fa fa-cog'></i>
+- title:<div class='shade2'><i class='fa fa-person-running'></i><i class='fa fa-hand-point-up'></i></div>
 
-x
+Slips caught at runtime, but no support for checking lapses or mistakes.
+Provides immediate feedback, making quick error correction possible.
 
 ----------------------------------------------------------------------------------------------------
 - id:dims-adoptability
-- title:<i class='fa fa-cog'></i>
+- title:<div class='shade3'><i class='fa fa-clapperboard'></i><i class='fa fa-user'></i><i class='fa fa-minimize'></i></div>
 
-x
+Domain-focus on specific needs and graphical interface supports learning. End-users can progressively become programmers.
+No packaging mechanism, but wide range of samples and community available.
 
 ----------------------------------------------------------------------------------------------------
 - id:summary

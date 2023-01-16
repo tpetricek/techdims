@@ -28,21 +28,24 @@ Programs cannot modify themselves, notebook or system at runtime.
 
 ----------------------------------------------------------------------------------------------------
 - id:dims-complexity
-- title:<i class='fa fa-cog'></i>
+- title:<div class='shade1'><i class='fa fa-recycle'></i><i class='fa fa-receipt'></i><i class='fa fa-satellite-dish'></i></div>
 
-x
+Complexity relegated to complex libraries (pandas, ML libraries, etc.) created outside the system.
+Basic language automation (GC) but no automatic recomputation in standard Jupyter setup.
 
 ----------------------------------------------------------------------------------------------------
 - id:dims-errors
-- title:<i class='fa fa-cog'></i>
+- title:<div class='shade2'><i class='fa fa-person-running'></i><i class='fa fa-hand-point-up'></i></div>
 
-x
+Slips caught at runtime. Limited checking of lapses or domain-specific mistakes.
+REPL-evaluation provides quick feedback, making quick error correction possible.
 
 ----------------------------------------------------------------------------------------------------
 - id:dims-adoptability
-- title:<i class='fa fa-cog'></i>
+- title:<div class='shade4'><i class='fa fa-clapperboard'></i><i class='fa fa-user'></i><i class='fa fa-globe'></i><i class='fa fa-boxes-packing'></i><i class='fa fa-podcast'></i></div>
 
-x
+Learnability is supported by focus on a specific domain, graphical interface and community.
+Notebooks can import a range of community packages and integrate with external systems.
 
 ----------------------------------------------------------------------------------------------------
 - id:summary

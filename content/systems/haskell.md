@@ -29,21 +29,24 @@ Programs cannot modify themselves nor the system. Type classes allow extensibili
 
 ----------------------------------------------------------------------------------------------------
 - id:dims-complexity
-- title:<i class='fa fa-cog'></i>
+- title:<div class='shade3'><i class='fa fa-recycle'></i><i class='fa fa-building-columns'></i></div>
 
-x
+Complexity factored using math-inspired type class hierarchies with type system support.
+Automates memory management (GC) and evaluation order (laziness).
 
 ----------------------------------------------------------------------------------------------------
 - id:dims-errors
-- title:<i class='fa fa-cog'></i>
+- title:<div class='shade3'><i class='fa fa-person-military-pointing'></i><i class='fa fa-code'></i></div>
 
-x
+Strict error checking eliminates lapes and slips and some mistakes at compile time.
+Error correction done in text editor, based on non-trivial error messages.
 
 ----------------------------------------------------------------------------------------------------
 - id:dims-adoptability
-- title:<i class='fa fa-cog'></i>
+- title:<div class='shade1'><i class='fa fa-infinity'></i><i class='fa fa-table-cells-large'></i><i class='fa fa-podcast'></i><i class='fa fa-boxes-packing'></i></div>
 
-x
+Learning requires background knowledge (mathematics), but is supported by community and uniform design.
+Closed ecosystem, but with community and diversity of packages.
 
 ----------------------------------------------------------------------------------------------------
 - id:summary

@@ -28,21 +28,24 @@ modified from within itself. Addressing can be done via "advising".
 
 ----------------------------------------------------------------------------------------------------
 - id:dims-complexity
-- title:<i class='fa fa-cog'></i>
+- title:<div class='shade3'><i class='fa fa-recycle'></i><i class='fa fa-building-columns'></i></div>
 
-x
+Optional but common factoring mechanisms include functions, CLOS and domain-specific languages.
+Basic automation (garbage collection) with more in the context of AI research.
 
 ----------------------------------------------------------------------------------------------------
 - id:dims-errors
-- title:<i class='fa fa-cog'></i>
+- title:<div class='shade1'><i class='fa fa-person-running'></i><i class='fa fa-bug-slash'></i><i class='fa fa-truck-fast'></i></div>
 
-x
+Errors detected at runtime and can be corrected immediately in interactive editor/debugger.
+More checking can be done via reflection and code analysis.
 
 ----------------------------------------------------------------------------------------------------
 - id:dims-adoptability
-- title:<i class='fa fa-cog'></i>
+- title:<div class='shade1'><i class='fa fa-table-cells-large'></i><i class='fa fa-podcast'></i></div>
 
-x
+Steep learning curve, but uniform design makes understanding reusable. Designed for programmers.
+Active community, but closed from the external world and limited packages available.
 
 ----------------------------------------------------------------------------------------------------
 - id:summary

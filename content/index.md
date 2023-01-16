@@ -55,6 +55,8 @@ compare and guide their work and, ultimately, stand on the shoulders of giants.
   [Start from a summary matrix of system and dimensions](-> #left=index,matrix-intro;big=index,matrix-body;footer=index,navigation)
 - Want to understand our motivation and methodology?  
   [Start from our paper about technical dimensions](-> #left=paper,main)
+- Want to the Technical Dimensions welcome page?  
+  [Go back and choose a different route](-> #splash=index,welcome)
 
 </div>
 
@@ -90,6 +92,14 @@ paper section, but note that not all cases are discussed in the paper.
 
 ## Select systems and dimensions to compare in the table
 
+<div class="matrix-footer">
+
+For example, you may want to compare different systems of a certain type such as
+OS-like systems (LISP machines, Smalltalk, UNIX, Web),
+sysems built around languages (Haskell, Notebooks) 
+or application-focused systems (spreadsheets, Hypercard, Boxer).
+
+</div>
 <div class="checksgroup">
 <div class="checks">
 

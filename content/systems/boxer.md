@@ -28,21 +28,24 @@ Adding only appends boxes and cannot modify existing ones.
 
 ----------------------------------------------------------------------------------------------------
 - id:dims-complexity
-- title:<i class='fa fa-cog'></i>
+- title:<div class='shade2'><i class='fa fa-recycle'></i><i class='fa fa-receipt'></i><i class='fa fa-satellite-dish'></i></div>
 
-x
+Basic factoring via language and box abstractions (ports). System automates user-interface 
+handling; high-level language and DSLs offer basic automation (garbage collection, turtle graphics).
 
 ----------------------------------------------------------------------------------------------------
 - id:dims-errors
-- title:<i class='fa fa-cog'></i>
+- title:<div class='shade2'><i class='fa fa-person-running'></i><i class='fa fa-hand-point-up'></i></div>
 
-x
+Slips detected at runtime, no support for checking lapses and mistakes.
+Evaluation offers immediate feedback, making quick error correction possible.
 
 ----------------------------------------------------------------------------------------------------
 - id:dims-adoptability
-- title:<i class='fa fa-cog'></i>
+- title:<div class='shade3'><i class='fa fa-minimize'></i><i class='fa fa-user'></i><i class='fa fa-table-cells-large'></i></div>
 
-x
+Simple and minimal design supports learnability. Unified design makes knowledge reusable.
+System is closed from external world and has only limited community and available packages or examples.
 
 ----------------------------------------------------------------------------------------------------
 - id:summary

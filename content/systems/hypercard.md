@@ -28,21 +28,24 @@ Adding only appends new content, but cannot modify existing ones.
 
 ----------------------------------------------------------------------------------------------------
 - id:dims-complexity
-- title:<i class='fa fa-cog'></i>
+- title:<div class='shade2'><i class='fa fa-recycle'></i><i class='fa fa-receipt'></i><i class='fa fa-satellite-dish'></i></div>
 
-x
+Basic factoring via language and card abstractions. Underlying system automates user-interface 
+handling; high-level scripting language offers basic automation (garbage collection).
 
 ----------------------------------------------------------------------------------------------------
 - id:dims-errors
-- title:<i class='fa fa-cog'></i>
+- title:<div class='shade3'><i class='fa fa-person-military-pointing'></i><i class='fa fa-person-running'></i><i class='fa fa-code'></i></div>
 
-x
+High-level structure prevents many errors by construction. Script slips checked at runtime. 
+Correction done in code based on an error message.
 
 ----------------------------------------------------------------------------------------------------
 - id:dims-adoptability
-- title:<i class='fa fa-cog'></i>
+- title:<div class='shade3'><i class='fa fa-minimize'></i><i class='fa fa-user'></i><i class='fa fa-podcast'></i></div>
 
-x
+Focus on specific domain (hypermedia) and graphical interface supports learning. End-users can 
+progresively become programmers. Closed from external world, but active community sharing examples.
 
 ----------------------------------------------------------------------------------------------------
 - id:summary

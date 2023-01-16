@@ -27,21 +27,24 @@ a large degree of modifiability (via dynamic scripting). CSS provides powerful a
 
 ----------------------------------------------------------------------------------------------------
 - id:dims-complexity
-- title:<i class='fa fa-cog'></i>
+- title:<div class='shade4'><i class='fa fa-recycle'></i><i class='fa fa-building-columns'></i><i class='fa fa-gears'></i><i class='fa fa-receipt'></i></div>
 
-x
+Factoring via high-level languages (JavaScript), rule-based systems (CSS) and standard interfaces
+(W3C specifications). Automation at basic level (garbage collection) and in declarative domains (CSS).
 
 ----------------------------------------------------------------------------------------------------
 - id:dims-errors
-- title:<i class='fa fa-cog'></i>
+- title:<div class='shade4'><i class='fa fa-person-rays'></i><i class='fa fa-truck-fast'></i><i class='fa fa-code'></i><i class='fa fa-bug-slash'></i></div>
 
-x
+Generally aims to do the best thing possible (automatic recovery) on errors.
+Direct error correction can be done in browser tools, but not permanent.
 
 ----------------------------------------------------------------------------------------------------
 - id:dims-adoptability
-- title:<i class='fa fa-cog'></i>
+- title:<div class='shade4'><i class='fa fa-globe'></i><i class='fa fa-boxes-packing'></i><i class='fa fa-podcast'></i></div>
 
-x
+Web has a diversity of technologies; learnability is mainly achieved through community.
+The diversified web ecosystem allows for the integration with external systems.
 
 ----------------------------------------------------------------------------------------------------
 - id:summary
