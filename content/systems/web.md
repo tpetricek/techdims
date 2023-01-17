@@ -1,47 +1,54 @@
 ----------------------------------------------------------------------------------------------------
 - id:dims-interaction
-- title:<div class='shade4'><i class='fa fa-circle-play'></i> <i class='fa fa-rotate-right'></i> <i class='fa fa-lock'></i> <i class='fa fa-lock-open'></i> <i class='fa fa-subscript'></i></div>
+- shade: shade4
+- characteristics: interaction-multi, interaction-repl, interaction-live, interaction-closed, interaction-open, interaction-principles
 
 Edit and refresh mode with state visible in DOM browser and live developer tools.
 Code abstractions are closed, but style abstractions more transparent.
 
 ----------------------------------------------------------------------------------------------------
 - id:dims-notation
-- title:<div class='shade3'><i class='fa fa-handshake'></i> <i class='fa fa-bars-staggered'></i></div>
+- shade: shade3
+- characteristics: notations-complementing, notations-nonuniform
 
 Diversity of text-based highly non-uniform notations (HTML, JavaScript, CSS) with limited structure editing for debugging (DOM).
 
 ----------------------------------------------------------------------------------------------------
 - id:dims-conceptual
-- title:<div class='shade1'><i class='fa fa-file'></i><i class='fa fa-shapes'></i><i class='fa fa-flask'></i><i class='fa fa-toolbox'></i></div>
+- shade: shade1
+- characteristics: concepts-large, concepts-diverse, concepts-domain, concepts-convenient
 
 Improvised mix of open "large" concepts (HTTP) and specific ones (DOM).
 Many convenient libraries and tools with low commonality and varying composability.
 
 ----------------------------------------------------------------------------------------------------
 - id:dims-customizability
-- title:<div class='shade4'><i class='fa fa-car-on'></i><i class='fa fa-square-xmark'></i><i class='fa fa-list-ol'></i><i class='fa fa-file-cirlce-plus'></i></div>
+- shade: shade4
+- characteristics: custom-runtime, custom-closed, custom-addressing, custom-additive
 
 Basic infrastructure (browser, protocols) are fixed. Individual applications can have
 a large degree of modifiability (via dynamic scripting). CSS provides powerful addressing.
 
 ----------------------------------------------------------------------------------------------------
 - id:dims-complexity
-- title:<div class='shade4'><i class='fa fa-recycle'></i><i class='fa fa-building-columns'></i><i class='fa fa-gears'></i><i class='fa fa-receipt'></i></div>
+- shade: shade4
+- characteristics: complexity-gc, complexity-rich, complexity-lowlevel, complexity-domain
 
 Factoring via high-level languages (JavaScript), rule-based systems (CSS) and standard interfaces
 (W3C specifications). Automation at basic level (garbage collection) and in declarative domains (CSS).
 
 ----------------------------------------------------------------------------------------------------
 - id:dims-errors
-- title:<div class='shade4'><i class='fa fa-person-rays'></i><i class='fa fa-truck-fast'></i><i class='fa fa-code'></i><i class='fa fa-bug-slash'></i></div>
+- shade: shade4
+- characteristics: errors-custom, errors-recovery, errors-code, errors-interactive
 
 Generally aims to do the best thing possible (automatic recovery) on errors.
 Direct error correction can be done in browser tools, but not permanent.
 
 ----------------------------------------------------------------------------------------------------
 - id:dims-adoptability
-- title:<div class='shade4'><i class='fa fa-globe'></i><i class='fa fa-boxes-packing'></i><i class='fa fa-podcast'></i></div>
+- shade: shade4
+- characteristics: adoptability-worse, adoptability-packages, adoptability-community
 
 Web has a diversity of technologies; learnability is mainly achieved through community.
 The diversified web ecosystem allows for the integration with external systems.

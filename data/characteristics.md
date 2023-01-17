@@ -2,13 +2,13 @@ Interaction
 ===============================================================================
 
 ## Feedback loops
-- **interaction-build** (fa-screwdriver-wrench) - some kind of build phase
 - **interaction-repl** (fa-circle-play) - REPL-like execution
 - **interaction-live** (fa-rotate-right) - some kind of live feedback
 - **interaction-dm** (fa-hand-pointer) - some kind of direct manipulation
 
 ## Modes of interaction
-- **interaction-tbd** (fa-tbd) - TBD!
+- **interaction-single** (fa-caret-right) - single mode of interaction
+- **interaction-multi** (fa-forward) - multiple modes of interaction (build phase)
 
 ## Abstraction construction
 - **interaction-open** (fa-lock-open) - open abstractions
@@ -54,7 +54,7 @@ Conceptual structure
 - **concepts-domain** (fa-flask) - domain specific concepts
 
 ## Commonality
-- **concepts-tbd** (fa-tbd) - TBD!
+- **concepts-interface** (fa-tbd) - explicit interface for capturing commondality
 
 Customizability
 ===============================================================================
@@ -101,6 +101,7 @@ Errors
 - **errors-interactive** (fa-bug-slash) - interactive editor/debugger for correction
 - **errors-immediate** (fa-hand-point-up) - immediate feedback
 - **errors-code** (fa-code) - fix errors in code based on error messages
+- **errors-recovery** (fa-truck-fast) - automatic error recovery
 
 Adoptability
 ===============================================================================

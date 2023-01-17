@@ -322,31 +322,31 @@ How do we go from abstractions to concrete examples and vice versa?<br />
 <p><em>Jupyter notebook.</em> In Jupyter notebooks, you are inclined to work with concrete things, because you see previews after individual cells. This discourages creating abstractions, because then you would not be able to look inside at such a fine grained level.</p>
 <p><em>Spreadsheets.</em> Up until the recent introduction of lambda expressions into Excel, spreadsheets have been relentlessly concrete, without any way to abstract and reuse patterns of computation other than copy-and-paste.</p>
 </section>
-<section data-file="systems/boxer" data-id="dims-interaction" data-title="<div class='shade3'><i class='fa fa-circle-play'></i> <i class='fa fa-hand-pointer'></i> <i class='fa fa-rotate-right'></i> <i class='fa fa-lock-open'></i> <i class='fa fa-subscript'></i> <i class='fa fa-eye'></i></div>">
+<section data-characteristics="interaction-repl, interaction-dm, interaction-open, interaction-principles, interaction-concrete" data-file="systems/boxer" data-id="dims-interaction" data-shade="shade3" data-title="<div class='shade3'><i class='fa fa-circle-play' title='REPL-like execution'></i><i class='fa fa-hand-pointer' title='some kind of direct manipulation'></i><i class='fa fa-lock-open' title='open abstractions'></i><i class='fa fa-subscript' title='abstraction from first principles'></i><i class='fa fa-eye' title='abstraction from concrete'></i></div>">
 <p>Direct manipulation for graphical elements with REPL-like code execution.
 Abstraction via messages sent to boxes and using ports to reuse concrete boxes.</p>
 </section>
-<section data-file="systems/boxer" data-id="dims-notation" data-title="<div class='shade2'><i class='fa fa-handshake'></i> <i class='fa fa-arrow-pointer'></i> <i class='fa fa-bars'></i> <i class='fa fa-iamge'></i></div>">
+<section data-characteristics="notations-complementing, notations, notations-uniform, notations-graphical" data-file="systems/boxer" data-id="dims-notation" data-shade="shade2" data-title="<div class='shade2'><i class='fa fa-handshake' title='has complementing notation'></i><i class='fa fa-arrow-pointer' title='some structure editing'></i><i class='fa fa-bars' title='uniform notation'></i><i class='fa fa-image' title='some graphical notation'></i></div>">
 <p>Complementing graphical notation (boxes) with source code in LISP.
 Everything is a box (graphical) or a list (code). Tree-based document model.</p>
 </section>
-<section data-file="systems/boxer" data-id="dims-conceptual" data-title="<div class='shade3'><i class='fa fa-gem'></i><i class='fa fa-flask'></i><i class='fa fa-link-slash'></i></div>">
+<section data-characteristics="concepts-minimal, concepts-domain, concepts-noncomposable" data-file="systems/boxer" data-id="dims-conceptual" data-shade="shade3" data-title="<div class='shade3'><i class='fa fa-gem' title='small number of concepts'></i><i class='fa fa-flask' title='domain specific concepts'></i><i class='fa fa-link-slash' title='lacks composability'></i></div>">
 <p>Limited number of domain-specific concepts (box, graphical output).
 Composability at code level, but not at a higher level (only via ports).</p>
 </section>
-<section data-file="systems/boxer" data-id="dims-customizability" data-title="<div class='shade1'><i class='fa fa-square-xmark'></i><i class='fa fa-file'></i></div>">
+<section data-characteristics="custom-closed, concepts-large" data-file="systems/boxer" data-id="dims-customizability" data-shade="shade1" data-title="<div class='shade1'><i class='fa fa-square-xmark' title='not modifieable at all'></i><i class='fa fa-file' title='large concepts'></i></div>">
 <p>Image-based system, editable during execution, but system itself cannot be modified.
 Adding only appends boxes and cannot modify existing ones.</p>
 </section>
-<section data-file="systems/boxer" data-id="dims-complexity" data-title="<div class='shade2'><i class='fa fa-recycle'></i><i class='fa fa-receipt'></i><i class='fa fa-satellite-dish'></i></div>">
+<section data-characteristics="complexity-gc, complexity-domain, complexity-externalized" data-file="systems/boxer" data-id="dims-complexity" data-shade="shade2" data-title="<div class='shade2'><i class='fa fa-recycle' title='basic language automation like GC'></i><i class='fa fa-receipt' title='domain-specific factoring (grid, ui, boxes)'></i><i class='fa fa-satellite-dish' title='lots of externalized complexity'></i></div>">
 <p>Basic factoring via language and box abstractions (ports). System automates user-interface
 handling; high-level language and DSLs offer basic automation (garbage collection, turtle graphics).</p>
 </section>
-<section data-file="systems/boxer" data-id="dims-errors" data-title="<div class='shade2'><i class='fa fa-person-running'></i><i class='fa fa-hand-point-up'></i></div>">
+<section data-characteristics="errors-dynamic, errors-immediate" data-file="systems/boxer" data-id="dims-errors" data-shade="shade2" data-title="<div class='shade2'><i class='fa fa-person-running' title='runtime error checking'></i><i class='fa fa-hand-point-up' title='immediate feedback'></i></div>">
 <p>Slips detected at runtime, no support for checking lapses and mistakes.
 Evaluation offers immediate feedback, making quick error correction possible.</p>
 </section>
-<section data-file="systems/boxer" data-id="dims-adoptability" data-title="<div class='shade3'><i class='fa fa-minimize'></i><i class='fa fa-user'></i><i class='fa fa-table-cells-large'></i></div>">
+<section data-characteristics="adoptability-minimal, adoptability-nonexperts, adoptability-unified" data-file="systems/boxer" data-id="dims-adoptability" data-shade="shade3" data-title="<div class='shade3'><i class='fa fa-minimize' title='simple, small, specific needs'></i><i class='fa fa-user' title='used by non-experts'></i><i class='fa fa-table-cells-large' title='unified design, provides value after intial learning curve'></i></div>">
 <p>Simple and minimal design supports learnability. Unified design makes knowledge reusable.
 System is closed from external world and has only limited community and available packages or examples.</p>
 </section>
@@ -359,31 +359,31 @@ System is closed from external world and has only limited community and availabl
 <p><embed type="application/transclusion" src="" data-links="content=summary,link=index" /></p>
 <p>more here</p>
 </section>
-<section data-file="systems/haskell" data-id="dims-interaction" data-title="<div class='shade2'><i class='fa fa-screwdriver-wrench'></i> <i class='fa fa-lock'></i> <i class='fa fa-subscript'></i></div>">
+<section data-characteristics="interaction-multi, interaction-closed, interaction-principles" data-file="systems/haskell" data-id="dims-interaction" data-shade="shade2" data-title="<div class='shade2'><i class='fa fa-forward' title='multiple modes of interaction (build phase)'></i><i class='fa fa-lock' title='closed abstractiosn'></i><i class='fa fa-subscript' title='abstraction from first principles'></i></div>">
 <p>Separate editing, compilation and execution modes with feedback at each level.
 Abstractions from first-principles (functions, type classes) are opaque during execution.</p>
 </section>
-<section data-file="systems/haskell" data-id="dims-notation" data-title="<div class='shade3'><i class='fa fa-trophy'></i> <i class='fa fa-handshake'></i></div>">
+<section data-characteristics="notations-primary, notations-complementing" data-file="systems/haskell" data-id="dims-notation" data-shade="shade3" data-title="<div class='shade3'><i class='fa fa-trophy' title='has primary notation'></i><i class='fa fa-handshake' title='has complementing notation'></i></div>">
 <p>Primary source code notation with secondary infrastructure notations, edited as text.
 Rich mostly explicit language with variety of extensions.</p>
 </section>
-<section data-file="systems/haskell" data-id="dims-conceptual" data-title="<div class='shade2'><i class='fa fa-gem'></i><i class='fa fa-link'></i><i class='fa fa-hand-fist'></i></div>">
+<section data-characteristics="concepts-interface, concepts-minimal, concepts-composable, concepts-nonconvenient" data-file="systems/haskell" data-id="dims-conceptual" data-shade="shade2" data-title="<div class='shade2'><i class='fa fa-tbd' title='explicit interface for capturing commondality'></i><i class='fa fa-gem' title='small number of concepts'></i><i class='fa fa-link' title='high composability'></i><i class='fa fa-hand-fist' title='lacks convenience'></i></div>">
 <p>Small number of unified concepts (functions, expressions) at odds with outside world.
 Composability at expression and type level. Limited set of convenience tools. Type classes for commonality.</p>
 </section>
-<section data-file="systems/haskell" data-id="dims-customizability" data-title="<div class='shade2'><i class='fa fa-code-pull-request'></i><i class='fa fa-flag-checkered'></i><i class='fa fa-file-circle-plus'></i></div>">
+<section data-characteristics="custom-oss, custom-stages, custom-additive" data-file="systems/haskell" data-id="dims-customizability" data-shade="shade2" data-title="<div class='shade2'><i class='fa fa-code-pull-request' title='modifiable as oss'></i><i class='fa fa-flag-checkered' title='stage distinction'></i><i class='fa fa-file-circle-plus' title='additive authoring'></i></div>">
 <p>Language is fixed, but can theoretically be modified as open-source project with community.
 Programs cannot modify themselves nor the system. Type classes allow extensibility at compile-time.</p>
 </section>
-<section data-file="systems/haskell" data-id="dims-complexity" data-title="<div class='shade3'><i class='fa fa-recycle'></i><i class='fa fa-building-columns'></i></div>">
+<section data-characteristics="complexity-gc, complexity-rich" data-file="systems/haskell" data-id="dims-complexity" data-shade="shade3" data-title="<div class='shade3'><i class='fa fa-recycle' title='basic language automation like GC'></i><i class='fa fa-building-columns' title='rich complexity structuring (FP, OOP)'></i></div>">
 <p>Complexity factored using math-inspired type class hierarchies with type system support.
 Automates memory management (GC) and evaluation order (laziness).</p>
 </section>
-<section data-file="systems/haskell" data-id="dims-errors" data-title="<div class='shade3'><i class='fa fa-person-military-pointing'></i><i class='fa fa-code'></i></div>">
+<section data-characteristics="errors-static, errors-code" data-file="systems/haskell" data-id="dims-errors" data-shade="shade3" data-title="<div class='shade3'><i class='fa fa-person-military-pointing' title='static error checking'></i><i class='fa fa-code' title='fix errors in code based on error messages'></i></div>">
 <p>Strict error checking eliminates lapes and slips and some mistakes at compile time.
 Error correction done in text editor, based on non-trivial error messages.</p>
 </section>
-<section data-file="systems/haskell" data-id="dims-adoptability" data-title="<div class='shade1'><i class='fa fa-infinity'></i><i class='fa fa-table-cells-large'></i><i class='fa fa-podcast'></i><i class='fa fa-boxes-packing'></i></div>">
+<section data-characteristics="adoptability-background, adoptability-unified, adoptability-community, adoptability-packages" data-file="systems/haskell" data-id="dims-adoptability" data-shade="shade1" data-title="<div class='shade1'><i class='fa fa-infinity' title='advanced background knowledge assumptions'></i><i class='fa fa-table-cells-large' title='unified design, provides value after intial learning curve'></i><i class='fa fa-podcast' title='vibrant community in some sense'></i><i class='fa fa-boxes-packing' title='easy sharing of packages'></i></div>">
 <p>Learning requires background knowledge (mathematics), but is supported by community and uniform design.
 Closed ecosystem, but with community and diversity of packages.</p>
 </section>
@@ -396,31 +396,31 @@ Closed ecosystem, but with community and diversity of packages.</p>
 <p><embed type="application/transclusion" src="" data-links="content=summary,link=index" /></p>
 <p>more here</p>
 </section>
-<section data-file="systems/hypercard" data-id="dims-interaction" data-title="<div class='shade3'><i class='fa fa-circle-play'></i> <i class='fa fa-hand-pointer'></i> <i class='fa fa-lock-open'></i> <i class='fa fa-subscript'></i> <i class='fa fa-eye'></i></div>">
+<section data-characteristics="interaction-repl, interaction-dm, interaction-open, interaction-principles, interaction-concrete" data-file="systems/hypercard" data-id="dims-interaction" data-shade="shade3" data-title="<div class='shade3'><i class='fa fa-circle-play' title='REPL-like execution'></i><i class='fa fa-hand-pointer' title='some kind of direct manipulation'></i><i class='fa fa-lock-open' title='open abstractions'></i><i class='fa fa-subscript' title='abstraction from first principles'></i><i class='fa fa-eye' title='abstraction from concrete'></i></div>">
 <p>Direct manipulation for user interface; programmatic scripting with execution feedback loop.
 Abstractions on card level using shared backgrounds and transclusion.</p>
 </section>
-<section data-file="systems/hypercard" data-id="dims-notation" data-title="<div class='shade1'><i class='fa fa-handshake'></i> <i class='fa fa-arrow-pointer'></i> <i class='fa fa-bars-staggered'></i> <i class='fa fa-image'></i></div>">
+<section data-characteristics="notations-complementing, notations, notations-nonuniform, notations-graphical" data-file="systems/hypercard" data-id="dims-notation" data-shade="shade1" data-title="<div class='shade1'><i class='fa fa-handshake' title='has complementing notation'></i><i class='fa fa-arrow-pointer' title='some structure editing'></i><i class='fa fa-bars-staggered' title='non-uniform notation'></i><i class='fa fa-image' title='some graphical notation'></i></div>">
 <p>Complementing graphical notation (user interface) with source code in Hypertalk.
 Variety of controls and langauge features with tight expression geography in user interface.</p>
 </section>
-<section data-file="systems/hypercard" data-id="dims-conceptual" data-title="<div class='shade3'><i class='fa fa-gem'></i><i class='fa fa-shapes'></i><i class='fa fa-link-slash'></i><i class='fa fa-toolbox'></i></div>">
+<section data-characteristics="concepts-minimal, concepts-diverse, concepts-noncomposable, concepts-convenient" data-file="systems/hypercard" data-id="dims-conceptual" data-shade="shade3" data-title="<div class='shade3'><i class='fa fa-gem' title='small number of concepts'></i><i class='fa fa-shapes' title='variety of diverse concepts'></i><i class='fa fa-link-slash' title='lacks composability'></i><i class='fa fa-toolbox' title='high convenience'></i></div>">
 <p>Limited number of domain-specific concepts (cards, user interface elements, scripts).
 Partial composability at script level, but limited at card level. Convenient for the given domain.</p>
 </section>
-<section data-file="systems/hypercard" data-id="dims-customizability" data-title="<div class='shade1'><i class='fa fa-file'></i><i class='fa fa-square-xmark'></i></div>">
+<section data-characteristics="concepts-large, custom-closed" data-file="systems/hypercard" data-id="dims-customizability" data-shade="shade1" data-title="<div class='shade1'><i class='fa fa-file' title='large concepts'></i><i class='fa fa-square-xmark' title='not modifieable at all'></i></div>">
 <p>Cards are editable during execution, but system itself cannot be modified.
 Adding only appends new content, but cannot modify existing ones.</p>
 </section>
-<section data-file="systems/hypercard" data-id="dims-complexity" data-title="<div class='shade2'><i class='fa fa-recycle'></i><i class='fa fa-receipt'></i><i class='fa fa-satellite-dish'></i></div>">
+<section data-characteristics="complexity-gc, complexity-domain, complexity-externalized" data-file="systems/hypercard" data-id="dims-complexity" data-shade="shade2" data-title="<div class='shade2'><i class='fa fa-recycle' title='basic language automation like GC'></i><i class='fa fa-receipt' title='domain-specific factoring (grid, ui, boxes)'></i><i class='fa fa-satellite-dish' title='lots of externalized complexity'></i></div>">
 <p>Basic factoring via language and card abstractions. Underlying system automates user-interface
 handling; high-level scripting language offers basic automation (garbage collection).</p>
 </section>
-<section data-file="systems/hypercard" data-id="dims-errors" data-title="<div class='shade3'><i class='fa fa-person-military-pointing'></i><i class='fa fa-person-running'></i><i class='fa fa-code'></i></div>">
+<section data-characteristics="errors-static, errors-dynamic, errors-code" data-file="systems/hypercard" data-id="dims-errors" data-shade="shade3" data-title="<div class='shade3'><i class='fa fa-person-military-pointing' title='static error checking'></i><i class='fa fa-person-running' title='runtime error checking'></i><i class='fa fa-code' title='fix errors in code based on error messages'></i></div>">
 <p>High-level structure prevents many errors by construction. Script slips checked at runtime.
 Correction done in code based on an error message.</p>
 </section>
-<section data-file="systems/hypercard" data-id="dims-adoptability" data-title="<div class='shade3'><i class='fa fa-minimize'></i><i class='fa fa-user'></i><i class='fa fa-podcast'></i></div>">
+<section data-characteristics="adoptability-minimal, adoptability-nonexperts, adoptability-community" data-file="systems/hypercard" data-id="dims-adoptability" data-shade="shade3" data-title="<div class='shade3'><i class='fa fa-minimize' title='simple, small, specific needs'></i><i class='fa fa-user' title='used by non-experts'></i><i class='fa fa-podcast' title='vibrant community in some sense'></i></div>">
 <p>Focus on specific domain (hypermedia) and graphical interface supports learning. End-users can
 progresively become programmers. Closed from external world, but active community sharing examples.</p>
 </section>
@@ -433,31 +433,31 @@ progresively become programmers. Closed from external world, but active communit
 <p><embed type="application/transclusion" src="" data-links="content=summary,link=index" /></p>
 <p>more here</p>
 </section>
-<section data-file="systems/lisp-machines" data-id="dims-interaction" data-title="<div class='shade1'><i class='fa fa-circle-play'></i> <i class='fa fa-lock-open'></i> <i class='fa fa-subscript'></i></div>">
+<section data-characteristics="interaction-single, interaction-repl, interaction-open, interaction-principles" data-file="systems/lisp-machines" data-id="dims-interaction" data-shade="shade1" data-title="<div class='shade1'><i class='fa fa-caret-right' title='single mode of interaction'></i><i class='fa fa-circle-play' title='REPL-like execution'></i><i class='fa fa-lock-open' title='open abstractions'></i><i class='fa fa-subscript' title='abstraction from first principles'></i></div>">
 <p>Integrated execution and editing mode, giving feedback at runtime.
 Abstractions constructed using functions are accessible as data.</p>
 </section>
-<section data-file="systems/lisp-machines" data-id="dims-notation" data-title="<div class='shade4'><i class='fa fa-trophy'></i> <i class='fa fa-arrow-pointer'></i> <i class='fa fa-bars'></i></div>">
+<section data-characteristics="notations-primary, notations, notations-uniform" data-file="systems/lisp-machines" data-id="dims-notation" data-shade="shade4" data-title="<div class='shade4'><i class='fa fa-trophy' title='has primary notation'></i><i class='fa fa-arrow-pointer' title='some structure editing'></i><i class='fa fa-bars' title='uniform notation'></i></div>">
 <p>Very uniform notation with code and data represented as S-expressions
 and edited either as text or using structure editor. Use of domain-specific languages.</p>
 </section>
-<section data-file="systems/lisp-machines" data-id="dims-conceptual" data-title="<div class='shade2'><i class='fa fa-gem'></i><i class='fa fa-link'></i><i class='fa fa-hand-fist'></i></div>">
+<section data-characteristics="concepts-interface, concepts-minimal, concepts-composable, concepts-nonconvenient" data-file="systems/lisp-machines" data-id="dims-conceptual" data-shade="shade2" data-title="<div class='shade2'><i class='fa fa-tbd' title='explicit interface for capturing commondality'></i><i class='fa fa-gem' title='small number of concepts'></i><i class='fa fa-link' title='high composability'></i><i class='fa fa-hand-fist' title='lacks convenience'></i></div>">
 <p>Small number of unified concepts ("everything is a list") at odds with outside world.
 Allows for composability, but lacks convenience ("Lisp curse").</p>
 </section>
-<section data-file="systems/lisp-machines" data-id="dims-customizability" data-title="<div class='shade3'><i class='fa fa-file'></i><i class='fa fa-car-on'></i><i class='fa fa-list-ol'></i><i class='fa fa-file-circle-plus'></i><i class='fa fa-arrows-spin'></i></div>">
+<section data-characteristics="concepts-large, custom-runtime, custom-addressing, custom-additive, custom-sustainable" data-file="systems/lisp-machines" data-id="dims-customizability" data-shade="shade3" data-title="<div class='shade3'><i class='fa fa-file' title='large concepts'></i><i class='fa fa-car-on' title='modifiable while running'></i><i class='fa fa-list-ol' title='clever addressing mechanism'></i><i class='fa fa-file-circle-plus' title='additive authoring'></i><i class='fa fa-arrows-spin' title='self-sustainable'></i></div>">
 <p>System can be customized at runtime. Much of the system is written in itself and can be
 modified from within itself. Addressing can be done via "advising".</p>
 </section>
-<section data-file="systems/lisp-machines" data-id="dims-complexity" data-title="<div class='shade3'><i class='fa fa-recycle'></i><i class='fa fa-building-columns'></i></div>">
+<section data-characteristics="complexity-gc, complexity-rich" data-file="systems/lisp-machines" data-id="dims-complexity" data-shade="shade3" data-title="<div class='shade3'><i class='fa fa-recycle' title='basic language automation like GC'></i><i class='fa fa-building-columns' title='rich complexity structuring (FP, OOP)'></i></div>">
 <p>Optional but common factoring mechanisms include functions, CLOS and domain-specific languages.
 Basic automation (garbage collection) with more in the context of AI research.</p>
 </section>
-<section data-file="systems/lisp-machines" data-id="dims-errors" data-title="<div class='shade1'><i class='fa fa-person-running'></i><i class='fa fa-bug-slash'></i><i class='fa fa-truck-fast'></i></div>">
+<section data-characteristics="errors-dynamic, errors-recovery, errors-interactive" data-file="systems/lisp-machines" data-id="dims-errors" data-shade="shade1" data-title="<div class='shade1'><i class='fa fa-person-running' title='runtime error checking'></i><i class='fa fa-truck-fast' title='automatic error recovery'></i><i class='fa fa-bug-slash' title='interactive editor/debugger for correction'></i></div>">
 <p>Errors detected at runtime and can be corrected immediately in interactive editor/debugger.
 More checking can be done via reflection and code analysis.</p>
 </section>
-<section data-file="systems/lisp-machines" data-id="dims-adoptability" data-title="<div class='shade1'><i class='fa fa-table-cells-large'></i><i class='fa fa-podcast'></i></div>">
+<section data-characteristics="adoptability-unified, adoptability-community" data-file="systems/lisp-machines" data-id="dims-adoptability" data-shade="shade1" data-title="<div class='shade1'><i class='fa fa-table-cells-large' title='unified design, provides value after intial learning curve'></i><i class='fa fa-podcast' title='vibrant community in some sense'></i></div>">
 <p>Steep learning curve, but uniform design makes understanding reusable. Designed for programmers.
 Active community, but closed from the external world and limited packages available.</p>
 </section>
@@ -470,31 +470,31 @@ Active community, but closed from the external world and limited packages availa
 <p><embed type="application/transclusion" src="systems/lisp-machines,summary" data-links="#left=index" /></p>
 <p>more here</p>
 </section>
-<section data-file="systems/notebooks" data-id="dims-interaction" data-title="<div class='shade3'><i class='fa fa-circle-play'></i> <i class='fa fa-lock-open'></i> <i class='fa fa-subscript'></i> <i class='fa fa-eye'></i></div>">
+<section data-characteristics="interaction-repl, interaction-open, interaction-principles, interaction-concrete" data-file="systems/notebooks" data-id="dims-interaction" data-shade="shade3" data-title="<div class='shade3'><i class='fa fa-circle-play' title='REPL-like execution'></i><i class='fa fa-lock-open' title='open abstractions'></i><i class='fa fa-subscript' title='abstraction from first principles'></i><i class='fa fa-eye' title='abstraction from concrete'></i></div>">
 <p>Feedback and execution at cell level.
 Programmatic abstractions are possible, but manual approach by copying or modifying code is common.</p>
 </section>
-<section data-file="systems/notebooks" data-id="dims-notation" data-title="<div class='shade2'><i class='fa fa-handshake'></i> <i class='fa fa-arrow-pointer'></i> <i class='fa fa-bars-staggered'></i> <i class='fa fa-image'></i></div>">
+<section data-characteristics="notations-complementing, notations, notations-nonuniform, notations-graphical" data-file="systems/notebooks" data-id="dims-notation" data-shade="shade2" data-title="<div class='shade2'><i class='fa fa-handshake' title='has complementing notation'></i><i class='fa fa-arrow-pointer' title='some structure editing'></i><i class='fa fa-bars-staggered' title='non-uniform notation'></i><i class='fa fa-image' title='some graphical notation'></i></div>">
 <p>Literate programming with code, text and outputs, embedded in a notebook as complementing notations.
 Document model where notebook is a list of cells.</p>
 </section>
-<section data-file="systems/notebooks" data-id="dims-conceptual" data-title="<div class='shade4'><i class='fa fa-file'></i><i class='fa fa-shapes'></i><i class='fa fa-link-slash'></i><i class='fa fa-toolbox'></i></div>">
+<section data-characteristics="concepts-large, concepts-diverse, concepts-noncomposable, concepts-convenient" data-file="systems/notebooks" data-id="dims-conceptual" data-shade="shade4" data-title="<div class='shade4'><i class='fa fa-file' title='large concepts'></i><i class='fa fa-shapes' title='variety of diverse concepts'></i><i class='fa fa-link-slash' title='lacks composability'></i><i class='fa fa-toolbox' title='high convenience'></i></div>">
 <p>Notebook and cells as "large" concepts with code notions (Python) as "small" concepts.
 Composability primarily at code level, but not notebook level. Convenient libraries and tools.</p>
 </section>
-<section data-file="systems/notebooks" data-id="dims-customizability" data-title="<div class='shade2'><i class='fa fa-code-pull-request'></i><i class='fa fa-square-xmark'></i></div>">
+<section data-characteristics="custom-oss, custom-closed" data-file="systems/notebooks" data-id="dims-customizability" data-shade="shade2" data-title="<div class='shade2'><i class='fa fa-code-pull-request' title='modifiable as oss'></i><i class='fa fa-square-xmark' title='not modifieable at all'></i></div>">
 <p>System is fixed, but can theoretically be modified as open-source project with community.
 Programs cannot modify themselves, notebook or system at runtime.</p>
 </section>
-<section data-file="systems/notebooks" data-id="dims-complexity" data-title="<div class='shade1'><i class='fa fa-recycle'></i><i class='fa fa-receipt'></i><i class='fa fa-satellite-dish'></i></div>">
+<section data-characteristics="complexity-gc, complexity-domain, complexity-externalized" data-file="systems/notebooks" data-id="dims-complexity" data-shade="shade1" data-title="<div class='shade1'><i class='fa fa-recycle' title='basic language automation like GC'></i><i class='fa fa-receipt' title='domain-specific factoring (grid, ui, boxes)'></i><i class='fa fa-satellite-dish' title='lots of externalized complexity'></i></div>">
 <p>Complexity relegated to complex libraries (pandas, ML libraries, etc.) created outside the system.
 Basic language automation (GC) but no automatic recomputation in standard Jupyter setup.</p>
 </section>
-<section data-file="systems/notebooks" data-id="dims-errors" data-title="<div class='shade2'><i class='fa fa-person-running'></i><i class='fa fa-hand-point-up'></i></div>">
+<section data-characteristics="errors-dynamic, errors-immediate" data-file="systems/notebooks" data-id="dims-errors" data-shade="shade2" data-title="<div class='shade2'><i class='fa fa-person-running' title='runtime error checking'></i><i class='fa fa-hand-point-up' title='immediate feedback'></i></div>">
 <p>Slips caught at runtime. Limited checking of lapses or domain-specific mistakes.
 REPL-evaluation provides quick feedback, making quick error correction possible.</p>
 </section>
-<section data-file="systems/notebooks" data-id="dims-adoptability" data-title="<div class='shade4'><i class='fa fa-clapperboard'></i><i class='fa fa-user'></i><i class='fa fa-globe'></i><i class='fa fa-boxes-packing'></i><i class='fa fa-podcast'></i></div>">
+<section data-characteristics="adoptability-domain, adoptability-nonexperts, adoptability-worse, adoptability-packages, adoptability-community" data-file="systems/notebooks" data-id="dims-adoptability" data-shade="shade4" data-title="<div class='shade4'><i class='fa fa-clapperboard' title='focus on a specific application domain'></i><i class='fa fa-user' title='used by non-experts'></i><i class='fa fa-globe' title='compatibility with anything external'></i><i class='fa fa-boxes-packing' title='easy sharing of packages'></i><i class='fa fa-podcast' title='vibrant community in some sense'></i></div>">
 <p>Learnability is supported by focus on a specific domain, graphical interface and community.
 Notebooks can import a range of community packages and integrate with external systems.</p>
 </section>
@@ -507,31 +507,31 @@ Notebooks can import a range of community packages and integrate with external s
 <p><embed type="application/transclusion" src="" data-links="content=summary,link=index" /></p>
 <p>more here</p>
 </section>
-<section data-file="systems/smalltalk" data-id="dims-interaction" data-title="<div class='shade1'><i class='fa fa-circle-play'></i> <i class='fa fa-lock-open'></i> <i class='fa fa-subscript'></i></div>">
+<section data-characteristics="interaction-single, interaction-repl, interaction-open, interaction-principles" data-file="systems/smalltalk" data-id="dims-interaction" data-shade="shade1" data-title="<div class='shade1'><i class='fa fa-caret-right' title='single mode of interaction'></i><i class='fa fa-circle-play' title='REPL-like execution'></i><i class='fa fa-lock-open' title='open abstractions'></i><i class='fa fa-subscript' title='abstraction from first principles'></i></div>">
 <p>Integrated execution and editing mode, giving feedback at runtime.
 Abstractions constructed using objects are accessible via a browser.</p>
 </section>
-<section data-file="systems/smalltalk" data-id="dims-notation" data-title="<div class='shade2'><i class='fa fa-trophy'></i> <i class='fa fa-arrow-pointer'></i> <i class='fa fa-bars'></i></div>">
+<section data-characteristics="notations-primary, notations, notations-uniform" data-file="systems/smalltalk" data-id="dims-notation" data-shade="shade2" data-title="<div class='shade2'><i class='fa fa-trophy' title='has primary notation'></i><i class='fa fa-arrow-pointer' title='some structure editing'></i><i class='fa fa-bars' title='uniform notation'></i></div>">
 <p>Primary source code notation with graphical structure editor for object structure.
 Secondary overlapping notations can be developed in-system. Small language.</p>
 </section>
-<section data-file="systems/smalltalk" data-id="dims-conceptual" data-title="<div class='shade2'><i class='fa fa-gem'></i><i class='fa fa-link'></i><i class='fa fa-hand-fist'></i></div>">
+<section data-characteristics="concepts-interface, concepts-minimal, concepts-composable, concepts-nonconvenient" data-file="systems/smalltalk" data-id="dims-conceptual" data-shade="shade2" data-title="<div class='shade2'><i class='fa fa-tbd' title='explicit interface for capturing commondality'></i><i class='fa fa-gem' title='small number of concepts'></i><i class='fa fa-link' title='high composability'></i><i class='fa fa-hand-fist' title='lacks convenience'></i></div>">
 <p>Small number of unified concepts ("everything is an object") at odds with outside world.
 Everything is composed from small number of primitives, but limits convenience. Structural commonality.</p>
 </section>
-<section data-file="systems/smalltalk" data-id="dims-customizability" data-title="<div class='shade3'><i class='fa fa-car-on'></i><i class='fa fa-list-ol'></i><i class='fa fa-file-circle-plus'></i><i class='fa fa-arrows-spin'></i></div>">
+<section data-characteristics="custom-runtime, custom-addressing, custom-additive, custom-sustainable" data-file="systems/smalltalk" data-id="dims-customizability" data-shade="shade3" data-title="<div class='shade3'><i class='fa fa-car-on' title='modifiable while running'></i><i class='fa fa-list-ol' title='clever addressing mechanism'></i><i class='fa fa-file-circle-plus' title='additive authoring'></i><i class='fa fa-arrows-spin' title='self-sustainable'></i></div>">
 <p>System can be customized at runtime. Much of the system is written in itself and can be
 modified from within itself. Extensibility achieved via object-oriented programming.</p>
 </section>
-<section data-file="systems/smalltalk" data-id="dims-complexity" data-title="<div class='shade3'><i class='fa fa-recycle'></i><i class='fa fa-building-columns'></i></div>">
+<section data-characteristics="complexity-gc, complexity-rich" data-file="systems/smalltalk" data-id="dims-complexity" data-shade="shade3" data-title="<div class='shade3'><i class='fa fa-recycle' title='basic language automation like GC'></i><i class='fa fa-building-columns' title='rich complexity structuring (FP, OOP)'></i></div>">
 <p>Factoring using a rich class-based system covering system and application-level features.
 Basic automation (garbage collection) with more possible through libraries &amp; via reflection.</p>
 </section>
-<section data-file="systems/smalltalk" data-id="dims-errors" data-title="<div class='shade1'><i class='fa fa-person-running'></i><i class='fa fa-bug-slash'></i></div>">
+<section data-characteristics="errors-dynamic, errors-interactive" data-file="systems/smalltalk" data-id="dims-errors" data-shade="shade1" data-title="<div class='shade1'><i class='fa fa-person-running' title='runtime error checking'></i><i class='fa fa-bug-slash' title='interactive editor/debugger for correction'></i></div>">
 <p>Errors detected at runtime and can be corrected immediately in interactive editor/debugger.
 Further detection possible via engineering testing tools.</p>
 </section>
-<section data-file="systems/smalltalk" data-id="dims-adoptability" data-title="<div class='shade1'><i class='fa fa-table-cells-large'></i><i class='fa fa-user'></i><i class='fa fa-podcast'></i></div>">
+<section data-characteristics="adoptability-unified, adoptability-nonexperts, adoptability-community" data-file="systems/smalltalk" data-id="dims-adoptability" data-shade="shade1" data-title="<div class='shade1'><i class='fa fa-table-cells-large' title='unified design, provides value after intial learning curve'></i><i class='fa fa-user' title='used by non-experts'></i><i class='fa fa-podcast' title='vibrant community in some sense'></i></div>">
 <p>Steep learning curve, but uniform design makes understanding reusable. End-users can progressively become programmers.
 Active community, but closed world and limited packages.</p>
 </section>
@@ -544,31 +544,31 @@ Active community, but closed world and limited packages.</p>
 <p><embed type="application/transclusion" src="" data-links="content=summary,link=index" /></p>
 <p>more here</p>
 </section>
-<section data-file="systems/spreadsheets" data-id="dims-interaction" data-title="<div class='shade3'><i class='fa fa-rotate-right'></i> <i class='fa fa-hand-pointer'></i> <i class='fa fa-lock-open'></i> <i class='fa fa-eye'></i></div>">
+<section data-characteristics="interaction-live, interaction-dm, interaction-open, interaction-concrete" data-file="systems/spreadsheets" data-id="dims-interaction" data-shade="shade3" data-title="<div class='shade3'><i class='fa fa-rotate-right' title='some kind of live feedback'></i><i class='fa fa-hand-pointer' title='some kind of direct manipulation'></i><i class='fa fa-lock-open' title='open abstractions'></i><i class='fa fa-eye' title='abstraction from concrete'></i></div>">
 <p>Live update when editing. Formulas are always accessible.
 Abstraction by generalizing from concrete computation (drag down) or using macros.</p>
 </section>
-<section data-file="systems/spreadsheets" data-id="dims-notation" data-title="<div class='shade1'><i class='fa fa-handshake'></i> <i class='fa fa-arrow-pointer'></i> <i class='fa fa-bars-staggered'></i> <i class='fa fa-iamge'></i></div>">
+<section data-characteristics="notations-complementing, notations, notations-nonuniform, notations-graphical" data-file="systems/spreadsheets" data-id="dims-notation" data-shade="shade1" data-title="<div class='shade1'><i class='fa fa-handshake' title='has complementing notation'></i><i class='fa fa-arrow-pointer' title='some structure editing'></i><i class='fa fa-bars-staggered' title='non-uniform notation'></i><i class='fa fa-image' title='some graphical notation'></i></div>">
 <p>Complementing notations with graphical grid, formulas and macros, allowing gradually richer interactions.
 Different non-uniform notation at each level.</p>
 </section>
-<section data-file="systems/spreadsheets" data-id="dims-conceptual" data-title="<div class='shade3'><i class='fa fa-gem'></i><i class='fa fa-link'></i><i class='fa fa-toolbox'></i></div>">
+<section data-characteristics="concepts-minimal, concepts-composable, concepts-convenient" data-file="systems/spreadsheets" data-id="dims-conceptual" data-shade="shade3" data-title="<div class='shade3'><i class='fa fa-gem' title='small number of concepts'></i><i class='fa fa-link' title='high composability'></i><i class='fa fa-toolbox' title='high convenience'></i></div>">
 <p>Limited number of domain-specific concepts (sheet, formula, macro).
 Computation can be composed and formulas constructed using many convenient built-ins. Structural commonality.</p>
 </section>
-<section data-file="systems/spreadsheets" data-id="dims-customizability" data-title="<div class='shade1'><i class='fa fa-square-xmark'></i><i class='fa fa-file'></i></div>">
+<section data-characteristics="custom-closed, concepts-large" data-file="systems/spreadsheets" data-id="dims-customizability" data-shade="shade1" data-title="<div class='shade1'><i class='fa fa-square-xmark' title='not modifieable at all'></i><i class='fa fa-file' title='large concepts'></i></div>">
 <p>Documents are editable during execution, but system itself cannot be modified.
 Adding only appends computations, but cannot modify existing ones.</p>
 </section>
-<section data-file="systems/spreadsheets" data-id="dims-complexity" data-title="<div class='shade1'><i class='fa fa-wand-magic-sparkles'></i><i class='fa fa-receipt'></i></div>">
+<section data-characteristics="complexity-fancy, complexity-domain" data-file="systems/spreadsheets" data-id="dims-complexity" data-shade="shade1" data-title="<div class='shade1'><i class='fa fa-wand-magic-sparkles' title='advanced automation mechanism of some kind'></i><i class='fa fa-receipt' title='domain-specific factoring (grid, ui, boxes)'></i></div>">
 <p>Fixed structure of formulas and grid. High-level language for formulas with automated re-computation.
 Programming-by-example provides next-step automation.</p>
 </section>
-<section data-file="systems/spreadsheets" data-id="dims-errors" data-title="<div class='shade2'><i class='fa fa-person-running'></i><i class='fa fa-hand-point-up'></i></div>">
+<section data-characteristics="errors-dynamic, errors-immediate" data-file="systems/spreadsheets" data-id="dims-errors" data-shade="shade2" data-title="<div class='shade2'><i class='fa fa-person-running' title='runtime error checking'></i><i class='fa fa-hand-point-up' title='immediate feedback'></i></div>">
 <p>Slips caught at runtime, but no support for checking lapses or mistakes.
 Provides immediate feedback, making quick error correction possible.</p>
 </section>
-<section data-file="systems/spreadsheets" data-id="dims-adoptability" data-title="<div class='shade3'><i class='fa fa-clapperboard'></i><i class='fa fa-user'></i><i class='fa fa-minimize'></i></div>">
+<section data-characteristics="adoptability-domain, adoptability-nonexperts, adoptability-minimal" data-file="systems/spreadsheets" data-id="dims-adoptability" data-shade="shade3" data-title="<div class='shade3'><i class='fa fa-clapperboard' title='focus on a specific application domain'></i><i class='fa fa-user' title='used by non-experts'></i><i class='fa fa-minimize' title='simple, small, specific needs'></i></div>">
 <p>Domain-focus on specific needs and graphical interface supports learning. End-users can progressively become programmers.
 No packaging mechanism, but wide range of samples and community available.</p>
 </section>
@@ -581,32 +581,32 @@ No packaging mechanism, but wide range of samples and community available.</p>
 <p><embed type="application/transclusion" src="" data-links="content=summary,link=index" /></p>
 <p>more here</p>
 </section>
-<section data-file="systems/unix" data-id="dims-interaction" data-title="<div class='shade2'><i class='fa fa-screwdriver-wrench'></i> <i class='fa fa-circle-play'></i> <i class='fa fa-lock'></i> <i class='fa fa-subscript'></i> <i class='fa fa-eye'></i></div>">
+<section data-characteristics="interaction-multi, interaction-repl, interaction-closed, interaction-principles, interaction-concrete" data-file="systems/unix" data-id="dims-interaction" data-shade="shade2" data-title="<div class='shade2'><i class='fa fa-forward' title='multiple modes of interaction (build phase)'></i><i class='fa fa-circle-play' title='REPL-like execution'></i><i class='fa fa-lock' title='closed abstractiosn'></i><i class='fa fa-subscript' title='abstraction from first principles'></i><i class='fa fa-eye' title='abstraction from concrete'></i></div>">
 <p>Edit, build and execution modes with feedback in each step.
 Abstractions include files, memory and processes. Shell allows going from concrete to abstract.</p>
 </section>
-<section data-file="systems/unix" data-id="dims-notation" data-title="<div class='shade3'><i class='fa fa-trophy'></i> <i class='fa fa-handshake'></i> <i class='fa fa-bars-staggered'></i> <i class='fa fa-bug'></i></div>">
+<section data-characteristics="notations-primary, notations-complementing, notations-nonuniform, notations-concise" data-file="systems/unix" data-id="dims-notation" data-shade="shade3" data-title="<div class='shade3'><i class='fa fa-trophy' title='has primary notation'></i><i class='fa fa-handshake' title='has complementing notation'></i><i class='fa fa-bars-staggered' title='non-uniform notation'></i><i class='fa fa-bug' title='concise error-prone'></i></div>">
 <p>Primary notation (the C language) with variety of secondary (file system, shell scripts),
 all edited via text editor. Admits concise but error-prone notations.</p>
 </section>
-<section data-file="systems/unix" data-id="dims-conceptual" data-title="<div class='shade1'><i class='fa fa-file'></i><i class='fa fa-link'></i><i class='fa fa-toolbox'></i></div>">
+<section data-characteristics="concepts-large, concepts-composable, concepts-convenient" data-file="systems/unix" data-id="dims-conceptual" data-shade="shade1" data-title="<div class='shade1'><i class='fa fa-file' title='large concepts'></i><i class='fa fa-link' title='high composability'></i><i class='fa fa-toolbox' title='high convenience'></i></div>">
 <p>Files provide "large" common concepts, but details are open.
 Scripting based on small composable tools. Standard libraries and tools offer convenience.</p>
 </section>
-<section data-file="systems/unix" data-id="dims-customizability" data-title="<div class='shade3'><i class='fa fa-flag-checkered'></i><i class='fa fa-file-circle-plus'></i><i class='fa fa-arrows-spin'></i></div>">
+<section data-characteristics="custom-stages, custom-additive, custom-sustainable" data-file="systems/unix" data-id="dims-customizability" data-shade="shade3" data-title="<div class='shade3'><i class='fa fa-flag-checkered' title='stage distinction'></i><i class='fa fa-file-circle-plus' title='additive authoring'></i><i class='fa fa-arrows-spin' title='self-sustainable'></i></div>">
 <p>Explicit stage distinction between execution and building, but system is written using its
 own notation (C language) and can be modified and rebuilt from within itself. Limited
 modifiability at runtime.</p>
 </section>
-<section data-file="systems/unix" data-id="dims-complexity" data-title="<div class='shade4'><i class='fa fa-wrench'></i><i class='fa fa-gears'></i></div>">
+<section data-characteristics="complexity-manual, complexity-lowlevel" data-file="systems/unix" data-id="dims-complexity" data-shade="shade4" data-title="<div class='shade4'><i class='fa fa-wrench' title='everything manual, no automation at all'></i><i class='fa fa-gears' title='low level infrastructure (files, http)'></i></div>">
 <p>Defines low-level infrastructure (hardware abstractions) and large object structure (files, processes);
 small-scale factoring and automation left to the user and/or application.</p>
 </section>
-<section data-file="systems/unix" data-id="dims-errors" data-title="<div class='shade4'><i class='fa fa-gun'></i><i class='fa fa-person-rays'></i></div>">
+<section data-characteristics="errors-shootfoot, errors-custom" data-file="systems/unix" data-id="dims-errors" data-shade="shade4" data-title="<div class='shade4'><i class='fa fa-gun' title='no error checking'></i><i class='fa fa-person-rays' title='implement custom detection/correction'></i></div>">
 <p>Error detection left to the system user. Low-level primitives make it possible to
 automate detection and response via custom mechanisms.</p>
 </section>
-<section data-file="systems/unix" data-id="dims-adoptability" data-title="<div class='shade2'><i class='fa fa-infinity'></i><i class='fa fa-globe'></i><i class='fa fa-podcast'></i></div>">
+<section data-characteristics="adoptability-background, adoptability-worse, adoptability-community" data-file="systems/unix" data-id="dims-adoptability" data-shade="shade2" data-title="<div class='shade2'><i class='fa fa-infinity' title='advanced background knowledge assumptions'></i><i class='fa fa-globe' title='compatibility with anything external'></i><i class='fa fa-podcast' title='vibrant community in some sense'></i></div>">
 <p>Requires background knowledge (system-level), but supported by active community.
 Openness allows integration with the external world; diversity of packages available.</p>
 </section>
@@ -619,30 +619,30 @@ Openness allows integration with the external world; diversity of packages avail
 <p><embed type="application/transclusion" src="" data-links="content=summary,link=index" /></p>
 <p>more here</p>
 </section>
-<section data-file="systems/web" data-id="dims-interaction" data-title="<div class='shade4'><i class='fa fa-circle-play'></i> <i class='fa fa-rotate-right'></i> <i class='fa fa-lock'></i> <i class='fa fa-lock-open'></i> <i class='fa fa-subscript'></i></div>">
+<section data-characteristics="interaction-multi, interaction-repl, interaction-live, interaction-closed, interaction-open, interaction-principles" data-file="systems/web" data-id="dims-interaction" data-shade="shade4" data-title="<div class='shade4'><i class='fa fa-forward' title='multiple modes of interaction (build phase)'></i><i class='fa fa-circle-play' title='REPL-like execution'></i><i class='fa fa-rotate-right' title='some kind of live feedback'></i><i class='fa fa-lock' title='closed abstractiosn'></i><i class='fa fa-lock-open' title='open abstractions'></i><i class='fa fa-subscript' title='abstraction from first principles'></i></div>">
 <p>Edit and refresh mode with state visible in DOM browser and live developer tools.
 Code abstractions are closed, but style abstractions more transparent.</p>
 </section>
-<section data-file="systems/web" data-id="dims-notation" data-title="<div class='shade3'><i class='fa fa-handshake'></i> <i class='fa fa-bars-staggered'></i></div>">
+<section data-characteristics="notations-complementing, notations-nonuniform" data-file="systems/web" data-id="dims-notation" data-shade="shade3" data-title="<div class='shade3'><i class='fa fa-handshake' title='has complementing notation'></i><i class='fa fa-bars-staggered' title='non-uniform notation'></i></div>">
 <p>Diversity of text-based highly non-uniform notations (HTML, JavaScript, CSS) with limited structure editing for debugging (DOM).</p>
 </section>
-<section data-file="systems/web" data-id="dims-conceptual" data-title="<div class='shade1'><i class='fa fa-file'></i><i class='fa fa-shapes'></i><i class='fa fa-flask'></i><i class='fa fa-toolbox'></i></div>">
+<section data-characteristics="concepts-large, concepts-diverse, concepts-domain, concepts-convenient" data-file="systems/web" data-id="dims-conceptual" data-shade="shade1" data-title="<div class='shade1'><i class='fa fa-file' title='large concepts'></i><i class='fa fa-shapes' title='variety of diverse concepts'></i><i class='fa fa-flask' title='domain specific concepts'></i><i class='fa fa-toolbox' title='high convenience'></i></div>">
 <p>Improvised mix of open "large" concepts (HTTP) and specific ones (DOM).
 Many convenient libraries and tools with low commonality and varying composability.</p>
 </section>
-<section data-file="systems/web" data-id="dims-customizability" data-title="<div class='shade4'><i class='fa fa-car-on'></i><i class='fa fa-square-xmark'></i><i class='fa fa-list-ol'></i><i class='fa fa-file-cirlce-plus'></i></div>">
+<section data-characteristics="custom-runtime, custom-closed, custom-addressing, custom-additive" data-file="systems/web" data-id="dims-customizability" data-shade="shade4" data-title="<div class='shade4'><i class='fa fa-car-on' title='modifiable while running'></i><i class='fa fa-square-xmark' title='not modifieable at all'></i><i class='fa fa-list-ol' title='clever addressing mechanism'></i><i class='fa fa-file-circle-plus' title='additive authoring'></i></div>">
 <p>Basic infrastructure (browser, protocols) are fixed. Individual applications can have
 a large degree of modifiability (via dynamic scripting). CSS provides powerful addressing.</p>
 </section>
-<section data-file="systems/web" data-id="dims-complexity" data-title="<div class='shade4'><i class='fa fa-recycle'></i><i class='fa fa-building-columns'></i><i class='fa fa-gears'></i><i class='fa fa-receipt'></i></div>">
+<section data-characteristics="complexity-gc, complexity-rich, complexity-lowlevel, complexity-domain" data-file="systems/web" data-id="dims-complexity" data-shade="shade4" data-title="<div class='shade4'><i class='fa fa-recycle' title='basic language automation like GC'></i><i class='fa fa-building-columns' title='rich complexity structuring (FP, OOP)'></i><i class='fa fa-gears' title='low level infrastructure (files, http)'></i><i class='fa fa-receipt' title='domain-specific factoring (grid, ui, boxes)'></i></div>">
 <p>Factoring via high-level languages (JavaScript), rule-based systems (CSS) and standard interfaces
 (W3C specifications). Automation at basic level (garbage collection) and in declarative domains (CSS).</p>
 </section>
-<section data-file="systems/web" data-id="dims-errors" data-title="<div class='shade4'><i class='fa fa-person-rays'></i><i class='fa fa-truck-fast'></i><i class='fa fa-code'></i><i class='fa fa-bug-slash'></i></div>">
+<section data-characteristics="errors-custom, errors-recovery, errors-code, errors-interactive" data-file="systems/web" data-id="dims-errors" data-shade="shade4" data-title="<div class='shade4'><i class='fa fa-person-rays' title='implement custom detection/correction'></i><i class='fa fa-truck-fast' title='automatic error recovery'></i><i class='fa fa-code' title='fix errors in code based on error messages'></i><i class='fa fa-bug-slash' title='interactive editor/debugger for correction'></i></div>">
 <p>Generally aims to do the best thing possible (automatic recovery) on errors.
 Direct error correction can be done in browser tools, but not permanent.</p>
 </section>
-<section data-file="systems/web" data-id="dims-adoptability" data-title="<div class='shade4'><i class='fa fa-globe'></i><i class='fa fa-boxes-packing'></i><i class='fa fa-podcast'></i></div>">
+<section data-characteristics="adoptability-worse, adoptability-packages, adoptability-community" data-file="systems/web" data-id="dims-adoptability" data-shade="shade4" data-title="<div class='shade4'><i class='fa fa-globe' title='compatibility with anything external'></i><i class='fa fa-boxes-packing' title='easy sharing of packages'></i><i class='fa fa-podcast' title='vibrant community in some sense'></i></div>">
 <p>Web has a diversity of technologies; learnability is mainly achieved through community.
 The diversified web ecosystem allows for the integration with external systems.</p>
 </section>

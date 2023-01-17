@@ -1,27 +1,31 @@
 ----------------------------------------------------------------------------------------------------
 - id:dims-interaction
-- title:<div class='shade2'><i class='fa fa-screwdriver-wrench'></i> <i class='fa fa-circle-play'></i> <i class='fa fa-lock'></i> <i class='fa fa-subscript'></i> <i class='fa fa-eye'></i></div>
+- shade: shade2
+- characteristics: interaction-multi, interaction-repl, interaction-closed, interaction-principles, interaction-concrete
 
 Edit, build and execution modes with feedback in each step.
 Abstractions include files, memory and processes. Shell allows going from concrete to abstract.
 
 ----------------------------------------------------------------------------------------------------
 - id:dims-notation
-- title:<div class='shade3'><i class='fa fa-trophy'></i> <i class='fa fa-handshake'></i> <i class='fa fa-bars-staggered'></i> <i class='fa fa-bug'></i></div>
+- shade: shade3
+- characteristics: notations-primary, notations-complementing, notations-nonuniform, notations-concise
 
 Primary notation (the C language) with variety of secondary (file system, shell scripts), 
 all edited via text editor. Admits concise but error-prone notations.
 
 ----------------------------------------------------------------------------------------------------
 - id:dims-conceptual
-- title:<div class='shade1'><i class='fa fa-file'></i><i class='fa fa-link'></i><i class='fa fa-toolbox'></i></div>
+- shade: shade1
+- characteristics: concepts-large, concepts-composable, concepts-convenient
 
 Files provide "large" common concepts, but details are open. 
 Scripting based on small composable tools. Standard libraries and tools offer convenience.
 
 ----------------------------------------------------------------------------------------------------
 - id:dims-customizability
-- title:<div class='shade3'><i class='fa fa-flag-checkered'></i><i class='fa fa-file-circle-plus'></i><i class='fa fa-arrows-spin'></i></div>
+- shade: shade3
+- characteristics: custom-stages, custom-additive, custom-sustainable
 
 Explicit stage distinction between execution and building, but system is written using its
 own notation (C language) and can be modified and rebuilt from within itself. Limited
@@ -29,21 +33,24 @@ modifiability at runtime.
 
 ----------------------------------------------------------------------------------------------------
 - id:dims-complexity
-- title:<div class='shade4'><i class='fa fa-wrench'></i><i class='fa fa-gears'></i></div>
+- shade: shade4
+- characteristics: complexity-manual, complexity-lowlevel
 
 Defines low-level infrastructure (hardware abstractions) and large object structure (files, processes);
 small-scale factoring and automation left to the user and/or application.
 
 ----------------------------------------------------------------------------------------------------
 - id:dims-errors
-- title:<div class='shade4'><i class='fa fa-gun'></i><i class='fa fa-person-rays'></i></div>
+- shade: shade4
+- characteristics: errors-shootfoot, errors-custom
 
 Error detection left to the system user. Low-level primitives make it possible to 
 automate detection and response via custom mechanisms.
 
 ----------------------------------------------------------------------------------------------------
 - id:dims-adoptability
-- title:<div class='shade2'><i class='fa fa-infinity'></i><i class='fa fa-globe'></i><i class='fa fa-podcast'></i></div>
+- shade: shade2
+- characteristics: adoptability-background, adoptability-worse, adoptability-community
 
 Requires background knowledge (system-level), but supported by active community.
 Openness allows integration with the external world; diversity of packages available.

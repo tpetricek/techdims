@@ -1,6 +1,7 @@
 #r "nuget:FSharp.Formatting"
 open System
 open System.IO
+open System.Text.RegularExpressions
 open FSharp.Formatting
 open FSharp.Formatting.Markdown
 
@@ -38,6 +39,22 @@ let extractSections pars =
         List.rev acc
   loop [] [] [] pars
   
+let characteristics = 
+  let reg = Regex("\s*\(([a-z\-]*)\)\s-\s(.*)")
+  let doc = Markdown.Parse(File.ReadAllText(Path.Combine(__SOURCE_DIRECTORY__, "data/characteristics.md")))
+  [ for p in doc.Paragraphs do
+      match p with 
+      | MarkdownParagraph.ListBlock(_, its, _) ->
+          for it in its do 
+            match it with 
+            | [ MarkdownParagraph.Span
+                  ( [ MarkdownSpan.Strong([ MarkdownSpan.Literal(key, _) ], _); 
+                      MarkdownSpan.Literal(info, _) ], _) ] -> 
+                      let m = reg.Match(info)
+                      yield key, (m.Groups.[1].Value, m.Groups.[2].Value)
+            | _ -> failwith "characteristics: Failed parsing the data file"
+      | _ -> () ] |> dict
+
 let genreateSummaryTableAndChecks () = 
   let systems = 
     List.zip [ "LISP machines"; "Smalltalk"; "UNIX"; "Spreadsheets"; "Web platform"; "Hypercard"; "Boxer"; "Notebooks"; "Haskell" ]
@@ -95,7 +112,17 @@ let sections =
   [ for fn in mds do 
       let flinks, sections = readDocument fn
       for kvp in flinks do links.Add(kvp.Key, kvp.Value)
-      for opts, section in sections do
+      for opts, section in sections do  
+        let opts = 
+          if opts.ContainsKey "shade" && opts.ContainsKey "characteristics" && not (opts.ContainsKey "title") then
+            let icons = 
+              String.concat "" [ 
+                for c in opts.["characteristics"].Split(",") -> 
+                  let fa, info = characteristics.[c.Trim()] 
+                  $"<i class='fa {fa}' title='{info}'></i>" ]
+            let title = $"""<div class='{opts.["shade"]}'>{icons}</div>"""
+            opts.Add("title", title)
+          else opts
         let data = String.concat "" [ for kvp in opts -> $" data-{kvp.Key}=\"{kvp.Value}\"" ]
         yield InlineHtmlBlock($"<section{data}>", None, None)
         yield! section
