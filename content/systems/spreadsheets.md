@@ -1,7 +1,7 @@
 ----------------------------------------------------------------------------------------------------
 - id:dims-interaction
 - shade: shade3
-- characteristics: interaction-live, interaction-dm, interaction-open, interaction-concrete
+- characteristics: interaction-single, interaction-live, interaction-dm, interaction-open, interaction-concrete
 
 Live update when editing. Formulas are always accessible.
 Abstraction by generalizing from concrete computation (drag down) or using macros.
@@ -60,7 +60,7 @@ No packaging mechanism, but wide range of samples and community available.
 
 yadda
 
-![](img/visicalc.png)
+![](img/sys/visicalc.png)
 
 
 ----------------------------------------------------------------------------------------------------

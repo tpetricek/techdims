@@ -15,7 +15,48 @@
 </head>
 <body>
   <article>
-    <section data-class="welcome" data-file="index" data-id="welcome" data-title="Technical dimensions of programming systems">
+    <section data-class="frameset catalogue" data-file="catalogue" data-id="index" data-title="Ya">
+<embed type="application/transclusion" src="catalogue,intro" />
+</section>
+<section data-class="frameset catalogue" data-file="catalogue" data-id="list" data-title="Ya">
+<embed type="application/transclusion" src="dimensions/interaction,summary" />
+<embed type="application/transclusion" src="dimensions/notation,summary" />
+</section>
+<section data-file="catalogue" data-id="intro" data-title="Catalogue of technical dimensions">
+<h1>Catalogue of technical dimensions</h1>
+<p>The technical dimensions framework breaks down discussion about
+programming systems along various specific "axes". The dimensions identify
+a range of possible design choices, characterized by two extreme points
+in the design space.</p>
+<p><a href="#image=catalogue,nest"><img src="img/nest.png" alt="A diagram showing programming systems with two dimensions" /></a></p>
+<p>The dimensions are not quantitative, but they allow qualitative comparison.
+The extreme points do not represent "good" and "bad" designs, merely different trade-offs.</p>
+<p>The set of dimensions provides a map of the design space of programming systems (see the
+illustration). Past and present systems serve as landmarks, but the map also reveals unexplored
+or overlooked possibilities.</p>
+<p>The 22 technical dimensions are grouped into 7 clusters or topics of interest.
+Each cluster consists of individual dimensions, examples that capture a particular
+known value (or a combination of values), remarks and relations to other dimensions.</p>
+<!--
+- <i class="fa fa-hand-pointer"></i> Interaction
+- <i class="fa fa-code"></i> Notation
+- <i class="fa fa-cubes"></i> Conceptual structure
+- <i class="fa fa-hammer"></i> Customizability
+- <i class="fa fa-sitemap"></i> Complexity
+- <i class="fa fa-bug"></i> Errors
+- <i class="fa fa-code-fork"></i> Adoptability
+-->
+</section>
+<section data-class="noborder" data-file="catalogue" data-id="nest" data-title="An illustration of the technical dimensions framework">
+<blockquote>
+<p><img src="img/nest.png" alt="A diagram showing programming systems with two dimensions" /></p>
+<p><strong>Illustration of technical dimensions.</strong> The diagram shows a number of sample programming
+systems, positioned according to two hypothetical dimensions. Viewed as programming systems,
+text-based programming languages with debugger, editor and build tools are grouped
+in one region.</p>
+</blockquote>
+</section>
+<section data-class="welcome" data-file="index" data-id="welcome" data-title="Technical dimensions of programming systems">
 <h1>Technical dimensions of programming systems</h1>
 <blockquote>
 <p>by <a href="https://programmingmadecomplicated.wordpress.com/">Joel Jakubovic</a>, <a href="https://alarmingdevelopment.org/">Jonathan Edwards</a> and <a href="https://tomasp.net">Tomas Petricek</a></p>
@@ -34,7 +75,7 @@ compare and guide their work and, ultimately, stand on the shoulders of giants.<
 <ul>
 <li>
 Want to delve into the details and analyse your system?<br />
-<a class="tlink" href="#left=index,catalogue;footer=index,navigation"><i class="fa fa-arrow-right"></i>Start from the catalogue of technical dimensions</a>
+<a class="tlink" href="#top=catalogue,index;left=catalogue,list;footer=index,navigation"><i class="fa fa-arrow-right"></i>Start from the catalogue of technical dimensions</a>
 </li>
 <li>
 Want to explore our framework by example?<br />
@@ -58,12 +99,12 @@ rich graphical user interface. In Smalltalk, the developer environment is a part
 program and the state of the program can be edited through object browser.</p>
 </blockquote>
 </section>
-<section data-file="index" data-id="navigation" data-title="Where to start to learn more">
+<section data-file="index" data-id="navigation" data-title="Where to go to learn more">
 <div>
 <ul>
 <li>
 Want to delve into the details and analyse your system?<br />
-<a class="tlink" href="#left=index,catalogue;footer=index,navigation"><i class="fa fa-arrow-right"></i>Start from the catalogue of technical dimensions</a>
+<a class="tlink" href="#top=catalogue,index;left=catalogue,list;footer=index,navigation"><i class="fa fa-arrow-right"></i>Start from the catalogue of technical dimensions</a>
 </li>
 <li>
 Want to explore our framework by example?<br />
@@ -84,10 +125,6 @@ Want to the Technical Dimensions welcome page?<br />
 </ul>
 </div>
 </section>
-<section data-file="index" data-id="catalogue" data-title="Ya">
-<h1>Catalogue of technical dimensions</h1>
-<p><embed type="application/transclusion" src="dimensions/interaction,summary" data-links="#left=.;right=dimensions/interaction,index" /></p>
-</section>
 <section data-file="index" data-id="matrix-intro" data-title="Summary matrix of systems and dimensions">
 <h1>Matrix of systems and dimensions</h1>
 <p>The matrix shows the differences between <a href="#left=index,systems">good old programming systems</a>
@@ -99,7 +136,7 @@ find connections between systems. You can click on the header to go to a relevan
 paper section, but note that not all cases are discussed in the paper.</p>
 </section>
 <section data-class="matrix" data-file="index" data-id="matrix-body" data-title="Detailed matrix of systems and dimensions">
-<p><div class="table-wrapper"><table><tr><th></th><th class='slisp-machines'>LISP machines</th><th class='ssmalltalk'>Smalltalk</th><th class='sunix'>UNIX</th><th class='sspreadsheets'>Spreadsheets</th><th class='sweb'>Web platform</th><th class='shypercard'>Hypercard</th><th class='sboxer'>Boxer</th><th class='snotebooks'>Notebooks</th><th class='shaskell'>Haskell</th></tr><tr class='dinteraction'><th>Interaction</th><td class='slisp-machines'><embed type="application/transclusion" src="systems/lisp-machines,dims-interaction" data-links="#left=index,matrix;right=systems/lisp-machines,index" /></td><td class='ssmalltalk'><embed type="application/transclusion" src="systems/smalltalk,dims-interaction" data-links="#left=index,matrix;right=systems/smalltalk,index" /></td><td class='sunix'><embed type="application/transclusion" src="systems/unix,dims-interaction" data-links="#left=index,matrix;right=systems/unix,index" /></td><td class='sspreadsheets'><embed type="application/transclusion" src="systems/spreadsheets,dims-interaction" data-links="#left=index,matrix;right=systems/spreadsheets,index" /></td><td class='sweb'><embed type="application/transclusion" src="systems/web,dims-interaction" data-links="#left=index,matrix;right=systems/web,index" /></td><td class='shypercard'><embed type="application/transclusion" src="systems/hypercard,dims-interaction" data-links="#left=index,matrix;right=systems/hypercard,index" /></td><td class='sboxer'><embed type="application/transclusion" src="systems/boxer,dims-interaction" data-links="#left=index,matrix;right=systems/boxer,index" /></td><td class='snotebooks'><embed type="application/transclusion" src="systems/notebooks,dims-interaction" data-links="#left=index,matrix;right=systems/notebooks,index" /></td><td class='shaskell'><embed type="application/transclusion" src="systems/haskell,dims-interaction" data-links="#left=index,matrix;right=systems/haskell,index" /></td></tr><tr class='dnotation'><th>Notation</th><td class='slisp-machines'><embed type="application/transclusion" src="systems/lisp-machines,dims-notation" data-links="#left=index,matrix;right=systems/lisp-machines,index" /></td><td class='ssmalltalk'><embed type="application/transclusion" src="systems/smalltalk,dims-notation" data-links="#left=index,matrix;right=systems/smalltalk,index" /></td><td class='sunix'><embed type="application/transclusion" src="systems/unix,dims-notation" data-links="#left=index,matrix;right=systems/unix,index" /></td><td class='sspreadsheets'><embed type="application/transclusion" src="systems/spreadsheets,dims-notation" data-links="#left=index,matrix;right=systems/spreadsheets,index" /></td><td class='sweb'><embed type="application/transclusion" src="systems/web,dims-notation" data-links="#left=index,matrix;right=systems/web,index" /></td><td class='shypercard'><embed type="application/transclusion" src="systems/hypercard,dims-notation" data-links="#left=index,matrix;right=systems/hypercard,index" /></td><td class='sboxer'><embed type="application/transclusion" src="systems/boxer,dims-notation" data-links="#left=index,matrix;right=systems/boxer,index" /></td><td class='snotebooks'><embed type="application/transclusion" src="systems/notebooks,dims-notation" data-links="#left=index,matrix;right=systems/notebooks,index" /></td><td class='shaskell'><embed type="application/transclusion" src="systems/haskell,dims-notation" data-links="#left=index,matrix;right=systems/haskell,index" /></td></tr><tr class='dconceptual'><th>Conceptual structure</th><td class='slisp-machines'><embed type="application/transclusion" src="systems/lisp-machines,dims-conceptual" data-links="#left=index,matrix;right=systems/lisp-machines,index" /></td><td class='ssmalltalk'><embed type="application/transclusion" src="systems/smalltalk,dims-conceptual" data-links="#left=index,matrix;right=systems/smalltalk,index" /></td><td class='sunix'><embed type="application/transclusion" src="systems/unix,dims-conceptual" data-links="#left=index,matrix;right=systems/unix,index" /></td><td class='sspreadsheets'><embed type="application/transclusion" src="systems/spreadsheets,dims-conceptual" data-links="#left=index,matrix;right=systems/spreadsheets,index" /></td><td class='sweb'><embed type="application/transclusion" src="systems/web,dims-conceptual" data-links="#left=index,matrix;right=systems/web,index" /></td><td class='shypercard'><embed type="application/transclusion" src="systems/hypercard,dims-conceptual" data-links="#left=index,matrix;right=systems/hypercard,index" /></td><td class='sboxer'><embed type="application/transclusion" src="systems/boxer,dims-conceptual" data-links="#left=index,matrix;right=systems/boxer,index" /></td><td class='snotebooks'><embed type="application/transclusion" src="systems/notebooks,dims-conceptual" data-links="#left=index,matrix;right=systems/notebooks,index" /></td><td class='shaskell'><embed type="application/transclusion" src="systems/haskell,dims-conceptual" data-links="#left=index,matrix;right=systems/haskell,index" /></td></tr><tr class='dcustomizability'><th>Customizability</th><td class='slisp-machines'><embed type="application/transclusion" src="systems/lisp-machines,dims-customizability" data-links="#left=index,matrix;right=systems/lisp-machines,index" /></td><td class='ssmalltalk'><embed type="application/transclusion" src="systems/smalltalk,dims-customizability" data-links="#left=index,matrix;right=systems/smalltalk,index" /></td><td class='sunix'><embed type="application/transclusion" src="systems/unix,dims-customizability" data-links="#left=index,matrix;right=systems/unix,index" /></td><td class='sspreadsheets'><embed type="application/transclusion" src="systems/spreadsheets,dims-customizability" data-links="#left=index,matrix;right=systems/spreadsheets,index" /></td><td class='sweb'><embed type="application/transclusion" src="systems/web,dims-customizability" data-links="#left=index,matrix;right=systems/web,index" /></td><td class='shypercard'><embed type="application/transclusion" src="systems/hypercard,dims-customizability" data-links="#left=index,matrix;right=systems/hypercard,index" /></td><td class='sboxer'><embed type="application/transclusion" src="systems/boxer,dims-customizability" data-links="#left=index,matrix;right=systems/boxer,index" /></td><td class='snotebooks'><embed type="application/transclusion" src="systems/notebooks,dims-customizability" data-links="#left=index,matrix;right=systems/notebooks,index" /></td><td class='shaskell'><embed type="application/transclusion" src="systems/haskell,dims-customizability" data-links="#left=index,matrix;right=systems/haskell,index" /></td></tr><tr class='dcomplexity'><th>Complexity</th><td class='slisp-machines'><embed type="application/transclusion" src="systems/lisp-machines,dims-complexity" data-links="#left=index,matrix;right=systems/lisp-machines,index" /></td><td class='ssmalltalk'><embed type="application/transclusion" src="systems/smalltalk,dims-complexity" data-links="#left=index,matrix;right=systems/smalltalk,index" /></td><td class='sunix'><embed type="application/transclusion" src="systems/unix,dims-complexity" data-links="#left=index,matrix;right=systems/unix,index" /></td><td class='sspreadsheets'><embed type="application/transclusion" src="systems/spreadsheets,dims-complexity" data-links="#left=index,matrix;right=systems/spreadsheets,index" /></td><td class='sweb'><embed type="application/transclusion" src="systems/web,dims-complexity" data-links="#left=index,matrix;right=systems/web,index" /></td><td class='shypercard'><embed type="application/transclusion" src="systems/hypercard,dims-complexity" data-links="#left=index,matrix;right=systems/hypercard,index" /></td><td class='sboxer'><embed type="application/transclusion" src="systems/boxer,dims-complexity" data-links="#left=index,matrix;right=systems/boxer,index" /></td><td class='snotebooks'><embed type="application/transclusion" src="systems/notebooks,dims-complexity" data-links="#left=index,matrix;right=systems/notebooks,index" /></td><td class='shaskell'><embed type="application/transclusion" src="systems/haskell,dims-complexity" data-links="#left=index,matrix;right=systems/haskell,index" /></td></tr><tr class='derrors'><th>Errors</th><td class='slisp-machines'><embed type="application/transclusion" src="systems/lisp-machines,dims-errors" data-links="#left=index,matrix;right=systems/lisp-machines,index" /></td><td class='ssmalltalk'><embed type="application/transclusion" src="systems/smalltalk,dims-errors" data-links="#left=index,matrix;right=systems/smalltalk,index" /></td><td class='sunix'><embed type="application/transclusion" src="systems/unix,dims-errors" data-links="#left=index,matrix;right=systems/unix,index" /></td><td class='sspreadsheets'><embed type="application/transclusion" src="systems/spreadsheets,dims-errors" data-links="#left=index,matrix;right=systems/spreadsheets,index" /></td><td class='sweb'><embed type="application/transclusion" src="systems/web,dims-errors" data-links="#left=index,matrix;right=systems/web,index" /></td><td class='shypercard'><embed type="application/transclusion" src="systems/hypercard,dims-errors" data-links="#left=index,matrix;right=systems/hypercard,index" /></td><td class='sboxer'><embed type="application/transclusion" src="systems/boxer,dims-errors" data-links="#left=index,matrix;right=systems/boxer,index" /></td><td class='snotebooks'><embed type="application/transclusion" src="systems/notebooks,dims-errors" data-links="#left=index,matrix;right=systems/notebooks,index" /></td><td class='shaskell'><embed type="application/transclusion" src="systems/haskell,dims-errors" data-links="#left=index,matrix;right=systems/haskell,index" /></td></tr><tr class='dadoptability'><th>Adoptability</th><td class='slisp-machines'><embed type="application/transclusion" src="systems/lisp-machines,dims-adoptability" data-links="#left=index,matrix;right=systems/lisp-machines,index" /></td><td class='ssmalltalk'><embed type="application/transclusion" src="systems/smalltalk,dims-adoptability" data-links="#left=index,matrix;right=systems/smalltalk,index" /></td><td class='sunix'><embed type="application/transclusion" src="systems/unix,dims-adoptability" data-links="#left=index,matrix;right=systems/unix,index" /></td><td class='sspreadsheets'><embed type="application/transclusion" src="systems/spreadsheets,dims-adoptability" data-links="#left=index,matrix;right=systems/spreadsheets,index" /></td><td class='sweb'><embed type="application/transclusion" src="systems/web,dims-adoptability" data-links="#left=index,matrix;right=systems/web,index" /></td><td class='shypercard'><embed type="application/transclusion" src="systems/hypercard,dims-adoptability" data-links="#left=index,matrix;right=systems/hypercard,index" /></td><td class='sboxer'><embed type="application/transclusion" src="systems/boxer,dims-adoptability" data-links="#left=index,matrix;right=systems/boxer,index" /></td><td class='snotebooks'><embed type="application/transclusion" src="systems/notebooks,dims-adoptability" data-links="#left=index,matrix;right=systems/notebooks,index" /></td><td class='shaskell'><embed type="application/transclusion" src="systems/haskell,dims-adoptability" data-links="#left=index,matrix;right=systems/haskell,index" /></td></tr></table></div></p>
+<div class="table-wrapper"><table><tr><th></th><th class='slisp-machines'>LISP machines</th><th class='ssmalltalk'>Smalltalk</th><th class='sunix'>UNIX</th><th class='sspreadsheets'>Spreadsheets</th><th class='sweb'>Web platform</th><th class='shypercard'>Hypercard</th><th class='sboxer'>Boxer</th><th class='snotebooks'>Notebooks</th><th class='shaskell'>Haskell</th></tr><tr class='dinteraction'><th>Interaction</th><td class='slisp-machines'><embed type="application/transclusion" src="systems/lisp-machines,dims-interaction" data-links="#left=index,matrix;right=systems/lisp-machines,index" /></td><td class='ssmalltalk'><embed type="application/transclusion" src="systems/smalltalk,dims-interaction" data-links="#left=index,matrix;right=systems/smalltalk,index" /></td><td class='sunix'><embed type="application/transclusion" src="systems/unix,dims-interaction" data-links="#left=index,matrix;right=systems/unix,index" /></td><td class='sspreadsheets'><embed type="application/transclusion" src="systems/spreadsheets,dims-interaction" data-links="#left=index,matrix;right=systems/spreadsheets,index" /></td><td class='sweb'><embed type="application/transclusion" src="systems/web,dims-interaction" data-links="#left=index,matrix;right=systems/web,index" /></td><td class='shypercard'><embed type="application/transclusion" src="systems/hypercard,dims-interaction" data-links="#left=index,matrix;right=systems/hypercard,index" /></td><td class='sboxer'><embed type="application/transclusion" src="systems/boxer,dims-interaction" data-links="#left=index,matrix;right=systems/boxer,index" /></td><td class='snotebooks'><embed type="application/transclusion" src="systems/notebooks,dims-interaction" data-links="#left=index,matrix;right=systems/notebooks,index" /></td><td class='shaskell'><embed type="application/transclusion" src="systems/haskell,dims-interaction" data-links="#left=index,matrix;right=systems/haskell,index" /></td></tr><tr class='dnotation'><th>Notation</th><td class='slisp-machines'><embed type="application/transclusion" src="systems/lisp-machines,dims-notation" data-links="#left=index,matrix;right=systems/lisp-machines,index" /></td><td class='ssmalltalk'><embed type="application/transclusion" src="systems/smalltalk,dims-notation" data-links="#left=index,matrix;right=systems/smalltalk,index" /></td><td class='sunix'><embed type="application/transclusion" src="systems/unix,dims-notation" data-links="#left=index,matrix;right=systems/unix,index" /></td><td class='sspreadsheets'><embed type="application/transclusion" src="systems/spreadsheets,dims-notation" data-links="#left=index,matrix;right=systems/spreadsheets,index" /></td><td class='sweb'><embed type="application/transclusion" src="systems/web,dims-notation" data-links="#left=index,matrix;right=systems/web,index" /></td><td class='shypercard'><embed type="application/transclusion" src="systems/hypercard,dims-notation" data-links="#left=index,matrix;right=systems/hypercard,index" /></td><td class='sboxer'><embed type="application/transclusion" src="systems/boxer,dims-notation" data-links="#left=index,matrix;right=systems/boxer,index" /></td><td class='snotebooks'><embed type="application/transclusion" src="systems/notebooks,dims-notation" data-links="#left=index,matrix;right=systems/notebooks,index" /></td><td class='shaskell'><embed type="application/transclusion" src="systems/haskell,dims-notation" data-links="#left=index,matrix;right=systems/haskell,index" /></td></tr><tr class='dconceptual'><th>Conceptual structure</th><td class='slisp-machines'><embed type="application/transclusion" src="systems/lisp-machines,dims-conceptual" data-links="#left=index,matrix;right=systems/lisp-machines,index" /></td><td class='ssmalltalk'><embed type="application/transclusion" src="systems/smalltalk,dims-conceptual" data-links="#left=index,matrix;right=systems/smalltalk,index" /></td><td class='sunix'><embed type="application/transclusion" src="systems/unix,dims-conceptual" data-links="#left=index,matrix;right=systems/unix,index" /></td><td class='sspreadsheets'><embed type="application/transclusion" src="systems/spreadsheets,dims-conceptual" data-links="#left=index,matrix;right=systems/spreadsheets,index" /></td><td class='sweb'><embed type="application/transclusion" src="systems/web,dims-conceptual" data-links="#left=index,matrix;right=systems/web,index" /></td><td class='shypercard'><embed type="application/transclusion" src="systems/hypercard,dims-conceptual" data-links="#left=index,matrix;right=systems/hypercard,index" /></td><td class='sboxer'><embed type="application/transclusion" src="systems/boxer,dims-conceptual" data-links="#left=index,matrix;right=systems/boxer,index" /></td><td class='snotebooks'><embed type="application/transclusion" src="systems/notebooks,dims-conceptual" data-links="#left=index,matrix;right=systems/notebooks,index" /></td><td class='shaskell'><embed type="application/transclusion" src="systems/haskell,dims-conceptual" data-links="#left=index,matrix;right=systems/haskell,index" /></td></tr><tr class='dcustomizability'><th>Customizability</th><td class='slisp-machines'><embed type="application/transclusion" src="systems/lisp-machines,dims-customizability" data-links="#left=index,matrix;right=systems/lisp-machines,index" /></td><td class='ssmalltalk'><embed type="application/transclusion" src="systems/smalltalk,dims-customizability" data-links="#left=index,matrix;right=systems/smalltalk,index" /></td><td class='sunix'><embed type="application/transclusion" src="systems/unix,dims-customizability" data-links="#left=index,matrix;right=systems/unix,index" /></td><td class='sspreadsheets'><embed type="application/transclusion" src="systems/spreadsheets,dims-customizability" data-links="#left=index,matrix;right=systems/spreadsheets,index" /></td><td class='sweb'><embed type="application/transclusion" src="systems/web,dims-customizability" data-links="#left=index,matrix;right=systems/web,index" /></td><td class='shypercard'><embed type="application/transclusion" src="systems/hypercard,dims-customizability" data-links="#left=index,matrix;right=systems/hypercard,index" /></td><td class='sboxer'><embed type="application/transclusion" src="systems/boxer,dims-customizability" data-links="#left=index,matrix;right=systems/boxer,index" /></td><td class='snotebooks'><embed type="application/transclusion" src="systems/notebooks,dims-customizability" data-links="#left=index,matrix;right=systems/notebooks,index" /></td><td class='shaskell'><embed type="application/transclusion" src="systems/haskell,dims-customizability" data-links="#left=index,matrix;right=systems/haskell,index" /></td></tr><tr class='dcomplexity'><th>Complexity</th><td class='slisp-machines'><embed type="application/transclusion" src="systems/lisp-machines,dims-complexity" data-links="#left=index,matrix;right=systems/lisp-machines,index" /></td><td class='ssmalltalk'><embed type="application/transclusion" src="systems/smalltalk,dims-complexity" data-links="#left=index,matrix;right=systems/smalltalk,index" /></td><td class='sunix'><embed type="application/transclusion" src="systems/unix,dims-complexity" data-links="#left=index,matrix;right=systems/unix,index" /></td><td class='sspreadsheets'><embed type="application/transclusion" src="systems/spreadsheets,dims-complexity" data-links="#left=index,matrix;right=systems/spreadsheets,index" /></td><td class='sweb'><embed type="application/transclusion" src="systems/web,dims-complexity" data-links="#left=index,matrix;right=systems/web,index" /></td><td class='shypercard'><embed type="application/transclusion" src="systems/hypercard,dims-complexity" data-links="#left=index,matrix;right=systems/hypercard,index" /></td><td class='sboxer'><embed type="application/transclusion" src="systems/boxer,dims-complexity" data-links="#left=index,matrix;right=systems/boxer,index" /></td><td class='snotebooks'><embed type="application/transclusion" src="systems/notebooks,dims-complexity" data-links="#left=index,matrix;right=systems/notebooks,index" /></td><td class='shaskell'><embed type="application/transclusion" src="systems/haskell,dims-complexity" data-links="#left=index,matrix;right=systems/haskell,index" /></td></tr><tr class='derrors'><th>Errors</th><td class='slisp-machines'><embed type="application/transclusion" src="systems/lisp-machines,dims-errors" data-links="#left=index,matrix;right=systems/lisp-machines,index" /></td><td class='ssmalltalk'><embed type="application/transclusion" src="systems/smalltalk,dims-errors" data-links="#left=index,matrix;right=systems/smalltalk,index" /></td><td class='sunix'><embed type="application/transclusion" src="systems/unix,dims-errors" data-links="#left=index,matrix;right=systems/unix,index" /></td><td class='sspreadsheets'><embed type="application/transclusion" src="systems/spreadsheets,dims-errors" data-links="#left=index,matrix;right=systems/spreadsheets,index" /></td><td class='sweb'><embed type="application/transclusion" src="systems/web,dims-errors" data-links="#left=index,matrix;right=systems/web,index" /></td><td class='shypercard'><embed type="application/transclusion" src="systems/hypercard,dims-errors" data-links="#left=index,matrix;right=systems/hypercard,index" /></td><td class='sboxer'><embed type="application/transclusion" src="systems/boxer,dims-errors" data-links="#left=index,matrix;right=systems/boxer,index" /></td><td class='snotebooks'><embed type="application/transclusion" src="systems/notebooks,dims-errors" data-links="#left=index,matrix;right=systems/notebooks,index" /></td><td class='shaskell'><embed type="application/transclusion" src="systems/haskell,dims-errors" data-links="#left=index,matrix;right=systems/haskell,index" /></td></tr><tr class='dadoptability'><th>Adoptability</th><td class='slisp-machines'><embed type="application/transclusion" src="systems/lisp-machines,dims-adoptability" data-links="#left=index,matrix;right=systems/lisp-machines,index" /></td><td class='ssmalltalk'><embed type="application/transclusion" src="systems/smalltalk,dims-adoptability" data-links="#left=index,matrix;right=systems/smalltalk,index" /></td><td class='sunix'><embed type="application/transclusion" src="systems/unix,dims-adoptability" data-links="#left=index,matrix;right=systems/unix,index" /></td><td class='sspreadsheets'><embed type="application/transclusion" src="systems/spreadsheets,dims-adoptability" data-links="#left=index,matrix;right=systems/spreadsheets,index" /></td><td class='sweb'><embed type="application/transclusion" src="systems/web,dims-adoptability" data-links="#left=index,matrix;right=systems/web,index" /></td><td class='shypercard'><embed type="application/transclusion" src="systems/hypercard,dims-adoptability" data-links="#left=index,matrix;right=systems/hypercard,index" /></td><td class='sboxer'><embed type="application/transclusion" src="systems/boxer,dims-adoptability" data-links="#left=index,matrix;right=systems/boxer,index" /></td><td class='snotebooks'><embed type="application/transclusion" src="systems/notebooks,dims-adoptability" data-links="#left=index,matrix;right=systems/notebooks,index" /></td><td class='shaskell'><embed type="application/transclusion" src="systems/haskell,dims-adoptability" data-links="#left=index,matrix;right=systems/haskell,index" /></td></tr></table></div>
 <h2>Select systems and dimensions to compare in the table</h2>
 <div class="matrix-footer">
 <p>For example, you may want to compare different systems of a certain type such as
@@ -113,29 +150,33 @@ or application-focused systems (spreadsheets, Hypercard, Boxer).</p>
 <button onclick="[...document.getElementsByClassName('csys')].forEach(function(e) { e.checked=true; if (e.onchange) e.onchange(); });">Select all</button> 
 <button onclick="[...document.getElementsByClassName('csys')].forEach(function(e) { e.checked=false; if (e.onchange) e.onchange(); });">Select none</button> 
 </p>
-<p><label><input type="checkbox" class="csys" id="cslisp-machines" name="cslisp-machines" checked>LISP machines</label><label><input type="checkbox" class="csys" id="cssmalltalk" name="cssmalltalk" checked>Smalltalk</label><label><input type="checkbox" class="csys" id="csunix" name="csunix" checked>UNIX</label><label><input type="checkbox" class="csys" id="csspreadsheets" name="csspreadsheets" checked>Spreadsheets</label><label><input type="checkbox" class="csys" id="csweb" name="csweb" checked>Web platform</label><label><input type="checkbox" class="csys" id="cshypercard" name="cshypercard" checked>Hypercard</label><label><input type="checkbox" class="csys" id="csboxer" name="csboxer" checked>Boxer</label><label><input type="checkbox" class="csys" id="csnotebooks" name="csnotebooks" checked>Notebooks</label><label><input type="checkbox" class="csys" id="cshaskell" name="cshaskell" checked>Haskell</label></p>
+<label><input type="checkbox" class="csys" id="cslisp-machines" name="cslisp-machines" checked>LISP machines</label><label><input type="checkbox" class="csys" id="cssmalltalk" name="cssmalltalk" checked>Smalltalk</label><label><input type="checkbox" class="csys" id="csunix" name="csunix" checked>UNIX</label><label><input type="checkbox" class="csys" id="csspreadsheets" name="csspreadsheets" checked>Spreadsheets</label><label><input type="checkbox" class="csys" id="csweb" name="csweb" checked>Web platform</label><label><input type="checkbox" class="csys" id="cshypercard" name="cshypercard" checked>Hypercard</label><label><input type="checkbox" class="csys" id="csboxer" name="csboxer" checked>Boxer</label><label><input type="checkbox" class="csys" id="csnotebooks" name="csnotebooks" checked>Notebooks</label><label><input type="checkbox" class="csys" id="cshaskell" name="cshaskell" checked>Haskell</label>
 </div>
 <div class="checks">
 <p>
 <button onclick="[...document.getElementsByClassName('cdim')].forEach(function(e) { e.checked=true; if (e.onchange) e.onchange(); });">Select all</button> 
 <button onclick="[...document.getElementsByClassName('cdim')].forEach(function(e) { e.checked=false; if (e.onchange) e.onchange(); });">Select none</button> 
 </p>
-<p><label><input type="checkbox" class="cdim" id="cdinteraction" name="cdinteraction" checked>Interaction</label><label><input type="checkbox" class="cdim" id="cdnotation" name="cdnotation" checked>Notation</label><label><input type="checkbox" class="cdim" id="cdconceptual" name="cdconceptual" checked>Conceptual structure</label><label><input type="checkbox" class="cdim" id="cdcustomizability" name="cdcustomizability" checked>Customizability</label><label><input type="checkbox" class="cdim" id="cdcomplexity" name="cdcomplexity" checked>Complexity</label><label><input type="checkbox" class="cdim" id="cderrors" name="cderrors" checked>Errors</label><label><input type="checkbox" class="cdim" id="cdadoptability" name="cdadoptability" checked>Adoptability</label></p>
+<label><input type="checkbox" class="cdim" id="cdinteraction" name="cdinteraction" checked>Interaction</label><label><input type="checkbox" class="cdim" id="cdnotation" name="cdnotation" checked>Notation</label><label><input type="checkbox" class="cdim" id="cdconceptual" name="cdconceptual" checked>Conceptual structure</label><label><input type="checkbox" class="cdim" id="cdcustomizability" name="cdcustomizability" checked>Customizability</label><label><input type="checkbox" class="cdim" id="cdcomplexity" name="cdcomplexity" checked>Complexity</label><label><input type="checkbox" class="cdim" id="cderrors" name="cderrors" checked>Errors</label><label><input type="checkbox" class="cdim" id="cdadoptability" name="cdadoptability" checked>Adoptability</label>
 </div>
 </div>
 </section>
-<section data-class="systems" data-file="index" data-id="systems" data-title="Systems">
+<section data-file="index" data-id="systems-intro" data-title="Systems">
 <h1>Programming systems</h1>
-<p><embed type="application/transclusion" src="paper,definition" data-links="#left=.;right=paper,programming-systems" /></p>
-<p><embed type="application/transclusion" src="systems/lisp-machines,summary" data-links="#left=.;right=systems/lisp-machines,index" /></p>
-<p><embed type="application/transclusion" src="systems/smalltalk,summary" data-links="#left=.;right=systems/smalltalk,index" /></p>
-<p><embed type="application/transclusion" src="systems/unix,summary" data-links="#left=.;right=systems/unix,index" /></p>
-<p><embed type="application/transclusion" src="systems/spreadsheets,summary" data-links="#left=.;right=systems/spreadsheets,index" /></p>
-<p><embed type="application/transclusion" src="systems/web,summary" data-links="#left=.;right=systems/web,index" /></p>
-<p><embed type="application/transclusion" src="systems/hypercard,summary" data-links="#left=.;right=systems/hypercard,index" /></p>
-<p><embed type="application/transclusion" src="systems/boxer,summary" data-links="#left=.;right=systems/boxer,index" /></p>
-<p><embed type="application/transclusion" src="systems/notebooks,summary" data-links="#left=.;right=systems/notebooks,index" /></p>
-<p><embed type="application/transclusion" src="systems/haskell,summary" data-links="#left=.;right=systems/haskell,index" /></p>
+<embed type="application/transclusion" src="paper,definition" />
+<a class="tlink" href="#left=paper,introduction"><i class="fa fa-arrow-right"></i>read more in the paper</a>
+</section>
+<section data-class="systems frameset" data-file="index" data-id="systems" data-title="Systems">
+<embed type="application/transclusion" src="index,systems-intro" />
+<embed type="application/transclusion" src="systems/lisp-machines,summary" />
+<embed type="application/transclusion" src="systems/smalltalk,summary" />
+<embed type="application/transclusion" src="systems/unix,summary" />
+<embed type="application/transclusion" src="systems/spreadsheets,summary" />
+<embed type="application/transclusion" src="systems/web,summary" />
+<embed type="application/transclusion" src="systems/hypercard,summary" />
+<embed type="application/transclusion" src="systems/boxer,summary" />
+<embed type="application/transclusion" src="systems/notebooks,summary" />
+<embed type="application/transclusion" src="systems/haskell,summary" />
 </section>
 <section data-file="paper" data-id="main" data-title="Paper">
 <p>paper....</p>
@@ -185,7 +226,7 @@ A \emph{programming system} is an integrated and complete set of tools sufficien
 <p>A <em>programming system</em> is an integrated and complete set of tools sufficient for creating, modifying, and executing programs. These will include notations for structuring programs and data, facilities for running and debugging programs, and interfaces for performing all of these tasks. Facilities for testing, analysis, packaging, or version control may also be present. Notations include programming languages and interfaces include text editors, but are not limited to these.</p>
 </section>
 <section data-file="paper" data-id="programming-systems">
-<p><embed type="application/transclusion" src="" data-links="content=paper;definition,link=paper;programming-systems" /></p>
+<embed type="application/transclusion" src="content=paper;definition,link=paper;programming-systems" />
 <p>We introduce the notion of a <em>programming system</em> through a number of example systems. We draw them from three broad reference classes:</p>
 <ul>
 <li><p>Software ecosystems built around a text-based programming <em>language</em>. They consist of a set of tools such as compilers, debuggers, and profilers. These tools may exist as separate command-line programs, or within an Integrated Development Environment.</p></li>
@@ -228,26 +269,27 @@ While spreadsheets were designed to solve problems in a specific application are
 <p>As a programming system, HyperCard is interesting for a couple of reasons. It effectively combines visual and textual notation. Programs appear the same way during editing as they do during execution. Most notably, HyperCard supports gradual progression from the "user" role to "developer": a user may first use stacks, then go on to edit the visual aspects or choose pre-defined logic until, eventually, they learn to program in HyperTalk.</p>
 </section>
 <section data-file="dimensions/interaction" data-id="summary" data-title="Interaction">
+<h1><i class="fa fa-cog"></i> Interaction <a class="tlink" href="#top=.;left=.;footer=.;right=dimensions/interaction,index"><i class="fa fa-arrow-right"></i>Description and relations...</a></h1>
 <p>How do users manifest their ideas, evaluate the result, and generate new ideas in response?</p>
 <h2>Dimensions</h2>
 <ul>
 <li>
 What are the gulfs of execution and evaluation and how are they related?<br />
-<a class="tlink" href="#left=.;right=dimensions/interaction,feedback-loops!"><i class="fa fa-arrow-right"></i>!</a>
+<a class="tlink" href="#top=.;left=.;footer=.;right=dimensions/interaction,feedback-loops!"><i class="fa fa-arrow-right"></i>!</a>
 </li>
 <li>
 Which sets of feedback loops only occur together?<br />
-<a class="tlink" href="#left=.;right=dimensions/interaction,modes-of-interaction!"><i class="fa fa-arrow-right"></i>!</a>
+<a class="tlink" href="#top=.;left=.;footer=.;right=dimensions/interaction,modes-of-interaction!"><i class="fa fa-arrow-right"></i>!</a>
 </li>
 <li>
 How do we go from abstractions to concrete examples and vice versa?<br />
-<a class="tlink" href="#left=.;right=dimensions/interaction,abstraction-construction!"><i class="fa fa-arrow-right"></i>!</a>
+<a class="tlink" href="#top=.;left=.;footer=.;right=dimensions/interaction,abstraction-construction!"><i class="fa fa-arrow-right"></i>!</a>
 </li>
 </ul>
 <h2>Examples</h2>
 <ul>
-<li><a class="tlink" href="#left=.;right=dimensions/interaction,immediate-feedback!"><i class="fa fa-arrow-right"></i>!</a></li>
-<li><a class="tlink" href="#left=.;right=dimensions/interaction,direct-manipulation!"><i class="fa fa-arrow-right"></i>!</a></li>
+<li><a class="tlink" href="#top=.;left=.;footer=.;right=dimensions/interaction,immediate-feedback!"><i class="fa fa-arrow-right"></i>!</a></li>
+<li><a class="tlink" href="#top=.;left=.;footer=.;right=dimensions/interaction,direct-manipulation!"><i class="fa fa-arrow-right"></i>!</a></li>
 </ul>
 </section>
 <section data-file="dimensions/interaction" data-id="index" data-summary="How do users manifest their ideas, evaluate the result, and generate new ideas in response?" data-title="Interaction">
@@ -255,7 +297,7 @@ How do we go from abstractions to concrete examples and vice versa?<br />
 <p>An essential aspect of programming systems is how the user interacts with them when creating programs. Take the standard form of statically typed, compiled languages with straightforward library linking: here, programmers write their code in a text editor, invoke the compiler, and read through error messages they get. After fixing the code to pass compilation, a similar process might happen with runtime errors.</p>
 <p>Other forms are yet possible. On the one hand, some typical interactions like compilation or execution of a program  may not be perceptible at all. On the other hand, the system may provide various interfaces to support the plethora of other interactions that are often important in programming, such as looking up documentation, managing dependencies, refactoring or pair programming.</p>
 <p>We focus on the interactions where programmer interacts with the system to construct a program with a desired behavior. To analyze those, we use the concepts of <em>gulf of execution</em> and <em>gulf of evaluation</em> from <em>The Design of Everyday Things</em>\ \cite{Norman}.</p>
-<p><embed type="application/transclusion" src="" data-links="content=summary,link=feedback-loops" /></p>
+<embed type="application/transclusion" src="content=summary,link=feedback-loops" />
 <h3>Relations</h3>
 <ul>
 <li><em>Errors</em> (Section \ref{errors}) A longer evaluation gulf delays the detection of errors. A longer execution gulf can increase the <em>likelihood</em> of errors (e.g. writing a lot of code or taking a long time to write it). By turning runtime bugs into statically detected bugs, the combined evaluation gulfs can be reduced.</li>
@@ -322,7 +364,116 @@ How do we go from abstractions to concrete examples and vice versa?<br />
 <p><em>Jupyter notebook.</em> In Jupyter notebooks, you are inclined to work with concrete things, because you see previews after individual cells. This discourages creating abstractions, because then you would not be able to look inside at such a fine grained level.</p>
 <p><em>Spreadsheets.</em> Up until the recent introduction of lambda expressions into Excel, spreadsheets have been relentlessly concrete, without any way to abstract and reuse patterns of computation other than copy-and-paste.</p>
 </section>
-<section data-characteristics="interaction-repl, interaction-dm, interaction-open, interaction-principles, interaction-concrete" data-file="systems/boxer" data-id="dims-interaction" data-shade="shade3" data-title="<div class='shade3'><i class='fa fa-circle-play' title='REPL-like execution'></i><i class='fa fa-hand-pointer' title='some kind of direct manipulation'></i><i class='fa fa-lock-open' title='open abstractions'></i><i class='fa fa-subscript' title='abstraction from first principles'></i><i class='fa fa-eye' title='abstraction from concrete'></i></div>">
+<section data-class="dimensions-notation-anchor" data-file="dimensions/notation" data-id="summary" data-title="Notation">
+<h1><i class="fa fa-code"></i> Notation <a class="tlink" href="#top=.;left=.;footer=.;right=dimensions/notation,index"><i class="fa fa-arrow-right"></i>Description and relations...</a></h1>
+<p>How are the different textual and visual programming notations related?</p>
+<h2>Dimensions</h2>
+<ul>
+<li>
+What notations are used to program the system and how are they related?<br />
+<a class="tlink" href="#top=.;left=.;footer=.;right=dimensions/notation,notational-structure!"><i class="fa fa-arrow-right"></i>!</a>
+</li>
+<li>
+What is the connection between what a user sees and what a computer program sees?<br />
+<a class="tlink" href="#top=.;left=.;footer=.;right=dimensions/notation,surface-internal-notation!"><i class="fa fa-arrow-right"></i>!</a>
+</li>
+<li>
+Is one notation more important than others?<br />
+<a class="tlink" href="#top=.;left=.;footer=.;right=dimensions/notation,primary-secondary-notations!"><i class="fa fa-arrow-right"></i>!</a>
+</li>
+<li>
+Do similar expressions encode similar programs?<br />
+<a class="tlink" href="#top=.;left=.;footer=.;right=dimensions/notation,expression-geography!"><i class="fa fa-arrow-right"></i>!</a>
+</li>
+<li>
+Does the notation use a small or a large number of basic concepts?<br />
+<a class="tlink" href="#top=.;left=.;footer=.;right=dimensions/notation,uniformity-of-notations!"><i class="fa fa-arrow-right"></i>!</a>
+</li>
+</ul>
+<h2>Examples</h2>
+<ul>
+<li><a class="tlink" href="#top=.;left=.;footer=.;right=dimensions/notation,overlapping-notations!"><i class="fa fa-arrow-right"></i>!</a></li>
+<li><a class="tlink" href="#top=.;left=.;footer=.;right=dimensions/notation,complementing-notations!"><i class="fa fa-arrow-right"></i>!</a></li>
+<li><a class="tlink" href="#top=.;left=.;footer=.;right=dimensions/notation,explicit-implicit-structure!"><i class="fa fa-arrow-right"></i>!</a></li>
+<li><a class="tlink" href="#top=.;left=.;footer=.;right=dimensions/notation,one-string-in-memory!"><i class="fa fa-arrow-right"></i>!</a></li>
+<li><a class="tlink" href="#top=.;left=.;footer=.;right=dimensions/notation,two-strings-in-memory!"><i class="fa fa-arrow-right"></i>!</a></li>
+</ul>
+</section>
+<section data-file="dimensions/notation" data-id="index" data-title="xx">
+<h2>Notation</h2>
+<p>\mybox{How are the different textual / visual programming notations related?}</p>
+<p>Programming is always done through some form of notation. We consider notations in the most general sense and include any structured gesture using textual or visual notation. Textual notations primarily include  programming languages, but also things like configuration files. Visual notations include graphical programming languages. Other kinds of structured gestures include user interfaces for constructing visual elements used in the system.</p>
+<h3>References</h3>
+<p><em>Cognitive Dimensions of Notation</em> \cite{CogDims} provide a comprehensive framework for analysing individual notations, while our focus here is on how multiple notations are related and how they are structured. It is worth noting that the Cognitive Dimensions also define <em>secondary notation</em>, but in a different sense to ours. For them, secondary notation refers to whether a notation allows including redundant information such as color or comments for readability purposes.</p>
+<p>The importance of notations in the practice of science, more generally, has been studied by \cite{PaperTools} as "paper tools". These are formula-like entities which can be manipulated by humans in lieu of experimentation, such as the aforementioned mathematical notation in Haskell: a "paper tool" for experimentation on a whiteboard. Programming notations are similar, but they are a way of communicating with a machine; the experimentation does not happen on paper alone.</p>
+<h3>Relations</h3>
+<ul>
+<li><em>Interaction</em> (Section \ref{interaction}): The feedback loops that exist in a programming system are typically associated with individual notations. Different notations may also have different feedback loops.</li>
+<li><em>Adoptability</em> (Section \ref{adoptability}): Notational structure can affect learnability. In particular, complementing notations may require (possibly different) users to master multiple notations. Overlapping notations may improve learnability by allowing the user to edit the program in one way (perhaps visually) and see the effect in the other notation (such as code.)</li>
+<li><em>Errors</em> (Section \ref{errors}). A process that merely records user actions in a sequence (such as text editing) will, in particular, record any <em>errors</em> the user makes and defer their handling to later use of the data, keeping the errors <em>latent</em>. A process which instead treats user actions as edits to a structure, with constraints and correctness rules, will be able to catch errors at the moment they are introduced and ensure the data coming out is error-free.</li>
+</ul>
+</section>
+<section data-file="dimensions/notation" data-id="notational-structure" data-title="Dimension: Notational structure">
+<h3>Dimension: notational structure</h3>
+<p>In practice, most programming systems use multiple notations. Different notations can play different roles in the system. On the one hand, multiple <em>overlapping notations</em> can be provided as different ways of programming the same aspects of the system. In this case, each notation may be more suitable to different kinds of users, but may have certain limitations (for example, a visual notation may have a limited expressive power). On the other hand, multiple <em>complementing notations</em> may be used as the means for programming different aspects of the system. In this case, programming the system requires using multiple notations, but each notation may be more suitable for the task at hand; think of how HTML describes document structure while JavaScript specifies its behavior.</p>
+</section>
+<section data-file="dimensions/notation" data-id="overlapping-notations" data-title="Example: Overlapping notations">
+<h3>Example: overlapping notations</h3>
+<p>A programming system may provide multiple notations for programming the same aspect of the system. This is typically motivated by an attempt to offer easy ways of completing different tasks: say, a textual notation for defining abstractions and a visual notation for specifying concrete structures. The crucial issue in this kind of arrangement is <em>synchronizing</em> the different notations; if they have different characteristics, this may not be a straightforward mapping. For example, source code may allow more elaborate abstraction mechanisms like  loops, which will appear as visible repetition in the visual notation. What should such a system do when the user edits a single object that resulted from such repetition? Similarly, textual notation may allow incomplete expressions that do not have an equivalent in the visual notation. For programming systems that use <em>overlapping notations</em>, we need to describe how the notations are synchronized.</p>
+<p><em>Sketch-n-Sketch</em> \cite{SnS} employs overlapping notations for creating and editing SVG and HTML documents. The user edits documents in an interface with a split-screen structure that shows source code on the left and displayed visual output on the right. They can edit both of these and changes are propagated to the other view. The code can use abstraction mechanisms (such as functions) which are not completely visible in the visual editor (an issue we return to in <em>expression geography</em> below). Sketch-n-Sketch can be seen as an example of a <em>projectional editor</em>.^[Technically, traditional projectional editors usually work more directly with the abstract syntax tree of a programming language.\note{TODO: Insert some more references to research on "projectional editors"}]</p>
+<p><em>UML Round-tripping.</em> Another example of a programming system that utilizes the <em>overlapping notations</em> structure are UML design tools that display the program both as source code and as a UML diagram. Edits in one result in automatic update of the other. An example is the Together/J^[<a href="https://www.mindprod.com/jgloss/togetherj.html">https://www.mindprod.com/jgloss/togetherj.html</a>] system. To solve the issue of notation synchronization, such systems often need to store additional information in the textual notation, typically using a special kind of code comment. In this example, after the user re-arranges classes in UML diagrams, the new locations need to be updated in the code.</p>
+</section>
+<section data-file="dimensions/notation" data-id="complementing-notations" data-title="Example: Complementing notations">
+<h3>Example: complementing notations</h3>
+<p>A programming system may also provide multiple complementing notations for programming different aspects of its world. Again, this is typically  motivated by the aim to make specifying certain aspects of programming easier, but it is more suitable when the different aspects can be more clearly separated. The key issue for systems with complementing notations is how the different notations are connected. The user may need to use both notations at the same time, or they may need to progress from one to the next level when solving increasingly complex problems. In the latter case, the learnability of progressing from one level to the next is a major concern.</p>
+<p><em>Spreadsheets and HyperCard.</em> In Excel, there are three different complementing notations that allow users to specify aspects of increasing complexity: (i) the visual grid, (ii) formula language and (iii) a macro language such as Visual Basic for Applications. The notations are largely independent and have different degrees of expressive power. Entering values in a grid cannot be used for specifying new computations, but it can be used to adapt or run a computation, for example when entering different alternatives in What-If Scenario Analysis. More complex tasks can be achieved using formulas and macros. A user gradually learns more advanced notations, but experience with a previous notation does not help with mastering the next one. The approach optimizes for easy learnability at one level, but introduces a hurdle for users to surmount in order to get to the second level. The notational structure of <em>HyperCard</em> is similar and consists of (i) visual design of cards, (ii) visual programming (via the GUI) with a limited number of operations and (iii) HyperTalk for arbitrary scripting.</p>
+<p><em>Boxer and Jupyter.</em> Boxer \cite{Boxer} uses <em>complementing notations</em> in that it combines a visual notation (the layout of the document and the boxes of which it consists) with textual notation (the code in the boxes). Here, the textual notation is always nested within the visual. The case of Jupyter notebooks is similar. The document structure is graphical; code and visual outputs are nested as editable cells in the document. This arrangement is common in many other systems such as Flash or Visual Basic, which both combine visual notation with textual code, although one is not nested in the other.</p>
+</section>
+<section data-file="dimensions/notation" data-id="surface-internal-notation" data-title="Dimension: Surface and internal notation">
+<h3>Dimensions: surface notation and internal notation</h3>
+<p>All programming systems build up structures in memory, which we can consider as an <em>internal notation</em> not usually visible to the user. Even though such structures might be revealed in a debugger, they are hidden during normal operation. What the user interacts with instead is the <em>surface notation</em>, typically one of text or shapes on a screen. Every interaction with the surface notation alters the internal notation in some way, and the nature of this connection is worth examining in more detail. To do this, we illustrate with a simplified binary choice for the form of these notations.</p>
+</section>
+<section data-file="dimensions/notation" data-id="explicit-implicit-structure" data-title="Example: Explicit versus implicit structure">
+<h3>Examples: implicit vs. explicit structure</h3>
+<p>Let us partition notations into two families. Notations with <em>implicit structure</em> present as a sequence of items, such as textual characters or audio signal amplitudes. Those with <em>explicit structure</em> present as a tree or graph without an obvious order, such as shapes in a vector graphics editor. These two types of notations can be transformed into each other: the implicit structure contained in a string can be <em>parsed</em> into an explicit syntax tree, and an explicit document structure might be <em>rendered</em> into a sequence of characters with the same implicit structure.</p>
+<p>Now consider an interface to enter a personal name made up of a forename and a surname. For the surface notation, there could be a single text field to hold the names separated with a space; here, the sub-structure is implicit in the string. Alternatively, there could be two fields where the names are entered separately, and their separation is explicit. A similar choice exists for the internal notation built up in memory: is it a single string, or two separate strings?</p>
+<p>We can see that these choices give four combinations. More interestingly, they exhibit unique characters owing to two key asymmetries. Firstly, surface notation is mostly used by humans, while the internal notation is mostly used by the computer. Secondly, and most significantly, computer programs can only work with explicit structure, while humans can understand both explicit and implicit structure. \joel{informal vs formal structure?} Because of the practical consequences of this asymmetry, we will examine the combinations with emphasis on the <em>internal</em> notation first.</p>
+</section>
+<section data-file="dimensions/notation" data-id="one-string-in-memory" data-title="Examples: One string in memory">
+<h3>Examples: one string in memory (implicitly structured internal notation)</h3>
+<p>The simplest case here would be with implicit structure in the surface notation, i.e. a single text box for the full name. Edits to the surface are straightforwardly mirrored interally and persisted to disk. This corresponds to <em>text editing</em>. We can generalize this to an idea of <em>sequence editing</em> if we view the fundamental act as <em>recording</em> events to a list over time. For text, these are key presses; for an audio editing interface they would be samples of sound amplitude.</p>
+<p>In the other case, with two text boxes, we have <em>sequence rendering</em>. The information about the separation of the two strings, present in the interface, is not quite "thrown away" but is made <em>implicit</em> as a space character in the string. This combination corresponds to Visual Basic generating code from GUI forms, video editors combining multiple clips and effects into a single stream, and 3D renderers turning scene graphs into pixels. Another example is line-based diff tools, which provide side-by-side views and related interfaces, yet must ultimately forward the user's changes to the underlying text file.</p>
+<p>Critically, in both of these cases, a computer program can only manipulate the stored sequences <em>as</em> sequences; that is, by inserting, removing, or serially reading. The appealing feature here is that these operations are simple to implement and may be re-usable across many types of sequences. However, any further structure is implicit and, to work with it programmatically, a user must write a program to <em>parse</em> it into something explicit. Furthermore, errors introduced at this stage may simply be <em>recorded</em> into the sequence, only to be discovered much later in an attempt to use the data.</p>
+</section>
+<section data-file="dimensions/notation" data-id="two-strings-in-memory" data-title="Examples: Two strings in memory">
+<h3>Examples: two strings in memory (explicitly structured internal notation)</h3>
+<p>\joel{TODO: cite The Many Forms of a Single Fact}
+With two text boxes, both notations match, so there is not much work to do. As with sequence editing, edits on the surface can be mirrored to the internal notation. This corresponds to vector graphics editors and 3D modelling tools, as well as <em>structure editors</em> for programming languages. For this reason we call this combination <em>structure editing</em>.</p>
+<p>With a single text field, we have <em>structure recovery.</em> Parsing needs to happen each time the input changes. This style is found in the DOM inspector in browser developer tools, where HTML can be edited as text to make changes to the document tree structure. More generally, this is the mode found in compilers and interpreters which accept program source text yet internally work on tree and graph structures. It is also possible to do a sort of structure editing this way, where the experience is made to resemble text editing but the output is explicitly structured.</p>
+<p>In both of these cases, in order to write programs to transform, analyze, or otherwise work with the digital artefact the user has created, one can trivially navigate the stored structure instead of parsing it for every use. Parsing is either done away with altogether or is reduced to a transient process that happens during editing; this means errors can be caught at the moment they are introduced instead of remaining latent.</p>
+</section>
+<section data-file="dimensions/notation" data-id="primary-secondary-notations" data-title="Dimension: Primary and secondary notations">
+<h3>Dimension: primary and secondary notations</h3>
+<p>In practice, most programming systems use multiple notations. Even in systems based on traditional programming languages, the <em>primary notation</em> of the language is often supported by <em>secondary notations</em> such as annotations encoded in comments and build tool configuration files. However, it is possible for multiple notations to be primary, especially if they are <em>overlapping</em> as defined earlier.</p>
+<p><em>Programming languages.</em> Programming systems built around traditional programming languages typically have further notations or structured gestures associated with them. The primary notation in UNIX is the C programming language. Yet this is enclosed in a programming <em>system</em> providing a multi-step mechanism for running C code via the terminal, assisted by secondary notations such as shell scripts. Some programming systems attempt to integrate tools that normally rely on secondary notations into the system itself, reducing the number of secondary notations that the programmer needs to master. For example, in the Smalltalk descendant Pharo, versioning and package management is done from within Pharo, removing the need for secondary notation such as <code>git</code> commands and dependency configuration files.^[The tool for versioning and package management in Pharo can still be seen as an <em>internal</em> domain-specific language and thus as a secondary notation, but its basic structure is <em>shared</em> with other notations in the Pharo system.]</p>
+<p><em>Haskell.</em> In Haskell, the primary notation is the programming language, but there are also a number of secondary notations. Those include package managers (e.g. the <code>cabal.project</code> file) or configuration files for Haskell build tools. More interestingly, there is also an informal mathematical notation associated with Haskell that is used when programmers discuss programs on a whiteboard or in academic publications. The idea of having such a mathematical notation dates back to the <em>Report on Algol 58</em> \cite{Alg58}, which explicitly defined a "publication language" for "stating and communicating problems" using Greek letters and subscripts.</p>
+</section>
+<section data-file="dimensions/notation" data-id="expression-geography" data-title="Dimension: Expression geography">
+<h3>Dimension: expression geography</h3>
+<p>A crucial feature of a notation is the relationship between the structure of the notation and the structure of the behavior it encodes. Most importantly, do <em>similar expressions</em> in a particular notation represent <em>similar behavior</em>?^[See Basman's \cite{NotYetCraft} similar discussion of "density".] Visual notations may provide a more or less direct mapping. On the one hand, similar-looking code in a block language may mean very different things. On the other hand, similar looking design of two HyperCard cards will result in similar looking cards---the mapping between the notation and the logic is much more direct.</p>
+<p><em>C/C++ expression language.</em> In textual notations, this may easily not be the case. Consider the two C conditionals:</p>
+<ul>
+<li><code>if (x==1) { ... }</code> evaluates the Boolean expression <code>x==1</code> to determine whether <code>x</code> equals <code>1</code>, running the code block if the condition holds.</li>
+<li><code>if (x=1) { ... }</code> <em>assigns</em> <code>1</code> to the variable <code>x</code>. In C, assignment is an expression <em>returning</em> the assigned value, so the result <code>1</code> is interpreted as <code>true</code> and the block of code is <em>always</em> executed.</li>
+</ul>
+<p>A notation can be designed to map better to the logic behind it, for example, by requiring the user to write <code>1==x</code>. This solves the above problem as <code>1</code> is a literal rather than a variable, so it cannot be assigned to (<code>1=x</code> is a compile error).</p>
+</section>
+<section data-file="dimensions/notation" data-id="uniformity-of-notations" data-title="Dimension: Uniformity of notations">
+<h3>Dimension: uniformity of notations</h3>
+<p>One common concern with notations is the extent to which they are uniform. A uniform notation can express a wide range of things using just a small number of concepts. The primary example here is S-expressions from Lisp. An S-expression is either an atom or a pair of S-expressions written <code>(s1 . s2)</code>. By convention, an S-expression <code>(s1 . (s2 . (s3 . nil)))</code> represents a list, written as <code>(s1 s2 s3)</code>. In Lisp, uniformity of notations is closely linked to uniformity of representation.^[Notations generally are closely linked to representation in that the notation may mirror the structures used for program representation. Basman et al. \cite{Externalize} refer to this as a distinction between "dead" notation and "live" representation forms).] In the idealized model of LISP 1.5, the data structures represented by an S-expression are what exists in memory. In real-world Lisp systems, the representation in memory is more complex. A programming system can also take a very different approach and fully separate the notation from the in-memory representation.</p>
+<p><em>Lisp systems.</em> In Lisp, source code is represented in memory as S-expressions, which can be manipulated by Lisp primitives. In addition, Lisp systems have robust macro processing as part of their semantics: expanding a macro revises the list structure of the code that uses the macro. Combining these makes it possible to define extensions to the system in Lisp, with syntax indistinguishable from Lisp. Moreover, it is possible to write a program that constructs another Lisp program and not only run it interpretively (using the \texttt{eval} function) but compile it at runtime (using the \texttt{compile} function) and execute it. Many domain-specific languages, as well as prototypes of new programming languages (such as Scheme), were implemented this way. Lisp the language is, in this sense, a "programmable programming language". \cite{LispIntro,ProgProgLang}</p>
+</section>
+<section data-characteristics="interaction-single, interaction-repl, interaction-dm, interaction-open, interaction-principles, interaction-concrete" data-file="systems/boxer" data-id="dims-interaction" data-shade="shade3" data-title="<div class='shade3'><i class='fa fa-caret-right' title='single mode of interaction'></i><i class='fa fa-circle-play' title='REPL-like execution'></i><i class='fa fa-hand-pointer' title='some kind of direct manipulation'></i><i class='fa fa-lock-open' title='open abstractions'></i><i class='fa fa-subscript' title='abstraction from first principles'></i><i class='fa fa-eye' title='abstraction from concrete'></i></div>">
 <p>Direct manipulation for graphical elements with REPL-like code execution.
 Abstraction via messages sent to boxes and using ports to reuse concrete boxes.</p>
 </section>
@@ -356,7 +507,7 @@ System is closed from external world and has only limited community and availabl
 </section>
 <section data-class="systems" data-file="systems/boxer" data-id="index">
 <h1>Boxer</h1>
-<p><embed type="application/transclusion" src="" data-links="content=summary,link=index" /></p>
+<embed type="application/transclusion" src="content=summary,link=index" />
 <p>more here</p>
 </section>
 <section data-characteristics="interaction-multi, interaction-closed, interaction-principles" data-file="systems/haskell" data-id="dims-interaction" data-shade="shade2" data-title="<div class='shade2'><i class='fa fa-forward' title='multiple modes of interaction (build phase)'></i><i class='fa fa-lock' title='closed abstractiosn'></i><i class='fa fa-subscript' title='abstraction from first principles'></i></div>">
@@ -393,10 +544,10 @@ Closed ecosystem, but with community and diversity of packages.</p>
 </section>
 <section data-class="systems" data-file="systems/haskell" data-id="index">
 <h1>Haskell</h1>
-<p><embed type="application/transclusion" src="" data-links="content=summary,link=index" /></p>
+<embed type="application/transclusion" src="content=summary,link=index" />
 <p>more here</p>
 </section>
-<section data-characteristics="interaction-repl, interaction-dm, interaction-open, interaction-principles, interaction-concrete" data-file="systems/hypercard" data-id="dims-interaction" data-shade="shade3" data-title="<div class='shade3'><i class='fa fa-circle-play' title='REPL-like execution'></i><i class='fa fa-hand-pointer' title='some kind of direct manipulation'></i><i class='fa fa-lock-open' title='open abstractions'></i><i class='fa fa-subscript' title='abstraction from first principles'></i><i class='fa fa-eye' title='abstraction from concrete'></i></div>">
+<section data-characteristics="interaction-single, interaction-repl, interaction-dm, interaction-open, interaction-principles, interaction-concrete" data-file="systems/hypercard" data-id="dims-interaction" data-shade="shade3" data-title="<div class='shade3'><i class='fa fa-caret-right' title='single mode of interaction'></i><i class='fa fa-circle-play' title='REPL-like execution'></i><i class='fa fa-hand-pointer' title='some kind of direct manipulation'></i><i class='fa fa-lock-open' title='open abstractions'></i><i class='fa fa-subscript' title='abstraction from first principles'></i><i class='fa fa-eye' title='abstraction from concrete'></i></div>">
 <p>Direct manipulation for user interface; programmatic scripting with execution feedback loop.
 Abstractions on card level using shared backgrounds and transclusion.</p>
 </section>
@@ -430,7 +581,7 @@ progresively become programmers. Closed from external world, but active communit
 </section>
 <section data-class="systems" data-file="systems/hypercard" data-id="index">
 <h1>Hypercard</h1>
-<p><embed type="application/transclusion" src="" data-links="content=summary,link=index" /></p>
+<embed type="application/transclusion" src="content=summary,link=index" />
 <p>more here</p>
 </section>
 <section data-characteristics="interaction-single, interaction-repl, interaction-open, interaction-principles" data-file="systems/lisp-machines" data-id="dims-interaction" data-shade="shade1" data-title="<div class='shade1'><i class='fa fa-caret-right' title='single mode of interaction'></i><i class='fa fa-circle-play' title='REPL-like execution'></i><i class='fa fa-lock-open' title='open abstractions'></i><i class='fa fa-subscript' title='abstraction from first principles'></i></div>">
@@ -467,7 +618,7 @@ Active community, but closed from the external world and limited packages availa
 </section>
 <section data-class="systems" data-file="systems/lisp-machines" data-id="index" data-title="LISP machines">
 <h1>LISP machines</h1>
-<p><embed type="application/transclusion" src="systems/lisp-machines,summary" data-links="#left=index" /></p>
+<p><img src="#left=index" alt="$systems/lisp-machines,summary" /></p>
 <p>more here</p>
 </section>
 <section data-characteristics="interaction-repl, interaction-open, interaction-principles, interaction-concrete" data-file="systems/notebooks" data-id="dims-interaction" data-shade="shade3" data-title="<div class='shade3'><i class='fa fa-circle-play' title='REPL-like execution'></i><i class='fa fa-lock-open' title='open abstractions'></i><i class='fa fa-subscript' title='abstraction from first principles'></i><i class='fa fa-eye' title='abstraction from concrete'></i></div>">
@@ -504,7 +655,7 @@ Notebooks can import a range of community packages and integrate with external s
 </section>
 <section data-class="systems" data-file="systems/notebooks" data-id="index">
 <h1>Notebooks</h1>
-<p><embed type="application/transclusion" src="" data-links="content=summary,link=index" /></p>
+<embed type="application/transclusion" src="content=summary,link=index" />
 <p>more here</p>
 </section>
 <section data-characteristics="interaction-single, interaction-repl, interaction-open, interaction-principles" data-file="systems/smalltalk" data-id="dims-interaction" data-shade="shade1" data-title="<div class='shade1'><i class='fa fa-caret-right' title='single mode of interaction'></i><i class='fa fa-circle-play' title='REPL-like execution'></i><i class='fa fa-lock-open' title='open abstractions'></i><i class='fa fa-subscript' title='abstraction from first principles'></i></div>">
@@ -541,7 +692,7 @@ Active community, but closed world and limited packages.</p>
 </section>
 <section data-class="systems" data-file="systems/smalltalk" data-id="index">
 <h1>Smalltalk</h1>
-<p><embed type="application/transclusion" src="" data-links="content=summary,link=index" /></p>
+<embed type="application/transclusion" src="content=summary,link=index" />
 <p>more here</p>
 </section>
 <section data-characteristics="interaction-live, interaction-dm, interaction-open, interaction-concrete" data-file="systems/spreadsheets" data-id="dims-interaction" data-shade="shade3" data-title="<div class='shade3'><i class='fa fa-rotate-right' title='some kind of live feedback'></i><i class='fa fa-hand-pointer' title='some kind of direct manipulation'></i><i class='fa fa-lock-open' title='open abstractions'></i><i class='fa fa-eye' title='abstraction from concrete'></i></div>">
@@ -578,7 +729,7 @@ No packaging mechanism, but wide range of samples and community available.</p>
 </section>
 <section data-class="systems" data-file="systems/spreadsheets" data-id="index">
 <h1>Spreadsheets</h1>
-<p><embed type="application/transclusion" src="" data-links="content=summary,link=index" /></p>
+<embed type="application/transclusion" src="content=summary,link=index" />
 <p>more here</p>
 </section>
 <section data-characteristics="interaction-multi, interaction-repl, interaction-closed, interaction-principles, interaction-concrete" data-file="systems/unix" data-id="dims-interaction" data-shade="shade2" data-title="<div class='shade2'><i class='fa fa-forward' title='multiple modes of interaction (build phase)'></i><i class='fa fa-circle-play' title='REPL-like execution'></i><i class='fa fa-lock' title='closed abstractiosn'></i><i class='fa fa-subscript' title='abstraction from first principles'></i><i class='fa fa-eye' title='abstraction from concrete'></i></div>">
@@ -616,7 +767,7 @@ Openness allows integration with the external world; diversity of packages avail
 </section>
 <section data-class="systems" data-file="systems/unix" data-id="index">
 <h1>UNIX</h1>
-<p><embed type="application/transclusion" src="" data-links="content=summary,link=index" /></p>
+<embed type="application/transclusion" src="content=summary,link=index" />
 <p>more here</p>
 </section>
 <section data-characteristics="interaction-multi, interaction-repl, interaction-live, interaction-closed, interaction-open, interaction-principles" data-file="systems/web" data-id="dims-interaction" data-shade="shade4" data-title="<div class='shade4'><i class='fa fa-forward' title='multiple modes of interaction (build phase)'></i><i class='fa fa-circle-play' title='REPL-like execution'></i><i class='fa fa-rotate-right' title='some kind of live feedback'></i><i class='fa fa-lock' title='closed abstractiosn'></i><i class='fa fa-lock-open' title='open abstractions'></i><i class='fa fa-subscript' title='abstraction from first principles'></i></div>">
@@ -652,7 +803,7 @@ The diversified web ecosystem allows for the integration with external systems.<
 </section>
 <section data-class="systems" data-file="systems/web" data-id="index">
 <h1>Web platform</h1>
-<p><embed type="application/transclusion" src="" data-links="content=summary,link=index" /></p>
+<embed type="application/transclusion" src="content=summary,link=index" />
 <p>more here</p>
 </section>
 
@@ -660,23 +811,26 @@ The diversified web ecosystem allows for the integration with external systems.<
   <div id="display">
     <div id="splash" class="display"></div>
     <div id="image" class="display"></div>
-    <div id="left" class="display"></div>
+    <div id="top" class="display"></div>
     <div id="right" class="display"></div>
+    <div id="left" class="display"></div>
     <div id="big" class="display"></div>
     <div id="footer" class="display"></div>
   </div>
   <script type="application/template" id="display-template">    
-    <div class="display-title">
-      [TITLE]
-    </div>
-    <div class="display-body [CLASS]">
-      [CONTENT]
+    <div class="display-wrapper [CLASS]">
+      <div class="display-title">
+        [TITLE]
+      </div>
+      <div class="display-body">
+        [CONTENT]
+      </div>
     </div>
   </script>
   <script type="application/template" id="transclusion-content-template">    
     <div class="transclusion">
       <div class="title">
-        <a href="[LINK]"><i class="fa fa-arrow-right"></i>[TITLE]</a>
+        [TITLE]
       </div>
       <div class="body">
         [CONTENT]

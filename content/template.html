@@ -20,23 +20,26 @@
   <div id="display">
     <div id="splash" class="display"></div>
     <div id="image" class="display"></div>
-    <div id="left" class="display"></div>
+    <div id="top" class="display"></div>
     <div id="right" class="display"></div>
+    <div id="left" class="display"></div>
     <div id="big" class="display"></div>
     <div id="footer" class="display"></div>
   </div>
   <script type="application/template" id="display-template">    
-    <div class="display-title">
-      [TITLE]
-    </div>
-    <div class="display-body [CLASS]">
-      [CONTENT]
+    <div class="display-wrapper [CLASS]">
+      <div class="display-title">
+        [TITLE]
+      </div>
+      <div class="display-body">
+        [CONTENT]
+      </div>
     </div>
   </script>
   <script type="application/template" id="transclusion-content-template">    
     <div class="transclusion">
       <div class="title">
-        <a href="[LINK]"><i class="fa fa-arrow-right"></i>[TITLE]</a>
+        [TITLE]
       </div>
       <div class="body">
         [CONTENT]

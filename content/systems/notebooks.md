@@ -1,7 +1,7 @@
 ----------------------------------------------------------------------------------------------------
 - id:dims-interaction
 - shade: shade3
-- characteristics: interaction-repl, interaction-open, interaction-principles, interaction-concrete
+- characteristics: interaction-single, interaction-repl, interaction-open, interaction-principles, interaction-concrete
 
 Feedback and execution at cell level.
 Programmatic abstractions are possible, but manual approach by copying or modifying code is common.
@@ -60,7 +60,7 @@ Notebooks can import a range of community packages and integrate with external s
 
 yadda
 
-![](img/ipython.png)
+![](img/sys/ipython.png)
 
 
 ----------------------------------------------------------------------------------------------------

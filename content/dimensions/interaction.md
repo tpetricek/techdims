@@ -2,21 +2,23 @@
 - id:summary
 - title: Interaction
 
-How do users manifest their ideas, evaluate the result, and generate new ideas in response?
+# <i class="fa fa-hand-pointer"></i> Interaction [Description and relations...](-> #top=.;left=.;footer=.;right=dimensions/interaction,index)
+
+How do users manifest their ideas, evaluate the result, and generate new ideas in response?  
 
 ## Dimensions
 
 - What are the gulfs of execution and evaluation and how are they related?  
-  [!](-> #left=.;right=dimensions/interaction,feedback-loops!)
+  [!](-> #top=.;left=.;footer=.;right=dimensions/interaction,feedback-loops!)
 - Which sets of feedback loops only occur together?  
-  [!](-> #left=.;right=dimensions/interaction,modes-of-interaction!)
+  [!](-> #top=.;left=.;footer=.;right=dimensions/interaction,modes-of-interaction!)
 - How do we go from abstractions to concrete examples and vice versa?  
-  [!](-> #left=.;right=dimensions/interaction,abstraction-construction!)
+  [!](-> #top=.;left=.;footer=.;right=dimensions/interaction,abstraction-construction!)
 
 ## Examples
 
-- [!](-> #left=.;right=dimensions/interaction,immediate-feedback!)
-- [!](-> #left=.;right=dimensions/interaction,direct-manipulation!)
+- [!](-> #top=.;left=.;footer=.;right=dimensions/interaction,immediate-feedback!)
+- [!](-> #top=.;left=.;footer=.;right=dimensions/interaction,direct-manipulation!)
 
 
 ----------------------------------------------------------------------------------------------------

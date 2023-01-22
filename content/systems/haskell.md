@@ -61,7 +61,7 @@ Closed ecosystem, but with community and diversity of packages.
 
 yadda
 
-![](img/haskell.png)
+![](img/sys/haskell.png)
 
 
 ----------------------------------------------------------------------------------------------------

@@ -60,7 +60,7 @@ Active community, but closed world and limited packages.
 
 yadda
 
-![](img/smalltalk-78.png)
+![](img/sys/smalltalk-78.png)
 
 
 

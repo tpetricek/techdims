@@ -23,7 +23,7 @@ compare and guide their work and, ultimately, stand on the shoulders of giants.
 ## Where to start to learn more
 
 - Want to delve into the details and analyse your system?  
-  [Start from the catalogue of technical dimensions](-> #left=index,catalogue;footer=index,navigation)
+  [Start from the catalogue of technical dimensions](-> #top=catalogue,index;left=catalogue,list;footer=index,navigation)
 - Want to explore our framework by example?  
   [Start from good old programming systems](-> #left=index,systems)
 - Want to see how this helps us understand programming systems?  
@@ -43,12 +43,12 @@ compare and guide their work and, ultimately, stand on the shoulders of giants.
 
 ----------------------------------------------------------------------------------------------------
 - id:navigation
-- title:Where to start to learn more
+- title:Where to go to learn more
 
 <div>
 
 - Want to delve into the details and analyse your system?  
-  [Start from the catalogue of technical dimensions](-> #left=index,catalogue;footer=index,navigation)
+  [Start from the catalogue of technical dimensions](-> #top=catalogue,index;left=catalogue,list;footer=index,navigation)
 - Want to explore our framework by example?  
   [Start from good old programming systems](-> #left=index,systems)
 - Want to see how this helps us understand programming systems?  
@@ -59,14 +59,6 @@ compare and guide their work and, ultimately, stand on the shoulders of giants.
   [Go back and choose a different route](-> #splash=index,welcome)
 
 </div>
-
-----------------------------------------------------------------------------------------------------
-- id:catalogue
-- title:Ya
-
-# Catalogue of technical dimensions
-
-![$dimensions/interaction,summary](#left=.;right=dimensions/interaction,index)
 
 ----------------------------------------------------------------------------------------------------
 - id:matrix-intro
@@ -124,28 +116,51 @@ or application-focused systems (spreadsheets, Hypercard, Boxer).
 </div>
 
 ----------------------------------------------------------------------------------------------------
-- id:systems
+- id:systems-intro
 - title:Systems
-- class:systems
 
 # Programming systems
 
-![$paper,definition](#left=.;right=paper,programming-systems)
+![$](paper,definition)
 
-![$systems/lisp-machines,summary](#left=.;right=systems/lisp-machines,index)
+[read more in the paper](-> #left=paper,introduction)
 
-![$systems/smalltalk,summary](#left=.;right=systems/smalltalk,index)
+----------------------------------------------------------------------------------------------------
+- id:systems
+- title:Systems
+- class:systems frameset
 
-![$systems/unix,summary](#left=.;right=systems/unix,index)
+![$](index,systems-intro)
 
-![$systems/spreadsheets,summary](#left=.;right=systems/spreadsheets,index)
+![$](systems/lisp-machines,summary)
 
-![$systems/web,summary](#left=.;right=systems/web,index)
+![$](systems/smalltalk,summary)
 
-![$systems/hypercard,summary](#left=.;right=systems/hypercard,index)
+![$](systems/unix,summary)
 
-![$systems/boxer,summary](#left=.;right=systems/boxer,index)
+![$](systems/spreadsheets,summary)
 
-![$systems/notebooks,summary](#left=.;right=systems/notebooks,index)
+![$](systems/web,summary)
 
-![$systems/haskell,summary](#left=.;right=systems/haskell,index)
+![$](systems/hypercard,summary)
+
+![$](systems/boxer,summary)
+
+![$](systems/notebooks,summary)
+
+![$](systems/haskell,summary)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

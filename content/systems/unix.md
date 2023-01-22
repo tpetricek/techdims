@@ -61,7 +61,7 @@ Openness allows integration with the external world; diversity of packages avail
 
 yadda
 
-![](img/unix-6.png)
+![](img/sys/unix-6.png)
 
 
 ----------------------------------------------------------------------------------------------------

@@ -60,7 +60,7 @@ Active community, but closed from the external world and limited packages availa
 
 yadda
 
-![](img/lisp-genera.gif)
+![](img/sys/lisp-genera.gif)
 
 
 ----------------------------------------------------------------------------------------------------

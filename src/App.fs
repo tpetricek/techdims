@@ -28,8 +28,7 @@ let getHashLink (state:Map<_, _>) =
   "#" + String.concat "," [ for kvp in state -> getHash kvp.Key kvp.Value ]
 
 type Transclusion = 
-  { Content : Section
-    Link : string }
+  { Content : Section }
 
 let findContent (ref:string) = 
   let file, id = 
@@ -68,6 +67,9 @@ let expandLinks state (el:HTMLElement) =
 
 let rec renderTransclusion trans = 
   let nc = document.createElement("div")
+  match trans.Content.Properties.TryFind "class" with 
+  | Some cls -> nc.className <- cls
+  | _ -> ()
   let body = trans.Content.Element.innerHTML
   let title = 
     match trans.Content.Properties.TryFind "title" with 
@@ -75,7 +77,7 @@ let rec renderTransclusion trans =
     | _ -> failwithf "renderTransclusion: Missing title for: %s" trans.Content.ID
   nc.innerHTML <- 
     document.getElementById("transclusion-content-template").innerHTML
-      .Replace("[TITLE]", title).Replace("[CONTENT]", body).Replace("[LINK]", trans.Link)
+      .Replace("[TITLE]", title).Replace("[CONTENT]", body)
   renderTransclusions nc
   nc
 
@@ -83,8 +85,7 @@ and renderTransclusions out =
   for child in getAllChildren out do 
     if child.tagName = "EMBED" then
       let embed = child :?> HTMLEmbedElement
-      let ts = { Content = findContent embed.attributes.[unbox "src"].value; 
-                 Link = embed.dataset.["links"] }
+      let ts = { Content = findContent embed.attributes.[unbox "src"].value }
       let nc = renderTransclusion ts
       child.parentElement.replaceChild(nc, child) |> ignore
 
@@ -127,7 +128,13 @@ let render state =
         let w = int img.clientWidth+200
         let l = max 0 (int window.document.body.clientWidth - w) / 2
         displ?style <- sprintf "max-width:100vw;width:%dpx;left:%dpx;" w l
-        
+
+  if state.Displays.ContainsKey "right" then
+    let anch = document.getElementsByClassName(state.Displays.["right"].File.Replace("/","-") + "-anchor")
+    let right = document.getElementById("right")
+    right?style?paddingTop <- ""
+    if anch.length > 0 then
+      right?style?paddingTop <- $"{anch.[0]?offsetTop - right?offsetTop}px"
 
 let initial = "splash=index,welcome"
 

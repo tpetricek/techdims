@@ -77,24 +77,28 @@ let genreateSummaryTableAndChecks () =
   {| Table = $"""<div class="table-wrapper"><table><tr>{header}</tr>{body}</table></div>""";
      SysChecks = systems; DimChecks = dims |}
 
+let (|SpecialLink|_|) = function
+  | DirectLink(body, link, title, range) when link.StartsWith("->") -> 
+      [ yield Literal($"<a class=\"tlink\" href=\"{link.Substring(3)}\"><i class=\"fa fa-arrow-right\"></i>", None)
+        yield! body
+        yield Literal("</a>", None) ] |> Some
+  | DirectImage("$$", "matrix-table", _, _) ->
+      [ Literal(genreateSummaryTableAndChecks().Table, None) ] |> Some
+  | DirectImage("$$", "matrix-dimchecks", _, _) ->
+      [ Literal(genreateSummaryTableAndChecks().DimChecks, None) ] |> Some
+  | DirectImage("$$", "matrix-syschecks", _, _) ->
+      [ Literal(genreateSummaryTableAndChecks().SysChecks, None) ] |> Some
+  | DirectImage("$", cnt, _, _) ->
+      [ Literal($"<embed type=\"application/transclusion\" src=\"{cnt}\" />", None) ] |> Some
+  | _ -> None
+
 let rec replaceTransclusions = function
   | MarkdownPatterns.ParagraphNested(p, ps) -> 
       MarkdownPatterns.ParagraphNested(p, List.map (List.map replaceTransclusions) ps)
+  | MarkdownParagraph.Paragraph([ SpecialLink ss ], _) -> 
+      MarkdownParagraph.Span(ss, None)
   | MarkdownPatterns.ParagraphSpans(s, ss) -> 
-      let ss = ss |> List.collect (function
-        | DirectLink(body, link, title, range) when link.StartsWith("->") -> 
-            [ yield Literal($"<a class=\"tlink\" href=\"{link.Substring(3)}\"><i class=\"fa fa-arrow-right\"></i>", None)
-              yield! body
-              yield Literal("</a>", None) ]
-        | DirectImage("$$", "matrix-table", _, _) ->
-            [ Literal(genreateSummaryTableAndChecks().Table, None) ]
-        | DirectImage("$$", "matrix-dimchecks", _, _) ->
-            [ Literal(genreateSummaryTableAndChecks().DimChecks, None) ]
-        | DirectImage("$$", "matrix-syschecks", _, _) ->
-            [ Literal(genreateSummaryTableAndChecks().SysChecks, None) ]
-        | DirectImage(cnt, links, _, _) when cnt.StartsWith("$") ->
-            [ Literal($"<embed type=\"application/transclusion\" src=\"{cnt.Substring(1)}\" data-links=\"{links}\" />", None) ]
-        | s -> [ s ])
+      let ss = ss |> List.collect (function SpecialLink ss -> ss | s -> [s])
       MarkdownPatterns.ParagraphSpans(s, ss)
   | p -> p
 

@@ -1,7 +1,7 @@
 ----------------------------------------------------------------------------------------------------
 - id:dims-interaction
 - shade: shade3
-- characteristics: interaction-repl, interaction-dm, interaction-open, interaction-principles, interaction-concrete
+- characteristics: interaction-single, interaction-repl, interaction-dm, interaction-open, interaction-principles, interaction-concrete
 
 Direct manipulation for graphical elements with REPL-like code execution.
 Abstraction via messages sent to boxes and using ports to reuse concrete boxes.
@@ -60,7 +60,7 @@ System is closed from external world and has only limited community and availabl
 
 yadda
 
-![](img/boxer.gif)
+![](img/sys/boxer.gif)
 
 
 ----------------------------------------------------------------------------------------------------

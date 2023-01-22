@@ -3,9 +3,10 @@ article { display:none; }
 body { padding-bottom:50px; font-family: 'Titillium Web', sans-serif; background-color:white; background-size:6px 6px; background-position: 0 0, 3px 3px; background-image: linear-gradient(45deg, black 25%, transparent 25%, transparent 75%, black 75%, black), linear-gradient(45deg, black 25%, transparent 25%, transparent 75%, black 75%, black); }
 
 h1 { font-size:30pt; line-height: 1.2em; margin-bottom:20px; }
-h2 { font-size:20pt; line-height: 1.2em; margin:30px 0px 20px 0px; }
-p { font-size:14pt; margin-bottom:15px; }
-li { margin-bottom:10px; line-height:32px; list-style-type:none; font-size:14pt; }
+h1 .fa { font-size:26pt; margin-right:5px;}
+h2 { font-size:20pt; line-height: 1.2em; margin:20px 0px 10px 0px; }
+p { font-size:14pt; margin-bottom:15px; line-height:30px; }
+li { margin-bottom:10px; line-height:30px; list-style-type:none; font-size:14pt; }
 ul { padding-left:20px; }
 a { color:black; text-decoration:underline; }
 a:hover, a:active { text-decoration:underline; }
@@ -13,10 +14,15 @@ a:hover, a:active { text-decoration:underline; }
 .tlink { border:3px solid black; padding:0px 8px 0px 8px; text-decoration:none; border-radius:4px; font-weight:bold; font-size:12pt; }
 .tlink:hover, .tlink:active { text-decoration:none; }
 .tlink .fa { font-size:10pt; margin:0px 7px -2px 0px; position:relative; top:-1px; }
+h1 .tlink { vertical-align:top; margin:2px 0px 0px 10px;}
 
-div.display { background:white; border:3px solid black; }
+div.display .display-wrapper { background:white; border:3px solid black; }
 div.display .display-title { font-weight:bold; font-size:12pt; color:white; background:black; text-align:left; padding:1px 0px 1px 5px; }
-div.display .display-body { padding:30px; }
+div.display .display-body { padding:20px 20px 20px 30px; }
+div.display .frameset.display-wrapper { background:none; border-style:none; }
+div.display .frameset .display-body { padding:0px; }
+div.display .frameset .display-title { display:none; }
+
 .display.visible { display:block; }
 .display.hidden { display:none; }
 
@@ -25,14 +31,17 @@ div.display .display-body { padding:30px; }
 #image .display-body { text-align:center;}
 #image img { border:4px solid black; max-width:100%;}
 #image blockquote { display:inline-block; }
-#left { width:40vw; margin:20px 0px 0px 5vw; }
-#right { position:absolute; width:40vw; left:42vw; margin:20px 0px 0px 5vw; }
+#image .noborder img { border-style:none; max-width:100%;}
+#top { width:40vw; margin:20px 0px 20px 5vw; }
+#left { width:40vw; margin:0px 0px 0px 5vw; }
+#right { position:absolute; width:40vw; left:42vw; margin:0px 0px 0px 5vw; }
 #big { width:90vw; margin:20px 10vw 0px 5vw; }
 #footer { width:40vw; margin:20px 10vw 0px 5vw; }
 
 .welcome blockquote p { margin:-10px 0px 30px 0px; } 
 .welcome img { border:3px solid black; float:right; max-width:300px; margin:0px 20px 20px 20px;}
 .systems img { border:3px solid black; float:right; max-width:300px; margin:0px 20px 20px 20px;}
+.catalogue img { border:3px solid black; float:right; max-width:400px; margin:20px 20px 20px 20px;}
 
 .matrix .table-wrapper { overflow-x:scroll; border:3px solid black; margin-bottom:20px;}
 .matrix table { table-layout: fixed; border-collapse: collapse; }
@@ -75,9 +84,13 @@ div.display .display-body { padding:30px; }
 .matrix input { margin:0px 5px 0px 0px; }
 .matrix label { font-size:14pt; display: block; margin-left:10px;}
 .matrix .matrix-footer p { max-width: 700px; margin-bottom:30px; }
+.matrix .transclusion .title { text-align:right; }
+.matrix .transclusion .title i { color:white; margin:4px 10px 4px 0px; font-size:9pt; }
 
-div.transclusion { border:3px solid black; }
-div.transclusion .title { font-size:12pt; background:black; font-weight:bold; padding:1px 2px 3px 5px; }
-div.transclusion .title a { color:white; text-decoration:none; }
-div.transclusion .title .fa { font-size:10pt; margin:0px 8px 0px 2px; }
-div.transclusion .body { padding:10px; }
+.frameset div.transclusion { border:3px solid black; margin-bottom:20px; }
+.frameset div.transclusion .title { font-size:12pt; background:black; font-weight:bold; padding:1px 2px 3px 5px; color:white; }
+.frameset div.transclusion .body { padding:20px 20px 20px 30px; background:white; }
+
+.frameset div.transclusion div.transclusion { border-style:none; margin-bottom:0px; }
+.frameset div.transclusion div.transclusion .title { display:none; }
+.frameset div.transclusion div.transclusion .body { padding:0px;  }

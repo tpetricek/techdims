@@ -59,7 +59,7 @@ The diversified web ecosystem allows for the integration with external systems.
 
 yadda
 
-![](img/web-ie5.png)
+![](img/sys/web-ie5.png)
 
 
 ----------------------------------------------------------------------------------------------------

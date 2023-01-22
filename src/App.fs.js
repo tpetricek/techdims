@@ -1,7 +1,7 @@
 import { FSharpRef, Record } from "./fable_modules/fable-library.3.7.20/Types.js";
 import { record_type, class_type, string_type } from "./fable_modules/fable-library.3.7.20/Reflection.js";
 import { filter, find, append, tryFind, singleton, map, collect, delay, toList } from "./fable_modules/fable-library.3.7.20/Seq.js";
-import { FSharpMap__TryGetValue, FSharpMap__TryFind, map as map_2, FSharpMap__get_Item, ofSeq } from "./fable_modules/fable-library.3.7.20/Map.js";
+import { FSharpMap__ContainsKey, FSharpMap__TryGetValue, FSharpMap__TryFind, map as map_2, FSharpMap__get_Item, ofSeq } from "./fable_modules/fable-library.3.7.20/Map.js";
 import { rangeDouble } from "./fable_modules/fable-library.3.7.20/Range.js";
 import { toText, replace, substring, printf, toFail, join } from "./fable_modules/fable-library.3.7.20/String.js";
 import { map as map_1, equalsWith } from "./fable_modules/fable-library.3.7.20/Array.js";
@@ -48,15 +48,14 @@ export function getHashLink(state) {
 }
 
 export class Transclusion extends Record {
-    constructor(Content, Link) {
+    constructor(Content) {
         super();
         this.Content = Content;
-        this.Link = Link;
     }
 }
 
 export function Transclusion$reflection() {
-    return record_type("App.Transclusion", [], Transclusion, () => [["Content", Section$reflection()], ["Link", string_type]]);
+    return record_type("App.Transclusion", [], Transclusion, () => [["Content", Section$reflection()]]);
 }
 
 export function findContent(ref) {
@@ -142,17 +141,22 @@ export function expandLinks(state, el) {
 
 export function renderTransclusion(trans) {
     const nc = document.createElement("div");
+    const matchValue = FSharpMap__TryFind(trans.Content.Properties, "class");
+    if (matchValue != null) {
+        const cls = matchValue;
+        nc.className = cls;
+    }
     const body = trans.Content.Element.innerHTML;
     let title;
-    const matchValue = FSharpMap__TryFind(trans.Content.Properties, "title");
-    if (matchValue != null) {
-        const t = matchValue;
+    const matchValue_1 = FSharpMap__TryFind(trans.Content.Properties, "title");
+    if (matchValue_1 != null) {
+        const t = matchValue_1;
         title = t;
     }
     else {
         title = toFail(printf("renderTransclusion: Missing title for: %s"))(trans.Content.ID);
     }
-    nc.innerHTML = replace(replace(replace(document.getElementById("transclusion-content-template").innerHTML, "[TITLE]", title), "[CONTENT]", body), "[LINK]", trans.Link);
+    nc.innerHTML = replace(replace(document.getElementById("transclusion-content-template").innerHTML, "[TITLE]", title), "[CONTENT]", body);
     renderTransclusions(nc);
     return nc;
 }
@@ -164,7 +168,7 @@ export function renderTransclusions(out) {
             const child = enumerator["System.Collections.Generic.IEnumerator`1.get_Current"]();
             if (child.tagName === "EMBED") {
                 const embed = child;
-                const ts = new Transclusion(findContent((embed.attributes["src"]).value), embed.dataset["links"]);
+                const ts = new Transclusion(findContent((embed.attributes["src"]).value));
                 const nc = renderTransclusion(ts);
                 child.parentElement.replaceChild(nc, child);
             }
@@ -251,6 +255,14 @@ export function render(state) {
                 const l = (~(~(max(comparePrimitives, 0, (~(~window.document.body.clientWidth)) - w) / 2))) | 0;
                 displ.style = toText(printf("max-width:100vw;width:%dpx;left:%dpx;"))(w)(l);
             });
+        }
+    }
+    if (FSharpMap__ContainsKey(state.Displays, "right")) {
+        const anch = document.getElementsByClassName(replace(FSharpMap__get_Item(state.Displays, "right").File, "/", "-") + "-anchor");
+        const right = document.getElementById("right");
+        right.style.paddingTop = "";
+        if (anch.length > 0) {
+            right.style.paddingTop = (`${((anch[0]).offsetTop - right.offsetTop)}px`);
         }
     }
 }

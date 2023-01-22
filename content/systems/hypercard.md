@@ -1,7 +1,7 @@
 ----------------------------------------------------------------------------------------------------
 - id:dims-interaction
 - shade: shade3
-- characteristics: interaction-repl, interaction-dm, interaction-open, interaction-principles, interaction-concrete
+- characteristics: interaction-single, interaction-repl, interaction-dm, interaction-open, interaction-principles, interaction-concrete
 
 Direct manipulation for user interface; programmatic scripting with execution feedback loop.
 Abstractions on card level using shared backgrounds and transclusion.
@@ -60,7 +60,7 @@ progresively become programmers. Closed from external world, but active communit
 
 yadda
 
-![](img/hypercard.jpg)
+![](img/sys/hypercard.jpg)
 
 
 ----------------------------------------------------------------------------------------------------
