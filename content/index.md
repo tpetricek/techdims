@@ -28,7 +28,7 @@ compare and guide their work and, ultimately, stand on the shoulders of giants.
   [Start from good old programming systems](-> #left=index,systems)
 - Want to see how this helps us understand programming systems?  
   [Start from a summary matrix of system and dimensions](-> #left=index,matrix-intro;big=index,matrix-body;footer=index,navigation)
-- Want to understand our motivation and methodology?  
+- Read about our motivation, methodology and evaluation?  
   [Start from our paper about technical dimensions](-> #left=paper,main)
 
 ----------------------------------------------------------------------------------------------------
@@ -54,7 +54,7 @@ compare and guide their work and, ultimately, stand on the shoulders of giants.
   [Start from good old programming systems](-> #left=index,systems)
 - Want to see how this helps us understand programming systems?  
   [Start from a summary matrix of system and dimensions](-> #left=index,matrix-intro;big=index,matrix-body;footer=index,navigation)
-- Want to understand our motivation and methodology?  
+- Read about our motivation, methodology and evaluation?  
   [Start from our paper about technical dimensions](-> #left=paper,main)
 - Want to the Technical Dimensions welcome page?  
   [Go back and choose a different route](-> #top=index,welcome)

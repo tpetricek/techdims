@@ -45,6 +45,10 @@ well-known value (or a combination of values), remarks and relations to other di
 
 ![$](dimensions/complexity,summary)
 
+![$](dimensions/errors,summary)
+
+![$](dimensions/adoptability,summary)
+
 ----------------------------------------------------------------------------------------------------
 - id:nest
 - title:An illustration of the technical dimensions framework

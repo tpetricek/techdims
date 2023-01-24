@@ -18,7 +18,7 @@ How is meaning constructed? How are internal and external incentives balanced?
 - How much is common structure explicitly marked as such?  
   [!](-> #*=.;right=dimensions/conceptual-structure,commonality!)
 
-## Examples & remarks
+## Examples and remarks
 
 - [!](-> #*=.;right=dimensions/conceptual-structure,example-integrity!)
 - [!](-> #*=.;right=dimensions/conceptual-structure,example-openness!)
