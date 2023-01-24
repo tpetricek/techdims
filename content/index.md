@@ -25,11 +25,11 @@ compare and guide their work and, ultimately, stand on the shoulders of giants.
 - Want to delve into the details and analyse your system?  
   [Start from the catalogue of technical dimensions](-> #top=catalogue,index;left=catalogue,list;footer=index,navigation)
 - Want to explore our framework by example?  
-  [Start from good old programming systems](-> #left=index,systems)
+  [Start from good old programming systems](-> #top=systems,intro;left=systems,index)
 - Want to see how this helps us understand programming systems?  
   [Start from a summary matrix of system and dimensions](-> #left=index,matrix-intro;big=index,matrix-body;footer=index,navigation)
 - Read about our motivation, methodology and evaluation?  
-  [Start from our paper about technical dimensions](-> #left=paper,main)
+  [Start from our paper about technical dimensions](-> #top=paper,index;left=paper,toc;footer=index,navigation)
 
 ----------------------------------------------------------------------------------------------------
 - id:smalltalk-76
@@ -51,11 +51,11 @@ compare and guide their work and, ultimately, stand on the shoulders of giants.
 - Want to delve into the details and analyse your system?  
   [Start from the catalogue of technical dimensions](-> #top=catalogue,index;left=catalogue,list;footer=index,navigation)
 - Want to explore our framework by example?  
-  [Start from good old programming systems](-> #left=index,systems)
+  [Start from good old programming systems](-> #top=systems,intro;left=systems,index)
 - Want to see how this helps us understand programming systems?  
   [Start from a summary matrix of system and dimensions](-> #left=index,matrix-intro;big=index,matrix-body;footer=index,navigation)
 - Read about our motivation, methodology and evaluation?  
-  [Start from our paper about technical dimensions](-> #left=paper,main)
+  [Start from our paper about technical dimensions](-> #top=paper,index;left=paper,toc;footer=index,navigation)
 - Want to the Technical Dimensions welcome page?  
   [Go back and choose a different route](-> #top=index,welcome)
 
@@ -115,53 +115,3 @@ or application-focused systems (spreadsheets, Hypercard, Boxer).
 
 </div>
 </div>
-
-----------------------------------------------------------------------------------------------------
-- id:systems-intro
-- title:Systems
-
-# Programming systems
-
-![$](paper,definition)
-
-[read more in the paper](-> #left=paper,introduction)
-
-----------------------------------------------------------------------------------------------------
-- id:systems
-- title:Systems
-- class:systems frameset
-
-![$](index,systems-intro)
-
-![$](systems/lisp-machines,summary)
-
-![$](systems/smalltalk,summary)
-
-![$](systems/unix,summary)
-
-![$](systems/spreadsheets,summary)
-
-![$](systems/web,summary)
-
-![$](systems/hypercard,summary)
-
-![$](systems/boxer,summary)
-
-![$](systems/notebooks,summary)
-
-![$](systems/haskell,summary)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

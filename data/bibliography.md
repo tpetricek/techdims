@@ -98,3 +98,5 @@
  - Mathematica: Wolfram, Stephen. 1991. *Mathematica: A System for Doing Mathematics byComputer (2nd Ed.)*. USA: Addison Wesley Longman Publishing Co., Inc.
  - VisiCalc2: Zynda, Melissa Rodriguez. 2013. “The First Killer App: A History ofSpreadsheets.” *Interactions* 20 (5): 68–72.<https://doi.org/10.1145/2509224>.
  - Interlisp: Teitelman, Warren. 1974. “Interlisp Reference Manual.” Xerox PARC. <http://www.bitsavers.org/pdf/xerox/interlisp/Interlisp_Reference_Manual_1974.pdf>
+ - Tyranny: Feyerabend, Paul. 2011. The Tyranny of Science, Cambridge: Polity Press. ISBN 0745651895
+ - Irony: Petit Emmanuel J. 2013. Irony: Irony or, the Self-Critical Opacity of Postmodern Architecture. Yale University Press

@@ -183,7 +183,7 @@ In Haskell, the primary notation is the programming language, but there are also
 - title:Dimension: Expression geography
 
 # Dimension: Expression geography
-A crucial feature of a notation is the relationship between the structure of the notation and the structure of the behavior it encodes. Most importantly, do *similar expressions* in a particular notation represent *similar behavior*? (See Basman's [#](NotYetCraft) similar discussion of "density".) Visual notations may provide a more or less direct mapping. On the one hand, similar-looking code in a block language may mean very different things. On the other hand, similar looking design of two HyperCard cards will result in similar looking cards---the mapping between the notation and the logic is much more direct.
+A crucial feature of a notation is the relationship between the structure of the notation and the structure of the behavior it encodes. Most importantly, do *similar expressions* in a particular notation represent *similar behavior*? (See Basman's [#](NotYetCraft) similar discussion of "density".) Visual notations may provide a more or less direct mapping. On the one hand, similar-looking code in a block language may mean very different things. On the other hand, similar looking design of two HyperCard cards will result in similar looking cards—the mapping between the notation and the logic is much more direct.
 
 ## C/C++ expression language
 In textual notations, this may easily not be the case. Consider the two C conditionals:

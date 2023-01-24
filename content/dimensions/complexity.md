@@ -40,7 +40,7 @@ Most programming systems use _factoring of complexity_ and encapsulate some of t
 
 [Conceptual structure](-> #*=.;right=dimensions/conceptual-structure,index) In many cases, the factoring of complexity follows the conceptual structure of the programming system.
 
-[Flattening and factoring](-> #*=.;right=dimensions/conceptual-structure,flattening-factoring) One typically automates the thing at the lowest level in one's factoring (by making the lowest level a thing that exists outside of the program---in a system or a library)
+[Flattening and factoring](-> #*=.;right=dimensions/conceptual-structure,flattening-factoring) One typically automates the thing at the lowest level in one's factoring (by making the lowest level a thing that exists outside of the program—in a system or a library)
 
 ----------------------------------------------------------------------------------------------------
 - id:notations
@@ -49,9 +49,9 @@ Most programming systems use _factoring of complexity_ and encapsulate some of t
 # Remark: Notations
 Even when working at a high level, programming involves manipulating some program notation. In high-level functional or imperative programming languages, the programmer writes code that typically has clear operational meaning, even when some of the complexity is relegated to a library implementation or a runtime. 
 
-When using declarative programming systems like SQL, Prolog or Datalog, the meaning of a program is still unambiguous, but it is not defined operationally---there is a (more or less deterministic) inference engine that solves the problem based on the provided description. 
+When using declarative programming systems like SQL, Prolog or Datalog, the meaning of a program is still unambiguous, but it is not defined operationally—there is a (more or less deterministic) inference engine that solves the problem based on the provided description. 
 
-Finally, systems based on *programming by example* step even further away from having clear operational meaning---the program may be simply a collection of sample inputs and outputs, from which a (possibly non-deterministic) engine infers the concrete steps of execution.
+Finally, systems based on *programming by example* step even further away from having clear operational meaning—the program may be simply a collection of sample inputs and outputs, from which a (possibly non-deterministic) engine infers the concrete steps of execution.
 
 ----------------------------------------------------------------------------------------------------
 - id:factoring
@@ -117,4 +117,4 @@ An interesting case of automation is _programming by example_. [#](PBE) In this 
 
 Throughout history, programmers have always hoped for the next level of "automatic programming". As observed by Parnas, [#](Euphemism) "automatic programming has always been a euphemism for programming in a higher-level language than was then available to the programmer".
 
-We may speculate whether Deep Learning will enable the next step of automation. However, this would not be different in principle from existing developments. We can see any level of automation as using *artificial intelligence* methods. This is the case for declarative languages or constraint-based languages---where the inference engine implements a traditional AI method (GOFAI, i.e., Good Old Fashioned AI).
+We may speculate whether Deep Learning will enable the next step of automation. However, this would not be different in principle from existing developments. We can see any level of automation as using *artificial intelligence* methods. This is the case for declarative languages or constraint-based languages—where the inference engine implements a traditional AI method (GOFAI, i.e., Good Old Fashioned AI).

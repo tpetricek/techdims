@@ -53,10 +53,16 @@ div.display .frameset .display-title { display:none; }
 .nobullet li { list-style-type:none; margin-left:0px; }
 .systems img { border:3px solid black; float:right; max-width:300px; margin:0px 20px 20px 20px;}
 .catalogue img { border:3px solid black; float:right; max-width:400px; margin:20px 20px 20px 20px;}
-.doc img { border:3px solid black; float:right; max-width:300px; margin:0px 20px 20px 20px;}
+.doc img { border:3px solid black; float:right; max-width:400px; margin:0px 20px 20px 20px;}
 
 .doc blockquote { text-align:right; font-style:italic; padding:0px 0px 10px 10%; }
 .doc blockquote p { margin-bottom:10px;}
+
+.dark table { table-layout: fixed; border-collapse: collapse; margin:0px 30px 0px 30px; }
+.dark table td { padding:0px 10px 0px 5px; line-height:26px; font-size:13pt; font-weight:400; border:2px solid black; }
+.dark .cluster { background:black; color:white; }
+.dark .cluster td { font-size:12pt; font-weight:600; padding:0px 0px 0px 5px; line-height:16pt; }
+.dark a { text-decoration:none; }
 
 .matrix .table-wrapper { overflow-x:scroll; border:3px solid black; margin-bottom:20px;}
 .matrix table { table-layout: fixed; border-collapse: collapse; }

@@ -67,7 +67,7 @@ HyperCard and Flash were both programming systems that found widespread adoption
 
 ## Smalltalk and Lisp machines
 
-Smalltalk and Lisp machines were complex but unified. After overcoming the initial learning curve, their environments provided a complete solution for building entire application systems of arbitrary complexity without having to learn other technologies. Boxer [#](BoxerDesign) is notable for providing a general-purpose programming environment---albeit for small-scale applications---along with an organizing visual metaphor like that of spreadsheets.
+Smalltalk and Lisp machines were complex but unified. After overcoming the initial learning curve, their environments provided a complete solution for building entire application systems of arbitrary complexity without having to learn other technologies. Boxer [#](BoxerDesign) is notable for providing a general-purpose programming environment—albeit for small-scale applications—along with an organizing visual metaphor like that of spreadsheets.
 
 ----------------------------------------------------------------------------------------------------
 - id:sociability
