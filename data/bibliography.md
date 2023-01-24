@@ -1,0 +1,99 @@
+ - DotCom: Ankerson, Megan Sapnar. 2018. *Dot-Com Design: The Rise of a Usable,Social, Commercial Web*. NYU Press.
+ - NotYetCraft: Basman, Antranig. 2016. “Building Software Is Not (yet) a Craft.” In*Proceedings of the 27th Annual Workshop of the Psychology ofProgramming Interest Group, PPIG 2016, Cambridge, UK, September 7-10,2016*, edited by Luke Church, 32. Psychology of Programming InterestGroup. <http://ppig.org/library/paper/building-software-not-yet-craft>.
+ - Infusion: Basman, Antranig. 2021. “Infusion Framework and Components.” 2021.<https://fluidproject.org/infusion.html>.
+ - Externalize: Basman, Antranig, L. Church, C. Klokmose, and Colin B. D. Clark. 2016.“Software and How It Lives on: Embedding Live Programs in the WorldAround Them.” In *PPIG*.
+ - OpenAuthorial: Basman, Antranig, Clayton Lewis, and Colin Clark. 2018. “The OpenAuthorial Principle: Supporting Networks of Authors in CreatingExternalisable Designs.” In *Proceedings of the 2018 ACM SIGPLANInternational Symposium on New Ideas, New Paradigms, and Reflections onProgramming and Software*, 29–43.
+ - APIdesign: Bloch, Joshua. 2007. “How to Design a Good API and Why It Matters.”2007.<http://www.cs.bc.edu/~muller/teaching/cs102/s06/lib/pdf/api-design>.
+ - Varv: Borowski, Marcel, Luke Murray, Rolf Bagge, Janus Bager Kristensen,Arvind Satyanarayan, and Clemens Nylandsted Klokmose. 2022. “Varv:Reprogrammable Interactive Software as a Declarative Data Structure.” In*CHI Conference on Human Factors in Computing Systems*. CHI ’22. NewYork, NY, USA: Association for Computing Machinery.<https://doi.org/10.1145/3491102.3502064>.
+ - brooks95aristo: Brooks, FP. 1995. “Aristocracy, Democracy and System Design.” In *TheMythical Man Month: Essays on Software Engineering*. Addison-Wesley.
+ - MMM: Brooks, Frederick P. 1978. *The Mythical Man-Month: Essays on Softw*.1st ed. USA: Addison-Wesley Longman Publishing Co., Inc.
+ - Chang: Chang, Hasok. 2004. *Inventing Temperature: Measurement and ScientificProgress*. Oxford: Oxford University Press.
+ - ChaosMonkey: Chang, Michael Alan, Bredan Tschaen, Theophilus Benson, and Laurent Vanbever. 2015a. “Chaos Monkey: Increasing SDN Reliability ThroughSystematic Network Destruction.” In *Proceedings of the 2015 ACMConference on Special Interest Group on Data Communication*, 371–72.SIGCOMM ’15. New York, NY, USA: Association for Computing Machinery.<https://doi.org/10.1145/2785956.2790038>.
+ - 10.1145/2829988.2790038: Chang, Michael Alan, Bredan Tschaen, Theophilus Benson, and Laurent Vanbever. 2015b. “Chaos Monkey: Increasing SDN Reliability Through SystematicNetwork Destruction.” *SIGCOMM Comput. Commun. Rev.* 45 (4): 371–72.<https://doi.org/10.1145/2829988.2790038>.
+ - DarkErrors: Chisa, Ellen. 2020. “Introduction: Error Rail and Match with `DB::get`.”2020. <https://youtu.be/NRMmy9ZzA-o>.
+ - CodaWeb: Coda. 2022. “Coda: The Doc That Brings It All Together.”<https://coda.io>.
+ - WhatIsSuccess: Czaplicki, Evan. 2018. 2018.<https://www.youtube.com/watch?v=uGlzRt-FYto>.
+ - Eclipse: desRivieres, J., and J. Wiegand. 2004. “Eclipse: A Platform forIntegrating Development Tools.” *IBM Systems Journal* 43 (2): 371–83.<https://doi.org/10.1147/sj.432.0371>.
+ - Boxer: diSessa, A. A, and H. Abelson. 1986. “Boxer: A ReconstructibleComputational Medium.” *Commun. ACM* 29 (9): 859–68.<https://doi.org/10.1145/6592.6595>.
+ - BoxerDesign: diSessa, Andrea A. 1985. “A Principled Design for an IntegratedComputational Environment.” *Human–Computer Interaction* 1 (1): 1–47.[https://doi.org/10.1207/s15327051hci0101\\1](https://doi.org/10.1207/s15327051hci0101\_1).
+ - 10.1145/1094811.1094851: Edwards, Jonathan. 2005a. “Subtext: Uncovering the Simplicity ofProgramming.” In *Proceedings of the 20th Annual ACM SIGPLAN Conferenceon Object-Oriented Programming, Systems, Languages, and Applications*,505–18. OOPSLA ’05. New York, NY, USA: Association for ComputingMachinery. <https://doi.org/10.1145/1094811.1094851>.
+ - Subtext: Edwards, Jonathan. 2005b. “Subtext: Uncovering the Simplicity of Programming.”*SIGPLAN Not.* 40 (10): 505–18.<https://doi.org/10.1145/1103845.1094851>.
+ - EvProgSys: Edwards, Jonathan, Stephen Kell, Tomas Petricek, and Luke Church. 2019.“Evaluating Programming Systems Design.” In *Proceedings of 30th AnnualWorkshop of Psychology of Programming Interest Group*. PPIG 2019.Newcastle, UK.
+ - ProgProgLang: Felleisen, Matthias, Robert Bruce Findler, Matthew Flatt, ShriramKrishnamurthi, Eli Barzilay, Jay McCarthy, and Sam Tobin-Hochstadt.2018. “A Programmable Programming Language.” *Commun. ACM* 61 (3):62–71. <https://doi.org/10.1145/3127323>.
+ - MalfunctioningSW: Floridi, Luciano, Nir Fresco, and Giuseppe Primiero. 2015. “OnMalfunctioning Software.” *Synthese* 192 (4): 1199–1220.
+ - LispIntro: Foderaro, John. 1991. “LISP: Introduction.” *Commun. ACM* 34 (9): 27.<https://doi.org/10.1145/114669.114670>.
+ - DSLs: Fowler, Martin. 2010. *Domain-Specific Languages*. Pearson Education.
+ - Miscomputation: Fresco, Nir, and Giuseppe Primiero. 2013. “Miscomputation.” *Philosophy& Technology* 26 (3): 253–72.
+ - FullBrain: Fry, Christopher. 1997. “Programming on an Already Full Brain.” *Commun.ACM* 40 (4): 55–64. <https://doi.org/10.1145/248448.248459>.
+ - SwStudies: Fuller, Matthew et al. 2008. *Software Studies: A Lexicon*. Mit Press.
+ - WIB: Gabriel, Richard P. 1991. “Worse Is Better.” 1991.<https://www.dreamsongs.com/WorseIsBetter.html>.
+ - DesignedAsDesigner: Gabriel, Richard P. 2008. “Designed as Designer.” In *Proceedings of the 23rd ACMSIGPLAN Conference on Object-Oriented Programming Systems Languages andApplications*, 617–32. OOPSLA ’08. New York, NY, USA: Association forComputing Machinery. <https://doi.org/10.1145/1449764.1449813>.
+ - PLrev: Gabriel, Richard P. 2012. “The Structure of a Programming Language Revolution.” In*Proceedings of the ACM International Symposium on New Ideas, NewParadigms, and Reflections on Programming and Software*, 195–214.Onward! 2012. New York, NY, USA: Association for Computing Machinery.<https://doi.org/10.1145/2384592.2384611>.
+ - DesPats: Gamma, Erich, Richard Helm, Ralph E. Johnson, and John Vlissides. 1995.*Design Patterns: Elements of Reusable Object-Oriented Software*.Reading, Mass: Addison-Wesley.
+ - GlideWeb: Glide. 2022. “Glide: Create Apps and Websites Without Code.”<https://www.glideapps.com>.
+ - ExceptionHandling: Goodenough, John B. 1975. “Exception Handling: Issues and a ProposedNotation.” *Commun. ACM* 18 (12): 683–96.<https://doi.org/10.1145/361227.361230>.
+ - Java: Gosling, James, Bill Joy, Guy Steele, and Gilad Bracha. 2000. *The JavaLanguage Specification*. Addison-Wesley Professional.
+ - VisiCalc: Grad, Burton. 2007. “The Creation and the Demise of VisiCalc.” *IEEEAnnals of the History of Computing* 29 (3): 20–31.<https://doi.org/10.1109/MAHC.2007.4338439>.
+ - CogDims: Green, T. R. G., and M. Petre. 1996. “Usability Analysis of VisualProgramming Environments: A ‘Cognitive Dimensions’ Framework.” *JOURNALOF VISUAL LANGUAGES AND COMPUTING* 7: 131–74.
+ - PBEExcel: Gulwani, Sumit, William R Harris, and Rishabh Singh. 2012. “SpreadsheetData Manipulation Using Examples.” *Communications of the ACM* 55 (8):97–105.
+ - Hancock2003: Hancock, C., and M. Resnick. 2003. “Real-Time Programming and the BigIdeas of Computational Literacy.” PhD thesis, Massachusetts Institute ofTechnology. <https://dspace.mit.edu/handle/1721.1/61549>.
+ - LIVE21: Hempel, Brian, and Sam Lau. 2021. “LIVE Workshop.” 2021.<https://liveprog.org/live-2021/>.
+ - SnS: Hempel, Brian, Justin Lubin, and Ravi Chugh. 2019.“Sketch-n-Sketch: Output-DirectedProgramming for SVG.” In *Proceedings of the 32nd Annual ACM Symposiumon User Interface Software and Technology*, 281–92. UIST ’19. New York,NY, USA: Association for Computing Machinery.<https://doi.org/10.1145/3332165.3347925>.
+ - LIVE20: Hempel, Brian, and Roly Perera. 2020. “LIVE Workshop.” 2020.<https://liveprog.org/live-2020/>.
+ - SelfSustaining2010: Hirschfeld, Robert, Hidehiko Masuhara, and Kim Rose, eds. 2010.*Workshop on Self-Sustaining Systems, S3 2010, Tokyo, Japan, September27-28, 2010*. ACM. <https://doi.org/10.1145/1942793>.
+ - SelfSustaining2008: Hirschfeld, Robert, and Kim Rose, eds. 2008. *Self-Sustaining Systems,First Workshop, S3 2008, Potsdam, Germany, May 15-16, 2008, RevisedSelected Papers*. Vol. 5146. Lecture Notes in Computer Science.Springer. <https://doi.org/10.1007/978-3-540-89275-5>.
+ - STdesign: Ingalls, Daniel. 1981. “Design Principles Behind Smalltalk.” 1981.<https://archive.org/details/byte-magazine-1981-08/page/n299/mode/2up>.
+ - PersonalDynMedia: Kay, A., and A. Goldberg. 1977. “Personal Dynamic Media.” *Computer* 10(3): 31–41. <https://doi.org/10.1109/C-M.1977.217672>.
+ - Mythical: Kell, Stephen. 2009. “The Mythical Matched Modules: Overcoming theTyranny of Inflexible Software Construction.” In *OOPSLA Companion*.
+ - KellOS: Kell, Stephen. 2013. “The Operating System: Should There Be One?” In *Proceedingsof the Seventh Workshop on Programming Languages and Operating Systems*.PLOS ’13. New York, NY, USA: Association for Computing Machinery.<https://doi.org/10.1145/2525528.2525534>.
+ - KellComm: Kell, Stephen. 2017. “Some Were Meant for C: The Endurance of an UnmanageableLanguage.” In *Proceedings of the 2017 ACM SIGPLAN InternationalSymposium on New Ideas, New Paradigms, and Reflections on Programmingand Software*, 229–45. Onward! 2017. New York, NY, USA: Association forComputing Machinery. <https://doi.org/10.1145/3133850.3133867>.
+ - AspectJ: Kiczales, Gregor, Erik Hilsdale, Jim Hugunin, Mik Kersten, Jeffrey Palm,and William G. Griswold. 2001. “An Overview of AspectJ.” In *ECOOP2001 - Object-Oriented Programming, 15th European Conference, Budapest,Hungary, June 18-22, 2001, Proceedings*, edited by Jørgen LindskovKnudsen, 2072:327–53. Lecture Notes in Computer Science. Springer.[https://doi.org/10.1007/3-540-45337-7\\18](https://doi.org/10.1007/3-540-45337-7\_18).
+ - PaperTools: Klein, Ursula. 2003. *Experiments, Models, Paper Tools: Cultures ofOrganic Chemistry in the Nineteenth Century*. Stanford, CA: StanfordUniversity Press. <http://www.sup.org/books/title/?id=1917>.
+ - Webstrates: Klokmose, Clemens N., James R. Eagan, Siemen Baader, Wendy Mackay, andMichel Beaudouin-Lafon. 2015. “Webstrates: Shareable Dynamic Media.” In*Proceedings of the 28th Annual ACM Symposium on User Interface Software& Technology*, 280–90. UIST ’15. New York, NY, USA: Association forComputing Machinery. <https://doi.org/10.1145/2807442.2807446>.
+ - Jupyter: Kluyver, Thomas, Benjamin Ragan-Kelley, Fernando Pérez, Brian Granger,Matthias Bussonnier, Jonathan Frederic, Kyle Kelley, et al. n.d.“Jupyter Notebooks—a Publishing Format for Reproducible ComputationalWorkflows.” *Positioning and Power in Academic Publishing: Players,Agents and Agendas*, 87.
+ - LiterateProg: Knuth, Donald Ervin. 1984. “Literate Programming.” *The ComputerJournal* 27 (2): 97–111.
+ - LabView: Kodosky, Jeffrey. 2020. “LabVIEW.” *Proc. ACM Program. Lang.* 4 (HOPL).<https://doi.org/10.1145/3386328>.
+ - Kuhn: Kuhn, Thomas S. 1970. University of Chicago Press.
+ - UISTAuthor: Kumar, Ranjitha, and Michael Nebeling. 2021. “UIST 2021 - Author Guide.”2021. <https://uist.acm.org/uist2021/author-guide.html>.
+ - SPEPrograms: Lehman, Meir M. 1980. “Programs, Life Cycles, and Laws of SoftwareEvolution.” *Proceedings of the IEEE* 68 (9): 1060–76.
+ - Hackers: Levy, Steven. 1984. *Hackers: Heroes of the Computer Revolution*. USA:Doubleday.
+ - PBE: Lieberman, H. 2001. *Your Wish Is My Command:Programming by Example*. Morgan Kaufmann.
+ - Wildcard: Litt, Geoffrey, Daniel Jackson, Tyler Millis, and Jessica Quaye. 2020.“End-User Software Customization by Direct Manipulation of TabularData.” In *Proceedings of the 2020 ACM SIGPLAN International Symposiumon New Ideas, New Paradigms, and Reflections on Programming andSoftware*, 18–33. Onward! 2020. New York, NY, USA: Association forComputing Machinery. <https://doi.org/10.1145/3426428.3426914>.
+ - GHC: Marlow, Simon, and Simon Peyton-Jones. 2012. *The Glasgow HaskellCompiler*. Edited by A. Brown and G. Wilson. The Architecture of OpenSource Applications. CreativeCommons. <http://www.aosabook.org>.
+ - LISP15: McCarthy, John. 1962. *LISP 1.5 Programmer’s Manual*. The MIT Press.
+ - SocioPLT: Meyerovich, Leo A., and Ariel S. Rabkin. 2012. “Socio-PLT: Principlesfor Programming Language Adoption.” In *Proceedings of the ACMInternational Symposium on New Ideas, New Paradigms, and Reflections onProgramming and Software*, 39–54. Onward! 2012. New York, NY, USA:Association for Computing Machinery.<https://doi.org/10.1145/2384592.2384597>.
+ - HyperCard: Michel, Stephen L. 1989. *Hypercard: The Complete Reference*. Berkeley:Osborne McGraw-Hill.
+ - LSP: Microsoft. 2022. “Language Server Protocol.”<https://microsoft.github.io/language-server-protocol/>.
+ - Antifragile: Monperrus, Martin. 2017. “Principles of Antifragile Software.” In*Companion to the First International Conference on the Art, Science andEngineering of Programming*. Programming ’17. New York, NY, USA:Association for Computing Machinery.<https://doi.org/10.1145/3079368.3079412>.
+ - TedNelson: Nelson, T. H. 1965. “Complex Information Processing: A File Structurefor the Complex, the Changing and the Indeterminate.” In *Proceedings ofthe 1965 20th National Conference*, 84–100. ACM ’65. New York, NY, USA:Association for Computing Machinery.<https://doi.org/10.1145/800197.806036>.
+ - PoMoProNotes: Noble, James, and Robert Biddle. 2004. “Notes on Notes on PostmodernProgramming.” *SIGPLAN Not.* 39 (12): 40–56.<https://doi.org/10.1145/1052883.1052890>.
+ - Norman: Norman, Donald A. 2002. *The Design of Everyday Things*. USA: BasicBooks, Inc.
+ - EvUISR: Olsen, Dan R. 2007. “Evaluating User Interface Systems Research.” In*Proceedings of the 20th Annual ACM Symposium on User Interface Softwareand Technology*, 251–58. UIST ’07. New York, NY, USA: Association forComputing Machinery. <https://doi.org/10.1145/1294211.1294256>.
+ - Hazel: Omar, Cyrus, Ian Voysey, Michael Hilton, Joshua Sunshine, Claire LeGoues, Jonathan Aldrich, and Matthew A. Hammer. 2017.“Toward Semantic Foundations for ProgramEditors.” In *2nd Summit on Advances in Programming Languages(SNAPL 2017)*, edited by Benjamin S. Lerner, Rastislav Bodík, andShriram Krishnamurthi, 71:11:1–12. Leibniz International Proceedings inInformatics (LIPIcs). Dagstuhl, Germany: SchlossDagstuhl–Leibniz-Zentrum fuer Informatik.<https://doi.org/10.4230/LIPIcs.SNAPL.2017.11>.
+ - Euphemism: Parnas, David Lorge. 1985. “Software Aspects of Strategic DefenseSystems.” <http://web.stanford.edu/class/cs99r/readings/parnas1.pdf>.
+ - NakedObjects: Pawson, Richard. 2004. “Naked Objects.” PhD thesis, Trinity College,University of Dublin.
+ - Alg58: Perlis, A. J., and K. Samelson. 1958. “Preliminary Report: InternationalAlgebraic Language.” *Commun. ACM* 1 (12): 8–22.<https://doi.org/10.1145/377924.594925>.
+ - LivingWithErrors: Petricek, Tomas. 2017. “Miscomputation in Software: Learning to Livewith Errors.” *Art Sci. Eng. Program.* 1 (2): 14.<https://doi.org/10.22152/programming-journal.org/2017/1/14>.
+ - ComplementaryBasic: Petricek, Tomas, and Joel Jakubovic. 2021. “Complementary Science ofInteractive Programming Systems.” In *History and Philosophy ofComputing*.
+ - COLAs: Piumarta, Ian. 2006. “Accessible Language-Based Environments ofRecursive Theories.” 2006.<http://www.vpri.org/pdf/rn2006001a_colaswp.pdf>.
+ - Cathedral: Raymond, Eric S., and Bob Young. 2001. *The Cathedral & the Bazaar:Musings on Linux and Open Source by an Accidental Revolutionary*.O’Reilly.
+ - HumanError: Reason, James. 1990. *Human Error*. Cambridge university press.
+ - ReplitWeb: repl.it. 2022. “Replit: The Collaborative Browser-Based IDE.”<https://replit.com>.
+ - SweImpact: Ryder, Barbara G., Mary Lou Soffa, and Margaret Burnett. 2005. “TheImpact of Software Engineering Research on Modern ProgrammingLanguages.” *ACM Trans. Softw. Eng. Methodol.* 14 (4): 431–77.<https://doi.org/10.1145/1101815.1101818>.
+ - DirectManip: Shneiderman. 1983. “Direct Manipulation: A Step Beyond ProgrammingLanguages.” *Computer* 16 (8): 57–69.<https://doi.org/10.1109/MC.1983.1654471>.
+ - MemMod: Sitaker, Kragen Javier. 2016. “The Memory Models That UnderlieProgramming Languages.” 2016.<http://canonical.org/~kragen/memory-models/>.
+ - NextGen: Smaragdakis, Yannis. 2019. “Next-Paradigm Programming Languages: WhatWill They Look Like and What Changes Will They Bring?” In *Proceedingsof the 2019 ACM SIGPLAN International Symposium on New Ideas, NewParadigms, and Reflections on Programming and Software*, 187–97. Onward!2019. New York, NY, USA: Association for Computing Machinery.<https://doi.org/10.1145/3359591.3359739>.
+ - PRinPLs: Smith, Brian Cantwell. 1982. “Procedural Reflection in ProgrammingLanguages.” PhD thesis, Massachusetts Institute of Technology.<https://dspace.mit.edu/handle/1721.1/15961>.
+ - Pygmalion: Smith, D. C. 1975. “Pygmalion: A Creative Programming Environment.” In.
+ - CommonLisp: Steele, G., and S. E. Fahlman. 1990. *Common LISP: The Language*. HPTechnologies. Elsevier Science.<https://books.google.cz/books?id=FYoOIWuoXUIC>.
+ - LispEvolve: Steele, Guy L., and Richard P. Gabriel. 1993. “The Evolution of Lisp.”In *The Second ACM SIGPLAN Conference on History of ProgrammingLanguages*, 231–70. HOPL-II. New York, NY, USA: Association forComputing Machinery. <https://doi.org/10.1145/154766.155373>.
+ - Liveness: Tanimoto, Steven L. 2013. “A Perspective on the Evolution of LiveProgramming.” In *Proceedings of the 1st International Workshop on LiveProgramming*, 31–34. LIVE ’13. San Francisco, California: IEEE Press.
+ - TcherDiss: Tchernavskij, Philip. 2019. “Designing and Programming MalleableSoftware.” PhD thesis, Université Paris-Saclay, École doctorale nº580Sciences et Technologies de l’Information et de la Communication (STIC).
+ - DarkWeb: team, Dark language. 2022. “Dark Lang.” <https://darklang.com>.
+ - Pilot: Teitelman, Warren. 1966. “PILOT: A Step Toward Man-Computer Symbiosis.”PhD thesis, MIT.
+ - Live13: Ungar, David, and Randall B. Smith. 2013. “The Thing on the Screen IsSupposed to Be the Actual Thing.” 2013.<http://davidungar.net/Live2013/Live_2013.html>.
+ - BretVictor: Victor, Bret. 2012. “Learnable Programming.” 2012.<http://worrydream.com/#!/LearnableProgramming>.
+ - Perl: Wall, Larry. 1999. “Perl, the First Postmodern Computer Language.” 1999.<http://www.wall.org//~larry/pm.html>.
+ - LispCurse: Winestock, Rudolf. 2011. “The Lisp Curse.” 2011.<http://www.winestockwebdesign.com/Essays/Lisp_Curse.html>.
+ - Mathematica: Wolfram, Stephen. 1991. *Mathematica: A System for Doing Mathematics byComputer (2nd Ed.)*. USA: Addison Wesley Longman Publishing Co., Inc.
+ - VisiCalc2: Zynda, Melissa Rodriguez. 2013. “The First Killer App: A History ofSpreadsheets.” *Interactions* 20 (5): 68–72.<https://doi.org/10.1145/2509224>.

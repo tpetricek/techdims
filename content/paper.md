@@ -1,4 +1,13 @@
 ----------------------------------------------------------------------------------------------------
+- id:references
+- title:Paper
+- class:bibliography
+
+# Bibliography
+
+![$$](references)
+
+----------------------------------------------------------------------------------------------------
 - id:main
 - title:Paper
 
@@ -147,3 +156,5 @@ Efforts to support programming without relying on textual code can only be calle
 While spreadsheets were designed to solve problems in a specific application area, HyperCard\ \cite{HyperCard} was designed around a particular application format. Programs are "stacks of cards" containing multimedia components and controls such as buttons. These controls can be programmed with pre-defined operations like "navigate to another card", or via the HyperTalk scripting language for anything more sophisticated.
 
 As a programming system, HyperCard is interesting for a couple of reasons. It effectively combines visual and textual notation. Programs appear the same way during editing as they do during execution. Most notably, HyperCard supports gradual progression from the "user" role to "developer": a user may first use stacks, then go on to edit the visual aspects or choose pre-defined logic until, eventually, they learn to program in HyperTalk.
+
+

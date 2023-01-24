@@ -1,7 +1,7 @@
 import { FSharpRef, Record } from "./fable_modules/fable-library.3.7.20/Types.js";
 import { record_type, class_type, string_type } from "./fable_modules/fable-library.3.7.20/Reflection.js";
-import { filter, find, append, tryFind, singleton, map, collect, delay, toList } from "./fable_modules/fable-library.3.7.20/Seq.js";
-import { FSharpMap__ContainsKey, FSharpMap__TryGetValue, FSharpMap__TryFind, map as map_2, FSharpMap__get_Item, ofSeq } from "./fable_modules/fable-library.3.7.20/Map.js";
+import { filter, find, fold, append, tryFind, singleton, map, collect, delay, toList } from "./fable_modules/fable-library.3.7.20/Seq.js";
+import { FSharpMap__TryGetValue, FSharpMap__TryFind, map as map_2, FSharpMap__Remove, FSharpMap__Add, FSharpMap__get_Keys, FSharpMap__ContainsKey, FSharpMap__get_Item, ofSeq } from "./fable_modules/fable-library.3.7.20/Map.js";
 import { rangeDouble } from "./fable_modules/fable-library.3.7.20/Range.js";
 import { toText, replace, substring, printf, toFail, join } from "./fable_modules/fable-library.3.7.20/String.js";
 import { map as map_1, equalsWith } from "./fable_modules/fable-library.3.7.20/Array.js";
@@ -115,18 +115,34 @@ export function expandLinks(state, el) {
             if (c.tagName === "A") {
                 const a = c;
                 if ((a.attributes["href"]).value.indexOf("#") === 0) {
-                    const links = map_2((k, v) => {
+                    const links = parseKvpList(substring((a.attributes["href"]).value, 1));
+                    let links_2;
+                    if (FSharpMap__ContainsKey(links, "*")) {
+                        const source = FSharpMap__get_Keys(state.Displays);
+                        links_2 = fold((links_1, k) => {
+                            if (FSharpMap__ContainsKey(links_1, k)) {
+                                return links_1;
+                            }
+                            else {
+                                return FSharpMap__Add(links_1, k, ".");
+                            }
+                        }, FSharpMap__Remove(links, "*"), source);
+                    }
+                    else {
+                        links_2 = links;
+                    }
+                    const links_3 = map_2((k_1, v) => {
                         if (v === ".") {
-                            return (FSharpMap__get_Item(state.Displays, k).File + ",") + FSharpMap__get_Item(state.Displays, k).ID;
+                            return (FSharpMap__get_Item(state.Displays, k_1).File + ",") + FSharpMap__get_Item(state.Displays, k_1).ID;
                         }
                         else {
                             return v;
                         }
-                    }, parseKvpList(substring((a.attributes["href"]).value, 1)));
-                    const href = "#" + join(";", toList(delay(() => map((kvp) => (`${kvp[0]}=${replace(kvp[1], "!", "")}`), links))));
+                    }, links_2);
+                    const href = "#" + join(";", toList(delay(() => map((kvp) => (`${kvp[0]}=${replace(kvp[1], "!", "")}`), links_3))));
                     (a.attributes["href"]).value = href;
                     if (a.text === "!") {
-                        const title = find((kvp_1) => (kvp_1[1].indexOf("!") >= 0), links);
+                        const title = find((kvp_1) => (kvp_1[1].indexOf("!") >= 0), links_3);
                         const sec = findContent(replace(title[1], "!", ""));
                         a.innerHTML = replace(a.innerHTML, "!", FSharpMap__get_Item(sec.Properties, "title"));
                     }
@@ -257,17 +273,29 @@ export function render(state) {
             });
         }
     }
+    const scrollTo = (y_1) => {
+        window.setTimeout((_arg_2) => {
+            window.scrollTo(0, y_1);
+        }, 1);
+    };
     if (FSharpMap__ContainsKey(state.Displays, "right")) {
         const anch = document.getElementsByClassName(replace(FSharpMap__get_Item(state.Displays, "right").File, "/", "-") + "-anchor");
         const right = document.getElementById("right");
         right.style.paddingTop = "";
         if (anch.length > 0) {
             right.style.paddingTop = (`${((anch[0]).offsetTop - right.offsetTop)}px`);
+            scrollTo((anch[0]).offsetTop);
         }
+        else {
+            scrollTo(0);
+        }
+    }
+    else {
+        scrollTo(0);
     }
 }
 
-export const initial = "splash=index,welcome";
+export const initial = "top=index,welcome";
 
 export function parseLinks(link) {
     return map_2((_arg, link_1) => findContent(link_1), parseKvpList(link));

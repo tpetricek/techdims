@@ -10,42 +10,42 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css2?family=Inconsolata&family=Titillium+Web:wght@200;300;400;600;700;900&display=swap" rel="stylesheet">    
   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
   <article>
-    <section data-class="frameset catalogue" data-file="catalogue" data-id="index" data-title="Ya">
-<embed type="application/transclusion" src="catalogue,intro" />
-</section>
-<section data-class="frameset catalogue" data-file="catalogue" data-id="list" data-title="Ya">
-<embed type="application/transclusion" src="dimensions/interaction,summary" />
-<embed type="application/transclusion" src="dimensions/notation,summary" />
-</section>
-<section data-file="catalogue" data-id="intro" data-title="Catalogue of technical dimensions">
+    <section data-class="catalogue nobullet" data-file="catalogue" data-id="index" data-title="Catalogue of technical dimensions">
 <h1>Catalogue of technical dimensions</h1>
-<p>The technical dimensions framework breaks down discussion about
+<p>Technical dimensions break down discussion about
 programming systems along various specific "axes". The dimensions identify
 a range of possible design choices, characterized by two extreme points
 in the design space.</p>
-<p><a href="#image=catalogue,nest"><img src="img/nest.png" alt="A diagram showing programming systems with two dimensions" /></a></p>
-<p>The dimensions are not quantitative, but they allow qualitative comparison.
-The extreme points do not represent "good" and "bad" designs, merely different trade-offs.</p>
-<p>The set of dimensions provides a map of the design space of programming systems (see the
-illustration). Past and present systems serve as landmarks, but the map also reveals unexplored
+<p>The dimensions are not quantitative, but they allow comparison.
+The extreme points do not represent "good" and "bad" designs, merely different trade-offs.
+The set of dimensions provides a map of the design space of programming systems (see diagram).
+Past and present systems serve as landmarks, but the map also reveals unexplored
 or overlooked possibilities.</p>
+<p><a href="#image=catalogue,nest"><img src="img/nest.png" alt="A diagram showing programming systems with two dimensions" /></a></p>
 <p>The 22 technical dimensions are grouped into 7 clusters or topics of interest.
 Each cluster consists of individual dimensions, examples that capture a particular
-known value (or a combination of values), remarks and relations to other dimensions.</p>
-<!--
-- <i class="fa fa-hand-pointer"></i> Interaction
-- <i class="fa fa-code"></i> Notation
-- <i class="fa fa-cubes"></i> Conceptual structure
-- <i class="fa fa-hammer"></i> Customizability
-- <i class="fa fa-sitemap"></i> Complexity
-- <i class="fa fa-bug"></i> Errors
-- <i class="fa fa-code-fork"></i> Adoptability
--->
+well-known value (or a combination of values), remarks and relations to other dimensions.</p>
+<ul>
+<li><a class="tlink" href="#*=.;right=dimensions/interaction,index"><i class="fa fa-arrow-right"></i><i class="fa fa-hand-pointer"></i> Interaction</a></li>
+<li><a class="tlink" href="#*=.;right=dimensions/notation,index"><i class="fa fa-arrow-right"></i><i class="fa fa-code"></i> Notation</a></li>
+<li><a class="tlink" href="#*=.;right=dimensions/conceptual-structure,index"><i class="fa fa-arrow-right"></i><i class="fa fa-cubes"></i> Conceptual structure</a></li>
+<li><a class="tlink" href="#*=.;right=dimensions/customizability,index"><i class="fa fa-arrow-right"></i><i class="fa fa-hammer"></i> Customizability</a></li>
+<li><a class="tlink" href="#*=.;right=dimensions/complexity,index"><i class="fa fa-arrow-right"></i><i class="fa fa-sitemap"></i> Complexity</a></li>
+<li><a class="tlink" href="#*=.;right=dimensions/errors,index"><i class="fa fa-arrow-right"></i><i class="fa fa-bug"></i> Errors</a></li>
+<li><a class="tlink" href="#*=.;right=dimensions/adoptability,index"><i class="fa fa-arrow-right"></i><i class="fa fa-code-fork"></i> Adoptability</a></li>
+</ul>
+</section>
+<section data-class="frameset catalogue" data-file="catalogue" data-id="list" data-title="Catalogue of technical dimensions">
+<embed type="application/transclusion" src="dimensions/interaction,summary" />
+<embed type="application/transclusion" src="dimensions/notation,summary" />
+<embed type="application/transclusion" src="dimensions/conceptual-structure,summary" />
+<embed type="application/transclusion" src="dimensions/customizability,summary" />
+<embed type="application/transclusion" src="dimensions/complexity,summary" />
 </section>
 <section data-class="noborder" data-file="catalogue" data-id="nest" data-title="An illustration of the technical dimensions framework">
 <blockquote>
@@ -56,7 +56,7 @@ text-based programming languages with debugger, editor and build tools are group
 in one region.</p>
 </blockquote>
 </section>
-<section data-class="welcome" data-file="index" data-id="welcome" data-title="Technical dimensions of programming systems">
+<section data-class="welcome nobullet" data-file="index" data-id="welcome" data-title="Technical dimensions of programming systems">
 <h1>Technical dimensions of programming systems</h1>
 <blockquote>
 <p>by <a href="https://programmingmadecomplicated.wordpress.com/">Joel Jakubovic</a>, <a href="https://alarmingdevelopment.org/">Jonathan Edwards</a> and <a href="https://tomasp.net">Tomas Petricek</a></p>
@@ -99,7 +99,7 @@ rich graphical user interface. In Smalltalk, the developer environment is a part
 program and the state of the program can be edited through object browser.</p>
 </blockquote>
 </section>
-<section data-file="index" data-id="navigation" data-title="Where to go to learn more">
+<section data-class="nobullet" data-file="index" data-id="navigation" data-title="Where to go to learn more">
 <div>
 <ul>
 <li>
@@ -120,7 +120,7 @@ Want to understand our motivation and methodology?<br />
 </li>
 <li>
 Want to the Technical Dimensions welcome page?<br />
-<a class="tlink" href="#splash=index,welcome"><i class="fa fa-arrow-right"></i>Go back and choose a different route</a>
+<a class="tlink" href="#top=index,welcome"><i class="fa fa-arrow-right"></i>Go back and choose a different route</a>
 </li>
 </ul>
 </div>
@@ -177,6 +177,110 @@ or application-focused systems (spreadsheets, Hypercard, Boxer).</p>
 <embed type="application/transclusion" src="systems/boxer,summary" />
 <embed type="application/transclusion" src="systems/notebooks,summary" />
 <embed type="application/transclusion" src="systems/haskell,summary" />
+</section>
+<section data-class="bibliography" data-file="paper" data-id="references" data-title="Paper">
+<h1>Bibliography</h1>
+<ol>
+<li><span class="citationwrapper"><span class="citation">1</span></span><a name="DotCom" id="DotCom"> Ankerson, Megan Sapnar. 2018. <em>Dot-Com Design: The Rise of a Usable,Social, Commercial Web</em>. NYU Press.</a></li>
+<li><span class="citationwrapper"><span class="citation">2</span></span><a name="OpenAuthorial" id="OpenAuthorial"> Basman, Antranig, Clayton Lewis, and Colin Clark. 2018. “The OpenAuthorial Principle: Supporting Networks of Authors in CreatingExternalisable Designs.” In <em>Proceedings of the 2018 ACM SIGPLANInternational Symposium on New Ideas, New Paradigms, and Reflections onProgramming and Software</em>, 29–43.</a></li>
+<li><span class="citationwrapper"><span class="citation">3</span></span><a name="Externalize" id="Externalize"> Basman, Antranig, L. Church, C. Klokmose, and Colin B. D. Clark. 2016.“Software and How It Lives on: Embedding Live Programs in the WorldAround Them.” In <em>PPIG</em>.</a></li>
+<li><span class="citationwrapper"><span class="citation">4</span></span><a name="NotYetCraft" id="NotYetCraft"> Basman, Antranig. 2016. “Building Software Is Not (yet) a Craft.” In<em>Proceedings of the 27th Annual Workshop of the Psychology ofProgramming Interest Group, PPIG 2016, Cambridge, UK, September 7-10,2016</em>, edited by Luke Church, 32. Psychology of Programming InterestGroup. <a href="http://ppig.org/library/paper/building-software-not-yet-craft">http://ppig.org/library/paper/building-software-not-yet-craft</a>.</a></li>
+<li><span class="citationwrapper"><span class="citation">5</span></span><a name="Infusion" id="Infusion"> Basman, Antranig. 2021. “Infusion Framework and Components.” 2021.<a href="https://fluidproject.org/infusion.html">https://fluidproject.org/infusion.html</a>.</a></li>
+<li><span class="citationwrapper"><span class="citation">6</span></span><a name="APIdesign" id="APIdesign"> Bloch, Joshua. 2007. “How to Design a Good API and Why It Matters.”2007.<a href="http://www.cs.bc.edu/~muller/teaching/cs102/s06/lib/pdf/api-design">http://www.cs.bc.edu/~muller/teaching/cs102/s06/lib/pdf/api-design</a>.</a></li>
+<li><span class="citationwrapper"><span class="citation">7</span></span><a name="Varv" id="Varv"> Borowski, Marcel, Luke Murray, Rolf Bagge, Janus Bager Kristensen,Arvind Satyanarayan, and Clemens Nylandsted Klokmose. 2022. “Varv:Reprogrammable Interactive Software as a Declarative Data Structure.” In<em>CHI Conference on Human Factors in Computing Systems</em>. CHI ’22. NewYork, NY, USA: Association for Computing Machinery.<a href="https://doi.org/10.1145/3491102.3502064">https://doi.org/10.1145/3491102.3502064</a>.</a></li>
+<li><span class="citationwrapper"><span class="citation">8</span></span><a name="brooks95aristo" id="brooks95aristo"> Brooks, FP. 1995. “Aristocracy, Democracy and System Design.” In <em>TheMythical Man Month: Essays on Software Engineering</em>. Addison-Wesley.</a></li>
+<li><span class="citationwrapper"><span class="citation">9</span></span><a name="MMM" id="MMM"> Brooks, Frederick P. 1978. <em>The Mythical Man-Month: Essays on Softw</em>.1st ed. USA: Addison-Wesley Longman Publishing Co., Inc.</a></li>
+<li><span class="citationwrapper"><span class="citation">10</span></span><a name="Chang" id="Chang"> Chang, Hasok. 2004. <em>Inventing Temperature: Measurement and ScientificProgress</em>. Oxford: Oxford University Press.</a></li>
+<li><span class="citationwrapper"><span class="citation">11</span></span><a name="ChaosMonkey" id="ChaosMonkey"> Chang, Michael Alan, Bredan Tschaen, Theophilus Benson, and Laurent Vanbever. 2015a. “Chaos Monkey: Increasing SDN Reliability ThroughSystematic Network Destruction.” In <em>Proceedings of the 2015 ACMConference on Special Interest Group on Data Communication</em>, 371–72.SIGCOMM ’15. New York, NY, USA: Association for Computing Machinery.<a href="https://doi.org/10.1145/2785956.2790038">https://doi.org/10.1145/2785956.2790038</a>.</a></li>
+<li><span class="citationwrapper"><span class="citation">12</span></span><a name="10.1145/2829988.2790038" id="10.1145/2829988.2790038"> Chang, Michael Alan, Bredan Tschaen, Theophilus Benson, and Laurent Vanbever. 2015b. “Chaos Monkey: Increasing SDN Reliability Through SystematicNetwork Destruction.” <em>SIGCOMM Comput. Commun. Rev.</em> 45 (4): 371–72.<a href="https://doi.org/10.1145/2829988.2790038">https://doi.org/10.1145/2829988.2790038</a>.</a></li>
+<li><span class="citationwrapper"><span class="citation">13</span></span><a name="DarkErrors" id="DarkErrors"> Chisa, Ellen. 2020. “Introduction: Error Rail and Match with <code>DB::get</code>.”2020. <a href="https://youtu.be/NRMmy9ZzA-o">https://youtu.be/NRMmy9ZzA-o</a>.</a></li>
+<li><span class="citationwrapper"><span class="citation">14</span></span><a name="CodaWeb" id="CodaWeb"> Coda. 2022. “Coda: The Doc That Brings It All Together.”<a href="https://coda.io">https://coda.io</a>.</a></li>
+<li><span class="citationwrapper"><span class="citation">15</span></span><a name="WhatIsSuccess" id="WhatIsSuccess"> Czaplicki, Evan. 2018. 2018.<a href="https://www.youtube.com/watch?v=uGlzRt-FYto">https://www.youtube.com/watch?v=uGlzRt-FYto</a>.</a></li>
+<li><span class="citationwrapper"><span class="citation">16</span></span><a name="EvProgSys" id="EvProgSys"> Edwards, Jonathan, Stephen Kell, Tomas Petricek, and Luke Church. 2019.“Evaluating Programming Systems Design.” In <em>Proceedings of 30th AnnualWorkshop of Psychology of Programming Interest Group</em>. PPIG 2019.Newcastle, UK.</a></li>
+<li><span class="citationwrapper"><span class="citation">17</span></span><a name="10.1145/1094811.1094851" id="10.1145/1094811.1094851"> Edwards, Jonathan. 2005a. “Subtext: Uncovering the Simplicity ofProgramming.” In <em>Proceedings of the 20th Annual ACM SIGPLAN Conferenceon Object-Oriented Programming, Systems, Languages, and Applications</em>,505–18. OOPSLA ’05. New York, NY, USA: Association for ComputingMachinery. <a href="https://doi.org/10.1145/1094811.1094851">https://doi.org/10.1145/1094811.1094851</a>.</a></li>
+<li><span class="citationwrapper"><span class="citation">18</span></span><a name="Subtext" id="Subtext"> Edwards, Jonathan. 2005b. “Subtext: Uncovering the Simplicity of Programming.”<em>SIGPLAN Not.</em> 40 (10): 505–18.<a href="https://doi.org/10.1145/1103845.1094851">https://doi.org/10.1145/1103845.1094851</a>.</a></li>
+<li><span class="citationwrapper"><span class="citation">19</span></span><a name="ProgProgLang" id="ProgProgLang"> Felleisen, Matthias, Robert Bruce Findler, Matthew Flatt, ShriramKrishnamurthi, Eli Barzilay, Jay McCarthy, and Sam Tobin-Hochstadt.2018. “A Programmable Programming Language.” <em>Commun. ACM</em> 61 (3):62–71. <a href="https://doi.org/10.1145/3127323">https://doi.org/10.1145/3127323</a>.</a></li>
+<li><span class="citationwrapper"><span class="citation">20</span></span><a name="MalfunctioningSW" id="MalfunctioningSW"> Floridi, Luciano, Nir Fresco, and Giuseppe Primiero. 2015. “OnMalfunctioning Software.” <em>Synthese</em> 192 (4): 1199–1220.</a></li>
+<li><span class="citationwrapper"><span class="citation">21</span></span><a name="LispIntro" id="LispIntro"> Foderaro, John. 1991. “LISP: Introduction.” <em>Commun. ACM</em> 34 (9): 27.<a href="https://doi.org/10.1145/114669.114670">https://doi.org/10.1145/114669.114670</a>.</a></li>
+<li><span class="citationwrapper"><span class="citation">22</span></span><a name="DSLs" id="DSLs"> Fowler, Martin. 2010. <em>Domain-Specific Languages</em>. Pearson Education.</a></li>
+<li><span class="citationwrapper"><span class="citation">23</span></span><a name="Miscomputation" id="Miscomputation"> Fresco, Nir, and Giuseppe Primiero. 2013. “Miscomputation.” <em>Philosophy&amp; Technology</em> 26 (3): 253–72.</a></li>
+<li><span class="citationwrapper"><span class="citation">24</span></span><a name="FullBrain" id="FullBrain"> Fry, Christopher. 1997. “Programming on an Already Full Brain.” <em>Commun.ACM</em> 40 (4): 55–64. <a href="https://doi.org/10.1145/248448.248459">https://doi.org/10.1145/248448.248459</a>.</a></li>
+<li><span class="citationwrapper"><span class="citation">25</span></span><a name="SwStudies" id="SwStudies"> Fuller, Matthew et al. 2008. <em>Software Studies: A Lexicon</em>. Mit Press.</a></li>
+<li><span class="citationwrapper"><span class="citation">26</span></span><a name="WIB" id="WIB"> Gabriel, Richard P. 1991. “Worse Is Better.” 1991.<a href="https://www.dreamsongs.com/WorseIsBetter.html">https://www.dreamsongs.com/WorseIsBetter.html</a>.</a></li>
+<li><span class="citationwrapper"><span class="citation">27</span></span><a name="DesignedAsDesigner" id="DesignedAsDesigner"> Gabriel, Richard P. 2008. “Designed as Designer.” In <em>Proceedings of the 23rd ACMSIGPLAN Conference on Object-Oriented Programming Systems Languages andApplications</em>, 617–32. OOPSLA ’08. New York, NY, USA: Association forComputing Machinery. <a href="https://doi.org/10.1145/1449764.1449813">https://doi.org/10.1145/1449764.1449813</a>.</a></li>
+<li><span class="citationwrapper"><span class="citation">28</span></span><a name="PLrev" id="PLrev"> Gabriel, Richard P. 2012. “The Structure of a Programming Language Revolution.” In<em>Proceedings of the ACM International Symposium on New Ideas, NewParadigms, and Reflections on Programming and Software</em>, 195–214.Onward! 2012. New York, NY, USA: Association for Computing Machinery.<a href="https://doi.org/10.1145/2384592.2384611">https://doi.org/10.1145/2384592.2384611</a>.</a></li>
+<li><span class="citationwrapper"><span class="citation">29</span></span><a name="DesPats" id="DesPats"> Gamma, Erich, Richard Helm, Ralph E. Johnson, and John Vlissides. 1995.<em>Design Patterns: Elements of Reusable Object-Oriented Software</em>.Reading, Mass: Addison-Wesley.</a></li>
+<li><span class="citationwrapper"><span class="citation">30</span></span><a name="GlideWeb" id="GlideWeb"> Glide. 2022. “Glide: Create Apps and Websites Without Code.”<a href="https://www.glideapps.com">https://www.glideapps.com</a>.</a></li>
+<li><span class="citationwrapper"><span class="citation">31</span></span><a name="ExceptionHandling" id="ExceptionHandling"> Goodenough, John B. 1975. “Exception Handling: Issues and a ProposedNotation.” <em>Commun. ACM</em> 18 (12): 683–96.<a href="https://doi.org/10.1145/361227.361230">https://doi.org/10.1145/361227.361230</a>.</a></li>
+<li><span class="citationwrapper"><span class="citation">32</span></span><a name="Java" id="Java"> Gosling, James, Bill Joy, Guy Steele, and Gilad Bracha. 2000. <em>The JavaLanguage Specification</em>. Addison-Wesley Professional.</a></li>
+<li><span class="citationwrapper"><span class="citation">33</span></span><a name="VisiCalc" id="VisiCalc"> Grad, Burton. 2007. “The Creation and the Demise of VisiCalc.” <em>IEEEAnnals of the History of Computing</em> 29 (3): 20–31.<a href="https://doi.org/10.1109/MAHC.2007.4338439">https://doi.org/10.1109/MAHC.2007.4338439</a>.</a></li>
+<li><span class="citationwrapper"><span class="citation">34</span></span><a name="CogDims" id="CogDims"> Green, T. R. G., and M. Petre. 1996. “Usability Analysis of VisualProgramming Environments: A ‘Cognitive Dimensions’ Framework.” <em>JOURNALOF VISUAL LANGUAGES AND COMPUTING</em> 7: 131–74.</a></li>
+<li><span class="citationwrapper"><span class="citation">35</span></span><a name="PBEExcel" id="PBEExcel"> Gulwani, Sumit, William R Harris, and Rishabh Singh. 2012. “SpreadsheetData Manipulation Using Examples.” <em>Communications of the ACM</em> 55 (8):97–105.</a></li>
+<li><span class="citationwrapper"><span class="citation">36</span></span><a name="Hancock2003" id="Hancock2003"> Hancock, C., and M. Resnick. 2003. “Real-Time Programming and the BigIdeas of Computational Literacy.” PhD thesis, Massachusetts Institute ofTechnology. <a href="https://dspace.mit.edu/handle/1721.1/61549">https://dspace.mit.edu/handle/1721.1/61549</a>.</a></li>
+<li><span class="citationwrapper"><span class="citation">37</span></span><a name="SnS" id="SnS"> Hempel, Brian, Justin Lubin, and Ravi Chugh. 2019.“Sketch-n-Sketch: Output-DirectedProgramming for SVG.” In <em>Proceedings of the 32nd Annual ACM Symposiumon User Interface Software and Technology</em>, 281–92. UIST ’19. New York,NY, USA: Association for Computing Machinery.<a href="https://doi.org/10.1145/3332165.3347925">https://doi.org/10.1145/3332165.3347925</a>.</a></li>
+<li><span class="citationwrapper"><span class="citation">38</span></span><a name="LIVE20" id="LIVE20"> Hempel, Brian, and Roly Perera. 2020. “LIVE Workshop.” 2020.<a href="https://liveprog.org/live-2020/">https://liveprog.org/live-2020/</a>.</a></li>
+<li><span class="citationwrapper"><span class="citation">39</span></span><a name="LIVE21" id="LIVE21"> Hempel, Brian, and Sam Lau. 2021. “LIVE Workshop.” 2021.<a href="https://liveprog.org/live-2021/">https://liveprog.org/live-2021/</a>.</a></li>
+<li><span class="citationwrapper"><span class="citation">40</span></span><a name="SelfSustaining2010" id="SelfSustaining2010"> Hirschfeld, Robert, Hidehiko Masuhara, and Kim Rose, eds. 2010.<em>Workshop on Self-Sustaining Systems, S3 2010, Tokyo, Japan, September27-28, 2010</em>. ACM. <a href="https://doi.org/10.1145/1942793">https://doi.org/10.1145/1942793</a>.</a></li>
+<li><span class="citationwrapper"><span class="citation">41</span></span><a name="SelfSustaining2008" id="SelfSustaining2008"> Hirschfeld, Robert, and Kim Rose, eds. 2008. <em>Self-Sustaining Systems,First Workshop, S3 2008, Potsdam, Germany, May 15-16, 2008, RevisedSelected Papers</em>. Vol. 5146. Lecture Notes in Computer Science.Springer. <a href="https://doi.org/10.1007/978-3-540-89275-5">https://doi.org/10.1007/978-3-540-89275-5</a>.</a></li>
+<li><span class="citationwrapper"><span class="citation">42</span></span><a name="STdesign" id="STdesign"> Ingalls, Daniel. 1981. “Design Principles Behind Smalltalk.” 1981.<a href="https://archive.org/details/byte-magazine-1981-08/page/n299/mode/2up">https://archive.org/details/byte-magazine-1981-08/page/n299/mode/2up</a>.</a></li>
+<li><span class="citationwrapper"><span class="citation">43</span></span><a name="PersonalDynMedia" id="PersonalDynMedia"> Kay, A., and A. Goldberg. 1977. “Personal Dynamic Media.” <em>Computer</em> 10(3): 31–41. <a href="https://doi.org/10.1109/C-M.1977.217672">https://doi.org/10.1109/C-M.1977.217672</a>.</a></li>
+<li><span class="citationwrapper"><span class="citation">44</span></span><a name="Mythical" id="Mythical"> Kell, Stephen. 2009. “The Mythical Matched Modules: Overcoming theTyranny of Inflexible Software Construction.” In <em>OOPSLA Companion</em>.</a></li>
+<li><span class="citationwrapper"><span class="citation">45</span></span><a name="KellOS" id="KellOS"> Kell, Stephen. 2013. “The Operating System: Should There Be One?” In <em>Proceedingsof the Seventh Workshop on Programming Languages and Operating Systems</em>.PLOS ’13. New York, NY, USA: Association for Computing Machinery.<a href="https://doi.org/10.1145/2525528.2525534">https://doi.org/10.1145/2525528.2525534</a>.</a></li>
+<li><span class="citationwrapper"><span class="citation">46</span></span><a name="KellComm" id="KellComm"> Kell, Stephen. 2017. “Some Were Meant for C: The Endurance of an UnmanageableLanguage.” In <em>Proceedings of the 2017 ACM SIGPLAN InternationalSymposium on New Ideas, New Paradigms, and Reflections on Programmingand Software</em>, 229–45. Onward! 2017. New York, NY, USA: Association forComputing Machinery. <a href="https://doi.org/10.1145/3133850.3133867">https://doi.org/10.1145/3133850.3133867</a>.</a></li>
+<li><span class="citationwrapper"><span class="citation">47</span></span><a name="AspectJ" id="AspectJ"> Kiczales, Gregor, Erik Hilsdale, Jim Hugunin, Mik Kersten, Jeffrey Palm,and William G. Griswold. 2001. “An Overview of AspectJ.” In <em>ECOOP2001 - Object-Oriented Programming, 15th European Conference, Budapest,Hungary, June 18-22, 2001, Proceedings</em>, edited by Jørgen LindskovKnudsen, 2072:327–53. Lecture Notes in Computer Science. Springer.<a href="https://doi.org/10.1007/3-540-45337-7\_18"><a href="https://doi.org/10.1007/3-540-45337-7\\18">https://doi.org/10.1007/3-540-45337-7\\18</a></a>.</a></li>
+<li><span class="citationwrapper"><span class="citation">48</span></span><a name="PaperTools" id="PaperTools"> Klein, Ursula. 2003. <em>Experiments, Models, Paper Tools: Cultures ofOrganic Chemistry in the Nineteenth Century</em>. Stanford, CA: StanfordUniversity Press. <a href="http://www.sup.org/books/title/?id=1917">http://www.sup.org/books/title/?id=1917</a>.</a></li>
+<li><span class="citationwrapper"><span class="citation">49</span></span><a name="Webstrates" id="Webstrates"> Klokmose, Clemens N., James R. Eagan, Siemen Baader, Wendy Mackay, andMichel Beaudouin-Lafon. 2015. “Webstrates: Shareable Dynamic Media.” In<em>Proceedings of the 28th Annual ACM Symposium on User Interface Software&amp; Technology</em>, 280–90. UIST ’15. New York, NY, USA: Association forComputing Machinery. <a href="https://doi.org/10.1145/2807442.2807446">https://doi.org/10.1145/2807442.2807446</a>.</a></li>
+<li><span class="citationwrapper"><span class="citation">50</span></span><a name="Jupyter" id="Jupyter"> Kluyver, Thomas, Benjamin Ragan-Kelley, Fernando Pérez, Brian Granger,Matthias Bussonnier, Jonathan Frederic, Kyle Kelley, et al. n.d.“Jupyter Notebooks—a Publishing Format for Reproducible ComputationalWorkflows.” <em>Positioning and Power in Academic Publishing: Players,Agents and Agendas</em>, 87.</a></li>
+<li><span class="citationwrapper"><span class="citation">51</span></span><a name="LiterateProg" id="LiterateProg"> Knuth, Donald Ervin. 1984. “Literate Programming.” <em>The ComputerJournal</em> 27 (2): 97–111.</a></li>
+<li><span class="citationwrapper"><span class="citation">52</span></span><a name="LabView" id="LabView"> Kodosky, Jeffrey. 2020. “LabVIEW.” <em>Proc. ACM Program. Lang.</em> 4 (HOPL).<a href="https://doi.org/10.1145/3386328">https://doi.org/10.1145/3386328</a>.</a></li>
+<li><span class="citationwrapper"><span class="citation">53</span></span><a name="Kuhn" id="Kuhn"> Kuhn, Thomas S. 1970. University of Chicago Press.</a></li>
+<li><span class="citationwrapper"><span class="citation">54</span></span><a name="UISTAuthor" id="UISTAuthor"> Kumar, Ranjitha, and Michael Nebeling. 2021. “UIST 2021 - Author Guide.”2021. <a href="https://uist.acm.org/uist2021/author-guide.html">https://uist.acm.org/uist2021/author-guide.html</a>.</a></li>
+<li><span class="citationwrapper"><span class="citation">55</span></span><a name="SPEPrograms" id="SPEPrograms"> Lehman, Meir M. 1980. “Programs, Life Cycles, and Laws of SoftwareEvolution.” <em>Proceedings of the IEEE</em> 68 (9): 1060–76.</a></li>
+<li><span class="citationwrapper"><span class="citation">56</span></span><a name="Hackers" id="Hackers"> Levy, Steven. 1984. <em>Hackers: Heroes of the Computer Revolution</em>. USA:Doubleday.</a></li>
+<li><span class="citationwrapper"><span class="citation">57</span></span><a name="PBE" id="PBE"> Lieberman, H. 2001. <em>Your Wish Is My Command:Programming by Example</em>. Morgan Kaufmann.</a></li>
+<li><span class="citationwrapper"><span class="citation">58</span></span><a name="Wildcard" id="Wildcard"> Litt, Geoffrey, Daniel Jackson, Tyler Millis, and Jessica Quaye. 2020.“End-User Software Customization by Direct Manipulation of TabularData.” In <em>Proceedings of the 2020 ACM SIGPLAN International Symposiumon New Ideas, New Paradigms, and Reflections on Programming andSoftware</em>, 18–33. Onward! 2020. New York, NY, USA: Association forComputing Machinery. <a href="https://doi.org/10.1145/3426428.3426914">https://doi.org/10.1145/3426428.3426914</a>.</a></li>
+<li><span class="citationwrapper"><span class="citation">59</span></span><a name="GHC" id="GHC"> Marlow, Simon, and Simon Peyton-Jones. 2012. <em>The Glasgow HaskellCompiler</em>. Edited by A. Brown and G. Wilson. The Architecture of OpenSource Applications. CreativeCommons. <a href="http://www.aosabook.org">http://www.aosabook.org</a>.</a></li>
+<li><span class="citationwrapper"><span class="citation">60</span></span><a name="LISP15" id="LISP15"> McCarthy, John. 1962. <em>LISP 1.5 Programmer’s Manual</em>. The MIT Press.</a></li>
+<li><span class="citationwrapper"><span class="citation">61</span></span><a name="SocioPLT" id="SocioPLT"> Meyerovich, Leo A., and Ariel S. Rabkin. 2012. “Socio-PLT: Principlesfor Programming Language Adoption.” In <em>Proceedings of the ACMInternational Symposium on New Ideas, New Paradigms, and Reflections onProgramming and Software</em>, 39–54. Onward! 2012. New York, NY, USA:Association for Computing Machinery.<a href="https://doi.org/10.1145/2384592.2384597">https://doi.org/10.1145/2384592.2384597</a>.</a></li>
+<li><span class="citationwrapper"><span class="citation">62</span></span><a name="HyperCard" id="HyperCard"> Michel, Stephen L. 1989. <em>Hypercard: The Complete Reference</em>. Berkeley:Osborne McGraw-Hill.</a></li>
+<li><span class="citationwrapper"><span class="citation">63</span></span><a name="LSP" id="LSP"> Microsoft. 2022. “Language Server Protocol.”<a href="https://microsoft.github.io/language-server-protocol/">https://microsoft.github.io/language-server-protocol/</a>.</a></li>
+<li><span class="citationwrapper"><span class="citation">64</span></span><a name="Antifragile" id="Antifragile"> Monperrus, Martin. 2017. “Principles of Antifragile Software.” In<em>Companion to the First International Conference on the Art, Science andEngineering of Programming</em>. Programming ’17. New York, NY, USA:Association for Computing Machinery.<a href="https://doi.org/10.1145/3079368.3079412">https://doi.org/10.1145/3079368.3079412</a>.</a></li>
+<li><span class="citationwrapper"><span class="citation">65</span></span><a name="TedNelson" id="TedNelson"> Nelson, T. H. 1965. “Complex Information Processing: A File Structurefor the Complex, the Changing and the Indeterminate.” In <em>Proceedings ofthe 1965 20th National Conference</em>, 84–100. ACM ’65. New York, NY, USA:Association for Computing Machinery.<a href="https://doi.org/10.1145/800197.806036">https://doi.org/10.1145/800197.806036</a>.</a></li>
+<li><span class="citationwrapper"><span class="citation">66</span></span><a name="PoMoProNotes" id="PoMoProNotes"> Noble, James, and Robert Biddle. 2004. “Notes on Notes on PostmodernProgramming.” <em>SIGPLAN Not.</em> 39 (12): 40–56.<a href="https://doi.org/10.1145/1052883.1052890">https://doi.org/10.1145/1052883.1052890</a>.</a></li>
+<li><span class="citationwrapper"><span class="citation">67</span></span><a name="Norman" id="Norman"> Norman, Donald A. 2002. <em>The Design of Everyday Things</em>. USA: BasicBooks, Inc.</a></li>
+<li><span class="citationwrapper"><span class="citation">68</span></span><a name="EvUISR" id="EvUISR"> Olsen, Dan R. 2007. “Evaluating User Interface Systems Research.” In<em>Proceedings of the 20th Annual ACM Symposium on User Interface Softwareand Technology</em>, 251–58. UIST ’07. New York, NY, USA: Association forComputing Machinery. <a href="https://doi.org/10.1145/1294211.1294256">https://doi.org/10.1145/1294211.1294256</a>.</a></li>
+<li><span class="citationwrapper"><span class="citation">69</span></span><a name="Hazel" id="Hazel"> Omar, Cyrus, Ian Voysey, Michael Hilton, Joshua Sunshine, Claire LeGoues, Jonathan Aldrich, and Matthew A. Hammer. 2017.“Toward Semantic Foundations for ProgramEditors.” In <em>2nd Summit on Advances in Programming Languages(SNAPL 2017)</em>, edited by Benjamin S. Lerner, Rastislav Bodík, andShriram Krishnamurthi, 71:11:1–12. Leibniz International Proceedings inInformatics (LIPIcs). Dagstuhl, Germany: SchlossDagstuhl–Leibniz-Zentrum fuer Informatik.<a href="https://doi.org/10.4230/LIPIcs.SNAPL.2017.11">https://doi.org/10.4230/LIPIcs.SNAPL.2017.11</a>.</a></li>
+<li><span class="citationwrapper"><span class="citation">70</span></span><a name="Euphemism" id="Euphemism"> Parnas, David Lorge. 1985. “Software Aspects of Strategic DefenseSystems.” <a href="http://web.stanford.edu/class/cs99r/readings/parnas1.pdf">http://web.stanford.edu/class/cs99r/readings/parnas1.pdf</a>.</a></li>
+<li><span class="citationwrapper"><span class="citation">71</span></span><a name="NakedObjects" id="NakedObjects"> Pawson, Richard. 2004. “Naked Objects.” PhD thesis, Trinity College,University of Dublin.</a></li>
+<li><span class="citationwrapper"><span class="citation">72</span></span><a name="Alg58" id="Alg58"> Perlis, A. J., and K. Samelson. 1958. “Preliminary Report: InternationalAlgebraic Language.” <em>Commun. ACM</em> 1 (12): 8–22.<a href="https://doi.org/10.1145/377924.594925">https://doi.org/10.1145/377924.594925</a>.</a></li>
+<li><span class="citationwrapper"><span class="citation">73</span></span><a name="ComplementaryBasic" id="ComplementaryBasic"> Petricek, Tomas, and Joel Jakubovic. 2021. “Complementary Science ofInteractive Programming Systems.” In <em>History and Philosophy ofComputing</em>.</a></li>
+<li><span class="citationwrapper"><span class="citation">74</span></span><a name="LivingWithErrors" id="LivingWithErrors"> Petricek, Tomas. 2017. “Miscomputation in Software: Learning to Livewith Errors.” <em>Art Sci. Eng. Program.</em> 1 (2): 14.<a href="https://doi.org/10.22152/programming-journal.org/2017/1/14">https://doi.org/10.22152/programming-journal.org/2017/1/14</a>.</a></li>
+<li><span class="citationwrapper"><span class="citation">75</span></span><a name="COLAs" id="COLAs"> Piumarta, Ian. 2006. “Accessible Language-Based Environments ofRecursive Theories.” 2006.<a href="http://www.vpri.org/pdf/rn2006001a_colaswp.pdf">http://www.vpri.org/pdf/rn2006001a_colaswp.pdf</a>.</a></li>
+<li><span class="citationwrapper"><span class="citation">76</span></span><a name="Cathedral" id="Cathedral"> Raymond, Eric S., and Bob Young. 2001. <em>The Cathedral &amp; the Bazaar:Musings on Linux and Open Source by an Accidental Revolutionary</em>.O’Reilly.</a></li>
+<li><span class="citationwrapper"><span class="citation">77</span></span><a name="HumanError" id="HumanError"> Reason, James. 1990. <em>Human Error</em>. Cambridge university press.</a></li>
+<li><span class="citationwrapper"><span class="citation">78</span></span><a name="SweImpact" id="SweImpact"> Ryder, Barbara G., Mary Lou Soffa, and Margaret Burnett. 2005. “TheImpact of Software Engineering Research on Modern ProgrammingLanguages.” <em>ACM Trans. Softw. Eng. Methodol.</em> 14 (4): 431–77.<a href="https://doi.org/10.1145/1101815.1101818">https://doi.org/10.1145/1101815.1101818</a>.</a></li>
+<li><span class="citationwrapper"><span class="citation">79</span></span><a name="DirectManip" id="DirectManip"> Shneiderman. 1983. “Direct Manipulation: A Step Beyond ProgrammingLanguages.” <em>Computer</em> 16 (8): 57–69.<a href="https://doi.org/10.1109/MC.1983.1654471">https://doi.org/10.1109/MC.1983.1654471</a>.</a></li>
+<li><span class="citationwrapper"><span class="citation">80</span></span><a name="MemMod" id="MemMod"> Sitaker, Kragen Javier. 2016. “The Memory Models That UnderlieProgramming Languages.” 2016.<a href="http://canonical.org/~kragen/memory-models/">http://canonical.org/~kragen/memory-models/</a>.</a></li>
+<li><span class="citationwrapper"><span class="citation">81</span></span><a name="NextGen" id="NextGen"> Smaragdakis, Yannis. 2019. “Next-Paradigm Programming Languages: WhatWill They Look Like and What Changes Will They Bring?” In <em>Proceedingsof the 2019 ACM SIGPLAN International Symposium on New Ideas, NewParadigms, and Reflections on Programming and Software</em>, 187–97. Onward!2019. New York, NY, USA: Association for Computing Machinery.<a href="https://doi.org/10.1145/3359591.3359739">https://doi.org/10.1145/3359591.3359739</a>.</a></li>
+<li><span class="citationwrapper"><span class="citation">82</span></span><a name="PRinPLs" id="PRinPLs"> Smith, Brian Cantwell. 1982. “Procedural Reflection in ProgrammingLanguages.” PhD thesis, Massachusetts Institute of Technology.<a href="https://dspace.mit.edu/handle/1721.1/15961">https://dspace.mit.edu/handle/1721.1/15961</a>.</a></li>
+<li><span class="citationwrapper"><span class="citation">83</span></span><a name="Pygmalion" id="Pygmalion"> Smith, D. C. 1975. “Pygmalion: A Creative Programming Environment.” In.</a></li>
+<li><span class="citationwrapper"><span class="citation">84</span></span><a name="CommonLisp" id="CommonLisp"> Steele, G., and S. E. Fahlman. 1990. <em>Common LISP: The Language</em>. HPTechnologies. Elsevier Science.<a href="https://books.google.cz/books?id=FYoOIWuoXUIC">https://books.google.cz/books?id=FYoOIWuoXUIC</a>.</a></li>
+<li><span class="citationwrapper"><span class="citation">85</span></span><a name="LispEvolve" id="LispEvolve"> Steele, Guy L., and Richard P. Gabriel. 1993. “The Evolution of Lisp.”In <em>The Second ACM SIGPLAN Conference on History of ProgrammingLanguages</em>, 231–70. HOPL-II. New York, NY, USA: Association forComputing Machinery. <a href="https://doi.org/10.1145/154766.155373">https://doi.org/10.1145/154766.155373</a>.</a></li>
+<li><span class="citationwrapper"><span class="citation">86</span></span><a name="Liveness" id="Liveness"> Tanimoto, Steven L. 2013. “A Perspective on the Evolution of LiveProgramming.” In <em>Proceedings of the 1st International Workshop on LiveProgramming</em>, 31–34. LIVE ’13. San Francisco, California: IEEE Press.</a></li>
+<li><span class="citationwrapper"><span class="citation">87</span></span><a name="TcherDiss" id="TcherDiss"> Tchernavskij, Philip. 2019. “Designing and Programming MalleableSoftware.” PhD thesis, Université Paris-Saclay, École doctorale nº580Sciences et Technologies de l’Information et de la Communication (STIC).</a></li>
+<li><span class="citationwrapper"><span class="citation">88</span></span><a name="Pilot" id="Pilot"> Teitelman, Warren. 1966. “PILOT: A Step Toward Man-Computer Symbiosis.”PhD thesis, MIT.</a></li>
+<li><span class="citationwrapper"><span class="citation">89</span></span><a name="Live13" id="Live13"> Ungar, David, and Randall B. Smith. 2013. “The Thing on the Screen IsSupposed to Be the Actual Thing.” 2013.<a href="http://davidungar.net/Live2013/Live_2013.html">http://davidungar.net/Live2013/Live_2013.html</a>.</a></li>
+<li><span class="citationwrapper"><span class="citation">90</span></span><a name="BretVictor" id="BretVictor"> Victor, Bret. 2012. “Learnable Programming.” 2012.<a href="http://worrydream.com/#!/LearnableProgramming">http://worrydream.com/#!/LearnableProgramming</a>.</a></li>
+<li><span class="citationwrapper"><span class="citation">91</span></span><a name="Perl" id="Perl"> Wall, Larry. 1999. “Perl, the First Postmodern Computer Language.” 1999.<a href="http://www.wall.org//~larry/pm.html">http://www.wall.org//~larry/pm.html</a>.</a></li>
+<li><span class="citationwrapper"><span class="citation">92</span></span><a name="LispCurse" id="LispCurse"> Winestock, Rudolf. 2011. “The Lisp Curse.” 2011.<a href="http://www.winestockwebdesign.com/Essays/Lisp_Curse.html">http://www.winestockwebdesign.com/Essays/Lisp_Curse.html</a>.</a></li>
+<li><span class="citationwrapper"><span class="citation">93</span></span><a name="Mathematica" id="Mathematica"> Wolfram, Stephen. 1991. <em>Mathematica: A System for Doing Mathematics byComputer (2nd Ed.)</em>. USA: Addison Wesley Longman Publishing Co., Inc.</a></li>
+<li><span class="citationwrapper"><span class="citation">94</span></span><a name="VisiCalc2" id="VisiCalc2"> Zynda, Melissa Rodriguez. 2013. “The First Killer App: A History ofSpreadsheets.” <em>Interactions</em> 20 (5): 68–72.<a href="https://doi.org/10.1145/2509224">https://doi.org/10.1145/2509224</a>.</a></li>
+<li><span class="citationwrapper"><span class="citation">95</span></span><a name="Eclipse" id="Eclipse"> desRivieres, J., and J. Wiegand. 2004. “Eclipse: A Platform forIntegrating Development Tools.” <em>IBM Systems Journal</em> 43 (2): 371–83.<a href="https://doi.org/10.1147/sj.432.0371">https://doi.org/10.1147/sj.432.0371</a>.</a></li>
+<li><span class="citationwrapper"><span class="citation">96</span></span><a name="Boxer" id="Boxer"> diSessa, A. A, and H. Abelson. 1986. “Boxer: A ReconstructibleComputational Medium.” <em>Commun. ACM</em> 29 (9): 859–68.<a href="https://doi.org/10.1145/6592.6595">https://doi.org/10.1145/6592.6595</a>.</a></li>
+<li><span class="citationwrapper"><span class="citation">97</span></span><a name="BoxerDesign" id="BoxerDesign"> diSessa, Andrea A. 1985. “A Principled Design for an IntegratedComputational Environment.” <em>Human–Computer Interaction</em> 1 (1): 1–47.<a href="https://doi.org/10.1207/s15327051hci0101\_1"><a href="https://doi.org/10.1207/s15327051hci0101\\1">https://doi.org/10.1207/s15327051hci0101\\1</a></a>.</a></li>
+<li><span class="citationwrapper"><span class="citation">98</span></span><a name="ReplitWeb" id="ReplitWeb"> repl.it. 2022. “Replit: The Collaborative Browser-Based IDE.”<a href="https://replit.com">https://replit.com</a>.</a></li>
+<li><span class="citationwrapper"><span class="citation">99</span></span><a name="DarkWeb" id="DarkWeb"> team, Dark language. 2022. “Dark Lang.” <a href="https://darklang.com">https://darklang.com</a>.</a></li>
+</ol>
 </section>
 <section data-file="paper" data-id="main" data-title="Paper">
 <p>paper....</p>
@@ -268,53 +372,339 @@ Efforts to support programming without relying on textual code can only be calle
 While spreadsheets were designed to solve problems in a specific application area, HyperCard\ \cite{HyperCard} was designed around a particular application format. Programs are "stacks of cards" containing multimedia components and controls such as buttons. These controls can be programmed with pre-defined operations like "navigate to another card", or via the HyperTalk scripting language for anything more sophisticated.</p>
 <p>As a programming system, HyperCard is interesting for a couple of reasons. It effectively combines visual and textual notation. Programs appear the same way during editing as they do during execution. Most notably, HyperCard supports gradual progression from the "user" role to "developer": a user may first use stacks, then go on to edit the visual aspects or choose pre-defined logic until, eventually, they learn to program in HyperTalk.</p>
 </section>
-<section data-file="dimensions/interaction" data-id="summary" data-title="Interaction">
-<h1><i class="fa fa-cog"></i> Interaction <a class="tlink" href="#top=.;left=.;footer=.;right=dimensions/interaction,index"><i class="fa fa-arrow-right"></i>Description and relations...</a></h1>
+<section data-class="dimensions-complexity-anchor nobullet" data-file="dimensions/complexity" data-id="summary" data-title="Complexity">
+<h1><i class="fa fa-sitemap"></i> Complexity <a class="tlink" href="#*=.;right=dimensions/complexity,index"><i class="fa fa-arrow-right"></i>Description and relations...</a></h1>
+<p>How does the system structure complexity and what level of detail is required?</p>
+<h2>Dimensions</h2>
+<ul>
+<li>
+What programming details are hidden in reusable components and how?<br />
+<a class="tlink" href="#*=.;right=dimensions/complexity,factoring!"><i class="fa fa-arrow-right"></i>!</a>
+</li>
+<li>
+What part of program logic does not need to be explicitly specified?<br />
+<a class="tlink" href="#*=.;right=dimensions/complexity,automation!"><i class="fa fa-arrow-right"></i>!</a>
+</li>
+</ul>
+<h2>Examples and remarks</h2>
+<ul>
+<li><a class="tlink" href="#*=.;right=dimensions/complexity,notations!"><i class="fa fa-arrow-right"></i>!</a></li>
+<li><a class="tlink" href="#*=.;right=dimensions/complexity,dsls!"><i class="fa fa-arrow-right"></i>!</a></li>
+<li><a class="tlink" href="#*=.;right=dimensions/complexity,pbe!"><i class="fa fa-arrow-right"></i>!</a></li>
+<li><a class="tlink" href="#*=.;right=dimensions/complexity,next-level!"><i class="fa fa-arrow-right"></i>!</a></li>
+</ul>
+</section>
+<section data-file="dimensions/complexity" data-id="index" data-title="Complexity">
+<h1>Complexity</h1>
+<p><strong>How does the system structure complexity and what level of detail is required?</strong></p>
+<p>There is a massive gap between the level of detail required by a computer, which executes a sequence of low-level instructions, and the human description of a program in higher-level terms. To bridge this gap, a programming system needs to deal with the complexity inherent in going from a high-level description to low-level instructions.</p>
+<p>Ever since the 1940s, programmers have envisioned that "automatic programming" will allow higher-level programming. This did not necessarily mean full automation. In fact, the first "automatic programming" systems referred to higher-level programming languages with a compiler (or an interpreter) that expanded the high-level code into detailed instructions.</p>
+<p>Most programming systems use <em>factoring of complexity</em> and encapsulate some of the details that need to be specified into components that can be reused by the programmer. The details may be encapsulated in a library, or filled in by a compiler or interpreter. Such factoring may also be reflected in the conceptual structure of the system (See <a href="#*=.;right=dimensions/conceptual-structure,flattening-factoring">flattening and factoring</a>). However, a system may also fully <em>automate</em> some aspects of programming. In those cases, a general-purpose algorithm solves a whole class of problems, which then do not need to be coded explicitly. Think of planning the execution of SQL queries, or of the inference engine supporting a logic programming language like Prolog.</p>
+<h2>Relations</h2>
+<p><a class="tlink" href="#*=.;right=dimensions/conceptual-structure,index"><i class="fa fa-arrow-right"></i>Conceptual structure</a> In many cases, the factoring of complexity follows the conceptual structure of the programming system.</p>
+<p><a class="tlink" href="#*=.;right=dimensions/conceptual-structure,flattening-factoring"><i class="fa fa-arrow-right"></i>Flattening and factoring</a> One typically automates the thing at the lowest level in one's factoring (by making the lowest level a thing that exists outside of the program---in a system or a library)</p>
+</section>
+<section data-file="dimensions/complexity" data-id="notations" data-title="Remark: Notations">
+<h1>Remark: Notations</h1>
+<p>Even when working at a high level, programming involves manipulating some program notation. In high-level functional or imperative programming languages, the programmer writes code that typically has clear operational meaning, even when some of the complexity is relegated to a library implementation or a runtime.</p>
+<p>When using declarative programming systems like SQL, Prolog or Datalog, the meaning of a program is still unambiguous, but it is not defined operationally---there is a (more or less deterministic) inference engine that solves the problem based on the provided description.</p>
+<p>Finally, systems based on <em>programming by example</em> step even further away from having clear operational meaning---the program may be simply a collection of sample inputs and outputs, from which a (possibly non-deterministic) engine infers the concrete steps of execution.</p>
+</section>
+<section data-file="dimensions/complexity" data-id="factoring" data-title="Dimension: Factoring of complexity">
+<h1>Dimension: Factoring of complexity</h1>
+<p>The basic mechanism for dealing with complexity is <em>factoring</em> it. Given a program, the more domain-specific aspects of the logic are specified explicitly, whereas the more mundane and technical aspects of the logic are left to a reusable component.</p>
+<p>Often, this reusable component is just a library. Yet in the case of higher-level programming languages, the reusable component may include a part of a language runtime such as a memory allocator or a garbage collector. In case of declarative languages or programming by example, the reusable component is a general purpose inference engine.</p>
+<h2>Related examples</h2>
+<div class="nobullet">
+<ul>
+<li><a class="tlink" href="#*=.;right=dimensions/complexity,dsls!"><i class="fa fa-arrow-right"></i>!</a></li>
+</ul>
+</div>
+</section>
+<section data-file="dimensions/complexity" data-id="automation" data-title="Dimension: Level of automation">
+<h1>Dimension: Level of automation</h1>
+<p>Factoring of complexity shields the programmer from some details, but those details still need to be explicitly programmed. Depending on the customizability of the system, this programming may or may not be accessible, but it is always there. For example, a function used in a spreadsheet formula is implemented in the spreadsheet system.</p>
+<p>A programming system with higher <em>level of automation</em> requires more than simply factoring code into reusable components. It uses a mechanism where some details of the operational meaning of a program are never explicitly specified, but are inferred automatically by the system. This is the approach of <em>programming by example</em> and <em>machine learning</em>, where behaviour is specified through examples. In some cases, deciding whether a feature is <em>automation</em> or merely <em>factoring of complexity</em> is less clear: garbage collection can be seen as either a simple case of automation, or a sophisticated case of factoring complexity.</p>
+<p>There is also an interesting (and perhaps inevitable) trade-off. The higher the level of automation, the less explicit the operational meaning of a program. This has a wide range of implications. Smaragdakis <a class="citation" href="#*=.;right=paper,references" title=" Smaragdakis, Yannis. 2019. “Next-Paradigm Programming Languages: WhatWill They Look Like and What Changes Will They Bring?” In Proceedingsof the 2019 ACM SIGPLAN International Symposium on New Ideas, NewParadigms, and Reflections on Programming and Software, 187–97. Onward!2019. New York, NY, USA: Association for Computing Machinery.https://doi.org/10.1145/3359591.3359739.">81</a> notes, for example, that this means the implementation can significantly change the performance of a program.</p>
+<h2>Related examples</h2>
+<div class="nobullet">
+<ul>
+<li><a class="tlink" href="#*=.;right=dimensions/complexity,pbe!"><i class="fa fa-arrow-right"></i>!</a></li>
+<li><a class="tlink" href="#*=.;right=dimensions/complexity,next-level!"><i class="fa fa-arrow-right"></i>!</a></li>
+</ul>
+</div>
+</section>
+<section data-file="dimensions/complexity" data-id="dsls" data-title="Example: Domain-specific languages">
+<h1>Example: Domain-specific languages</h1>
+<p>Domain-specific languages <a class="citation" href="#*=.;right=paper,references" title=" Fowler, Martin. 2010. Domain-Specific Languages. Pearson Education.">22</a> provide an example of factoring of complexity that does not involve automation. In this case, programming is done at two levels. At the lower level, an (often more experienced) programmer develops a domain-specific language, which lets a (typically less experienced) programmer easily solve problems in a particular domain: say, modelling of financial contracts, or specifying interactive user interfaces.</p>
+<p>The domain-specific language provides primitives that can be composed, but each primitive and each form of composition has explicitly programmed and unambiguous operational meaning. The user of the domain-specific language can think in the higher-level concepts it provides, and this conceptual structure can be analysed using the dimensions in <a href="#*=.;right=dimensions/conceptual-structure,index">Conceptual structure</a>. As long as these concepts are clear, the user does not need to be concerned with the details of how exactly the resulting programs run.</p>
+</section>
+<section data-file="dimensions/complexity" data-id="pbe" data-title="Example: Programming by example">
+<h1>Example: Programming by example</h1>
+<p>An interesting case of automation is <em>programming by example</em>. <a class="citation" href="#*=.;right=paper,references" title=" Lieberman, H. 2001. Your Wish Is My Command:Programming by Example. Morgan Kaufmann.">57</a> In this case, the user does not provide even a declarative specification of the program behavior, but instead specifies sample inputs and outputs. A more or less sophisticated algorithm then attempts to infer the relationship between the inputs and the outputs. This may, for example, be done through program synthesis where an algorithm composes a transformation using a (small) number of pre-defined operations. Programming by example is often very accessible and has been used in spreadsheet applications. <a class="citation" href="#*=.;right=paper,references" title=" Gulwani, Sumit, William R Harris, and Rishabh Singh. 2012. “SpreadsheetData Manipulation Using Examples.” Communications of the ACM 55 (8):97–105.">35</a></p>
+</section>
+<section data-file="dimensions/complexity" data-id="next-level" data-title="Example: Next level automation">
+<h1>Example: Next-level automation</h1>
+<p>Throughout history, programmers have always hoped for the next level of "automatic programming". As observed by Parnas, <a class="citation" href="#*=.;right=paper,references" title=" Parnas, David Lorge. 1985. “Software Aspects of Strategic DefenseSystems.” http://web.stanford.edu/class/cs99r/readings/parnas1.pdf.">70</a> "automatic programming has always been a euphemism for programming in a higher-level language than was then available to the programmer".</p>
+<p>We may speculate whether Deep Learning will enable the next step of automation. However, this would not be different in principle from existing developments. We can see any level of automation as using <em>artificial intelligence</em> methods. This is the case for declarative languages or constraint-based languages---where the inference engine implements a traditional AI method (GOFAI, i.e., Good Old Fashioned AI).</p>
+</section>
+<section data-class="dimensions-conceptual-structure-anchor nobullet" data-file="dimensions/conceptual-structure" data-id="summary" data-title="Conceptual structure">
+<h1><i class="fa fa-cubes"></i> Conceptual structure <a class="tlink" href="#*=.;right=dimensions/conceptual-structure,index"><i class="fa fa-arrow-right"></i>Description and relations...</a></h1>
+<p>How is meaning constructed? How are internal and external incentives balanced?</p>
+<h2>Dimensions</h2>
+<ul>
+<li>
+Does the system present as elegantly designed or pragmatically improvised?<br />
+<a class="tlink" href="#*=.;right=dimensions/conceptual-structure,integrity-openness!"><i class="fa fa-arrow-right"></i>!</a>
+</li>
+<li>
+What are the primitives? How can they be combined to achieve novel behaviors?<br />
+<a class="tlink" href="#*=.;right=dimensions/conceptual-structure,composability!"><i class="fa fa-arrow-right"></i>!</a>
+</li>
+<li>
+Which wheels do users not need to reinvent?<br />
+<a class="tlink" href="#*=.;right=dimensions/conceptual-structure,convenience!"><i class="fa fa-arrow-right"></i>!</a>
+</li>
+<li>
+How much is common structure explicitly marked as such?<br />
+<a class="tlink" href="#*=.;right=dimensions/conceptual-structure,commonality!"><i class="fa fa-arrow-right"></i>!</a>
+</li>
+</ul>
+<h2>Examples &amp; remarks</h2>
+<ul>
+<li><a class="tlink" href="#*=.;right=dimensions/conceptual-structure,example-integrity!"><i class="fa fa-arrow-right"></i>!</a></li>
+<li><a class="tlink" href="#*=.;right=dimensions/conceptual-structure,example-openness!"><i class="fa fa-arrow-right"></i>!</a></li>
+<li><a class="tlink" href="#*=.;right=dimensions/conceptual-structure,flattening-factoring!"><i class="fa fa-arrow-right"></i>!</a></li>
+<li><a class="tlink" href="#*=.;right=dimensions/conceptual-structure,end-of-history!"><i class="fa fa-arrow-right"></i>!</a></li>
+</ul>
+</section>
+<section data-file="dimensions/conceptual-structure" data-id="index" data-title="Conceptual structure">
+<h1>Conceptual structure</h1>
+<p><strong>How is meaning constructed? How are internal and external incentives balanced?</strong></p>
+<p>For more information, refer to the primary technical dimension of this cluster and its two extreme ends:</p>
+<div class="nobullet">
+<ul>
+<li><a class="tlink" href="#*=.;right=dimensions/conceptual-structure,integrity-openness!"><i class="fa fa-arrow-right"></i>!</a></li>
+<li><a class="tlink" href="#*=.;right=dimensions/conceptual-structure,example-integrity!"><i class="fa fa-arrow-right"></i>!</a></li>
+<li><a class="tlink" href="#*=.;right=dimensions/conceptual-structure,example-openness!"><i class="fa fa-arrow-right"></i>!</a></li>
+</ul>
+</div>
+<h2>References</h2>
+<ul>
+<li>How to Design a Good API and Why it Matters <a class="citation" href="#*=.;right=paper,references" title=" Bloch, Joshua. 2007. “How to Design a Good API and Why It Matters.”2007.http://www.cs.bc.edu/~muller/teaching/cs102/s06/lib/pdf/api-design.">6</a></li>
+</ul>
+</section>
+<section data-file="dimensions/conceptual-structure" data-id="integrity-openness" data-title="Dimension: Conceptual integrity versus openness">
+<h1>Dimension: Conceptual integrity versus openness</h1>
+<p>The evolution of programming systems has led away from <em>conceptual integrity</em> towards an intricate ecosystem of specialized technologies and industry standards. Any attempt to unify parts of this ecosystem into a coherent whole will create <em>incompatibility</em> with the remaining parts, which becomes a major barrier to adoption. Designers seeking adoption are pushed to focus on localized incremental improvements that stay within the boundaries established by existing practice. This creates a tension between how highly they can afford to value conceptual elegance, and how open they are to the pressures imposed by society. We will turn to both of these opposite ends---<em>integrity</em> and <em>openness</em>---in more detail.</p>
+<h2>Related examples</h2>
+<div class="nobullet">
+<ul>
+<li><a class="tlink" href="#*=.;right=dimensions/conceptual-structure,example-integrity!"><i class="fa fa-arrow-right"></i>!</a></li>
+<li><a class="tlink" href="#*=.;right=dimensions/conceptual-structure,example-openness!"><i class="fa fa-arrow-right"></i>!</a></li>
+</ul>
+</div>
+</section>
+<section data-class="doc" data-file="dimensions/conceptual-structure" data-id="example-integrity" data-title="Example: Conceptual integrity">
+<h1>Example: Conceptual integrity</h1>
+<blockquote>
+<p>I will contend that Conceptual Integrity is the most important consideration in system design. It is better to have a system omit certain anomalous features and improvements, but to reflect one set of design ideas, than to have one that contains many good but independent and uncoordinated ideas.</p>
+<p>Fred Brooks, <em>Aristocracy, Democracy and System Design</em> <a class="citation" href="#*=.;right=paper,references" title=" Brooks, FP. 1995. “Aristocracy, Democracy and System Design.” In TheMythical Man Month: Essays on Software Engineering. Addison-Wesley.">8</a></p>
+</blockquote>
+<div></div>
+<blockquote>
+<p>Conceptual integrity arises not (simply) from one mind or from a small number of agreeing resonant minds, but from sometimes hidden co-authors and the thing designed itself.</p>
+<p>Richard Gabriel, <em>Designed As Designer</em> <a class="citation" href="#*=.;right=paper,references" title=" Gabriel, Richard P. 2008. “Designed as Designer.” In Proceedings of the 23rd ACMSIGPLAN Conference on Object-Oriented Programming Systems Languages andApplications, 617–32. OOPSLA ’08. New York, NY, USA: Association forComputing Machinery. https://doi.org/10.1145/1449764.1449813.">27</a></p>
+</blockquote>
+<p>Conceptual integrity strives to reduce complexity at the source; it employs <em>unified concepts</em> that may <em>compose orthogonally</em> to generate diversity. Perhaps the apotheosis of this approach can be found in early Smalltalk and Lisp machines, which were complete programming systems built around a single language. They incorporated capabilities commonly provided <em>outside</em> the programming language by operating systems and databases. Everything was done in one language, and so everything was represented with the datatypes of that language. Likewise the libraries and idioms of the language were applicable in all contexts. Having a <em>lingua franca</em> avoided much of the friction and impedance mismatches inherent to multi-language systems. A similar drive exists in the Python programming language, which follows the principle that “There should be one---and preferably only one---obvious way to do it” in order to promote community consensus on a single coherent style.</p>
+<h2>Memory models of programming langauges</h2>
+<p>In addition to Smalltalk and Lisp, many programming languages focus on one kind of data structure. As pointed out by Kragen Javier Sitaker: <a class="citation" href="#*=.;right=paper,references" title=" Sitaker, Kragen Javier. 2016. “The Memory Models That UnderlieProgramming Languages.” 2016.http://canonical.org/~kragen/memory-models/.">80</a></p>
+<div class="narrow">
+<ul>
+<li>In COBOL, data consists of nested records as in a business form.</li>
+<li>In Fortran, data consists of parallel arrays.</li>
+<li>In SQL, data is a set of relations with key constraints.</li>
+<li>In scripting languages like Python, Ruby, and Lua, much data takes the form of string-indexed hash tables.</li>
+</ul>
+</div>
+<p>Finally, many languages are <em>imperative</em>, staying close to the hardware model of addressable memory, lightly abstracted into primitive values and references into mutable arrays and structures. On the other hand, <em>functional</em> languages hide references and treat everything as immutable structured values. This conceptual simplification benefits certain kinds of programming, but can be counterproductive when an imperative approach is more natural, such as in external input/output.</p>
+</section>
+<section data-file="dimensions/conceptual-structure" data-id="example-openness" data-title="Example: Conceptual openness">
+<h1>Example: Conceptual openness</h1>
+<h2>Perl, contra Python</h2>
+<p>In contrast to Python's outlook, Perl proclaims “There is more than one way to do it” and considers itself “the first postmodern programming language”. <a class="citation" href="#*=.;right=paper,references" title=" Wall, Larry. 1999. “Perl, the First Postmodern Computer Language.” 1999.http://www.wall.org//~larry/pm.html.">91</a> “Perl doesn't have any agenda at all, other than to be maximally useful to the maximal number of people. To be the duct tape of the Internet, and of everything else.” The Perl way is to accept the status quo of evolved chaos and build upon it using duct tape and ingenuity. Taken to the extreme, a programming system becomes no longer a <em>system</em>, properly speaking, but rather a <em>toolkit for improvising</em> assemblages of <em>found</em> software. Perl can be seen as championing the values of <em>pluralism</em>, <em>compatibility</em>, or <em>conceptual openness</em> over conceptual integrity. This philosophy has been called <em>Postmodern Programming</em>. <a class="citation" href="#*=.;right=paper,references" title=" Noble, James, and Robert Biddle. 2004. “Notes on Notes on PostmodernProgramming.” SIGPLAN Not. 39 (12): 40–56.https://doi.org/10.1145/1052883.1052890.">66</a></p>
+<h2>C++, contra Smalltalk</h2>
+<p>Another case is that of C++, which added to C the Object-Oriented concepts developed by Smalltalk while remaining 100% compatible with C, down to the level of ABI and performance. This strategy was enormously successful for adoption, but came with the tradeoff of enormous complexity compared to languages designed from scratch for OO, like Smalltalk, Ruby, and Java.</p>
+<h2>Worse, contra Better</h2>
+<p>Richard Gabriel first described this dilemma in his influential 1991 essay <em>Worse is Better</em> <a class="citation" href="#*=.;right=paper,references" title=" Gabriel, Richard P. 1991. “Worse Is Better.” 1991.https://www.dreamsongs.com/WorseIsBetter.html.">26</a> analyzing the defeat of Lisp by UNIX and C. Because UNIX and C were so easy to port to new hardware, they were “the ultimate computer viruses” despite providing only “about 50%--80% of what you want from an operating system and programming language”. Their conceptual openness meant that they adapted easily to the evolving conditions of the external world. The tradeoff was decreased conceptual integrity, such as the undefined behaviours of C, the junkyard of working directories, and the proliferation of special purpose programming languages to provide a complete development environment.</p>
+<h2>UNIX and Files</h2>
+<p>Many programming languages and systems impose structure at a "fine granularity": that of individual variables and other data and code structures. Conversely, systems like UNIX and the Web impose fewer restrictions on how programmers represent things. UNIX insists only on a basic infrastructure of "large objects", <a class="citation" href="#*=.;right=paper,references" title=" Kell, Stephen. 2013. “The Operating System: Should There Be One?” In Proceedingsof the Seventh Workshop on Programming Languages and Operating Systems.PLOS ’13. New York, NY, USA: Association for Computing Machinery.https://doi.org/10.1145/2525528.2525534.">45</a> delegating all fine-grained structure to client programs. This scores many points for conceptual openness. <em>Files</em> provide a universal API for reading and writing byte streams, a low-level construct containing so many degrees of freedom that it can support a wide variety of formats and ecosystems. <em>Processes</em> similarly provide a thin abstraction over machine-level memory and processors.</p>
+<p>Concepual integrity is necessarily sacrificed for such openness; while "everything is a file" gestures at integrity, in the vein of Smalltalk's "everything is an object", exceptions proliferate. Directories are special kinds of files with special operations, hardware device files require special <code>ioctl</code> operations, and many commands expect files containing newline separators. Additionally, because client programs must supply their <em>own</em> structure for fine-grained data and code, they are given little in the way of mutual compatibility. As a result, they tend to evolve into competing silos of duplicated infrastructure. <a class="citation" href="#*=.;right=paper,references" title=" Kell, Stephen. 2013. “The Operating System: Should There Be One?” In Proceedingsof the Seventh Workshop on Programming Languages and Operating Systems.PLOS ’13. New York, NY, USA: Association for Computing Machinery.https://doi.org/10.1145/2525528.2525534.">45</a> <a class="citation" href="#*=.;right=paper,references" title=" Kell, Stephen. 2009. “The Mythical Matched Modules: Overcoming theTyranny of Inflexible Software Construction.” In OOPSLA Companion.">44</a></p>
+<h2>The Web</h2>
+<p>Web HTTP endpoints, meanwhile, have proven to be an even more adaptable and viral abstraction than UNIX files. They operate at a similar level of abstraction as files, but support richer content and encompass internet-wide interactions between autonomous systems. In a sense, HTTP GET and PUT have become the "subroutine calls" of an internet-scale programming system. Perhaps the most salient thing about the Web is that its usefulness came as such a surprise to everyone involved in designing or competing with it. It is likely that, by staying close to the existing practice of transferring files, the Web gained a competitive edge over more ambitious and less familiar hypertext projects like Xanadu. <a class="citation" href="#*=.;right=paper,references" title=" Nelson, T. H. 1965. “Complex Information Processing: A File Structurefor the Complex, the Changing and the Indeterminate.” In Proceedings ofthe 1965 20th National Conference, 84–100. ACM ’65. New York, NY, USA:Association for Computing Machinery.https://doi.org/10.1145/800197.806036.">65</a></p>
+<p>The choice between compatibility and integrity correlates with the personality traits of <em>pragmatism</em> and <em>idealism</em>. It is pragmatic to accept the status quo of technology and make the best of it. Conversely, idealists are willing to fight convention and risk rejection in order to attain higher goals. We can wonder which came first: the design decision or the personality trait? Do Lisp and Haskell teach people to think more abstractly and coherently, or do they filter for those with a pre-existing condition? Likewise, perhaps  introverted developers prefer the cloisters of Smalltalk or Lisp to the adventurous "Wild West" of the Web.</p>
+</section>
+<section data-file="dimensions/conceptual-structure" data-id="composability" data-title="Dimension: Composability">
+<h1>Dimension: Composability</h1>
+<p>In short, <em>you can get anywhere by putting together a number of smaller steps.</em> There exist building blocks which span a range of useful combinations.
+Composability is, in a sense, key to the notion of "programmability" and every programmable system will have some level of composability (e.g. in the scripting language.)</p>
+<h2>UNIX</h2>
+<p>UNIX shell commands are a standard example of composability. The base set of primitive commands can be augmented by programming command executables in other languages. Given some primitives, one can "pipe" one's output to another's input (<code>|</code>), sequence (<code>;</code> or <code>&amp;&amp;</code>), select via conditions, and repeat with loop constructs, enabling full imperative programming. Furthermore, command compositions can be packaged into a named "script" which follows the same interface as primitive commands, and named subprograms within a script can also be defined.</p>
+<h2>HyperCard</h2>
+<p>In <em>HyperCard</em>, the <em>Authoring Environment</em> is <em>non</em>-composable for programming buttons: there is simply a set of predefined behaviors to choose from. Full scriptability is available only in the <em>Programming Environment</em>.</p>
+<h2>Haskell</h2>
+<p>The <em>Haskell type system</em>, as well as that of other functional programming languages, exhibits high composability. New types can be defined in terms of existing ones in several ways. These include records, discriminated unions, function types and recursive constructs (e.g. to define a <code>List</code> as either a <code>Nil</code> or a combination of element plus other list.) The C programming language also has some means of composing types that are analogous in some ways, such as structs, unions, enums and indeed even function pointers. For every type, there is also a corresponding "pointer" type. It lacks, however, the recursive constructs permitted in Haskell types.</p>
+</section>
+<section data-file="dimensions/conceptual-structure" data-id="convenience" data-title="Dimension: Convenience">
+<h1>Dimension: Convenience</h1>
+<p>In short, <em>you can get to X, Y or Z via one single step.</em> There are ready-made solutions to specific problems, not necessarily generalizable or composable. Convenience often manifests as "canonical" solutions and utilities in the form of an expansive standard library.</p>
+<h2>Composability and convenience</h2>
+<p>Composability without convenience is a set of atoms or gears; theoretically, anything one wants could be built out of them, but one must do that work. This situation has been criticized as the <em>Lisp Curse</em>. <a class="citation" href="#*=.;right=paper,references" title=" Winestock, Rudolf. 2011. “The Lisp Curse.” 2011.http://www.winestockwebdesign.com/Essays/Lisp_Curse.html.">92</a></p>
+<p>Composability <em>with</em> convenience is a set of convenient specific tools <em>along with</em> enough components to construct new ones. The specific tools themselves could be transparently composed of these building blocks, but this is not essential. They save users the time and effort it would take to "roll their own" solutions to common tasks.</p>
+<h2>UNIX shell</h2>
+<p>For example, let us turn to a convenience factor of <em>UNIX</em> shell commands, having already discussed their composability above. Observe that it would be possible, in principle, to pass all information to a program via standard input. Yet in actual practice, for convenience, there is a standard interface of <em>command-line arguments</em> instead, separate from anything the program takes through standard input. Most programming systems similarly exhibit both composability and convenience, providing templates, standard libraries, or otherwise pre-packaged solutions, which can nevertheless be used programmatially as part of larger operations.</p>
+</section>
+<section data-file="dimensions/conceptual-structure" data-id="commonality" data-title="Dimension: Commonality">
+<h1>Dimension: Commonality</h1>
+<p>Humans can see Arrays, Strings, Dicts and Sets all have a “size”, but the software needs to be <em>told</em> that they are the “same”. Commonality like this can be factored out into an explicit structure (a “Collection” class), analogous to database <em>normalization</em>. This way, an entity's size can be queried without reference to its particular details: if <code>c</code> is declared to be a Collection, then one can straightforwardly access <code>c.size</code>.</p>
+<p>Alternatively, it can be left implicit. This is less upfront work, but permits instances to <em>diverge</em>, analogous to <em>redundancy</em> in databases. For example, Arrays and Strings might end up with “length”, while Dict and Set call it “size”. This means that, to query the size of an entity, it is necessary to perform a case split according to its concrete type, solely to funnel the diverging paths back to the commonality they represent:</p>
+<pre><code>if (entity is Array or String)  size := entity.length
+else if (entity is Dict or Set) size := entity.size
+</code></pre>
+<h2>Related examples</h2>
+<div class="nobullet">
+<ul>
+<li><a class="tlink" href="#*=.;right=dimensions/conceptual-structure,flattening-factoring!"><i class="fa fa-arrow-right"></i>!</a></li>
+</ul>
+</div>
+</section>
+<section data-file="dimensions/conceptual-structure" data-id="flattening-factoring" data-title="Examples: Flattening and factoring">
+<h1>Examples: Flattening and factoring</h1>
+<p>Data structures usually have several "moving parts" that can vary independently. For example, a simple pair of “vehicle type” and “color” might have all combinations of (Car, Van, Train) and (Red, Blue). In this <em>factored</em> representation, we can programmatically change the color directly: <code>pair.second = Red</code> or <code>vehicle.colour = Red</code>.</p>
+<p>In some contexts, such as class names, a system might only permit such multi-dimensional structure as an <em>exhaustive enumeration</em>: RedCar, BlueCar, RedVan, BlueVan, RedTrain, BlueTrain, etc. The system sees a flat list of atoms, even though a human can see the sub-structure encoded in the string. In this world, we cannot simply “change the color to Red” programmatically; we would need to case-split as follows:</p>
+<pre><code>if (type is BlueCar) type := RedCar
+else if (type is BlueVan) type := RedVan
+else if (type is BlueTrain) type := RedTrain
+</code></pre>
+<p>The <em>commonality</em> between RedCar, RedVan, BlueCar, and so on has been <em>flattened</em>. There is implicit structure here that remains <em>un-factored</em>, similar to how numbers can be expressed as singular expressions (16) or as factor products (2,2,2,2). <em>Factoring</em> this commonality gives us the original design, where there is a pair of values from different sets.</p>
+<p>In <em>relational databases</em>, there is an opposition between <em>normalization</em> and <em>redundancy</em>. In order to fit multi-table data into a <em>flat</em> table structure, data needs to be duplicated into redundant copies. When data is <em>factored</em> into small tables as much as possible, such that there is only one place each piece of data "lives", the database is in <em>normal form</em> or <em>normalized</em>. Redundancy is useful for read-only processes, because there is no need to join different tables together based on common keys. Writing, however, becomes risky; in order to modify one thing, it must be synchronized to the multiple places it is stored. This makes highly normalized databases optimized for writes over reads.</p>
+</section>
+<section data-file="dimensions/conceptual-structure" data-id="end-of-history" data-title="Remark: The end of history?">
+<h1>Remark: The end of history?</h1>
+<p>Today we live in a highly developed world of software technology. It is estimated that 41,000 person years have been invested into Linux. We describe software development technologies in terms of <em>stacks</em> of specialized tools, each of which might capitalize over 100 person-years of development. Programming systems have become programming ecosystems: not designed, but evolved. How can we noticeably improve programming in the face of the overwhelming edifice of existing technology? There are strong incentives to focus on localized incremental improvements that don’t cross the established boundaries.</p>
+<p>The history of computing is one of cycles of evolution and revolution. Successive cycles were dominated in turn by mainframes, minicomputers, workstations, personal computers, and the Web. Each transition built a whole new technology ecosystem replacing or on top of the previous. The last revolution, the Web, was 25 years ago, with the result that many people have never experienced a disruptive platform transition. Has history stopped, or are we just stuck in a long cycle, with increasingly pent-up pressures for change? If it is the latter, then incompatible ideas now spurned may yet flourish.</p>
+</section>
+<section data-class="dimensions-customizability-anchor nobullet" data-file="dimensions/customizability" data-id="summary" data-title="Customizability">
+<h1><i class="fa fa-hammer"></i> Customizability <a class="tlink" href="#*=.;right=dimensions/customizability,index"><i class="fa fa-arrow-right"></i>Description and relations...</a></h1>
+<p>Once a program exists in the system, how can it be extended and modified?</p>
+<h2>Dimensions</h2>
+<ul>
+<li>
+Must we customize running programs differently to inert ones? Do these changes last beyond termination?<br />
+<a class="tlink" href="#*=.;right=dimensions/customizability,staging!"><i class="fa fa-arrow-right"></i>!</a>
+</li>
+<li>
+Which portions of the system’s state can be referenced and transferred to/from it? How far can the system’s behavior be changed by adding expressions?<br />
+<a class="tlink" href="#*=.;right=dimensions/customizability,addressing!"><i class="fa fa-arrow-right"></i>!</a>
+</li>
+<li>
+How far can the system’s behavior be changed from within?<br />
+<a class="tlink" href="#*=.;right=dimensions/customizability,self-sustainability!"><i class="fa fa-arrow-right"></i>!</a>
+</li>
+</ul>
+</section>
+<section data-file="dimensions/customizability" data-id="index" data-title="Customizability">
+<h1>Customizability</h1>
+<p><strong>Once a program exists in the system, how can it be extended and modified?</strong></p>
+<p>Programming is a gradual process. We start either from nothing, or from an existing program, and gradually extend and refine it until it serves a given purpose. Programs created using different programming systems can be refined to different extents, in different ways, at different stages of their existence.
+Consider three examples:</p>
+<ol>
+<li>First, a program in a conventional programming language like Java can be refined only by modifying its source code. However, you may be able to do so by just adding new code, such as a new interface implementation.</li>
+<li>Second, a spreadsheet can be modified at any time by modifying the formulas or data it contains. There is no separate programming phase. However, you have to modify the formulas directly in the cell---there is no way of modifying it by specifying a change in a way that is external to the cell.</li>
+<li>Third, a <em>self-sustaining</em> programming system, such as Smalltalk, does not make an explicit distinction between "programming" and "using" phases, and it can be modified and extended via itself. It gives developers the power to experiment with the system and, in principle, replace it with a better system from within.</li>
+</ol>
+<h2>References</h2>
+<p>In addition to the examples discussed in text, the proceedings of self-sustaining systems workshops <a class="citation" href="#*=.;right=paper,references" title=" Hirschfeld, Robert, and Kim Rose, eds. 2008. Self-Sustaining Systems,First Workshop, S3 2008, Potsdam, Germany, May 15-16, 2008, RevisedSelected Papers. Vol. 5146. Lecture Notes in Computer Science.Springer. https://doi.org/10.1007/978-3-540-89275-5.">41</a> <a class="citation" href="#*=.;right=paper,references" title=" Hirschfeld, Robert, Hidehiko Masuhara, and Kim Rose, eds. 2010.Workshop on Self-Sustaining Systems, S3 2010, Tokyo, Japan, September27-28, 2010. ACM. https://doi.org/10.1145/1942793.">40</a> provide numerous examples of systems and languages that are able to bootstrap, implement, modify, and maintain themselves; Gabriel's analysis of programming language revolutions <a class="citation" href="#*=.;right=paper,references" title=" Gabriel, Richard P. 2012. “The Structure of a Programming Language Revolution.” InProceedings of the ACM International Symposium on New Ideas, NewParadigms, and Reflections on Programming and Software, 195–214.Onward! 2012. New York, NY, USA: Association for Computing Machinery.https://doi.org/10.1145/2384592.2384611.">28</a> uses <em>advising</em> in PILOT, related Lisp mechanisms, and "mixins" in OOP to illustrate the difference between the "languages" and "systems" paradigms.</p>
+<h2>Relations</h2>
+<p><a class="tlink" href="#*=.;right=dimensions/conceptual-structure,flattening-factoring"><i class="fa fa-arrow-right"></i>Flattening and factoring</a> Related in that "customizability" is a form of creating new programs from existing ones; factoring repetitive aspects into a reusable standard component library facilitates the same thing.</p>
+<p><a class="tlink" href="#*=.;right=dimensions/interaction,index"><i class="fa fa-arrow-right"></i>Interaction</a> This determines whether there are separate stages for running and writing programs and may thus influence what kind of customization is possible.</p>
+</section>
+<section data-file="dimensions/customizability" data-id="staging" data-title="Dimension: Staging of customization">
+<h1>Dimension: Staging of customization</h1>
+<p>For systems that distinguish between different stages, such as writing source code versus running a program, customization methods may be different for each stage. In traditional programming languages, customization is done by modifying or adding source code at the programming stage, but there is no (automatically provided) way of customizing the created programs once they are running.</p>
+<p>There are a number of interesting questions related to staging of customization. First, what is the notation used for customization? This may be the notation in which a program was initially created, but a system may also use a secondary notation for customization (consider Emacs using Emacs Lisp). For systems with a stage distinction, an important question is whether such changes are <em>persistent</em>.</p>
+<h2>Smalltalk, Interlisp and similar</h2>
+<p>In image-based programming systems, there is generally no strict distinction between stages and so a program can be customized during execution in the same way as during development. The program image includes the programming environment. Users of a program can open this, navigate to a suitable object or a class (which serve as the <em>addressable extension points</em>) and modify that. Lisp-based systems such as <em>Interlisp</em> follow a similar model. Changes made directly to the image are persistent. The PILOT system for Lisp <a class="citation" href="#*=.;right=paper,references" title=" Teitelman, Warren. 1966. “PILOT: A Step Toward Man-Computer Symbiosis.”PhD thesis, MIT.">88</a> offers an interactive way of correcting errors when a program fails during execution. Such corrections are then applied to the image and are thus persistent.</p>
+<h2>Document Object Model (DOM) and Webstrates</h2>
+<p>In the context of Web programming, there is traditionally a stage distinction between programming (writing the code and markup) and running (displaying a page). However, the DOM can also be modified by browser Developer Tools---either manually, by running scripts in a console, or by using a userscript manager such as Greasemonkey. Such changes are not persistent in the default browser state, but are made so by Webstrates <a class="citation" href="#*=.;right=paper,references" title=" Klokmose, Clemens N., James R. Eagan, Siemen Baader, Wendy Mackay, andMichel Beaudouin-Lafon. 2015. “Webstrates: Shareable Dynamic Media.” InProceedings of the 28th Annual ACM Symposium on User Interface Software&amp; Technology, 280–90. UIST ’15. New York, NY, USA: Association forComputing Machinery. https://doi.org/10.1145/2807442.2807446.">49</a> which synchronize the DOM between the server and the client. This makes the DOM collaborative, but not (automatically) <em>live</em> because of the complexities this implies for event handling.</p>
+</section>
+<section data-file="dimensions/customizability" data-id="addressing" data-title="Dimension: Addressing and externalizability">
+<h1>Dimension: Addressing and externalizability</h1>
+<p>Programs in all programming systems have a representation that may be exposed through notation such as source code. When customizing a program, an interesting question is whether a customization needs to be done by modifying the original representation, or whether it can be done by <em>adding</em> something alongside the original structure.</p>
+<p>In order to support customization through addition, a programming system needs a number of characteristics introduced by Basman et al. <a class="citation" href="#*=.;right=paper,references" title=" Basman, Antranig, L. Church, C. Klokmose, and Colin B. D. Clark. 2016.“Software and How It Lives on: Embedding Live Programs in the WorldAround Them.” In PPIG.">3</a> <a class="citation" href="#*=.;right=paper,references" title=" Basman, Antranig, Clayton Lewis, and Colin Clark. 2018. “The OpenAuthorial Principle: Supporting Networks of Authors in CreatingExternalisable Designs.” In Proceedings of the 2018 ACM SIGPLANInternational Symposium on New Ideas, New Paradigms, and Reflections onProgramming and Software, 29–43.">2</a> First, the system needs to support <em>addressing</em>: the ability to refer to a part of the program representation from the outside. Next, <em>externalizability</em> means that a piece of addressed state can be exhaustively transferred between the system and the outside world.</p>
+<p>Finally, <em>additive authoring</em> requires that system behaviours can be <em>changed</em> by simply <em>adding</em> a new expression containing addresses---in other words, anything can be <em>overriden</em> without being <em>erased</em>. Of particular importance is how addresses are specified and what extension points in the program they can refer to. The system may offer an automatic mechanism that makes certain parts of a program addressable, or this task may be delegated to the programmer.</p>
+<h2>Cascading Style Sheets (CSS)</h2>
+<p>CSS is a prime example of additive authoring within the Web programming system. It provides rich addressability mechanisms that are partly automatic (when referring to tag names) and partly manual (when using element IDs and class names). Given a web page, it is possible to modify almost any aspect of its appearance by simply <em>adding</em> additional rules to a CSS file. The Infusion project <a class="citation" href="#*=.;right=paper,references" title=" Basman, Antranig. 2021. “Infusion Framework and Components.” 2021.https://fluidproject.org/infusion.html.">5</a> offers similar customizability mechanisms, but for behaviour rather than just styling. There is also the recent programming system Varv, <a class="citation" href="#*=.;right=paper,references" title=" Borowski, Marcel, Luke Murray, Rolf Bagge, Janus Bager Kristensen,Arvind Satyanarayan, and Clemens Nylandsted Klokmose. 2022. “Varv:Reprogrammable Interactive Software as a Declarative Data Structure.” InCHI Conference on Human Factors in Computing Systems. CHI ’22. NewYork, NY, USA: Association for Computing Machinery.https://doi.org/10.1145/3491102.3502064.">7</a> which embodies additive authoring as a core principle.</p>
+<h2>Object Oriented Programming (OOP) and Aspect Oriented Programming (AOP)</h2>
+<p>In conventional programming languages, customization is done by modifying the code itself. OOP and AOP make it possible to do so by adding code independently of existing program code. In OOP, this requires manual definition of extension points, i.e. interfaces and abstract methods. Functionality can then be added to a system by defining a new class (although injecting the new class into existing code without modification requires some form of configuration such as a dependency injection container). AOP systems such as AspectJ <a class="citation" href="#*=.;right=paper,references" title=" Kiczales, Gregor, Erik Hilsdale, Jim Hugunin, Mik Kersten, Jeffrey Palm,and William G. Griswold. 2001. “An Overview of AspectJ.” In ECOOP2001 - Object-Oriented Programming, 15th European Conference, Budapest,Hungary, June 18-22, 2001, Proceedings, edited by Jørgen LindskovKnudsen, 2072:327–53. Lecture Notes in Computer Science. Springer.https://doi.org/10.1007/3-540-45337-7\\18.">47</a> provides a richer addressing mechanism. In particular, it makes it possible to add functionality to the invocation of a specific method (among other options) by using the <em>method call pointcut</em>. This functionality is similar to <em>advising</em> in Pilot <a class="citation" href="#*=.;right=paper,references" title=" Teitelman, Warren. 1966. “PILOT: A Step Toward Man-Computer Symbiosis.”PhD thesis, MIT.">88</a>.</p>
+</section>
+<section data-file="dimensions/customizability" data-id="self-sustainability" data-title="Dimension: Self-sustainability">
+<h1>Dimension: Self-sustainability</h1>
+<p>For most programming languages, programming systems, and ordinary software applications, if one wants to customize beyond a certain point, one must go beyond the facilities provided in the system itself. Most programming systems maintain a clear distinction between the <em>user level</em>, where the system is used, and <em>implementation level</em>, where the source code of the system itself resides. If the user level does not expose control over some property or feature, then one is forced to go to the implementation level. In the common case this will be a completely different language or system, with an associated learning cost. It is also likely to be lower-level---lacking expressive functions, features or abstractions of the user level---which makes for a more tedious programming experience.</p>
+<h2>Progressively evolvable systems</h2>
+<p>It is possible, however, to carefully design systems to expose deeper aspects of their implementation <em>at the user level</em>, relaxing the formerly strict division between these levels. For example, in the research system <em>3-Lisp</em>, <a class="citation" href="#*=.;right=paper,references" title=" Smith, Brian Cantwell. 1982. “Procedural Reflection in ProgrammingLanguages.” PhD thesis, Massachusetts Institute of Technology.https://dspace.mit.edu/handle/1721.1/15961.">82</a> ordinarily built-in functions like the conditional <code>if</code> and error handling <code>catch</code> are implemented in 3-Lisp code at the user level.</p>
+<p>The degree to which a system's inner workings are accessible to the user level, we call <em>self-sustainability</em>. At the maximal degree of this dimension would reside "stem cell"-like systems: those which can be progressively evolved to arbitrary behavior without having to "step outside" of the system to a lower implementation level. In a sense, any difference between these systems would be merely a difference in initial state, since any could be turned into any other.</p>
+<h2>Minimal customizability</h2>
+<p>The other end, of minimal self-sustainability, corresponds to minimal customizability: beyond the transient run-time state changes that make up the user level of any piece of software, the user cannot change anything without dropping down to the means of implementation of the system. This would resemble a traditional end-user "application" focused on a narrow domain with no means to do anything else.</p>
+<h2>Self-describing systems</h2>
+<p>The terms "self-describing" or "self-implementing" have been used for this property, but they can invite confusion: how can a thing describe itself? Instead, a system that can <em>sustain itself</em> is an easier concept to grasp. The examples that we see of high self-sustainability all tend to be <em>Operating System-like</em>. UNIX is widely established as an operating system, while Smalltalk and Lisp have been branded differently. Nevertheless, all three have shipped as the operating systems of custom hardware, and have similar responsibilities. Specifically: they support the execution of "programs"; they define an interface for accessing and modifying state; they provide standard libraries of common functionality; they define how programs can communicate with each other; they provide a user interface.</p>
+<h2>UNIX</h2>
+<p>Self-sustainability of UNIX is owed to the combination of two factors. First, the system is implemented in binary files (via ELF, Executable and Linkable Format) and text files (for configuration). Second, these files are part of the user-facing filesystem, so users can replace and modify parts of the system using UNIX file interfaces.</p>
+<h2>Smalltalk and Combined Object Lambda Architectures</h2>
+<p>Self-sustainability in Smalltalk is similar to UNIX, but at a finer granularity and with less emphasis on whether things reside in volatile (process) or non-volatile (file) storage. The analogous points are that (1) the system is implemented as objects with methods containing Smalltalk code, and (2) these are modifiable using the class browser and code editor. Combined Object Lambda Architectures, or COLAs, <a class="citation" href="#*=.;right=paper,references" title=" Piumarta, Ian. 2006. “Accessible Language-Based Environments ofRecursive Theories.” 2006.http://www.vpri.org/pdf/rn2006001a_colaswp.pdf.">75</a> are a theoretical system design to improve on the self-sustainability of Smalltalk. This is achieved by generalizing the object model to support relationships beyond classes.</p>
+</section>
+<section data-class="dimensions-interaction-anchor nobullet" data-file="dimensions/interaction" data-id="summary" data-title="Interaction">
+<h1><i class="fa fa-hand-pointer"></i> Interaction <a class="tlink" href="#*=.;right=dimensions/interaction,index"><i class="fa fa-arrow-right"></i>Description and relations...</a></h1>
 <p>How do users manifest their ideas, evaluate the result, and generate new ideas in response?</p>
 <h2>Dimensions</h2>
 <ul>
 <li>
 What are the gulfs of execution and evaluation and how are they related?<br />
-<a class="tlink" href="#top=.;left=.;footer=.;right=dimensions/interaction,feedback-loops!"><i class="fa fa-arrow-right"></i>!</a>
+<a class="tlink" href="#*=.;right=dimensions/interaction,feedback-loops!"><i class="fa fa-arrow-right"></i>!</a>
 </li>
 <li>
 Which sets of feedback loops only occur together?<br />
-<a class="tlink" href="#top=.;left=.;footer=.;right=dimensions/interaction,modes-of-interaction!"><i class="fa fa-arrow-right"></i>!</a>
+<a class="tlink" href="#*=.;right=dimensions/interaction,modes-of-interaction!"><i class="fa fa-arrow-right"></i>!</a>
 </li>
 <li>
 How do we go from abstractions to concrete examples and vice versa?<br />
-<a class="tlink" href="#top=.;left=.;footer=.;right=dimensions/interaction,abstraction-construction!"><i class="fa fa-arrow-right"></i>!</a>
+<a class="tlink" href="#*=.;right=dimensions/interaction,abstraction-construction!"><i class="fa fa-arrow-right"></i>!</a>
 </li>
 </ul>
 <h2>Examples</h2>
 <ul>
-<li><a class="tlink" href="#top=.;left=.;footer=.;right=dimensions/interaction,immediate-feedback!"><i class="fa fa-arrow-right"></i>!</a></li>
-<li><a class="tlink" href="#top=.;left=.;footer=.;right=dimensions/interaction,direct-manipulation!"><i class="fa fa-arrow-right"></i>!</a></li>
+<li><a class="tlink" href="#*=.;right=dimensions/interaction,immediate-feedback!"><i class="fa fa-arrow-right"></i>!</a></li>
+<li><a class="tlink" href="#*=.;right=dimensions/interaction,direct-manipulation!"><i class="fa fa-arrow-right"></i>!</a></li>
 </ul>
 </section>
-<section data-file="dimensions/interaction" data-id="index" data-summary="How do users manifest their ideas, evaluate the result, and generate new ideas in response?" data-title="Interaction">
-<h2>Interaction</h2>
+<section data-file="dimensions/interaction" data-id="index" data-title="Interaction">
+<h1>Interaction</h1>
+<p><strong>How do users manifest their ideas, evaluate the result, and generate new ideas in response?</strong></p>
 <p>An essential aspect of programming systems is how the user interacts with them when creating programs. Take the standard form of statically typed, compiled languages with straightforward library linking: here, programmers write their code in a text editor, invoke the compiler, and read through error messages they get. After fixing the code to pass compilation, a similar process might happen with runtime errors.</p>
 <p>Other forms are yet possible. On the one hand, some typical interactions like compilation or execution of a program  may not be perceptible at all. On the other hand, the system may provide various interfaces to support the plethora of other interactions that are often important in programming, such as looking up documentation, managing dependencies, refactoring or pair programming.</p>
-<p>We focus on the interactions where programmer interacts with the system to construct a program with a desired behavior. To analyze those, we use the concepts of <em>gulf of execution</em> and <em>gulf of evaluation</em> from <em>The Design of Everyday Things</em>\ \cite{Norman}.</p>
-<embed type="application/transclusion" src="content=summary,link=feedback-loops" />
-<h3>Relations</h3>
-<ul>
-<li><em>Errors</em> (Section \ref{errors}) A longer evaluation gulf delays the detection of errors. A longer execution gulf can increase the <em>likelihood</em> of errors (e.g. writing a lot of code or taking a long time to write it). By turning runtime bugs into statically detected bugs, the combined evaluation gulfs can be reduced.</li>
-<li><em>Adoptability</em> (Section \ref{adoptability}): The <em>execution</em> gulf is concerned with software using and programming in general. The time taken to realize an idea in software is affected by the user's familiarity and the system's <em>learnability</em>.</li>
-<li><em>Notation</em> (Section \ref{notation}): Feedback loops are related to <em>notational structures</em>. In a system with multiple notations, each notation may have different associated feedback loops. The motto "The thing on the screen is supposed to be the actual thing" \cite{NakedObjects}, adopted in the context of live programming, relates <em>liveness</em> to a direct connection between surface and internal notations. The idea is that interactable objects should be equipped with faithful behavior, instead of being intangible shadows cast by the hidden <em>real</em> object.</li>
-</ul>
+<p>We focus on the interactions where programmer interacts with the system to construct a program with a desired behavior. To analyze those, we use the concepts of <em>gulf of execution</em> and <em>gulf of evaluation</em> from <em>The Design of Everyday Things</em> <a class="citation" href="#*=.;right=paper,references" title=" Norman, Donald A. 2002. The Design of Everyday Things. USA: BasicBooks, Inc.">67</a>.</p>
+<h2>Relations</h2>
+<p><a class="tlink" href="#*=.;right=dimensions/errors,index"><i class="fa fa-arrow-right"></i>Errors</a> A longer evaluation gulf delays the detection of errors. A longer execution gulf can increase the <em>likelihood</em> of errors (e.g. writing a lot of code or taking a long time to write it). By turning runtime bugs into statically detected bugs, the combined evaluation gulfs can be reduced.</p>
+<p><a class="tlink" href="#*=.;right=dimensions/adoptability,index"><i class="fa fa-arrow-right"></i>Adoptability</a> The <em>execution</em> gulf is concerned with software using and programming in general. The time taken to realize an idea in software is affected by the user's familiarity and the system's <a href="#*=.;right=dimensions/adoptability,learnability">learnability</a>.</p>
+<p><a class="tlink" href="#*=.;right=dimensions/notation,index"><i class="fa fa-arrow-right"></i>Notation</a> <a href="#*=.;right=dimensions/interaction,feedback-loops">Feedback loops</a> are related to <a href="#*=.;right=dimensions/notation,notational-structure">notational structure</a>. In a system with multiple notations, each notation may have different associated feedback loops. The motto <em>"The thing on the screen is supposed to be the actual thing"</em> <a class="citation" href="#*=.;right=paper,references" title=" Pawson, Richard. 2004. “Naked Objects.” PhD thesis, Trinity College,University of Dublin.">71</a>, adopted in the context of live programming, relates <em>liveness</em> to a direct connection between <a href="#*=.;right=dimensions/notation,surface-internal-notation">surface and internal notations</a>. The idea is that interactable objects should be equipped with faithful behavior, instead of being intangible shadows cast by the hidden <em>real</em> object.</p>
 </section>
-<section data-file="dimensions/interaction" data-id="feedback-loops" data-title="Dimension: Feedback loops">
-<h3>Dimension: feedback loops</h3>
+<section data-class="doc" data-file="dimensions/interaction" data-id="feedback-loops" data-title="Dimension: Feedback loops">
+<h1>Dimension: Feedback loops</h1>
 <p>In using a system, one first has some idea and attempts to make it exist in the software; the gap between the user's goal and the means to execute the goal is known as the <em>gulf of execution</em>. Then, one compares the result actually achieved to the original goal in mind; this crosses the <em>gulf of evaluation</em>. These two activities comprise the <em>feedback loop</em> through which a user gradually realises their desires in the imagination, or refines those desires to find out "what they actually want".</p>
 <p>A system must contain at least one such feedback loop, but may contain several at different levels or specialized to certain domains. For each of them, we can separate the gulf of execution and evaluation as independent legs of the journey, with possibly different manners and speeds of crossing them.</p>
-<p>\begin{figure}
-\centering
-\includegraphics[width=0.5\linewidth]{feedback-loops.png}
-\caption{The nested feedback loops of a statically-checked programming language.\label{fig:feedback-loops}}
-\end{figure}</p>
-<p>For example, we can analyze statically checked <em>programming languages</em> (e.g. Java, Haskell) into several feedback loops (Figure \ref{fig:feedback-loops}):</p>
+<p><a href="#image=dimensions/interaction,feedback-loops-diagram"><img src="img/paper/feedback-loops.png" alt="" /></a></p>
+<h2>Statically checked languages</h2>
+<p>For example, we can analyze statically checked <em>programming languages</em> (e.g. Java, Haskell) into several feedback loops (see illustration):</p>
 <ol>
 <li><p>Programmers often think about design details and calculations on a whiteboard or notebook, even before writing code. This <em>supplementary medium</em> has its own feedback loop, even though this is often not automatic.</p></li>
 <li>
@@ -335,133 +725,189 @@ How do we go from abstractions to concrete examples and vice versa?<br />
 </ul>
 </li>
 </ol>
+<h2>Related examples</h2>
+<div class="nobullet">
+<ul>
+<li><a class="tlink" href="#*=.;right=dimensions/interaction,immediate-feedback!"><i class="fa fa-arrow-right"></i>!</a></li>
+<li><a class="tlink" href="#*=.;right=dimensions/interaction,direct-manipulation!"><i class="fa fa-arrow-right"></i>!</a></li>
+</ul>
+</div>
+</section>
+<section data-class="noborder" data-file="dimensions/interaction" data-id="feedback-loops-diagram" data-title="Illustration of nested feedback loops">
+<blockquote>
+<p><img src="img/paper/feedback-loops.png" alt="A diagram showing nested feedback loops of a programming system" /></p>
+<p><strong>The nested feedback loops of a statically-checked programming language.</strong> Programmer may
+write ideas on a paper or a whiteboard first and have it checked manually, then implement
+idea in code and have it checked by a type checker and, finally, run it and observe the runtime
+behaviour.</p>
+</blockquote>
 </section>
 <section data-file="dimensions/interaction" data-id="immediate-feedback" data-title="Example: Immediate feedback">
-<h3>Example: immediate feedback</h3>
-<p>The specific case where the <em>evaluation</em> gulf is minimized to be imperceptible is known as <em>immediate feedback</em>. Once the user has caused some change to the system, its effects (including errors) are immediately visible. This is a key ingredient of <em>liveness</em>, though it is not sufficient on its own. (See <em>Relations</em>)</p>
+<h1>Example: Immediate feedback</h1>
+<p>The specific case where the <em>evaluation</em> gulf is minimized to be imperceptible is known as <em>immediate feedback</em>. Once the user has caused some change to the system, its effects (including errors) are immediately visible. This is a key ingredient of <em>liveness</em>, though it is not sufficient on its own. (See <a href="#*=.;right=dimensions/interaction,index">Relations</a>)</p>
 <p>The ease of achieving immediate feedback is obviously constrained by the computational load of the user's effects on the system, and the system's performance on such tasks. However, such "loading time" is not the only way feedback can be delayed: a common situation is where the user has to manually ask for (or "poll") the relevant state of the system after their actions, even if the system finished the task quickly. Here, the feedback could be described as <em>immediate upon demand</em> yet not <em>automatically demanded</em>. For convenience, we choose to include the latter criterion---automatic demand of result---in our definition of immediate feedback.</p>
-<p>In a <em>REPL</em> or <em>shell</em>, there is a <em>main</em> cycle of typing commands and seeing their output, and a <em>secondary</em> cycle of typing and checking the command line itself. The output of commands can be immediate, but usually reflects only part of the total effects or even none at all. The user must manually issue further commands afterwards, to check the relevant state bit by bit. The secondary cycle, like all typing, provides immediate feedback in the form of character "echo", but things like syntax errors generally only get reported <em>after</em> the entire line is submitted. This evaluation gulf has been reduced in the JavaScript console of web browsers, where the line is "run" in a limited manner on every keystroke. Simple commands without side-effects,^[Of course, these are detected via some conservative over-approximation which excludes expressions that <em>might</em> side-effect.] such as calls to pure functions, can give instantly previewed results---though partially typed expressions and syntax errors will not trigger previews.</p>
+<h2>Read-eval-print-loop</h2>
+<p>In a <em>REPL</em> or <em>shell</em>, there is a <em>main</em> cycle of typing commands and seeing their output, and a <em>secondary</em> cycle of typing and checking the command line itself. The output of commands can be immediate, but usually reflects only part of the total effects or even none at all. The user must manually issue further commands afterwards, to check the relevant state bit by bit.</p>
+<p>The secondary cycle, like all typing, provides immediate feedback in the form of character "echo", but things like syntax errors generally only get reported <em>after</em> the entire line is submitted. This evaluation gulf has been reduced in the JavaScript console of web browsers, where the line is "run" in a limited manner on every keystroke. Simple commands without side-effects (detected via some conservative over-approximation), such as calls to pure functions, can give instantly previewed results---though partially typed expressions and syntax errors will not trigger previews.</p>
 </section>
 <section data-file="dimensions/interaction" data-id="direct-manipulation" data-title="Example: Direct manipulation">
-<h3>Example: direct manipulation</h3>
-<p>Direct manipulation \cite{DirectManip} is a special case of an immediate feedback loop. The user sees and interacts with an artefact in a way that is as similar as possible to real life; this typically includes dragging with a cursor or finger in order to physically move a visual item, and is limited by the particular haptic technology in use.</p>
-<p>Naturally, because moving real things with one's hands does not involve any waiting for the object to "catch up",^[In some situations, such as steering a boat with a rudder, there is a delay between input and effect. But on closer inspection, this delay is between the rudder and the boat; we do not see the hand pass through the wheel like a hologram, followed by the wheel turning a second later. In real life, objects touched directly give immediate feedback; objects controlled further down the line might not!] direct manipulation is necessarily an immediate-feedback cycle. If, on the other hand, one were to move a figure on screen by typing new co-ordinates in a text box, then this could still give <em>immediate feedback</em> (if the update appears instant and automatic) but would <em>not</em> be an example of direct manipulation.</p>
+<h1>Example: Direct manipulation</h1>
+<p>Direct manipulation <a class="citation" href="#*=.;right=paper,references" title=" Shneiderman. 1983. “Direct Manipulation: A Step Beyond ProgrammingLanguages.” Computer 16 (8): 57–69.https://doi.org/10.1109/MC.1983.1654471.">79</a> is a special case of an immediate feedback loop. The user sees and interacts with an artefact in a way that is as similar as possible to real life; this typically includes dragging with a cursor or finger in order to physically move a visual item, and is limited by the particular haptic technology in use.</p>
+<p>Naturally, because moving real things with one's hands does not involve any waiting for the object to "catch up", direct manipulation is necessarily an immediate-feedback cycle.
+If, on the other hand, one were to move a figure on screen by typing new co-ordinates in a text box, then this could still give <em>immediate feedback</em> (if the update appears instant and automatic) but would <em>not</em> be an example of direct manipulation.</p>
+<h2>Spreadsheets</h2>
 <p><em>Spreadsheets</em> contain a feedback loop for direct manipulation of values and formatting, as in any other WYSIWYG application. Here, there is feedback for every character typed and every change of style. This is not the case in the other loop for formula editing and formula invocation. There, we see a larger execution gulf for designing and typing formulas, where feedback is only given upon committing the formula by pressing enter. This makes it an "immediate feedback" loop only <em>on-demand</em>, as defined above.</p>
 </section>
 <section data-file="dimensions/interaction" data-id="modes-of-interaction" data-title="Dimension: Modes of interaction">
-<h3>Dimension: modes of interaction</h3>
+<h1>Dimension: Modes of interaction</h1>
 <p>The possible interactions in a programming system are typically structured so that interactions, and the associated feedback loops, are only available in certain <em>modes</em>. For example, when creating a new project, the user may be able to configure the project through a conversational interface like <code>npm init</code> in modern JavaScript. Such interactions are no longer available once the project is created. This idea of interaction modes goes beyond just programming systems, appearing in software engineering methodologies. In particular, having a separate <em>implementation</em> and <em>maintenance</em> phase would be an example of two modes.</p>
-<p><em>Editing vs debugging.</em> A good example is the distinction between <em>editing</em> and <em>debugging</em> mode. When debugging a program, the user can modify the program state and get (more) immediate feedback on what individual operations do. In some systems, one can even modify the program itself during debugging. Such feedback loops are not available outside of debugging mode.</p>
-<p><em>Lisp systems</em> sometimes distinguish between <em>interpreted</em> and <em>compiled</em> mode. The two modes do not differ just in the efficiency of code execution, but also in the interactions they enable. In the interpreted mode, code can be tested interactively and errors may be corrected during the code execution (see <em>Error response</em>). In the compiled mode, the program can only be tested as a whole. The same two modes also exist, for example, in some Haskell systems where the REPL uses an interpreter (GHCi) distinct from the compiler (GHC).</p>
-<p><em>Jupyter notebooks.</em> A programming system may also unify modes that are typically distinct. The Jupyter notebook environment does not have a distinct debugging mode; the user runs blocks of code and receives the result. The single mode can be used to quickly try things out, and to generate the final result, partly playing the role of both debugging and editing modes. However, even Jupyter notebooks distinguish between editing a document and running code.</p>
+<h2>Editing versus debugging</h2>
+<p>A good example is the distinction between <em>editing</em> and <em>debugging</em> mode. When debugging a program, the user can modify the program state and get (more) immediate feedback on what individual operations do. In some systems, one can even modify the program itself during debugging. Such feedback loops are not available outside of debugging mode.</p>
+<h2>Lisp systems</h2>
+<p>Lisp systems sometimes distinguish between <em>interpreted</em> and <em>compiled</em> mode. The two modes do not differ just in the efficiency of code execution, but also in the interactions they enable. In the interpreted mode, code can be tested interactively and errors may be corrected during the code execution (see <em>Error response</em>). In the compiled mode, the program can only be tested as a whole. The same two modes also exist, for example, in some Haskell systems where the REPL uses an interpreter (GHCi) distinct from the compiler (GHC).</p>
+<h2>Jupyter notebooks</h2>
+<p>A programming system may also unify modes that are typically distinct. The Jupyter notebook environment does not have a distinct debugging mode; the user runs blocks of code and receives the result. The single mode can be used to quickly try things out, and to generate the final result, partly playing the role of both debugging and editing modes. However, even Jupyter notebooks distinguish between editing a document and running code.</p>
 </section>
 <section data-file="dimensions/interaction" data-id="abstraction-construction" data-title="Dimension: Abstraction construction">
-<h3>Dimension: abstraction construction</h3>
+<h1>Dimension: Abstraction construction</h1>
 <p>A necessary activity in programming is going between abstract schemas and concrete instances. Abstractions can be constructed from concrete examples, first principles or through other methods. A part of the process may happen in the programmer's mind: they think of concrete cases and come up with an abstract concept, which they then directly encode in the system. Alternatively, a system can support these different methods directly.</p>
 <p>One option is to construct abstractions <em>from first principles</em>. Here, the programmer starts by defining an abstract entity such as an interface in object-oriented programming languages. To do this, they have to think what the required abstraction will be (in the mind) and then encode it (in the system).</p>
 <p>Another option is to construct abstractions <em>from concrete cases</em>. Here, the programmer uses the system to solve one or more concrete problems and, when they are satisfied, the system guides them in creating an abstraction based on their concrete case(s). In a programming language IDE this manifests as the "extract function" refactor, whereas in other systems we see approaches like macro recording.</p>
-<p><em>Pygmalion.</em> In Pygmalion \cite{Pygmalion}, all programming is done by manipulating concrete icons that represent concrete things. To create an abstraction, you can use "Remember mode", which records the operations done on icons and makes it possible to bind this recording to a new icon.</p>
-<p><em>Jupyter notebook.</em> In Jupyter notebooks, you are inclined to work with concrete things, because you see previews after individual cells. This discourages creating abstractions, because then you would not be able to look inside at such a fine grained level.</p>
-<p><em>Spreadsheets.</em> Up until the recent introduction of lambda expressions into Excel, spreadsheets have been relentlessly concrete, without any way to abstract and reuse patterns of computation other than copy-and-paste.</p>
+<h2>Pygmalion</h2>
+<p>In Pygmalion <a class="citation" href="#*=.;right=paper,references" title=" Smith, D. C. 1975. “Pygmalion: A Creative Programming Environment.” In.">83</a>, all programming is done by manipulating concrete icons that represent concrete things. To create an abstraction, you can use "Remember mode", which records the operations done on icons and makes it possible to bind this recording to a new icon.</p>
+<h2>Jupyter notebook</h2>
+<p>In Jupyter notebooks, you are inclined to work with concrete things, because you see previews after individual cells. This discourages creating abstractions, because then you would not be able to look inside at such a fine grained level.</p>
+<h2>Spreadsheets</h2>
+<p>Up until the recent introduction of lambda expressions into Excel, spreadsheets have been relentlessly concrete, without any way to abstract and reuse patterns of computation other than copy-and-paste.</p>
 </section>
-<section data-class="dimensions-notation-anchor" data-file="dimensions/notation" data-id="summary" data-title="Notation">
-<h1><i class="fa fa-code"></i> Notation <a class="tlink" href="#top=.;left=.;footer=.;right=dimensions/notation,index"><i class="fa fa-arrow-right"></i>Description and relations...</a></h1>
+<section data-class="dimensions-notation-anchor nobullet" data-file="dimensions/notation" data-id="summary" data-title="Notation">
+<h1><i class="fa fa-code"></i> Notation <a class="tlink" href="#*=.;right=dimensions/notation,index"><i class="fa fa-arrow-right"></i>Description and relations...</a></h1>
 <p>How are the different textual and visual programming notations related?</p>
 <h2>Dimensions</h2>
 <ul>
 <li>
 What notations are used to program the system and how are they related?<br />
-<a class="tlink" href="#top=.;left=.;footer=.;right=dimensions/notation,notational-structure!"><i class="fa fa-arrow-right"></i>!</a>
+<a class="tlink" href="#*=.;right=dimensions/notation,notational-structure!"><i class="fa fa-arrow-right"></i>!</a>
 </li>
 <li>
 What is the connection between what a user sees and what a computer program sees?<br />
-<a class="tlink" href="#top=.;left=.;footer=.;right=dimensions/notation,surface-internal-notation!"><i class="fa fa-arrow-right"></i>!</a>
+<a class="tlink" href="#*=.;right=dimensions/notation,surface-internal-notation!"><i class="fa fa-arrow-right"></i>!</a>
 </li>
 <li>
 Is one notation more important than others?<br />
-<a class="tlink" href="#top=.;left=.;footer=.;right=dimensions/notation,primary-secondary-notations!"><i class="fa fa-arrow-right"></i>!</a>
+<a class="tlink" href="#*=.;right=dimensions/notation,primary-secondary-notations!"><i class="fa fa-arrow-right"></i>!</a>
 </li>
 <li>
 Do similar expressions encode similar programs?<br />
-<a class="tlink" href="#top=.;left=.;footer=.;right=dimensions/notation,expression-geography!"><i class="fa fa-arrow-right"></i>!</a>
+<a class="tlink" href="#*=.;right=dimensions/notation,expression-geography!"><i class="fa fa-arrow-right"></i>!</a>
 </li>
 <li>
 Does the notation use a small or a large number of basic concepts?<br />
-<a class="tlink" href="#top=.;left=.;footer=.;right=dimensions/notation,uniformity-of-notations!"><i class="fa fa-arrow-right"></i>!</a>
+<a class="tlink" href="#*=.;right=dimensions/notation,uniformity-of-notations!"><i class="fa fa-arrow-right"></i>!</a>
 </li>
 </ul>
 <h2>Examples</h2>
 <ul>
-<li><a class="tlink" href="#top=.;left=.;footer=.;right=dimensions/notation,overlapping-notations!"><i class="fa fa-arrow-right"></i>!</a></li>
-<li><a class="tlink" href="#top=.;left=.;footer=.;right=dimensions/notation,complementing-notations!"><i class="fa fa-arrow-right"></i>!</a></li>
-<li><a class="tlink" href="#top=.;left=.;footer=.;right=dimensions/notation,explicit-implicit-structure!"><i class="fa fa-arrow-right"></i>!</a></li>
-<li><a class="tlink" href="#top=.;left=.;footer=.;right=dimensions/notation,one-string-in-memory!"><i class="fa fa-arrow-right"></i>!</a></li>
-<li><a class="tlink" href="#top=.;left=.;footer=.;right=dimensions/notation,two-strings-in-memory!"><i class="fa fa-arrow-right"></i>!</a></li>
+<li><a class="tlink" href="#*=.;right=dimensions/notation,overlapping-notations!"><i class="fa fa-arrow-right"></i>!</a></li>
+<li><a class="tlink" href="#*=.;right=dimensions/notation,complementing-notations!"><i class="fa fa-arrow-right"></i>!</a></li>
+<li><a class="tlink" href="#*=.;right=dimensions/notation,explicit-implicit-structure!"><i class="fa fa-arrow-right"></i>!</a></li>
 </ul>
 </section>
-<section data-file="dimensions/notation" data-id="index" data-title="xx">
-<h2>Notation</h2>
-<p>\mybox{How are the different textual / visual programming notations related?}</p>
+<section data-file="dimensions/notation" data-id="index" data-title="Notation">
+<h1>Notation</h1>
+<p><strong>How are the different textual and visual programming notations related?</strong></p>
 <p>Programming is always done through some form of notation. We consider notations in the most general sense and include any structured gesture using textual or visual notation. Textual notations primarily include  programming languages, but also things like configuration files. Visual notations include graphical programming languages. Other kinds of structured gestures include user interfaces for constructing visual elements used in the system.</p>
-<h3>References</h3>
-<p><em>Cognitive Dimensions of Notation</em> \cite{CogDims} provide a comprehensive framework for analysing individual notations, while our focus here is on how multiple notations are related and how they are structured. It is worth noting that the Cognitive Dimensions also define <em>secondary notation</em>, but in a different sense to ours. For them, secondary notation refers to whether a notation allows including redundant information such as color or comments for readability purposes.</p>
-<p>The importance of notations in the practice of science, more generally, has been studied by \cite{PaperTools} as "paper tools". These are formula-like entities which can be manipulated by humans in lieu of experimentation, such as the aforementioned mathematical notation in Haskell: a "paper tool" for experimentation on a whiteboard. Programming notations are similar, but they are a way of communicating with a machine; the experimentation does not happen on paper alone.</p>
-<h3>Relations</h3>
-<ul>
-<li><em>Interaction</em> (Section \ref{interaction}): The feedback loops that exist in a programming system are typically associated with individual notations. Different notations may also have different feedback loops.</li>
-<li><em>Adoptability</em> (Section \ref{adoptability}): Notational structure can affect learnability. In particular, complementing notations may require (possibly different) users to master multiple notations. Overlapping notations may improve learnability by allowing the user to edit the program in one way (perhaps visually) and see the effect in the other notation (such as code.)</li>
-<li><em>Errors</em> (Section \ref{errors}). A process that merely records user actions in a sequence (such as text editing) will, in particular, record any <em>errors</em> the user makes and defer their handling to later use of the data, keeping the errors <em>latent</em>. A process which instead treats user actions as edits to a structure, with constraints and correctness rules, will be able to catch errors at the moment they are introduced and ensure the data coming out is error-free.</li>
-</ul>
+<h2>References</h2>
+<p><em>Cognitive Dimensions of Notation</em> <a class="citation" href="#*=.;right=paper,references" title=" Green, T. R. G., and M. Petre. 1996. “Usability Analysis of VisualProgramming Environments: A ‘Cognitive Dimensions’ Framework.” JOURNALOF VISUAL LANGUAGES AND COMPUTING 7: 131–74.">34</a> provide a comprehensive framework for analysing individual notations, while our focus here is on how multiple notations are related and how they are structured. It is worth noting that the Cognitive Dimensions also define <em>secondary notation</em>, but in a different sense to ours. For them, secondary notation refers to whether a notation allows including redundant information such as color or comments for readability purposes.</p>
+<p>The importance of notations in the practice of science, more generally, has been studied as "paper tools". <a class="citation" href="#*=.;right=paper,references" title=" Klein, Ursula. 2003. Experiments, Models, Paper Tools: Cultures ofOrganic Chemistry in the Nineteenth Century. Stanford, CA: StanfordUniversity Press. http://www.sup.org/books/title/?id=1917.">48</a> These are formula-like entities which can be manipulated by humans in lieu of experimentation, such as the aforementioned mathematical notation in Haskell: a "paper tool" for experimentation on a whiteboard. Programming notations are similar, but they are a way of communicating with a machine; the experimentation does not happen on paper alone.</p>
+<h2>Relations</h2>
+<p><a class="tlink" href="#*=.;right=dimensions/interaction,index"><i class="fa fa-arrow-right"></i>Interaction</a> The feedback loops that exist in a programming system are typically associated with individual notations. Different notations may also have different feedback loops.</p>
+<p><a class="tlink" href="#*=.;right=dimensions/adoptability,index"><i class="fa fa-arrow-right"></i>Adoptability</a> Notational structure can affect learnability. In particular, complementing notations may require (possibly different) users to master multiple notations. Overlapping notations may improve learnability by allowing the user to edit the program in one way (perhaps visually) and see the effect in the other notation (such as code.)</p>
+<p><a class="tlink" href="#*=.;right=dimensions/errors,index"><i class="fa fa-arrow-right"></i>Errors</a> A process that merely records user actions in a sequence (such as text editing) will, in particular, record any <em>errors</em> the user makes and defer their handling to later use of the data, keeping the errors <em>latent</em>. A process which instead treats user actions as edits to a structure, with constraints and correctness rules, will be able to catch errors at the moment they are introduced and ensure the data coming out is error-free.</p>
 </section>
 <section data-file="dimensions/notation" data-id="notational-structure" data-title="Dimension: Notational structure">
-<h3>Dimension: notational structure</h3>
-<p>In practice, most programming systems use multiple notations. Different notations can play different roles in the system. On the one hand, multiple <em>overlapping notations</em> can be provided as different ways of programming the same aspects of the system. In this case, each notation may be more suitable to different kinds of users, but may have certain limitations (for example, a visual notation may have a limited expressive power). On the other hand, multiple <em>complementing notations</em> may be used as the means for programming different aspects of the system. In this case, programming the system requires using multiple notations, but each notation may be more suitable for the task at hand; think of how HTML describes document structure while JavaScript specifies its behavior.</p>
+<h1>Dimension: Notational structure</h1>
+<p>In practice, most programming systems use multiple notations. Different notations can play different roles in the system.</p>
+<p>On the one hand, multiple <a href="#*=.;right=dimensions/notation,overlapping-notations">overlapping notations</a> can be provided as different ways of programming the same aspects of the system. In this case, each notation may be more suitable to different kinds of users, but may have certain limitations (for example, a visual notation may have a limited expressive power).</p>
+<p>On the other hand, multiple <a href="#*=.;right=dimensions/notation,complementing-notation">complementing notations</a> may be used as the means for programming different aspects of the system. In this case, programming the system requires using multiple notations, but each notation may be more suitable for the task at hand; think of how HTML describes document structure while JavaScript specifies its behavior.</p>
+<h2>Related examples</h2>
+<div class="nobullet">
+<ul>
+<li><a class="tlink" href="#*=.;right=dimensions/notation,overlapping-notations!"><i class="fa fa-arrow-right"></i>!</a></li>
+<li><a class="tlink" href="#*=.;right=dimensions/notation,complementing-notations!"><i class="fa fa-arrow-right"></i>!</a></li>
+</ul>
+</div>
 </section>
 <section data-file="dimensions/notation" data-id="overlapping-notations" data-title="Example: Overlapping notations">
-<h3>Example: overlapping notations</h3>
-<p>A programming system may provide multiple notations for programming the same aspect of the system. This is typically motivated by an attempt to offer easy ways of completing different tasks: say, a textual notation for defining abstractions and a visual notation for specifying concrete structures. The crucial issue in this kind of arrangement is <em>synchronizing</em> the different notations; if they have different characteristics, this may not be a straightforward mapping. For example, source code may allow more elaborate abstraction mechanisms like  loops, which will appear as visible repetition in the visual notation. What should such a system do when the user edits a single object that resulted from such repetition? Similarly, textual notation may allow incomplete expressions that do not have an equivalent in the visual notation. For programming systems that use <em>overlapping notations</em>, we need to describe how the notations are synchronized.</p>
-<p><em>Sketch-n-Sketch</em> \cite{SnS} employs overlapping notations for creating and editing SVG and HTML documents. The user edits documents in an interface with a split-screen structure that shows source code on the left and displayed visual output on the right. They can edit both of these and changes are propagated to the other view. The code can use abstraction mechanisms (such as functions) which are not completely visible in the visual editor (an issue we return to in <em>expression geography</em> below). Sketch-n-Sketch can be seen as an example of a <em>projectional editor</em>.^[Technically, traditional projectional editors usually work more directly with the abstract syntax tree of a programming language.\note{TODO: Insert some more references to research on "projectional editors"}]</p>
-<p><em>UML Round-tripping.</em> Another example of a programming system that utilizes the <em>overlapping notations</em> structure are UML design tools that display the program both as source code and as a UML diagram. Edits in one result in automatic update of the other. An example is the Together/J^[<a href="https://www.mindprod.com/jgloss/togetherj.html">https://www.mindprod.com/jgloss/togetherj.html</a>] system. To solve the issue of notation synchronization, such systems often need to store additional information in the textual notation, typically using a special kind of code comment. In this example, after the user re-arranges classes in UML diagrams, the new locations need to be updated in the code.</p>
+<h1>Example: Overlapping notations</h1>
+<p>A programming system may provide multiple notations for programming the same aspect of the system. This is typically motivated by an attempt to offer easy ways of completing different tasks: say, a textual notation for defining abstractions and a visual notation for specifying concrete structures. The crucial issue in this kind of arrangement is <em>synchronizing</em> the different notations; if they have different characteristics, this may not be a straightforward mapping.</p>
+<p>For example, source code may allow more elaborate abstraction mechanisms like  loops, which will appear as visible repetition in the visual notation. What should such a system do when the user edits a single object that resulted from such repetition? Similarly, textual notation may allow incomplete expressions that do not have an equivalent in the visual notation. For programming systems that use <em>overlapping notations</em>, we need to describe how the notations are synchronized.</p>
+<h2>Sketch-n-Sketch</h2>
+<p>Sketch-n-Sketch <a class="citation" href="#*=.;right=paper,references" title=" Hempel, Brian, Justin Lubin, and Ravi Chugh. 2019.“Sketch-n-Sketch: Output-DirectedProgramming for SVG.” In Proceedings of the 32nd Annual ACM Symposiumon User Interface Software and Technology, 281–92. UIST ’19. New York,NY, USA: Association for Computing Machinery.https://doi.org/10.1145/3332165.3347925.">37</a> employs overlapping notations for creating and editing SVG and HTML documents. The user edits documents in an interface with a split-screen structure that shows source code on the left and displayed visual output on the right. They can edit both of these and changes are propagated to the other view. The code can use abstraction mechanisms (such as functions) which are not completely visible in the visual editor (an issue we return to in <a href="#*=.;right=dimensions/notation,expression-geography">expression geography</a>). Sketch-n-Sketch can be seen as an example of a <em>projectional editor</em>. (Technically, traditional projectional editors usually work more directly with the abstract syntax tree of a programming language.)</p>
+<h2>UML Round-tripping</h2>
+<p>Another example of a programming system that utilizes the <em>overlapping notations</em> structure are UML design tools that display the program both as source code and as a UML diagram. Edits in one result in automatic update of the other. An example is the <a href="https://www.mindprod.com/jgloss/togetherj.html">Together/J system</a>. To solve the issue of notation synchronization, such systems often need to store additional information in the textual notation, typically using a special kind of code comment. In this example, after the user re-arranges classes in UML diagrams, the new locations need to be updated in the code.</p>
 </section>
 <section data-file="dimensions/notation" data-id="complementing-notations" data-title="Example: Complementing notations">
-<h3>Example: complementing notations</h3>
-<p>A programming system may also provide multiple complementing notations for programming different aspects of its world. Again, this is typically  motivated by the aim to make specifying certain aspects of programming easier, but it is more suitable when the different aspects can be more clearly separated. The key issue for systems with complementing notations is how the different notations are connected. The user may need to use both notations at the same time, or they may need to progress from one to the next level when solving increasingly complex problems. In the latter case, the learnability of progressing from one level to the next is a major concern.</p>
-<p><em>Spreadsheets and HyperCard.</em> In Excel, there are three different complementing notations that allow users to specify aspects of increasing complexity: (i) the visual grid, (ii) formula language and (iii) a macro language such as Visual Basic for Applications. The notations are largely independent and have different degrees of expressive power. Entering values in a grid cannot be used for specifying new computations, but it can be used to adapt or run a computation, for example when entering different alternatives in What-If Scenario Analysis. More complex tasks can be achieved using formulas and macros. A user gradually learns more advanced notations, but experience with a previous notation does not help with mastering the next one. The approach optimizes for easy learnability at one level, but introduces a hurdle for users to surmount in order to get to the second level. The notational structure of <em>HyperCard</em> is similar and consists of (i) visual design of cards, (ii) visual programming (via the GUI) with a limited number of operations and (iii) HyperTalk for arbitrary scripting.</p>
-<p><em>Boxer and Jupyter.</em> Boxer \cite{Boxer} uses <em>complementing notations</em> in that it combines a visual notation (the layout of the document and the boxes of which it consists) with textual notation (the code in the boxes). Here, the textual notation is always nested within the visual. The case of Jupyter notebooks is similar. The document structure is graphical; code and visual outputs are nested as editable cells in the document. This arrangement is common in many other systems such as Flash or Visual Basic, which both combine visual notation with textual code, although one is not nested in the other.</p>
+<h1>Example: Complementing notations</h1>
+<p>A programming system may also provide multiple complementing notations for programming different aspects of its world. Again, this is typically  motivated by the aim to make specifying certain aspects of programming easier, but it is more suitable when the different aspects can be more clearly separated.</p>
+<p>The key issue for systems with complementing notations is how the different notations are connected. The user may need to use both notations at the same time, or they may need to progress from one to the next level when solving increasingly complex problems. In the latter case, the learnability of progressing from one level to the next is a major concern.</p>
+<h2>Spreadsheets and HyperCard</h2>
+<p>In Excel, there are three different complementing notations that allow users to specify aspects of increasing complexity: (i) the visual grid, (ii) formula language and (iii) a macro language such as Visual Basic for Applications. The notations are largely independent and have different degrees of expressive power. Entering values in a grid cannot be used for specifying new computations, but it can be used to adapt or run a computation, for example when entering different alternatives in What-If Scenario Analysis. More complex tasks can be achieved using formulas and macros.</p>
+<p>A user gradually learns more advanced notations, but experience with a previous notation does not help with mastering the next one. The approach optimizes for easy learnability at one level, but introduces a hurdle for users to surmount in order to get to the second level. The notational structure of <em>HyperCard</em> is similar and consists of (i) visual design of cards, (ii) visual programming (via the GUI) with a limited number of operations and (iii) HyperTalk for arbitrary scripting.</p>
+<h2>Boxer and Jupyter</h2>
+<p>Boxer <a class="citation" href="#*=.;right=paper,references" title=" diSessa, A. A, and H. Abelson. 1986. “Boxer: A ReconstructibleComputational Medium.” Commun. ACM 29 (9): 859–68.https://doi.org/10.1145/6592.6595.">96</a> uses <em>complementing notations</em> in that it combines a visual notation (the layout of the document and the boxes of which it consists) with textual notation (the code in the boxes). Here, the textual notation is always nested within the visual. The case of Jupyter notebooks is similar. The document structure is graphical; code and visual outputs are nested as editable cells in the document. This arrangement is common in many other systems such as Flash or Visual Basic, which both combine visual notation with textual code, although one is not nested in the other.</p>
 </section>
 <section data-file="dimensions/notation" data-id="surface-internal-notation" data-title="Dimension: Surface and internal notation">
-<h3>Dimensions: surface notation and internal notation</h3>
+<h1>Dimensions: Surface and internal notation</h1>
 <p>All programming systems build up structures in memory, which we can consider as an <em>internal notation</em> not usually visible to the user. Even though such structures might be revealed in a debugger, they are hidden during normal operation. What the user interacts with instead is the <em>surface notation</em>, typically one of text or shapes on a screen. Every interaction with the surface notation alters the internal notation in some way, and the nature of this connection is worth examining in more detail. To do this, we illustrate with a simplified binary choice for the form of these notations.</p>
+<h2>Related examples</h2>
+<div class="nobullet">
+<ul>
+<li><a class="tlink" href="#*=.;right=dimensions/notation,explicit-implicit-structure!"><i class="fa fa-arrow-right"></i>!</a></li>
+<li><a class="tlink" href="#*=.;right=dimensions/notation,one-string-in-memory!"><i class="fa fa-arrow-right"></i>!</a></li>
+<li><a class="tlink" href="#*=.;right=dimensions/notation,two-strings-in-memory!"><i class="fa fa-arrow-right"></i>!</a></li>
+</ul>
+</div>
 </section>
 <section data-file="dimensions/notation" data-id="explicit-implicit-structure" data-title="Example: Explicit versus implicit structure">
-<h3>Examples: implicit vs. explicit structure</h3>
+<h1>Examples: Explicit versus implicit structure</h1>
 <p>Let us partition notations into two families. Notations with <em>implicit structure</em> present as a sequence of items, such as textual characters or audio signal amplitudes. Those with <em>explicit structure</em> present as a tree or graph without an obvious order, such as shapes in a vector graphics editor. These two types of notations can be transformed into each other: the implicit structure contained in a string can be <em>parsed</em> into an explicit syntax tree, and an explicit document structure might be <em>rendered</em> into a sequence of characters with the same implicit structure.</p>
 <p>Now consider an interface to enter a personal name made up of a forename and a surname. For the surface notation, there could be a single text field to hold the names separated with a space; here, the sub-structure is implicit in the string. Alternatively, there could be two fields where the names are entered separately, and their separation is explicit. A similar choice exists for the internal notation built up in memory: is it a single string, or two separate strings?</p>
-<p>We can see that these choices give four combinations. More interestingly, they exhibit unique characters owing to two key asymmetries. Firstly, surface notation is mostly used by humans, while the internal notation is mostly used by the computer. Secondly, and most significantly, computer programs can only work with explicit structure, while humans can understand both explicit and implicit structure. \joel{informal vs formal structure?} Because of the practical consequences of this asymmetry, we will examine the combinations with emphasis on the <em>internal</em> notation first.</p>
+<p>We can see that these choices give four combinations. More interestingly, they exhibit unique characters owing to two key asymmetries. Firstly, surface notation is mostly used by humans, while the internal notation is mostly used by the computer. Secondly, and most significantly, computer programs can only work with explicit structure, while humans can understand both explicit and implicit structure. Because of the practical consequences of this asymmetry, we will examine the combinations with emphasis on the <em>internal</em> notation first.</p>
+<h2>Related examples</h2>
+<div class="nobullet">
+<ul>
+<li><a class="tlink" href="#*=.;right=dimensions/notation,one-string-in-memory!"><i class="fa fa-arrow-right"></i>!</a></li>
+<li><a class="tlink" href="#*=.;right=dimensions/notation,two-strings-in-memory!"><i class="fa fa-arrow-right"></i>!</a></li>
+</ul>
+</div>
 </section>
 <section data-file="dimensions/notation" data-id="one-string-in-memory" data-title="Examples: One string in memory">
-<h3>Examples: one string in memory (implicitly structured internal notation)</h3>
+<h1>Examples: One string in memory (implicitly structured internal notation)</h1>
 <p>The simplest case here would be with implicit structure in the surface notation, i.e. a single text box for the full name. Edits to the surface are straightforwardly mirrored interally and persisted to disk. This corresponds to <em>text editing</em>. We can generalize this to an idea of <em>sequence editing</em> if we view the fundamental act as <em>recording</em> events to a list over time. For text, these are key presses; for an audio editing interface they would be samples of sound amplitude.</p>
 <p>In the other case, with two text boxes, we have <em>sequence rendering</em>. The information about the separation of the two strings, present in the interface, is not quite "thrown away" but is made <em>implicit</em> as a space character in the string. This combination corresponds to Visual Basic generating code from GUI forms, video editors combining multiple clips and effects into a single stream, and 3D renderers turning scene graphs into pixels. Another example is line-based diff tools, which provide side-by-side views and related interfaces, yet must ultimately forward the user's changes to the underlying text file.</p>
 <p>Critically, in both of these cases, a computer program can only manipulate the stored sequences <em>as</em> sequences; that is, by inserting, removing, or serially reading. The appealing feature here is that these operations are simple to implement and may be re-usable across many types of sequences. However, any further structure is implicit and, to work with it programmatically, a user must write a program to <em>parse</em> it into something explicit. Furthermore, errors introduced at this stage may simply be <em>recorded</em> into the sequence, only to be discovered much later in an attempt to use the data.</p>
 </section>
 <section data-file="dimensions/notation" data-id="two-strings-in-memory" data-title="Examples: Two strings in memory">
-<h3>Examples: two strings in memory (explicitly structured internal notation)</h3>
-<p>\joel{TODO: cite The Many Forms of a Single Fact}
-With two text boxes, both notations match, so there is not much work to do. As with sequence editing, edits on the surface can be mirrored to the internal notation. This corresponds to vector graphics editors and 3D modelling tools, as well as <em>structure editors</em> for programming languages. For this reason we call this combination <em>structure editing</em>.</p>
+<h1>Examples: two strings in memory (explicitly structured internal notation)</h1>
+<p>With two text boxes, both notations match, so there is not much work to do. As with sequence editing, edits on the surface can be mirrored to the internal notation. This corresponds to vector graphics editors and 3D modelling tools, as well as <em>structure editors</em> for programming languages. For this reason we call this combination <em>structure editing</em>.</p>
 <p>With a single text field, we have <em>structure recovery.</em> Parsing needs to happen each time the input changes. This style is found in the DOM inspector in browser developer tools, where HTML can be edited as text to make changes to the document tree structure. More generally, this is the mode found in compilers and interpreters which accept program source text yet internally work on tree and graph structures. It is also possible to do a sort of structure editing this way, where the experience is made to resemble text editing but the output is explicitly structured.</p>
 <p>In both of these cases, in order to write programs to transform, analyze, or otherwise work with the digital artefact the user has created, one can trivially navigate the stored structure instead of parsing it for every use. Parsing is either done away with altogether or is reduced to a transient process that happens during editing; this means errors can be caught at the moment they are introduced instead of remaining latent.</p>
 </section>
 <section data-file="dimensions/notation" data-id="primary-secondary-notations" data-title="Dimension: Primary and secondary notations">
-<h3>Dimension: primary and secondary notations</h3>
+<h1>Dimension: Primary and secondary notations</h1>
 <p>In practice, most programming systems use multiple notations. Even in systems based on traditional programming languages, the <em>primary notation</em> of the language is often supported by <em>secondary notations</em> such as annotations encoded in comments and build tool configuration files. However, it is possible for multiple notations to be primary, especially if they are <em>overlapping</em> as defined earlier.</p>
-<p><em>Programming languages.</em> Programming systems built around traditional programming languages typically have further notations or structured gestures associated with them. The primary notation in UNIX is the C programming language. Yet this is enclosed in a programming <em>system</em> providing a multi-step mechanism for running C code via the terminal, assisted by secondary notations such as shell scripts. Some programming systems attempt to integrate tools that normally rely on secondary notations into the system itself, reducing the number of secondary notations that the programmer needs to master. For example, in the Smalltalk descendant Pharo, versioning and package management is done from within Pharo, removing the need for secondary notation such as <code>git</code> commands and dependency configuration files.^[The tool for versioning and package management in Pharo can still be seen as an <em>internal</em> domain-specific language and thus as a secondary notation, but its basic structure is <em>shared</em> with other notations in the Pharo system.]</p>
-<p><em>Haskell.</em> In Haskell, the primary notation is the programming language, but there are also a number of secondary notations. Those include package managers (e.g. the <code>cabal.project</code> file) or configuration files for Haskell build tools. More interestingly, there is also an informal mathematical notation associated with Haskell that is used when programmers discuss programs on a whiteboard or in academic publications. The idea of having such a mathematical notation dates back to the <em>Report on Algol 58</em> \cite{Alg58}, which explicitly defined a "publication language" for "stating and communicating problems" using Greek letters and subscripts.</p>
+<h2>Programming languages</h2>
+<p>Programming systems built around traditional programming languages typically have further notations or structured gestures associated with them. The primary notation in UNIX is the C programming language. Yet this is enclosed in a programming <em>system</em> providing a multi-step mechanism for running C code via the terminal, assisted by secondary notations such as shell scripts.</p>
+<p>Some programming systems attempt to integrate tools that normally rely on secondary notations into the system itself, reducing the number of secondary notations that the programmer needs to master. For example, in the Smalltalk descendant Pharo, versioning and package management is done from within Pharo, removing the need for secondary notation such as <code>git</code> commands and dependency configuration files. (The tool for versioning and package management in Pharo can still be seen as an <em>internal</em> domain-specific language and thus as a secondary notation, but its basic structure is <em>shared</em> with other notations in the Pharo system.)</p>
+<h2>Haskell</h2>
+<p>In Haskell, the primary notation is the programming language, but there are also a number of secondary notations. Those include package managers (e.g. the <code>cabal.project</code> file) or configuration files for Haskell build tools. More interestingly, there is also an informal mathematical notation associated with Haskell that is used when programmers discuss programs on a whiteboard or in academic publications. The idea of having such a mathematical notation dates back to the <em>Report on Algol 58</em> \cite{Alg58}, which explicitly defined a "publication language" for "stating and communicating problems" using Greek letters and subscripts.</p>
 </section>
 <section data-file="dimensions/notation" data-id="expression-geography" data-title="Dimension: Expression geography">
-<h3>Dimension: expression geography</h3>
-<p>A crucial feature of a notation is the relationship between the structure of the notation and the structure of the behavior it encodes. Most importantly, do <em>similar expressions</em> in a particular notation represent <em>similar behavior</em>?^[See Basman's \cite{NotYetCraft} similar discussion of "density".] Visual notations may provide a more or less direct mapping. On the one hand, similar-looking code in a block language may mean very different things. On the other hand, similar looking design of two HyperCard cards will result in similar looking cards---the mapping between the notation and the logic is much more direct.</p>
-<p><em>C/C++ expression language.</em> In textual notations, this may easily not be the case. Consider the two C conditionals:</p>
+<h1>Dimension: Expression geography</h1>
+<p>A crucial feature of a notation is the relationship between the structure of the notation and the structure of the behavior it encodes. Most importantly, do <em>similar expressions</em> in a particular notation represent <em>similar behavior</em>? (See Basman's <a class="citation" href="#*=.;right=paper,references" title=" Basman, Antranig. 2016. “Building Software Is Not (yet) a Craft.” InProceedings of the 27th Annual Workshop of the Psychology ofProgramming Interest Group, PPIG 2016, Cambridge, UK, September 7-10,2016, edited by Luke Church, 32. Psychology of Programming InterestGroup. http://ppig.org/library/paper/building-software-not-yet-craft.">4</a> similar discussion of "density".) Visual notations may provide a more or less direct mapping. On the one hand, similar-looking code in a block language may mean very different things. On the other hand, similar looking design of two HyperCard cards will result in similar looking cards---the mapping between the notation and the logic is much more direct.</p>
+<h2>C/C++ expression language</h2>
+<p>In textual notations, this may easily not be the case. Consider the two C conditionals:</p>
 <ul>
 <li><code>if (x==1) { ... }</code> evaluates the Boolean expression <code>x==1</code> to determine whether <code>x</code> equals <code>1</code>, running the code block if the condition holds.</li>
 <li><code>if (x=1) { ... }</code> <em>assigns</em> <code>1</code> to the variable <code>x</code>. In C, assignment is an expression <em>returning</em> the assigned value, so the result <code>1</code> is interpreted as <code>true</code> and the block of code is <em>always</em> executed.</li>
@@ -469,9 +915,11 @@ With two text boxes, both notations match, so there is not much work to do. As w
 <p>A notation can be designed to map better to the logic behind it, for example, by requiring the user to write <code>1==x</code>. This solves the above problem as <code>1</code> is a literal rather than a variable, so it cannot be assigned to (<code>1=x</code> is a compile error).</p>
 </section>
 <section data-file="dimensions/notation" data-id="uniformity-of-notations" data-title="Dimension: Uniformity of notations">
-<h3>Dimension: uniformity of notations</h3>
-<p>One common concern with notations is the extent to which they are uniform. A uniform notation can express a wide range of things using just a small number of concepts. The primary example here is S-expressions from Lisp. An S-expression is either an atom or a pair of S-expressions written <code>(s1 . s2)</code>. By convention, an S-expression <code>(s1 . (s2 . (s3 . nil)))</code> represents a list, written as <code>(s1 s2 s3)</code>. In Lisp, uniformity of notations is closely linked to uniformity of representation.^[Notations generally are closely linked to representation in that the notation may mirror the structures used for program representation. Basman et al. \cite{Externalize} refer to this as a distinction between "dead" notation and "live" representation forms).] In the idealized model of LISP 1.5, the data structures represented by an S-expression are what exists in memory. In real-world Lisp systems, the representation in memory is more complex. A programming system can also take a very different approach and fully separate the notation from the in-memory representation.</p>
-<p><em>Lisp systems.</em> In Lisp, source code is represented in memory as S-expressions, which can be manipulated by Lisp primitives. In addition, Lisp systems have robust macro processing as part of their semantics: expanding a macro revises the list structure of the code that uses the macro. Combining these makes it possible to define extensions to the system in Lisp, with syntax indistinguishable from Lisp. Moreover, it is possible to write a program that constructs another Lisp program and not only run it interpretively (using the \texttt{eval} function) but compile it at runtime (using the \texttt{compile} function) and execute it. Many domain-specific languages, as well as prototypes of new programming languages (such as Scheme), were implemented this way. Lisp the language is, in this sense, a "programmable programming language". \cite{LispIntro,ProgProgLang}</p>
+<h1>Dimension: Uniformity of notations</h1>
+<p>One common concern with notations is the extent to which they are uniform. A uniform notation can express a wide range of things using just a small number of concepts.</p>
+<p>The primary example here is S-expressions from Lisp. An S-expression is either an atom or a pair of S-expressions written <code>(s1 . s2)</code>. By convention, an S-expression <code>(s1 . (s2 . (s3 . nil)))</code> represents a list, written as <code>(s1 s2 s3)</code>. In Lisp, uniformity of notations is closely linked to uniformity of representation. (Notations generally are closely linked to representation in that the notation may mirror the structures used for program representation. Basman et al. <a class="citation" href="#*=.;right=paper,references" title=" Basman, Antranig, L. Church, C. Klokmose, and Colin B. D. Clark. 2016.“Software and How It Lives on: Embedding Live Programs in the WorldAround Them.” In PPIG.">3</a> refer to this as a distinction between "dead" notation and "live" representation forms.) In the idealized model of LISP 1.5, the data structures represented by an S-expression are what exists in memory. In real-world Lisp systems, the representation in memory is more complex. A programming system can also take a very different approach and fully separate the notation from the in-memory representation.</p>
+<h2>Lisp systems</h2>
+<p>In Lisp, source code is represented in memory as S-expressions, which can be manipulated by Lisp primitives. In addition, Lisp systems have robust macro processing as part of their semantics: expanding a macro revises the list structure of the code that uses the macro. Combining these makes it possible to define extensions to the system in Lisp, with syntax indistinguishable from Lisp. Moreover, it is possible to write a program that constructs another Lisp program and not only run it interpretively (using the <code>eval</code> function) but compile it at runtime (using the <code>compile</code> function) and execute it. Many domain-specific languages, as well as prototypes of new programming languages (such as Scheme), were implemented this way. Lisp the language is, in this sense, a "programmable programming language". <a class="citation" href="#*=.;right=paper,references" title=" Foderaro, John. 1991. “LISP: Introduction.” Commun. ACM 34 (9): 27.https://doi.org/10.1145/114669.114670.">21</a> <a class="citation" href="#*=.;right=paper,references" title=" Felleisen, Matthias, Robert Bruce Findler, Matthew Flatt, ShriramKrishnamurthi, Eli Barzilay, Jay McCarthy, and Sam Tobin-Hochstadt.2018. “A Programmable Programming Language.” Commun. ACM 61 (3):62–71. https://doi.org/10.1145/3127323.">19</a></p>
 </section>
 <section data-characteristics="interaction-single, interaction-repl, interaction-dm, interaction-open, interaction-principles, interaction-concrete" data-file="systems/boxer" data-id="dims-interaction" data-shade="shade3" data-title="<div class='shade3'><i class='fa fa-caret-right' title='single mode of interaction'></i><i class='fa fa-circle-play' title='REPL-like execution'></i><i class='fa fa-hand-pointer' title='some kind of direct manipulation'></i><i class='fa fa-lock-open' title='open abstractions'></i><i class='fa fa-subscript' title='abstraction from first principles'></i><i class='fa fa-eye' title='abstraction from concrete'></i></div>">
 <p>Direct manipulation for graphical elements with REPL-like code execution.
@@ -503,7 +951,7 @@ System is closed from external world and has only limited community and availabl
 </section>
 <section data-file="systems/boxer" data-id="summary" data-title="Boxer">
 <p>yadda</p>
-<p><img src="img/boxer.gif" alt="" /></p>
+<p><img src="img/sys/boxer.gif" alt="" /></p>
 </section>
 <section data-class="systems" data-file="systems/boxer" data-id="index">
 <h1>Boxer</h1>
@@ -540,7 +988,7 @@ Closed ecosystem, but with community and diversity of packages.</p>
 </section>
 <section data-file="systems/haskell" data-id="summary" data-title="Haskell">
 <p>yadda</p>
-<p><img src="img/haskell.png" alt="" /></p>
+<p><img src="img/sys/haskell.png" alt="" /></p>
 </section>
 <section data-class="systems" data-file="systems/haskell" data-id="index">
 <h1>Haskell</h1>
@@ -577,7 +1025,7 @@ progresively become programmers. Closed from external world, but active communit
 </section>
 <section data-file="systems/hypercard" data-id="summary" data-title="Hypercard">
 <p>yadda</p>
-<p><img src="img/hypercard.jpg" alt="" /></p>
+<p><img src="img/sys/hypercard.jpg" alt="" /></p>
 </section>
 <section data-class="systems" data-file="systems/hypercard" data-id="index">
 <h1>Hypercard</h1>
@@ -614,14 +1062,14 @@ Active community, but closed from the external world and limited packages availa
 </section>
 <section data-file="systems/lisp-machines" data-id="summary" data-title="LISP machines">
 <p>yadda</p>
-<p><img src="img/lisp-genera.gif" alt="" /></p>
+<p><img src="img/sys/lisp-genera.gif" alt="" /></p>
 </section>
 <section data-class="systems" data-file="systems/lisp-machines" data-id="index" data-title="LISP machines">
 <h1>LISP machines</h1>
 <p><img src="#left=index" alt="$systems/lisp-machines,summary" /></p>
 <p>more here</p>
 </section>
-<section data-characteristics="interaction-repl, interaction-open, interaction-principles, interaction-concrete" data-file="systems/notebooks" data-id="dims-interaction" data-shade="shade3" data-title="<div class='shade3'><i class='fa fa-circle-play' title='REPL-like execution'></i><i class='fa fa-lock-open' title='open abstractions'></i><i class='fa fa-subscript' title='abstraction from first principles'></i><i class='fa fa-eye' title='abstraction from concrete'></i></div>">
+<section data-characteristics="interaction-single, interaction-repl, interaction-open, interaction-principles, interaction-concrete" data-file="systems/notebooks" data-id="dims-interaction" data-shade="shade3" data-title="<div class='shade3'><i class='fa fa-caret-right' title='single mode of interaction'></i><i class='fa fa-circle-play' title='REPL-like execution'></i><i class='fa fa-lock-open' title='open abstractions'></i><i class='fa fa-subscript' title='abstraction from first principles'></i><i class='fa fa-eye' title='abstraction from concrete'></i></div>">
 <p>Feedback and execution at cell level.
 Programmatic abstractions are possible, but manual approach by copying or modifying code is common.</p>
 </section>
@@ -651,7 +1099,7 @@ Notebooks can import a range of community packages and integrate with external s
 </section>
 <section data-file="systems/notebooks" data-id="summary" data-title="Notebooks">
 <p>yadda</p>
-<p><img src="img/ipython.png" alt="" /></p>
+<p><img src="img/sys/ipython.png" alt="" /></p>
 </section>
 <section data-class="systems" data-file="systems/notebooks" data-id="index">
 <h1>Notebooks</h1>
@@ -688,14 +1136,14 @@ Active community, but closed world and limited packages.</p>
 </section>
 <section data-file="systems/smalltalk" data-id="summary" data-title="Smalltalk">
 <p>yadda</p>
-<p><img src="img/smalltalk-78.png" alt="" /></p>
+<p><img src="img/sys/smalltalk-78.png" alt="" /></p>
 </section>
 <section data-class="systems" data-file="systems/smalltalk" data-id="index">
 <h1>Smalltalk</h1>
 <embed type="application/transclusion" src="content=summary,link=index" />
 <p>more here</p>
 </section>
-<section data-characteristics="interaction-live, interaction-dm, interaction-open, interaction-concrete" data-file="systems/spreadsheets" data-id="dims-interaction" data-shade="shade3" data-title="<div class='shade3'><i class='fa fa-rotate-right' title='some kind of live feedback'></i><i class='fa fa-hand-pointer' title='some kind of direct manipulation'></i><i class='fa fa-lock-open' title='open abstractions'></i><i class='fa fa-eye' title='abstraction from concrete'></i></div>">
+<section data-characteristics="interaction-single, interaction-live, interaction-dm, interaction-open, interaction-concrete" data-file="systems/spreadsheets" data-id="dims-interaction" data-shade="shade3" data-title="<div class='shade3'><i class='fa fa-caret-right' title='single mode of interaction'></i><i class='fa fa-rotate-right' title='some kind of live feedback'></i><i class='fa fa-hand-pointer' title='some kind of direct manipulation'></i><i class='fa fa-lock-open' title='open abstractions'></i><i class='fa fa-eye' title='abstraction from concrete'></i></div>">
 <p>Live update when editing. Formulas are always accessible.
 Abstraction by generalizing from concrete computation (drag down) or using macros.</p>
 </section>
@@ -725,7 +1173,7 @@ No packaging mechanism, but wide range of samples and community available.</p>
 </section>
 <section data-file="systems/spreadsheets" data-id="summary" data-title="Spreadsheets">
 <p>yadda</p>
-<p><img src="img/visicalc.png" alt="" /></p>
+<p><img src="img/sys/visicalc.png" alt="" /></p>
 </section>
 <section data-class="systems" data-file="systems/spreadsheets" data-id="index">
 <h1>Spreadsheets</h1>
@@ -763,7 +1211,7 @@ Openness allows integration with the external world; diversity of packages avail
 </section>
 <section data-file="systems/unix" data-id="summary" data-title="UNIX">
 <p>yadda</p>
-<p><img src="img/unix-6.png" alt="" /></p>
+<p><img src="img/sys/unix-6.png" alt="" /></p>
 </section>
 <section data-class="systems" data-file="systems/unix" data-id="index">
 <h1>UNIX</h1>
@@ -799,7 +1247,7 @@ The diversified web ecosystem allows for the integration with external systems.<
 </section>
 <section data-file="systems/web" data-id="summary" data-title="Web platform">
 <p>yadda</p>
-<p><img src="img/web-ie5.png" alt="" /></p>
+<p><img src="img/sys/web-ie5.png" alt="" /></p>
 </section>
 <section data-class="systems" data-file="systems/web" data-id="index">
 <h1>Web platform</h1>

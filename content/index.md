@@ -1,7 +1,7 @@
 ----------------------------------------------------------------------------------------------------
 - id:welcome
 - title:Technical dimensions of programming systems
-- class:welcome
+- class:welcome nobullet
 
 # Technical dimensions of programming systems
 
@@ -44,6 +44,7 @@ compare and guide their work and, ultimately, stand on the shoulders of giants.
 ----------------------------------------------------------------------------------------------------
 - id:navigation
 - title:Where to go to learn more
+- class:nobullet
 
 <div>
 
@@ -56,7 +57,7 @@ compare and guide their work and, ultimately, stand on the shoulders of giants.
 - Want to understand our motivation and methodology?  
   [Start from our paper about technical dimensions](-> #left=paper,main)
 - Want to the Technical Dimensions welcome page?  
-  [Go back and choose a different route](-> #splash=index,welcome)
+  [Go back and choose a different route](-> #top=index,welcome)
 
 </div>
 

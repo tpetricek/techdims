@@ -56,7 +56,12 @@ let expandLinks state (el:HTMLElement) =
     if c.tagName = "A" then 
       let a = c :?> HTMLAnchorElement
       if a.attributes.[unbox "href"].value.StartsWith("#") then
-        let links = a.attributes.[unbox "href"].value.Substring(1) |> parseKvpList |> Map.map (fun k v ->
+        let links = a.attributes.[unbox "href"].value.Substring(1) |> parseKvpList 
+        let links = 
+          if links.ContainsKey "*" then state.Displays.Keys |> Seq.fold (fun (links:Map<_, _>) k -> 
+            if links.ContainsKey k then links else links.Add(k, ".")) (links.Remove("*"))
+          else links
+        let links = links |> Map.map (fun k v ->
           if v = "." then state.Displays.[k].File + "," + state.Displays.[k].ID else v)
         let href = "#" + String.concat ";" [ for kvp in links -> $"""{kvp.Key}={kvp.Value.Replace("!", "")}""" ]
         a.attributes.[unbox "href"].value <- href
@@ -128,15 +133,20 @@ let render state =
         let w = int img.clientWidth+200
         let l = max 0 (int window.document.body.clientWidth - w) / 2
         displ?style <- sprintf "max-width:100vw;width:%dpx;left:%dpx;" w l
-
+  
+  let scrollTo y =
+    window.setTimeout((fun _ -> window.scrollTo(0, y)), 1) |> ignore
   if state.Displays.ContainsKey "right" then
     let anch = document.getElementsByClassName(state.Displays.["right"].File.Replace("/","-") + "-anchor")
     let right = document.getElementById("right")
     right?style?paddingTop <- ""
     if anch.length > 0 then
       right?style?paddingTop <- $"{anch.[0]?offsetTop - right?offsetTop}px"
+      scrollTo (anch.[0]?offsetTop)
+    else scrollTo 0
+  else scrollTo 0
 
-let initial = "splash=index,welcome"
+let initial = "top=index,welcome"
 
 let parseLinks link = 
   parseKvpList link |> Map.map (fun _ link -> findContent link)

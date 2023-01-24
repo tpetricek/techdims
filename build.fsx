@@ -38,7 +38,40 @@ let extractSections pars =
         let acc = if section <> [] then (parseOptions opts, List.rev section)::acc else acc
         List.rev acc
   loop [] [] [] pars
+
+let rec toPlainText = function
+  | MarkdownSpan.Literal(s, _) -> s
+  | MarkdownPatterns.SpanNode(_, ss) -> String.concat "" (List.map toPlainText ss)
+  | MarkdownPatterns.SpanLeaf _ -> ""
+
+let citations = 
+  let doc = Markdown.Parse(File.ReadAllText(Path.Combine(__SOURCE_DIRECTORY__, "data/bibliography.md")))
+  let items = 
+    match doc.Paragraphs with 
+    | [ MarkdownParagraph.ListBlock(_, items, _) ] -> 
+        let sorted = 
+          [ for item in items do    
+              match item with 
+              | [ MarkdownParagraph.Span(MarkdownSpan.Literal(lit, _)::tl, _)] -> 
+                  let i = lit.IndexOf(':')
+                  let key = lit.Substring(0, i)
+                  let body = MarkdownSpan.Literal(lit.Substring(i+1), None)::tl
+                  let text = (String.concat "" (List.map toPlainText body)).Replace("\"", "'")
+                  let body = [
+                    yield MarkdownSpan.Literal($"""<a name="{key}" id="{key}">""",None)
+                    yield! body 
+                    yield MarkdownSpan.Literal($"</a>",None) ] 
+                  lit.Substring(i+1), (key, body, text) 
+              | _ -> failwith "citations: Incorrect item format" ] |> List.sortBy fst 
+        [ for i, (_, (k, b, t)) in Seq.indexed sorted do
+            k, i, MarkdownSpan.Literal($"""<span class="citationwrapper"><span class="citation">{i+1}</span></span>""", None)::b, t ]
+    | _ -> failwith "citations: Unexpected document format"
   
+  let lis = [ for k, i, its, t in items -> [ MarkdownParagraph.Span(its, None) ] ]
+  let lookup = [ for k, i, its, t in items -> k, (i, t) ] |> dict
+  let refs = MarkdownParagraph.ListBlock(MarkdownListKind.Ordered, lis, None)
+  {| References = refs; Lookup = lookup |}
+
 let characteristics = 
   let reg = Regex("\s*\(([a-z\-]*)\)\s-\s(.*)")
   let doc = Markdown.Parse(File.ReadAllText(Path.Combine(__SOURCE_DIRECTORY__, "data/characteristics.md")))
@@ -78,7 +111,10 @@ let genreateSummaryTableAndChecks () =
      SysChecks = systems; DimChecks = dims |}
 
 let (|SpecialLink|_|) = function
-  | DirectLink(body, link, title, range) when link.StartsWith("->") -> 
+  | DirectLink([Literal("#", _)], cite, _, _) when citations.Lookup.ContainsKey cite ->
+      let i, t = citations.Lookup.[cite]
+      [ Literal($"""<a class="citation" href="#*=.;right=paper,references" title="{t}">{i+1}</a>""", None) ] |> Some
+  | DirectLink(body, link, _, _) when link.StartsWith("->") -> 
       [ yield Literal($"<a class=\"tlink\" href=\"{link.Substring(3)}\"><i class=\"fa fa-arrow-right\"></i>", None)
         yield! body
         yield Literal("</a>", None) ] |> Some
@@ -97,6 +133,8 @@ let rec replaceTransclusions = function
       MarkdownPatterns.ParagraphNested(p, List.map (List.map replaceTransclusions) ps)
   | MarkdownParagraph.Paragraph([ SpecialLink ss ], _) -> 
       MarkdownParagraph.Span(ss, None)
+  | MarkdownParagraph.Paragraph([ DirectImage("$$", "references", _, _) ], _) ->
+      citations.References
   | MarkdownPatterns.ParagraphSpans(s, ss) -> 
       let ss = ss |> List.collect (function SpecialLink ss -> ss | s -> [s])
       MarkdownPatterns.ParagraphSpans(s, ss)
