@@ -56,7 +56,7 @@ compare and guide their work and, ultimately, stand on the shoulders of giants.
   [Start from a summary matrix of system and dimensions](-> #left=index,matrix-intro;big=index,matrix-body;footer=index,navigation)
 - Read about our motivation, methodology and evaluation?  
   [Start from our paper about technical dimensions](-> #top=paper,index;left=paper,toc;footer=index,navigation)
-- Want to the Technical Dimensions welcome page?  
+- Want to the Technical dimensions welcome page?  
   [Go back and choose a different route](-> #top=index,welcome)
 
 </div>

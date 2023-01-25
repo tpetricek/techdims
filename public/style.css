@@ -64,6 +64,14 @@ div.display .frameset .display-title { display:none; }
 .dark .cluster td { font-size:12pt; font-weight:600; padding:0px 0px 0px 5px; line-height:16pt; }
 .dark a { text-decoration:none; }
 
+.appendix table { width:1px; table-layout: fixed; border-collapse: collapse; margin:0px 30px 0px 30px; }
+.appendix table td, .appendix table th { text-align:center; width:40px; padding:0px 10px 0px 5px; line-height:26px; font-size:13pt; font-weight:400; border:2px solid black; }
+.appendix table th { height:120px;transform:translate(0px, 30px) rotate(-90deg); font-size:12pt; font-weight:600; padding:0px 0px 0px 5px; line-height:16pt; }
+.appendix table .tot td { font-weight:700;}
+.appendix table td .fa { margin-top:3px; }
+
+
+
 .matrix .table-wrapper { overflow-x:scroll; border:3px solid black; margin-bottom:20px;}
 .matrix table { table-layout: fixed; border-collapse: collapse; }
 .matrix th, td { border-top:1px solid black; border-left:1px solid black; padding:0px; margin:0px; text-align:left; vertical-align:top; }
