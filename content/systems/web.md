@@ -14,7 +14,7 @@ Code abstractions are closed, but style abstractions more transparent.
 Diversity of text-based highly non-uniform notations (HTML, JavaScript, CSS) with limited structure editing for debugging (DOM).
 
 ----------------------------------------------------------------------------------------------------
-- id:dims-conceptual
+- id:dims-conceptual-structure
 - shade: shade1
 - characteristics: concepts-large, concepts-diverse, concepts-domain, concepts-convenient
 
@@ -109,7 +109,7 @@ inspiration for different thinking about programming.
 
 ### Conceptual structure
 
-![$](systems/web,dims-conceptual)
+![$](systems/web,dims-conceptual-structure)
 
 ### Customizability
 

@@ -15,7 +15,7 @@ Complementing notations with graphical grid, formulas and macros, allowing gradu
 Different non-uniform notation at each level.
 
 ----------------------------------------------------------------------------------------------------
-- id:dims-conceptual
+- id:dims-conceptual-structure
 - shade: shade3
 - characteristics: concepts-minimal, concepts-composable, concepts-convenient
 
@@ -109,7 +109,7 @@ programming, such as programming by example.
 
 ### Conceptual structure
 
-![$](systems/spreadsheets,dims-conceptual)
+![$](systems/spreadsheets,dims-conceptual-structure)
 
 ### Customizability
 

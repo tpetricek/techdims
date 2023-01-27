@@ -94,10 +94,10 @@ let genreateSummaryTableAndChecks () =
              [ "lisp-machines"; "smalltalk"; "unix"; "spreadsheets"; "web"; "hypercard"; "boxer"; "notebooks"; "haskell" ]
   let dims = 
     List.zip [ "Interaction"; "Notation"; "Conceptual structure"; "Customizability"; "Complexity"; "Errors"; "Adoptability" ]
-             [ "interaction"; "notation"; "conceptual"; "customizability"; "complexity"; "errors"; "adoptability" ]
-  let header = "<th></th>" + String.concat "" [ for n, id in systems -> $"<th class='s{id}'>{n}</th>" ]
+             [ "interaction"; "notation"; "conceptual-structure"; "customizability"; "complexity"; "errors"; "adoptability" ]
+  let header = "<th></th>" + String.concat "" [ for n, id in systems -> $"<th class='s{id}'><a href='#footer=index,navigation;left=systems,index;right=systems/{id},overview;top=systems,intro'><i class=\"fa fa-arrow-right\"></i>  {n}</a></th>" ]
   let rows = [
-    for dimName, dimId in dims -> dimId, $"<th>{dimName}</th>" + String.concat "" [
+    for dimName, dimId in dims -> dimId, $"<th><a href='#top=catalogue,index;left=catalogue,list;footer=index,navigation;right=dimensions/{dimId},index'><i class=\"fa fa-arrow-right\"></i> {dimName}</a></th>" + String.concat "" [
       for sysName, sysId in systems -> 
         $"<td class='s{sysId}'><embed type=\"application/transclusion\" src=\"systems/{sysId},dims-{dimId}\" data-links=\"#left=index,matrix;right=systems/{sysId},index\" /></td>"
     ]

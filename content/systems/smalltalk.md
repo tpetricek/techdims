@@ -15,7 +15,7 @@ Primary source code notation with graphical structure editor for object structur
 Secondary overlapping notations can be developed in-system. Small language.
 
 ----------------------------------------------------------------------------------------------------
-- id:dims-conceptual
+- id:dims-conceptual-structure
 - shade: shade2
 - characteristics: concepts-interface, concepts-minimal, concepts-composable, concepts-nonconvenient
 
@@ -112,7 +112,7 @@ modify and debug the living system at all times.
 
 ### Conceptual structure
 
-![$](systems/smalltalk,dims-conceptual)
+![$](systems/smalltalk,dims-conceptual-structure)
 
 ### Customizability
 

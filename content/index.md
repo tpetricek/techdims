@@ -67,7 +67,7 @@ compare and guide their work and, ultimately, stand on the shoulders of giants.
 
 # Matrix of systems and dimensions
 
-The matrix shows the differences between [good old programming systems](#left=index,systems) 
+The matrix shows the differences between [good old programming systems](#top=systems,intro;left=systems,index;footer=index,navigation) 
 along the dimensions identified by our framework. For conciseness, the table shows only one 
 row for each cluster of dimensions, which consists of multiple separate dimensions each.
 

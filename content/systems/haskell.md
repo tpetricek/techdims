@@ -16,7 +16,7 @@ Rich mostly explicit language with variety of extensions.
 
 
 ----------------------------------------------------------------------------------------------------
-- id:dims-conceptual
+- id:dims-conceptual-structure
 - shade: shade2
 - characteristics: concepts-interface, concepts-minimal, concepts-composable, concepts-nonconvenient
 
@@ -112,7 +112,7 @@ mathematical concepts, which makes it a powerful system, but arguably limits its
 
 ### Conceptual structure
 
-![$](systems/haskell,dims-conceptual)
+![$](systems/haskell,dims-conceptual-structure)
 
 ### Customizability
 

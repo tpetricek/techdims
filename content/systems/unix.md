@@ -15,7 +15,7 @@ Primary notation (the C language) with variety of secondary (file system, shell 
 all edited via text editor. Admits concise but error-prone notations.
 
 ----------------------------------------------------------------------------------------------------
-- id:dims-conceptual
+- id:dims-conceptual-structure
 - shade: shade1
 - characteristics: concepts-large, concepts-composable, concepts-convenient
 
@@ -113,7 +113,7 @@ an explicit stage distinction (compilation).
 
 ### Conceptual structure
 
-![$](systems/unix,dims-conceptual)
+![$](systems/unix,dims-conceptual-structure)
 
 ### Customizability
 

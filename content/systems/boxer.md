@@ -15,7 +15,7 @@ Complementing graphical notation (boxes) with source code in LISP.
 Everything is a box (graphical) or a list (code). Tree-based document model.
 
 ----------------------------------------------------------------------------------------------------
-- id:dims-conceptual
+- id:dims-conceptual-structure
 - shade: shade3
 - characteristics: concepts-minimal, concepts-domain, concepts-noncomposable
 
@@ -106,7 +106,7 @@ introduced the idea of naive realism, i.e., the document displays everything the
 
 ### Conceptual structure
 
-![$](systems/boxer,dims-conceptual)
+![$](systems/boxer,dims-conceptual-structure)
 
 ### Customizability
 

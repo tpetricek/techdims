@@ -15,7 +15,7 @@ Complementing graphical notation (user interface) with source code in Hypertalk.
 Variety of controls and langauge features with tight expression geography in user interface.
 
 ----------------------------------------------------------------------------------------------------
-- id:dims-conceptual
+- id:dims-conceptual-structure
 - shade: shade3
 - characteristics: concepts-minimal, concepts-diverse, concepts-noncomposable, concepts-convenient
 
@@ -108,7 +108,7 @@ simple, yet flexible, programming model support adoption.
 
 ### Conceptual structure
 
-![$](systems/hypercard,dims-conceptual)
+![$](systems/hypercard,dims-conceptual-structure)
 
 ### Customizability
 

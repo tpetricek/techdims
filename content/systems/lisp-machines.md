@@ -15,7 +15,7 @@ Very uniform notation with code and data represented as S-expressions
 and edited either as text or using structure editor. Use of domain-specific languages.
 
 ----------------------------------------------------------------------------------------------------
-- id:dims-conceptual
+- id:dims-conceptual-structure
 - shade: shade2
 - characteristics: concepts-interface, concepts-minimal, concepts-composable, concepts-nonconvenient
 
@@ -112,7 +112,7 @@ This allows self-sustainability and interactive error-response.
 
 ### Conceptual structure
 
-![$](systems/lisp-machines,dims-conceptual)
+![$](systems/lisp-machines,dims-conceptual-structure)
 
 ### Customizability
 

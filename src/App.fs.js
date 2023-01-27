@@ -6,7 +6,8 @@ import { rangeDouble } from "./fable_modules/fable-library.3.7.20/Range.js";
 import { toText, replace, printf, toFail, substring, join } from "./fable_modules/fable-library.3.7.20/String.js";
 import { map as map_1, equalsWith } from "./fable_modules/fable-library.3.7.20/Array.js";
 import { comparePrimitives, max, disposeSafe, getEnumerator } from "./fable_modules/fable-library.3.7.20/Util.js";
-import { defaultArg } from "./fable_modules/fable-library.3.7.20/Option.js";
+import { map as map_3, bind, toArray, value as value_1, defaultArg } from "./fable_modules/fable-library.3.7.20/Option.js";
+import { singleton as singleton_1, append as append_1, tryPick, ofArray } from "./fable_modules/fable-library.3.7.20/List.js";
 
 export class Section extends Record {
     constructor(Properties, ID, File, Element$) {
@@ -230,6 +231,8 @@ export function renderWindow(state, win, sec) {
     }
 }
 
+export const titlePreferences = ofArray(["right", "left", "image"]);
+
 export function render(state) {
     const ce = document.getElementById("display").children;
     for (let i = 0; i <= (ce.length - 1); i++) {
@@ -292,32 +295,45 @@ export function render(state) {
             window.scrollTo(0, y_1);
         }, 1);
     };
+    const right = document.getElementById("right");
+    let anch_3;
     if (FSharpMap__ContainsKey(state.Displays, "right")) {
         let anch_2;
-        const right = FSharpMap__get_Item(state.Displays, "right");
+        const rdispl = FSharpMap__get_Item(state.Displays, "right");
         let anch_1;
-        const matchValue = right.Navigation;
+        const matchValue = rdispl.Navigation;
         if (matchValue != null) {
             const anch = matchValue;
             anch_1 = (anch + "-anchor");
         }
         else {
-            anch_1 = (replace(right.Content.File, "/", "-") + "-anchor");
+            anch_1 = (replace(rdispl.Content.File, "/", "-") + "-anchor");
         }
         anch_2 = document.getElementsByClassName(anch_1);
-        const right_1 = document.getElementById("right");
-        right_1.style.paddingTop = "";
-        if (anch_2.length > 0) {
-            right_1.style.paddingTop = (`${((anch_2[0]).offsetTop - right_1.offsetTop)}px`);
-            scrollTo((anch_2[0]).offsetTop);
-        }
-        else {
-            scrollTo(0);
-        }
+        right.style.paddingTop = "";
+        anch_3 = ((anch_2.length > 0) ? (anch_2[0]) : (void 0));
+    }
+    else {
+        anch_3 = (void 0);
+    }
+    if (anch_3 != null) {
+        right.style.paddingTop = (`${(value_1(anch_3).offsetTop - right.offsetTop)}px`);
+        scrollTo(value_1(anch_3).offsetTop);
     }
     else {
         scrollTo(0);
     }
+    const anchPart = ofArray(toArray(bind((el_2) => {
+        try {
+            return el_2.firstElementChild.firstElementChild.innerText;
+        }
+        catch (matchValue_1) {
+            return void 0;
+        }
+    }, anch_3)));
+    const titleOpt = tryPick((display) => map_3((displ_1) => FSharpMap__get_Item(displ_1.Content.Properties, "title"), FSharpMap__TryFind(state.Displays, display)), titlePreferences);
+    const title = join(" | ", append_1(ofArray(toArray(titleOpt)), append_1(anchPart, singleton_1("Technical dimensions of programming systems"))));
+    document.title = title;
 }
 
 export const initial = "top=index,welcome";

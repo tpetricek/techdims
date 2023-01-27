@@ -116,6 +116,8 @@ let renderWindow state (win:HTMLDivElement) sec =
     renderTransclusions win
     expandLinks state win
 
+let titlePreferences = [ "right"; "left"; "image" ]
+
 let render state = 
   let ce = document.getElementById("display").children
   for i in 0 .. ce.length-1 do
@@ -143,21 +145,33 @@ let render state =
   let scrollTo y =
     window.setTimeout((fun _ -> window.scrollTo(0, y)), 1) |> ignore
 
-  if state.Displays.ContainsKey "right" then    
-    let anch = 
-      let right = state.Displays.["right"]
+  let right = document.getElementById("right")
+  let anch = 
+    if state.Displays.ContainsKey "right" then    
       let anch = 
-        match right.Navigation with 
-        | Some anch -> anch + "-anchor"
-        | _ -> right.Content.File.Replace("/","-") + "-anchor"
-      document.getElementsByClassName(anch)
-    let right = document.getElementById("right")
-    right?style?paddingTop <- ""
-    if anch.length > 0 then
-      right?style?paddingTop <- $"{anch.[0]?offsetTop - right?offsetTop}px"
-      scrollTo (anch.[0]?offsetTop)
-    else scrollTo 0
+        let rdispl = state.Displays.["right"]
+        let anch = 
+          match rdispl.Navigation with 
+          | Some anch -> anch + "-anchor"
+          | _ -> rdispl.Content.File.Replace("/","-") + "-anchor"
+        document.getElementsByClassName(anch)
+      right?style?paddingTop <- ""
+      if anch.length > 0 then Some(anch.[0])
+      else None
+    else None
+
+  if anch.IsSome then
+    right?style?paddingTop <- $"{anch.Value?offsetTop - right?offsetTop}px"
+    scrollTo (anch.Value?offsetTop)
   else scrollTo 0
+
+  let anchPart = anch |> Option.bind (fun el -> try Some(el?firstElementChild?firstElementChild?innerText) with _ -> None) |> Option.toList
+  let titleOpt = titlePreferences |> List.tryPick(fun display -> 
+    state.Displays.TryFind(display) |> Option.map (fun displ -> displ.Content.Properties.["title"]))
+  let title = Option.toList titleOpt @ anchPart @ [ "Technical dimensions of programming systems" ] |> String.concat " | "
+  document.title <- title
+
+
 
 let initial = "top=index,welcome"
 

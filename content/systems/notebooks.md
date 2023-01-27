@@ -15,7 +15,7 @@ Literate programming with code, text and outputs, embedded in a notebook as comp
 Document model where notebook is a list of cells.
 
 ----------------------------------------------------------------------------------------------------
-- id:dims-conceptual
+- id:dims-conceptual-structure
 - shade: shade4
 - characteristics: concepts-large, concepts-diverse, concepts-noncomposable, concepts-convenient
 
@@ -108,7 +108,7 @@ use fewer abstractions. The system is optimized for a specific domain and cannot
 
 ### Conceptual structure
 
-![$](systems/notebooks,dims-conceptual)
+![$](systems/notebooks,dims-conceptual-structure)
 
 ### Customizability
 
