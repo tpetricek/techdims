@@ -56,19 +56,66 @@ The diversified web ecosystem allows for the integration with external systems.
 ----------------------------------------------------------------------------------------------------
 - id:summary
 - title:Web platform
-
-yadda
-
-![](img/sys/web-ie5.png)
-
-
-----------------------------------------------------------------------------------------------------
-- id:index
-- class:systems
+- class:systems-web-anchor sysdet
 
 # Web platform
 
-![$](content=summary,link=index)
+[![](img/sys/web-ie5.png)](#image=systems/web,screen)
 
-more here
+yadda yadda
 
+## Summary
+
+- [Technical dimensions summary](-> #*=.;right=systems/web,overview)
+- [!](-> #*=.;right=systems-web:paper,o-type!)
+
+## Discussion
+
+- [!](-> #*=.;right=systems-web:dimensions/notation,explicit-implicit-structure!)
+- [!](-> #*=.;right=systems-web:dimensions/conceptual-structure,example-openness!)
+- [!](-> #*=.;right=systems-web:dimensions/customizability,staging!)
+- [!](-> #*=.;right=systems-web:dimensions/customizability,addressing!)
+
+----------------------------------------------------------------------------------------------------
+- id:screen
+- title:A web page opening a pop-up window in Internet Explorer 5
+
+> ![Web platform screenshot](img/sys/web-ie5.png)
+> 
+> **Web platform screenshot.** A simple page that opens a pop-up window and contains a JavaScript coding error, running in Internet Explorer 5 on Windows 98.
+> ([source](https://tomasp.net/blog/2021/popup-from-hell/)).
+
+----------------------------------------------------------------------------------------------------
+- id:overview
+- title:Technical dimensions summary
+- class:dimlist
+
+# Web platform
+
+### Interaction
+
+![$](systems/web,dims-interaction)
+
+### Notation
+
+![$](systems/web,dims-notation)
+
+### Conceptual structure
+
+![$](systems/web,dims-conceptual)
+
+### Customizability
+
+![$](systems/web,dims-customizability)
+
+### Complexity
+
+![$](systems/web,dims-complexity)
+
+### Errors
+
+![$](systems/web,dims-errors)
+
+### Adoptability
+
+![$](systems/web,dims-adoptability)

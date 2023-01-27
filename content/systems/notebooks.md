@@ -57,19 +57,65 @@ Notebooks can import a range of community packages and integrate with external s
 ----------------------------------------------------------------------------------------------------
 - id:summary
 - title:Notebooks
-
-yadda
-
-![](img/sys/ipython.png)
-
-
-----------------------------------------------------------------------------------------------------
-- id:index
-- class:systems
+- class:systems-notebooks-anchor sysdet
 
 # Notebooks
 
-![$](content=summary,link=index)
+[![](img/sys/ipython.png)](#image=systems/notebooks,screen)
 
-more here
+yadda yadda
 
+## Summary
+
+- [Technical dimensions summary](-> #*=.;right=systems/notebooks,overview)
+- [!](-> #*=.;right=systems-notebooks:paper,l-type!)
+
+## Discussion
+
+- [!](-> #*=.;right=systems-notebooks:dimensions/interaction,modes-of-interaction!)
+- [!](-> #*=.;right=systems-notebooks:dimensions/interaction,abstraction-construction!)
+- [!](-> #*=.;right=systems-notebooks:dimensions/notation,complementing-notations!)
+
+----------------------------------------------------------------------------------------------------
+- id:screen
+- title:Literate programming in IPython notebook
+
+> ![IPython notebook screenshot](img/sys/ipython.png)
+> 
+> **IPython notebook screenshot.** A sample computational notebook in IPython (predecessor of Jupyter Notebooks), showing an interleaving of text, mathematical formulas, code and graphical outputs produced by the code
+> ([source](https://ipython.org/index.html)).
+
+----------------------------------------------------------------------------------------------------
+- id:overview
+- title:Technical dimensions summary
+- class:dimlist
+
+# Notebooks
+
+### Interaction
+
+![$](systems/notebooks,dims-interaction)
+
+### Notation
+
+![$](systems/notebooks,dims-notation)
+
+### Conceptual structure
+
+![$](systems/notebooks,dims-conceptual)
+
+### Customizability
+
+![$](systems/notebooks,dims-customizability)
+
+### Complexity
+
+![$](systems/notebooks,dims-complexity)
+
+### Errors
+
+![$](systems/notebooks,dims-errors)
+
+### Adoptability
+
+![$](systems/notebooks,dims-adoptability)

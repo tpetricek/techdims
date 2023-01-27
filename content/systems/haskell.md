@@ -58,19 +58,68 @@ Closed ecosystem, but with community and diversity of packages.
 ----------------------------------------------------------------------------------------------------
 - id:summary
 - title:Haskell
-
-yadda
-
-![](img/sys/haskell.png)
-
-
-----------------------------------------------------------------------------------------------------
-- id:index
-- class:systems
+- class:systems-haskell-anchor sysdet
 
 # Haskell
 
-![$](content=summary,link=index)
+[![](img/sys/haskell.png)](#image=systems/haskell,screen)
 
-more here
+yadda yadda
 
+## Summary
+
+- [Technical dimensions summary](-> #*=.;right=systems/haskell,overview)
+- [!](-> #*=.;right=systems-haskell:paper,l-type!)
+
+## Discussion
+
+- [!](-> #*=.;right=systems-haskell:dimensions/interaction,feedback-loops!)
+- [!](-> #*=.;right=systems-haskell:dimensions/interaction,modes-of-interaction!)
+- [!](-> #*=.;right=systems-haskell:dimensions/notation,primary-secondary-notations!)
+- [!](-> #*=.;right=systems-haskell:dimensions/conceptual-structure,composability!)
+- [!](-> #*=.;right=systems-haskell:dimensions/errors,error-detection!)
+- [!](-> #*=.;right=systems-haskell:dimensions/adoptability,sociability!)
+
+----------------------------------------------------------------------------------------------------
+- id:screen
+- title:Haskell setup based on the xmonad interface
+
+> ![Haskell screenshot](img/sys/haskell.png)
+> 
+> **Haskell screenshot.** A sample setup leveraging the (Haskell-implemented) xmonad desktop manager for Linux showing text editor and a command line interface for access to tools
+> ([source](https://github.com/liskin/dotfiles/tree/home/.xmonad)).
+
+----------------------------------------------------------------------------------------------------
+- id:overview
+- title:Technical dimensions summary
+- class:dimlist
+
+# Haskell
+
+### Interaction
+
+![$](systems/haskell,dims-interaction)
+
+### Notation
+
+![$](systems/haskell,dims-notation)
+
+### Conceptual structure
+
+![$](systems/haskell,dims-conceptual)
+
+### Customizability
+
+![$](systems/haskell,dims-customizability)
+
+### Complexity
+
+![$](systems/haskell,dims-complexity)
+
+### Errors
+
+![$](systems/haskell,dims-errors)
+
+### Adoptability
+
+![$](systems/haskell,dims-adoptability)

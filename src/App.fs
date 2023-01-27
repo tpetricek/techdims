@@ -20,8 +20,12 @@ let content =
         File = props.["file"]
         Properties = props } ]
 
+type Display = 
+  { Content : Section   
+    Navigation : string option }
+
 type State = 
-  { Displays : Map<string, Section> }
+  { Displays : Map<string, Display> }
 
 let getHashLink (state:Map<_, _>) = 
   let getHash d sec = $"{d}={sec.File};{sec.ID}"
@@ -31,6 +35,8 @@ type Transclusion =
   { Content : Section }
 
 let findContent (ref:string) = 
+  let col = ref.IndexOf(':')
+  let ref = if col <> -1 then ref.Substring(col+1) else ref
   let file, id = 
     match ref.Split(',') with 
     | [| file; id |] -> file, id 
@@ -62,7 +68,7 @@ let expandLinks state (el:HTMLElement) =
             if links.ContainsKey k then links else links.Add(k, ".")) (links.Remove("*"))
           else links
         let links = links |> Map.map (fun k v ->
-          if v = "." then state.Displays.[k].File + "," + state.Displays.[k].ID else v)
+          if v = "." then state.Displays.[k].Content.File + "," + state.Displays.[k].Content.ID else v)
         let href = "#" + String.concat ";" [ for kvp in links -> $"""{kvp.Key}={kvp.Value.Replace("!", "")}""" ]
         a.attributes.[unbox "href"].value <- href
         if a.text = "!" then
@@ -118,7 +124,7 @@ let render state =
     displ.classList.remove("hidden")
     displ.classList.remove("visible")
     displ.classList.add(if found then "visible" else "hidden")
-    if found then renderWindow state displ sec
+    if found then renderWindow state displ sec.Content
     if found then 
       let inputs = getAllChildren displ |> Seq.filter (fun el -> el.tagName = "INPUT" && (el.id.StartsWith("cd") || el.id.StartsWith("cs")))
       for inp in inputs do 
@@ -136,8 +142,15 @@ let render state =
   
   let scrollTo y =
     window.setTimeout((fun _ -> window.scrollTo(0, y)), 1) |> ignore
-  if state.Displays.ContainsKey "right" then
-    let anch = document.getElementsByClassName(state.Displays.["right"].File.Replace("/","-") + "-anchor")
+
+  if state.Displays.ContainsKey "right" then    
+    let anch = 
+      let right = state.Displays.["right"]
+      let anch = 
+        match right.Navigation with 
+        | Some anch -> anch + "-anchor"
+        | _ -> right.Content.File.Replace("/","-") + "-anchor"
+      document.getElementsByClassName(anch)
     let right = document.getElementById("right")
     right?style?paddingTop <- ""
     if anch.length > 0 then
@@ -149,7 +162,10 @@ let render state =
 let initial = "top=index,welcome"
 
 let parseLinks link = 
-  parseKvpList link |> Map.map (fun _ link -> findContent link)
+  parseKvpList link |> Map.map (fun _ (link:string) -> 
+    let col = link.IndexOf(':') 
+    { Navigation = if col <> -1 then Some(link.Substring(0, col)) else None
+      Content = findContent link })
 
 window.onhashchange <- fun e -> 
   let links = if window.location.hash = "" then initial else window.location.hash.Replace("#", "")

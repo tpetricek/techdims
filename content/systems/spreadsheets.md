@@ -57,19 +57,66 @@ No packaging mechanism, but wide range of samples and community available.
 ----------------------------------------------------------------------------------------------------
 - id:summary
 - title:Spreadsheets
-
-yadda
-
-![](img/sys/visicalc.png)
-
-
-----------------------------------------------------------------------------------------------------
-- id:index
-- class:systems
+- class:systems-spreadsheets-anchor sysdet
 
 # Spreadsheets
 
-![$](content=summary,link=index)
+[![](img/sys/visicalc.png)](#image=systems/spreadsheets,screen)
 
-more here
+yadda yadda
 
+## Summary
+
+- [Technical dimensions summary](-> #*=.;right=systems/spreadsheets,overview)
+- [!](-> #*=.;right=systems-spreadsheets:paper,a-type!)
+
+## Discussion
+
+- [!](-> #*=.;right=systems-spreadsheets:dimensions/interaction,abstraction-construction!)
+- [!](-> #*=.;right=systems-spreadsheets:dimensions/interaction,direct-manipulation!)
+- [!](-> #*=.;right=systems-spreadsheets:dimensions/notation,complementing-notations!)
+- [!](-> #*=.;right=systems-spreadsheets:dimensions/complexity,pbe!)
+
+----------------------------------------------------------------------------------------------------
+- id:screen
+- title:A screenshot of VisiCalc
+
+> ![VisiCalc screenshot](img/sys/visicalc.png)
+> 
+> **VisiCalc screenshot.** VisiCalc was the first spreadsheet computer program, developed for Apple II in 1979. The screenshot shows a spreadsheet performing a simple computation
+> ([source](https://en.wikipedia.org/wiki/VisiCalc)).
+
+----------------------------------------------------------------------------------------------------
+- id:overview
+- title:Technical dimensions summary
+- class:dimlist
+
+# Spreadsheets
+
+### Interaction
+
+![$](systems/spreadsheets,dims-interaction)
+
+### Notation
+
+![$](systems/spreadsheets,dims-notation)
+
+### Conceptual structure
+
+![$](systems/spreadsheets,dims-conceptual)
+
+### Customizability
+
+![$](systems/spreadsheets,dims-customizability)
+
+### Complexity
+
+![$](systems/spreadsheets,dims-complexity)
+
+### Errors
+
+![$](systems/spreadsheets,dims-errors)
+
+### Adoptability
+
+![$](systems/spreadsheets,dims-adoptability)

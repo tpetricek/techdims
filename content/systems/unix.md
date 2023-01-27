@@ -58,19 +58,69 @@ Openness allows integration with the external world; diversity of packages avail
 ----------------------------------------------------------------------------------------------------
 - id:summary
 - title:UNIX
-
-yadda
-
-![](img/sys/unix-6.png)
-
-
-----------------------------------------------------------------------------------------------------
-- id:index
-- class:systems
+- class:systems-unix-anchor sysdet
 
 # UNIX
 
-![$](content=summary,link=index)
+[![](img/sys/unix-6.png)](#image=systems/unix,screen)
 
-more here
+yadda yadda
 
+## Summary
+
+- [Technical dimensions summary](-> #*=.;right=systems/unix,overview)
+- [!](-> #*=.;right=systems-unix:paper,o-type!)
+
+## Discussion
+
+- [!](-> #*=.;right=systems-unix:dimensions/notation,primary-secondary-notations!)
+- [!](-> #*=.;right=systems-unix:dimensions/notation,expression-geography!)
+- [!](-> #*=.;right=systems-unix:dimensions/conceptual-structure,composability!)
+- [!](-> #*=.;right=systems-unix:dimensions/conceptual-structure,convenience!)
+- [!](-> #*=.;right=systems-unix:dimensions/conceptual-structure,example-openness!)
+- [!](-> #*=.;right=systems-unix:dimensions/customizability,self-sustainability!)
+- [!](-> #*=.;right=systems-unix:dimensions/adoptability,sociability!)
+
+----------------------------------------------------------------------------------------------------
+- id:screen
+- title:Version 6 UNIX running in a PDP-11 emulator
+
+> ![UNIX 6 screenshot](img/sys/unix-6.png)
+> 
+> **UNIX screenshot.** Version 6 Unix running in the SIMH PDP-11 emulator. This was the first widely distributed version of UNIX, released in 1975
+> ([source](https://en.wikipedia.org/wiki/Version_6_Unix)).
+
+----------------------------------------------------------------------------------------------------
+- id:overview
+- title:Technical dimensions summary
+- class:dimlist
+
+# UNIX
+
+### Interaction
+
+![$](systems/unix,dims-interaction)
+
+### Notation
+
+![$](systems/unix,dims-notation)
+
+### Conceptual structure
+
+![$](systems/unix,dims-conceptual)
+
+### Customizability
+
+![$](systems/unix,dims-customizability)
+
+### Complexity
+
+![$](systems/unix,dims-complexity)
+
+### Errors
+
+![$](systems/unix,dims-errors)
+
+### Adoptability
+
+![$](systems/unix,dims-adoptability)

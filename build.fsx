@@ -155,19 +155,18 @@ let sections =
       let flinks, sections = readDocument fn
       for kvp in flinks do links.Add(kvp.Key, kvp.Value)
       for opts, section in sections do  
-        let opts = 
+        let opts, extras = 
           if opts.ContainsKey "shade" && opts.ContainsKey "characteristics" && not (opts.ContainsKey "title") then
-            let icons = 
-              String.concat "" [ 
-                for c in opts.["characteristics"].Split(",") -> 
-                  let fa, info = characteristics.[c.Trim()] 
-                  $"<i class='fa {fa}' title='{info}'></i>" ]
+            let chars = opts.["characteristics"].Split(",") |> Seq.map (fun c -> characteristics.[c.Trim()])
+            let icons = String.concat "" [ for fa, info in chars -> $"<i class='fa {fa}' title='{info}'></i>" ]
+            let list = String.concat "" [ for fa, info in chars -> $"<li><i class='fa {fa}'></i>{info}</li>" ]
             let title = $"""<div class='{opts.["shade"]}'>{icons}</div>"""
-            opts.Add("title", title)
-          else opts
+            opts.Add("title", title), Some($"<ul class='details'>{list}</ul>")
+          else opts, None
         let data = String.concat "" [ for kvp in opts -> $" data-{kvp.Key}=\"{kvp.Value}\"" ]
         yield InlineHtmlBlock($"<section{data}>", None, None)
         yield! section
+        if extras.IsSome then yield InlineHtmlBlock(extras.Value, None, None)
         yield InlineHtmlBlock($"</section>", None, None) ]
 
 let doc = MarkdownDocument(sections, links)

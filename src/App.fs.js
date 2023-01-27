@@ -1,9 +1,9 @@
 import { FSharpRef, Record } from "./fable_modules/fable-library.3.7.20/Types.js";
-import { record_type, class_type, string_type } from "./fable_modules/fable-library.3.7.20/Reflection.js";
+import { option_type, record_type, class_type, string_type } from "./fable_modules/fable-library.3.7.20/Reflection.js";
 import { filter, find, fold, append, tryFind, singleton, map, collect, delay, toList } from "./fable_modules/fable-library.3.7.20/Seq.js";
 import { FSharpMap__TryGetValue, FSharpMap__TryFind, map as map_2, FSharpMap__Remove, FSharpMap__Add, FSharpMap__get_Keys, FSharpMap__ContainsKey, FSharpMap__get_Item, ofSeq } from "./fable_modules/fable-library.3.7.20/Map.js";
 import { rangeDouble } from "./fable_modules/fable-library.3.7.20/Range.js";
-import { toText, replace, substring, printf, toFail, join } from "./fable_modules/fable-library.3.7.20/String.js";
+import { toText, replace, printf, toFail, substring, join } from "./fable_modules/fable-library.3.7.20/String.js";
 import { map as map_1, equalsWith } from "./fable_modules/fable-library.3.7.20/Array.js";
 import { comparePrimitives, max, disposeSafe, getEnumerator } from "./fable_modules/fable-library.3.7.20/Util.js";
 import { defaultArg } from "./fable_modules/fable-library.3.7.20/Option.js";
@@ -31,6 +31,18 @@ export const content = toList(delay(() => {
     }, rangeDouble(0, 1, sections.length - 1));
 }));
 
+export class Display extends Record {
+    constructor(Content, Navigation) {
+        super();
+        this.Content = Content;
+        this.Navigation = Navigation;
+    }
+}
+
+export function Display$reflection() {
+    return record_type("App.Display", [], Display, () => [["Content", Section$reflection()], ["Navigation", option_type(string_type)]]);
+}
+
 export class State extends Record {
     constructor(Displays) {
         super();
@@ -39,7 +51,7 @@ export class State extends Record {
 }
 
 export function State$reflection() {
-    return record_type("App.State", [], State, () => [["Displays", class_type("Microsoft.FSharp.Collections.FSharpMap`2", [string_type, Section$reflection()])]]);
+    return record_type("App.State", [], State, () => [["Displays", class_type("Microsoft.FSharp.Collections.FSharpMap`2", [string_type, Display$reflection()])]]);
 }
 
 export function getHashLink(state) {
@@ -59,15 +71,17 @@ export function Transclusion$reflection() {
 }
 
 export function findContent(ref) {
+    const col = ref.indexOf(":") | 0;
+    const ref_1 = (col !== -1) ? substring(ref, col + 1) : ref;
     let patternInput;
-    const matchValue = ref.split(",");
+    const matchValue = ref_1.split(",");
     if ((!equalsWith((x, y) => (x === y), matchValue, null)) && (matchValue.length === 2)) {
         const id = matchValue[1];
         const file = matchValue[0];
         patternInput = [file, id];
     }
     else {
-        patternInput = toFail(printf("findContent: Invalid reference: \u0027%s\u0027"))(ref);
+        patternInput = toFail(printf("findContent: Invalid reference: \u0027%s\u0027"))(ref_1);
     }
     const id_1 = patternInput[1];
     const file_1 = patternInput[0];
@@ -133,7 +147,7 @@ export function expandLinks(state, el) {
                     }
                     const links_3 = map_2((k_1, v) => {
                         if (v === ".") {
-                            return (FSharpMap__get_Item(state.Displays, k_1).File + ",") + FSharpMap__get_Item(state.Displays, k_1).ID;
+                            return (FSharpMap__get_Item(state.Displays, k_1).Content.File + ",") + FSharpMap__get_Item(state.Displays, k_1).Content.ID;
                         }
                         else {
                             return v;
@@ -231,7 +245,7 @@ export function render(state) {
         displ.classList.remove("visible");
         displ.classList.add(found ? "visible" : "hidden");
         if (found) {
-            renderWindow(state, displ, sec);
+            renderWindow(state, displ, sec.Content);
         }
         if (found) {
             const inputs = filter((el) => {
@@ -279,12 +293,23 @@ export function render(state) {
         }, 1);
     };
     if (FSharpMap__ContainsKey(state.Displays, "right")) {
-        const anch = document.getElementsByClassName(replace(FSharpMap__get_Item(state.Displays, "right").File, "/", "-") + "-anchor");
-        const right = document.getElementById("right");
-        right.style.paddingTop = "";
-        if (anch.length > 0) {
-            right.style.paddingTop = (`${((anch[0]).offsetTop - right.offsetTop)}px`);
-            scrollTo((anch[0]).offsetTop);
+        let anch_2;
+        const right = FSharpMap__get_Item(state.Displays, "right");
+        let anch_1;
+        const matchValue = right.Navigation;
+        if (matchValue != null) {
+            const anch = matchValue;
+            anch_1 = (anch + "-anchor");
+        }
+        else {
+            anch_1 = (replace(right.Content.File, "/", "-") + "-anchor");
+        }
+        anch_2 = document.getElementsByClassName(anch_1);
+        const right_1 = document.getElementById("right");
+        right_1.style.paddingTop = "";
+        if (anch_2.length > 0) {
+            right_1.style.paddingTop = (`${((anch_2[0]).offsetTop - right_1.offsetTop)}px`);
+            scrollTo((anch_2[0]).offsetTop);
         }
         else {
             scrollTo(0);
@@ -298,7 +323,11 @@ export function render(state) {
 export const initial = "top=index,welcome";
 
 export function parseLinks(link) {
-    return map_2((_arg, link_1) => findContent(link_1), parseKvpList(link));
+    return map_2((_arg, link_1) => {
+        const col = link_1.indexOf(":") | 0;
+        const Navigation = (col !== -1) ? substring(link_1, 0, col) : (void 0);
+        return new Display(findContent(link_1), Navigation);
+    }, parseKvpList(link));
 }
 
 window.onhashchange = ((e) => {

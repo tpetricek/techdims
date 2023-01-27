@@ -18,7 +18,7 @@ or overlooked possibilities.
 
 [![A diagram showing programming systems with two dimensions](img/nest.png)](#image=catalogue,nest)
 
-The 22 technical dimensions are grouped into 7 clusters or topics of interest. 
+The 23 technical dimensions are grouped into 7 clusters or topics of interest. 
 Each cluster consists of individual dimensions, examples that capture a particular
 well-known value (or a combination of values), remarks and relations to other dimensions. 
 

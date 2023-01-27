@@ -7,7 +7,7 @@ Interaction
 - **interaction-dm** (fa-hand-pointer) - System supports some kind of direct manipulation
 
 ## Modes of interaction
-- **interaction-single** (fa-caret-right) - There is only a single mode of interaction
+- **interaction-single** (fa-chess-board) - There is only a single mode of interaction
 - **interaction-multi** (fa-forward) - There are multiple modes of interaction such as compilation vs. execution
 
 ## Abstraction construction
@@ -27,7 +27,7 @@ Notations
 - **notations-primary** (fa-trophy) - The system has a single primary notation
 
 ## Surface / internal notations
-- **notations** (fa-arrow-pointer) - The system supports some kind of structure editing 
+- **notations** (fa-puzzle-piece) - The system supports some kind of structure editing 
 
 ## Expression geography
 - **notations-concise** (fa-bug) - There is a concise error-prone notation
@@ -54,7 +54,7 @@ Conceptual structure
 - **concepts-domain** (fa-flask) - There are suitable domain-specific concepts
 
 ## Commonality
-- **concepts-interface** (fa-tbd) - The system provides an explicit method for capturing commondality
+- **concepts-interface** (fa-plug) - The system provides an explicit method for capturing commondality
 
 Customizability
 ===============================================================================

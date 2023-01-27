@@ -57,19 +57,65 @@ progresively become programmers. Closed from external world, but active communit
 ----------------------------------------------------------------------------------------------------
 - id:summary
 - title:Hypercard
-
-yadda
-
-![](img/sys/hypercard.jpg)
-
-
-----------------------------------------------------------------------------------------------------
-- id:index
-- class:systems
+- class:systems-hypercard-anchor sysdet
 
 # Hypercard
 
-![$](content=summary,link=index)
+[![](img/sys/hypercard.jpg)](#image=systems/hypercard,screen)
 
-more here
+yadda yadda
 
+## Summary
+
+- [Technical dimensions summary](-> #*=.;right=systems/hypercard,overview)
+- [!](-> #*=.;right=systems-hypercard:paper,a-type!)
+
+## Discussion
+
+- [!](-> #*=.;right=systems-hypercard:dimensions/notation,complementing-notations!)
+- [!](-> #*=.;right=systems-hypercard:dimensions/conceptual-structure,composability!)
+- [!](-> #*=.;right=systems-hypercard:dimensions/adoptability,learnability!)
+
+----------------------------------------------------------------------------------------------------
+- id:screen
+- title:Button configuration in Hypercard
+
+> ![Hypercard screenshot](img/sys/hypercard.jpg)
+> 
+> **Hypercard screenshot.** User interface for specifying properties and actions associated with a button in Hypercard
+> ([source](http://basalgangster.macgui.com/RetroMacComputing/The_Long_View/Entries/2010/10/23_HyperCard.html)).
+
+----------------------------------------------------------------------------------------------------
+- id:overview
+- title:Technical dimensions summary
+- class:dimlist
+
+# Hypercard
+
+### Interaction
+
+![$](systems/hypercard,dims-interaction)
+
+### Notation
+
+![$](systems/hypercard,dims-notation)
+
+### Conceptual structure
+
+![$](systems/hypercard,dims-conceptual)
+
+### Customizability
+
+![$](systems/hypercard,dims-customizability)
+
+### Complexity
+
+![$](systems/hypercard,dims-complexity)
+
+### Errors
+
+![$](systems/hypercard,dims-errors)
+
+### Adoptability
+
+![$](systems/hypercard,dims-adoptability)

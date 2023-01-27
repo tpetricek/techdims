@@ -25,7 +25,7 @@ compare and guide their work and, ultimately, stand on the shoulders of giants.
 - Want to delve into the details and analyse your system?  
   [Start from the catalogue of technical dimensions](-> #top=catalogue,index;left=catalogue,list;footer=index,navigation)
 - Want to explore our framework by example?  
-  [Start from good old programming systems](-> #top=systems,intro;left=systems,index)
+  [Start from good old programming systems](-> #top=systems,intro;left=systems,index;footer=index,navigation)
 - Want to see how this helps us understand programming systems?  
   [Start from a summary matrix of system and dimensions](-> #left=index,matrix-intro;big=index,matrix-body;footer=index,navigation)
 - Read about our motivation, methodology and evaluation?  
@@ -51,7 +51,7 @@ compare and guide their work and, ultimately, stand on the shoulders of giants.
 - Want to delve into the details and analyse your system?  
   [Start from the catalogue of technical dimensions](-> #top=catalogue,index;left=catalogue,list;footer=index,navigation)
 - Want to explore our framework by example?  
-  [Start from good old programming systems](-> #top=systems,intro;left=systems,index)
+  [Start from good old programming systems](-> #top=systems,intro;left=systems,index;footer=index,navigation)
 - Want to see how this helps us understand programming systems?  
   [Start from a summary matrix of system and dimensions](-> #left=index,matrix-intro;big=index,matrix-body;footer=index,navigation)
 - Read about our motivation, methodology and evaluation?  
@@ -88,7 +88,7 @@ paper section, but note that not all cases are discussed in the paper.
 <div class="matrix-footer">
 
 For example, you may want to compare different systems of a certain type such as
-OS-like systems (LISP machines, Smalltalk, UNIX, Web),
+OS-like systems (Lisp machines, Smalltalk, UNIX, Web),
 sysems built around languages (Haskell, Notebooks) 
 or application-focused systems (spreadsheets, Hypercard, Boxer).
 

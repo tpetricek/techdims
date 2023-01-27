@@ -6,6 +6,7 @@ body { padding-top:40px; padding-bottom:50px; font-family: 'Titillium Web', sans
 h1 { font-size:30pt; line-height: 1.2em; margin-bottom:20px; font-weight:600; }
 h1 .fa { font-size:26pt; margin-right:5px;}
 h2 { font-size:16pt; line-height: 1.2em; margin:20px 0px 10px 0px; font-weight:700; }
+h3 { font-size:16pt; line-height: 1.2em; margin:20px 0px 0px 0px; font-weight:700; }
 p { margin-bottom:15px; }
 li { margin:0px 0px 10px 25px; } 
 li p { margin:0px 0px 10px 0px; }
@@ -70,7 +71,12 @@ div.display .frameset .display-title { display:none; }
 .appendix table .tot td { font-weight:700;}
 .appendix table td .fa { margin-top:3px; }
 
+.progsys em strong { font-style:normal; }
+.progsys em i { margin-right:10px; font-size:18pt; }
+.progsys li { margin-left:40px; text-indent:-20px; list-style-type: none;}
+.progsys ul { margin:0px; padding:0px; }
 
+.sysdet li { margin:0px 0px 5px 0px; list-style-type:none;}
 
 .matrix .table-wrapper { overflow-x:scroll; border:3px solid black; margin-bottom:20px;}
 .matrix table { table-layout: fixed; border-collapse: collapse; }
@@ -116,6 +122,12 @@ div.display .frameset .display-title { display:none; }
 .matrix .transclusion .title { text-align:right; }
 .matrix .transclusion .title i { color:white; margin:4px 10px 4px 0px; font-size:9pt; }
 .matrix td p { line-height:18pt; padding-bottom:5px; }
+.matrix .details { display:none; }
+
+.dimlist .title { display:none; }
+.dimlist p { margin-bottom:10px; }
+.dimlist li { list-style-type:none; margin:0px 0px 3px 0px; }
+.dimlist li .fa { width:30px; }
 
 .bibliography li { margin-left:35px; text-indent:-35px; list-style-type:none;}
 .bibliography li .citation { background:black; color:white; padding:0px 5px 0px 5px; font-size:12pt; margin:0px 2px 0px 2px; text-decoration:none; border-radius:6px; }

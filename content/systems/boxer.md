@@ -57,19 +57,64 @@ System is closed from external world and has only limited community and availabl
 ----------------------------------------------------------------------------------------------------
 - id:summary
 - title:Boxer
-
-yadda
-
-![](img/sys/boxer.gif)
-
-
-----------------------------------------------------------------------------------------------------
-- id:index
-- class:systems
+- class:systems-boxer-anchor sysdet
 
 # Boxer
 
-![$](content=summary,link=index)
+[![](img/sys/boxer.gif)](#image=systems/boxer,screen)
 
-more here
+yadda yadda
 
+## Summary
+
+- [Technical dimensions summary](-> #*=.;right=systems/boxer,overview)
+- [!](-> #*=.;right=systems-boxer:paper,a-type!)
+
+## Discussion
+
+- [!](-> #*=.;right=systems-boxer:dimensions/notation,complementing-notations!)
+- [!](-> #*=.;right=systems-boxer:dimensions/adoptability,learnability!)
+
+----------------------------------------------------------------------------------------------------
+- id:screen
+- title:Boxer in educational context
+
+> ![Boxer screenshot](img/sys/boxer.gif)
+> 
+> **Boxer screenshot.** Boxer in the educational context, showing a simple program to draw a star using the built-in Turtle graphics
+> ([source](https://www.mathed.page/t-and-m/turtle-and-mouse.html)).
+
+----------------------------------------------------------------------------------------------------
+- id:overview
+- title:Technical dimensions summary
+- class:dimlist
+
+# Boxer
+
+### Interaction
+
+![$](systems/boxer,dims-interaction)
+
+### Notation
+
+![$](systems/boxer,dims-notation)
+
+### Conceptual structure
+
+![$](systems/boxer,dims-conceptual)
+
+### Customizability
+
+![$](systems/boxer,dims-customizability)
+
+### Complexity
+
+![$](systems/boxer,dims-complexity)
+
+### Errors
+
+![$](systems/boxer,dims-errors)
+
+### Adoptability
+
+![$](systems/boxer,dims-adoptability)

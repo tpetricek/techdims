@@ -57,20 +57,69 @@ Active community, but closed world and limited packages.
 ----------------------------------------------------------------------------------------------------
 - id:summary
 - title:Smalltalk
-
-yadda
-
-![](img/sys/smalltalk-78.png)
-
-
-
-----------------------------------------------------------------------------------------------------
-- id:index
-- class:systems
+- class:systems-smalltalk-anchor sysdet
 
 # Smalltalk
 
-![$](content=summary,link=index)
+[![](img/sys/smalltalk-78.png)](#image=systems/smalltalk,screen)
 
-more here
+yadda yadda
 
+## Summary
+
+- [Technical dimensions summary](-> #*=.;right=systems/smalltalk,overview)
+- [!](-> #*=.;right=systems-smalltalk:paper,o-type!)
+
+## Discussion
+
+- [!](-> #*=.;right=systems-smalltalk:dimensions/notation,primary-secondary-notations!)
+- [!](-> #*=.;right=systems-smalltalk:dimensions/conceptual-structure,example-integrity!)
+- [!](-> #*=.;right=systems-smalltalk:dimensions/conceptual-structure,example-openness!)
+- [!](-> #*=.;right=systems-smalltalk:dimensions/customizability,staging!)
+- [!](-> #*=.;right=systems-smalltalk:dimensions/customizability,self-sustainability!)
+- [!](-> #*=.;right=systems-smalltalk:dimensions/adoptability,learnability!)
+- [!](-> #*=.;right=systems-smalltalk:dimensions/adoptability,sociability!)
+
+----------------------------------------------------------------------------------------------------
+- id:screen
+- title:Screenshot of Smalltalk-78 emulation running in the Smalltalk Zoo
+
+> ![Smalltalk 78 screenshot](img/sys/smalltalk-78.png)
+> 
+> **Smalltalk 78 screenshot.** Screenshot of Smalltalk-78 emulation running in the Smalltalk Zoo, developed by the [Computer History Museum](https://computerhistory.org/blog/introducing-the-smalltalk-zoo-48-years-of-smalltalk-history-at-chm/). The screenshot illustrates a part of a Smalltalk demo given to Steve Jobs by the Smalltalk developers
+> ([source](https://computerhistory.org/blog/introducing-the-smalltalk-zoo-48-years-of-smalltalk-history-at-chm/)).
+
+----------------------------------------------------------------------------------------------------
+- id:overview
+- title:Technical dimensions summary
+- class:dimlist
+
+# Smalltalk
+
+### Interaction
+
+![$](systems/smalltalk,dims-interaction)
+
+### Notation
+
+![$](systems/smalltalk,dims-notation)
+
+### Conceptual structure
+
+![$](systems/smalltalk,dims-conceptual)
+
+### Customizability
+
+![$](systems/smalltalk,dims-customizability)
+
+### Complexity
+
+![$](systems/smalltalk,dims-complexity)
+
+### Errors
+
+![$](systems/smalltalk,dims-errors)
+
+### Adoptability
+
+![$](systems/smalltalk,dims-adoptability)

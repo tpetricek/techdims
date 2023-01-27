@@ -143,12 +143,6 @@ The main contributions of this project are organized as follows:
 > revealing an absence of systems with a high degree of both.
 
 ----------------------------------------------------------------------------------------------------
-- id:definition
-- title:What is a Programming System?
-
-A _programming system_ is an integrated and complete set of tools sufficient for creating, modifying, and executing programs. These will include notations for structuring programs and data, facilities for running and debugging programs, and interfaces for performing all of these tasks. Facilities for testing, analysis, packaging, or version control may also be present. Notations include programming languages and interfaces include text editors, but are not limited to these.
-
-----------------------------------------------------------------------------------------------------
 - id:related-work
 - title:Related work
 
