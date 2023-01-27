@@ -1,13 +1,13 @@
 import { FSharpRef, Record } from "./fable_modules/fable-library.3.7.20/Types.js";
 import { option_type, record_type, class_type, string_type } from "./fable_modules/fable-library.3.7.20/Reflection.js";
 import { filter, find, fold, append, tryFind, singleton, map, collect, delay, toList } from "./fable_modules/fable-library.3.7.20/Seq.js";
-import { FSharpMap__TryGetValue, FSharpMap__TryFind, map as map_2, FSharpMap__Remove, FSharpMap__Add, FSharpMap__get_Keys, FSharpMap__ContainsKey, FSharpMap__get_Item, ofSeq } from "./fable_modules/fable-library.3.7.20/Map.js";
+import { FSharpMap__TryGetValue, FSharpMap__TryFind, FSharpMap__Remove, FSharpMap__Add, FSharpMap__get_Keys, FSharpMap__ContainsKey, map as map_2, FSharpMap__get_Item, ofSeq } from "./fable_modules/fable-library.3.7.20/Map.js";
 import { rangeDouble } from "./fable_modules/fable-library.3.7.20/Range.js";
 import { toText, replace, printf, toFail, substring, join } from "./fable_modules/fable-library.3.7.20/String.js";
 import { map as map_1, equalsWith } from "./fable_modules/fable-library.3.7.20/Array.js";
 import { comparePrimitives, max, disposeSafe, getEnumerator } from "./fable_modules/fable-library.3.7.20/Util.js";
 import { map as map_3, bind, toArray, value as value_1, defaultArg } from "./fable_modules/fable-library.3.7.20/Option.js";
-import { singleton as singleton_1, append as append_1, tryPick, ofArray } from "./fable_modules/fable-library.3.7.20/List.js";
+import { singleton as singleton_1, tryPick, append as append_1, ofArray } from "./fable_modules/fable-library.3.7.20/List.js";
 
 export class Section extends Record {
     constructor(Properties, ID, File, Element$) {
@@ -56,8 +56,10 @@ export function State$reflection() {
 }
 
 export function getHashLink(state) {
-    const getHash = (d, sec) => (`${d}=${sec.File};${sec.ID}`);
-    return "#" + join(",", toList(delay(() => map((kvp) => getHash(kvp[0], kvp[1]), state))));
+    return "#" + join(",", toList(delay(() => map((kvp) => {
+        const sec = kvp[1];
+        return `${kvp[0]}=${sec.File};${sec.ID}`;
+    }, state))));
 }
 
 export class Transclusion extends Record {
@@ -78,8 +80,7 @@ export function findContent(ref) {
     const matchValue = ref_1.split(",");
     if ((!equalsWith((x, y) => (x === y), matchValue, null)) && (matchValue.length === 2)) {
         const id = matchValue[1];
-        const file = matchValue[0];
-        patternInput = [file, id];
+        patternInput = [matchValue[0], id];
     }
     else {
         patternInput = toFail(printf("findContent: Invalid reference: \u0027%s\u0027"))(ref_1);
@@ -95,8 +96,7 @@ export function findContent(ref) {
         }
     }, content);
     if (sec_1 != null) {
-        const sec_2 = sec_1;
-        return sec_2;
+        return sec_1;
     }
     else {
         const tupledArg = [file_1, id_1];
@@ -123,6 +123,7 @@ export function getAllChildren(el) {
 }
 
 export function expandLinks(state, el) {
+    let source;
     const enumerator = getEnumerator(getAllChildren(el));
     try {
         while (enumerator["System.Collections.IEnumerator.MoveNext"]()) {
@@ -131,21 +132,6 @@ export function expandLinks(state, el) {
                 const a = c;
                 if ((a.attributes["href"]).value.indexOf("#") === 0) {
                     const links = parseKvpList(substring((a.attributes["href"]).value, 1));
-                    let links_2;
-                    if (FSharpMap__ContainsKey(links, "*")) {
-                        const source = FSharpMap__get_Keys(state.Displays);
-                        links_2 = fold((links_1, k) => {
-                            if (FSharpMap__ContainsKey(links_1, k)) {
-                                return links_1;
-                            }
-                            else {
-                                return FSharpMap__Add(links_1, k, ".");
-                            }
-                        }, FSharpMap__Remove(links, "*"), source);
-                    }
-                    else {
-                        links_2 = links;
-                    }
                     const links_3 = map_2((k_1, v) => {
                         if (v === ".") {
                             return (FSharpMap__get_Item(state.Displays, k_1).Content.File + ",") + FSharpMap__get_Item(state.Displays, k_1).Content.ID;
@@ -153,12 +139,18 @@ export function expandLinks(state, el) {
                         else {
                             return v;
                         }
-                    }, links_2);
+                    }, FSharpMap__ContainsKey(links, "*") ? ((source = FSharpMap__get_Keys(state.Displays), fold((links_1, k) => {
+                        if (FSharpMap__ContainsKey(links_1, k)) {
+                            return links_1;
+                        }
+                        else {
+                            return FSharpMap__Add(links_1, k, ".");
+                        }
+                    }, FSharpMap__Remove(links, "*"), source))) : links);
                     const href = "#" + join(";", toList(delay(() => map((kvp) => (`${kvp[0]}=${replace(kvp[1], "!", "")}`), links_3))));
                     (a.attributes["href"]).value = href;
                     if (a.text === "!") {
-                        const title = find((kvp_1) => (kvp_1[1].indexOf("!") >= 0), links_3);
-                        const sec = findContent(replace(title[1], "!", ""));
+                        const sec = findContent(replace(find((kvp_1) => (kvp_1[1].indexOf("!") >= 0), links_3)[1], "!", ""));
                         a.innerHTML = replace(a.innerHTML, "!", FSharpMap__get_Item(sec.Properties, "title"));
                     }
                 }
@@ -180,13 +172,7 @@ export function renderTransclusion(trans) {
     const body = trans.Content.Element.innerHTML;
     let title;
     const matchValue_1 = FSharpMap__TryFind(trans.Content.Properties, "title");
-    if (matchValue_1 != null) {
-        const t = matchValue_1;
-        title = t;
-    }
-    else {
-        title = toFail(printf("renderTransclusion: Missing title for: %s"))(trans.Content.ID);
-    }
+    title = ((matchValue_1 != null) ? matchValue_1 : toFail(printf("renderTransclusion: Missing title for: %s"))(trans.Content.ID));
     nc.innerHTML = replace(replace(document.getElementById("transclusion-content-template").innerHTML, "[TITLE]", title), "[CONTENT]", body);
     renderTransclusions(nc);
     return nc;
@@ -198,9 +184,7 @@ export function renderTransclusions(out) {
         while (enumerator["System.Collections.IEnumerator.MoveNext"]()) {
             const child = enumerator["System.Collections.Generic.IEnumerator`1.get_Current"]();
             if (child.tagName === "EMBED") {
-                const embed = child;
-                const ts = new Transclusion(findContent((embed.attributes["src"]).value));
-                const nc = renderTransclusion(ts);
+                const nc = renderTransclusion(new Transclusion(findContent((child.attributes["src"]).value)));
                 child.parentElement.replaceChild(nc, child);
             }
         }
@@ -217,13 +201,7 @@ export function renderWindow(state, win, sec) {
         const html = document.getElementById("display-template").innerHTML;
         let title;
         const matchValue = FSharpMap__TryFind(sec.Properties, "title");
-        if (matchValue != null) {
-            const t = matchValue;
-            title = t;
-        }
-        else {
-            title = toFail(printf("renderWindow: Missing title for: %s,%s"))(sec.File)(sec.ID);
-        }
+        title = ((matchValue != null) ? matchValue : toFail(printf("renderWindow: Missing title for: %s,%s"))(sec.File)(sec.ID));
         const nhtml = replace(replace(replace(html, "[CONTENT]", sec.Element.innerHTML), "[TITLE]", title), "[CLASS]", defaultArg(FSharpMap__TryFind(sec.Properties, "class"), ""));
         win.innerHTML = nhtml;
         renderTransclusions(win);
@@ -241,17 +219,16 @@ export function render(state) {
         patternInput = [FSharpMap__TryGetValue(state.Displays, (ce[i]).id, new FSharpRef(() => outArg, (v) => {
             outArg = v;
         })), outArg];
-        const sec = patternInput[1];
         const found = patternInput[0];
         const displ = ce[i];
         displ.classList.remove("hidden");
         displ.classList.remove("visible");
         displ.classList.add(found ? "visible" : "hidden");
         if (found) {
-            renderWindow(state, displ, sec.Content);
+            renderWindow(state, displ, patternInput[1].Content);
         }
         if (found) {
-            const inputs = filter((el) => {
+            const enumerator = getEnumerator(filter((el) => {
                 if (el.tagName === "INPUT") {
                     if (el.id.indexOf("cd") === 0) {
                         return true;
@@ -263,12 +240,10 @@ export function render(state) {
                 else {
                     return false;
                 }
-            }, getAllChildren(displ));
-            const enumerator = getEnumerator(inputs);
+            }, getAllChildren(displ)));
             try {
                 while (enumerator["System.Collections.IEnumerator.MoveNext"]()) {
-                    const inp = enumerator["System.Collections.Generic.IEnumerator`1.get_Current"]();
-                    const inp_1 = inp;
+                    const inp_1 = enumerator["System.Collections.Generic.IEnumerator`1.get_Current"]();
                     inp_1.onchange = ((_arg) => {
                         const els = document.getElementsByClassName(substring(inp_1.id, 1));
                         for (let i_1 = 0; i_1 <= (els.length - 1); i_1++) {
@@ -302,13 +277,7 @@ export function render(state) {
         const rdispl = FSharpMap__get_Item(state.Displays, "right");
         let anch_1;
         const matchValue = rdispl.Navigation;
-        if (matchValue != null) {
-            const anch = matchValue;
-            anch_1 = (anch + "-anchor");
-        }
-        else {
-            anch_1 = (replace(rdispl.Content.File, "/", "-") + "-anchor");
-        }
+        anch_1 = ((matchValue != null) ? (matchValue + "-anchor") : (replace(rdispl.Content.File, "/", "-") + "-anchor"));
         anch_2 = document.getElementsByClassName(anch_1);
         right.style.paddingTop = "";
         anch_3 = ((anch_2.length > 0) ? (anch_2[0]) : (void 0));
@@ -331,8 +300,7 @@ export function render(state) {
             return void 0;
         }
     }, anch_3)));
-    const titleOpt = tryPick((display) => map_3((displ_1) => FSharpMap__get_Item(displ_1.Content.Properties, "title"), FSharpMap__TryFind(state.Displays, display)), titlePreferences);
-    const title = join(" | ", append_1(ofArray(toArray(titleOpt)), append_1(anchPart, singleton_1("Technical dimensions of programming systems"))));
+    const title = join(" | ", append_1(ofArray(toArray(tryPick((display) => map_3((displ_1) => FSharpMap__get_Item(displ_1.Content.Properties, "title"), FSharpMap__TryFind(state.Displays, display)), titlePreferences))), append_1(anchPart, singleton_1("Technical dimensions of programming systems"))));
     document.title = title;
 }
 
@@ -347,8 +315,7 @@ export function parseLinks(link) {
 }
 
 window.onhashchange = ((e) => {
-    const links = (window.location.hash === "") ? initial : replace(window.location.hash, "#", "");
-    render(new State(parseLinks(links)));
+    render(new State(parseLinks((window.location.hash === "") ? initial : replace(window.location.hash, "#", ""))));
 });
 
 window.onhashchange(null);
