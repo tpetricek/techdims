@@ -63,7 +63,13 @@ Notebooks can import a range of community packages and integrate with external s
 
 [![](img/sys/ipython.png)](#image=systems/notebooks,screen)
 
-yadda yadda
+Notebook systems such as Jupyter and IPython are literate programming systems built around one or
+more programming languages (Python, Julia). They structure code in cells and utilize a REPL 
+to let user interactively execute parts of code. This provides quick, but not "live" feedback.
+
+Notebooks typically rely on rich external libraries for complex tasks. Code in notebooks tends to
+use fewer abstractions. The system is optimized for a specific domain and cannot be easily modified.
+
 
 ## Summary
 

@@ -63,7 +63,12 @@ System is closed from external world and has only limited community and availabl
 
 [![](img/sys/boxer.gif)](#image=systems/boxer,screen)
 
-yadda yadda
+Boxer is an educational software environment that integrates text editing, programming and interactive
+graphics in a document-based environment structured as nested boxes. This is used to combine multiple
+notations (in different boxes), including code, interactive graphics and visual outputs.
+
+Boxer is designed to let non-experts explore and inspect program logic. To do so, it
+introduced the idea of naive realism, i.e., the document displays everything there is. 
 
 ## Summary
 

@@ -64,7 +64,13 @@ Closed ecosystem, but with community and diversity of packages.
 
 [![](img/sys/haskell.png)](#image=systems/haskell,screen)
 
-yadda yadda
+Haskell is a mathematically-oriented programming language and an example of a typical command-line
+oriented programming system built around a single language. It is used through a text editor,
+typically with background type checking to prevent errors early. Programs are compiled into executable
+that is then run and cannot be modified at runtime.
+
+Haskell is emphasizes a high degree of composability that often relies on prior familiarity with 
+mathematical concepts, which makes it a powerful system, but arguably limits its adoption.
 
 ## Summary
 

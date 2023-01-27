@@ -62,7 +62,14 @@ The diversified web ecosystem allows for the integration with external systems.
 
 [![](img/sys/web-ie5.png)](#image=systems/web,screen)
 
-yadda yadda
+The web evolved from an information sharing platform to a complex and pluralistic programming system
+that relies on an unprecedented diversity of tools including langauges for server-side and client-side 
+programming, CSS, compilers to JavaScript and browsers with their debugging tools.
+
+Web provides open high-level abstractions such as resources, end-points and protocols that enable
+interoperation between very different sub-systems. It includes interesting specific components, such
+as the Document Object Model (DOM) and Cascading Style Sheets (CSS) language that can serve as 
+inspiration for different thinking about programming.
 
 ## Summary
 

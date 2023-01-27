@@ -63,7 +63,13 @@ Active community, but closed world and limited packages.
 
 [![](img/sys/smalltalk-78.png)](#image=systems/smalltalk,screen)
 
-yadda yadda
+Smalltalk was developed as a communication system for "personal dynamic medium" that could be owned by 
+everyone and could "handle virtually all of its owner’s information-related needs." As such, it is 
+highly adaptable and customizable from within itself.
+
+It is based on a small and coherent programming model based on object-oriented programming, embedded
+in an image-based persistent interactive programming environment that makes it possible to explore, 
+modify and debug the living system at all times.
 
 ## Summary
 

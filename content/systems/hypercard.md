@@ -63,7 +63,13 @@ progresively become programmers. Closed from external world, but active communit
 
 [![](img/sys/hypercard.jpg)](#image=systems/hypercard,screen)
 
-yadda yadda
+Hypercard is a user-friendly general-purpose programming system built around the simple 
+hypertext abstraction of linked cards. It combines graphical interface with scription,
+allowing a smooth progression from end-user to creator.
+
+Hypercard is interesting in how it combines programming and using in a single unified
+interface that combines multiple complementing notations and how the interface and 
+simple, yet flexible, programming model support adoption.
 
 ## Summary
 

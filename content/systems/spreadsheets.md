@@ -63,7 +63,13 @@ No packaging mechanism, but wide range of samples and community available.
 
 [![](img/sys/visicalc.png)](#image=systems/spreadsheets,screen)
 
-yadda yadda
+Spreadsheets are focused on working with tabular data, but allow a great degree of programmability
+in this context. 
+
+As programming systems, spreadsheets feature a unique programming substrate (two-dimensional grid)
+and evaluation model with automatic (live) recomputation. They allow construction of abstractions 
+from concrete computations and have been extended with plurality of notations and novel styles of
+programming, such as programming by example.
 
 ## Summary
 

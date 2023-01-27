@@ -64,7 +64,13 @@ Openness allows integration with the external world; diversity of packages avail
 
 [![](img/sys/unix-6.png)](#image=systems/unix,screen)
 
-yadda yadda
+UNIX can be seen as a programming system, consisting of the OS-level abstractions such as files
+and processes, and associated tools including the C language, its compiler, shell and command line
+tools. 
+
+The high-level abstractions support a pluralistic open ecosystem which has, arguably, been a
+key to its wide-spread success. The system can be also modified from within itself, albeit with 
+an explicit stage distinction (compilation).
 
 ## Summary
 
