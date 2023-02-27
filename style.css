@@ -21,7 +21,7 @@ strong { font-weight:600;}
 pre { font-family:Inconsolata, 'Courier New', Courier, monospace; font-size:14pt; line-height:18pt; margin:10px 0px 10px 25px;}
 code { font-family:Inconsolata, 'Courier New', Courier, monospace; font-size:14pt;  }
 
-.tlink { outline:3px solid black; padding:0px 8px 0px 8px; text-decoration:none; border-radius:2px; font-weight:600; font-size:12pt;margin-right:10px; box-decoration-break: clone; }
+.tlink { outline:3px solid black; padding:0px 8px 0px 8px; text-decoration:none; border-radius:2px; font-weight:600; font-size:12pt;margin-right:10px; -webkit-box-decoration-break: clone;  box-decoration-break: clone; }
 .tlink:hover, .tlink:active { text-decoration:none; }
 .tlink .fa { font-size:10pt; margin:0px 7px -2px 0px; position:relative; top:-1px; }
 h1 .tlink { vertical-align:top; margin:2px 0px 0px 10px;}
