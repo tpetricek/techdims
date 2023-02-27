@@ -10,13 +10,13 @@ programming systems along various specific "axes". The dimensions identify
 a range of possible design choices, characterized by two extreme points
 in the design space.
 
+[![A diagram showing programming systems with two dimensions](img/nest.png)](#image=catalogue,nest)
+
 The dimensions are not quantitative, but they allow comparison.
 The extreme points do not represent "good" and "bad" designs, merely different trade-offs.
 The set of dimensions provides a map of the design space of programming systems (see diagram).
 Past and present systems serve as landmarks, but the map also reveals unexplored
 or overlooked possibilities.
-
-[![A diagram showing programming systems with two dimensions](img/nest.png)](#image=catalogue,nest)
 
 The 23 technical dimensions are grouped into 7 clusters or topics of interest. 
 Each cluster consists of individual dimensions, examples that capture a particular
@@ -24,6 +24,7 @@ well-known value (or a combination of values), remarks and relations to other di
 We do not expect the catalogue to be exhaustive for all aspects of programming systems, 
 past and future, and welcome follow-up work expanding the list.
 
+<div class="hide-sm">
 
 - [<i class="fa fa-hand-pointer"></i> Interaction](-> #*=.;right=dimensions/interaction,index)
 - [<i class="fa fa-code"></i> Notation](-> #*=.;right=dimensions/notation,index)
@@ -32,6 +33,8 @@ past and future, and welcome follow-up work expanding the list.
 - [<i class="fa fa-sitemap"></i> Complexity](-> #*=.;right=dimensions/complexity,index)
 - [<i class="fa fa-bug"></i> Errors](-> #*=.;right=dimensions/errors,index)
 - [<i class="fa fa-code-fork"></i> Adoptability](-> #*=.;right=dimensions/adoptability,index)
+
+</div>
 
 ----------------------------------------------------------------------------------------------------
 - id:list

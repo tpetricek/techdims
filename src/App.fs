@@ -10,6 +10,8 @@ type Section =
     File : string
     Element : HTMLElement }
 
+let mutable autoScrollEnabled = false
+
 let content = 
   [ let sections = document.getElementsByTagName("section")
     for i in 0 .. sections.length-1 do
@@ -61,7 +63,7 @@ let expandLinks state (el:HTMLElement) =
   for c in getAllChildren el do
     if c.tagName = "A" then 
       let a = c :?> HTMLAnchorElement
-      if a.attributes.[unbox "href"].value.StartsWith("#") then
+      if a.attributes.[unbox "href"] <> null && a.attributes.[unbox "href"].value.StartsWith("#") then
         let links = a.attributes.[unbox "href"].value.Substring(1) |> parseKvpList 
         let links = 
           if links.ContainsKey "*" then state.Displays.Keys |> Seq.fold (fun (links:Map<_, _>) k -> 
@@ -143,7 +145,13 @@ let render state =
         displ?style <- sprintf "max-width:100vw;width:%dpx;left:%dpx;" w l
   
   let scrollTo y =
-    window.setTimeout((fun _ -> window.scrollTo(0, y)), 1) |> ignore
+    if autoScrollEnabled then
+      window.setTimeout((fun _ -> window.scrollTo(0, y)), 1) |> ignore
+
+  if state.Displays.ContainsKey "right" && state.Displays.ContainsKey "left" then    
+    document.getElementById("left").classList.add("hide-sm")
+  else
+    document.getElementById("left").classList.remove("hide-sm")
 
   let right = document.getElementById("right")
   let anch = 
@@ -161,9 +169,13 @@ let render state =
     else None
 
   if anch.IsSome then
-    right?style?paddingTop <- $"{anch.Value?offsetTop - right?offsetTop}px"
-    scrollTo (anch.Value?offsetTop)
-  else scrollTo 0
+    if anch.Value?offsetTop > 0 then
+      right?style?paddingTop <- $"{anch.Value?offsetTop - right?offsetTop}px"
+      scrollTo (anch.Value?offsetTop)
+    else if state.Displays.ContainsKey "right" then
+      scrollTo (right?offsetTop)
+  else
+    scrollTo 0
 
   let anchPart = anch |> Option.bind (fun el -> try Some(el?firstElementChild?firstElementChild?innerText) with _ -> None) |> Option.toList
   let titleOpt = titlePreferences |> List.tryPick(fun display -> 
@@ -171,6 +183,9 @@ let render state =
   let title = Option.toList titleOpt @ anchPart @ [ "Technical dimensions of programming systems" ] |> String.concat " | "
   document.title <- title
 
+  for c in getAllChildren(document.getElementById("display")) do
+    if c.tagName = "A" then 
+      c.onclick <- fun _ -> autoScrollEnabled <- true; printfn "going awaaaaay"
 
 
 let initial = "top=index,welcome"
@@ -184,5 +199,6 @@ let parseLinks link =
 window.onhashchange <- fun e -> 
   let links = if window.location.hash = "" then initial else window.location.hash.Replace("#", "")
   render { Displays = parseLinks links }
+  autoScrollEnabled <- false
 
 window.onhashchange null
