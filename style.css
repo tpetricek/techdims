@@ -159,8 +159,12 @@ div.display .frameset .display-title { display:none; }
 }
 @media only screen and (max-width:560px) { .welcome img { max-width:85%; float:none; } }
 @media only screen and (max-width:700px) { .catalogue img { max-width:85%; float:none; } }
+@media only screen and (max-width:560px) { .systems img { max-width:85%; float:none; } }
+@media only screen and (max-width:700px) { .doc img { max-width:85%; float:none; } }
+
 @media only screen and (max-width:500px) { 
-  p, li { line-height:28px; font-size:13pt; }
+  li { font-size:13pt; }
+  p { line-height:28px; font-size:13pt; }
   .tlink { font-size:11pt; }
   h1 { font-size:28pt; }
   h2 { font-size:15pt; }
