@@ -56,21 +56,6 @@ div.display .frameset .display-title { display:none; }
 .catalogue img { border:3px solid black; float:right; max-width:400px; margin:20px 20px 20px 20px;}
 .doc img { border:3px solid black; float:right; max-width:400px; margin:0px 20px 20px 20px;}
 
-@media only screen and (max-width:1400px) { 
-  #right { width:55vw; }
-}
-@media only screen and (max-width:1200px) { 
-  #top { width:90vw; } 
-  #footer, #left { width:60vw; } 
-  .hide-sm, .display.visible.hide-sm { display:none; }
-  #right { position:initial; width:60vw; padding-bottom:0px; }
-}
-@media only screen and (max-width:1000px) { 
-  #footer, #left, #right { width:90vw; } 
-}
-@media only screen and (max-width:560px) { .welcome img { max-width:85%; float:none; } }
-@media only screen and (max-width:700px) { .catalogue img { max-width:85%; float:none; } }
-
 .doc blockquote { text-align:right; font-style:italic; padding:0px 0px 10px 10%; }
 .doc blockquote p { margin-bottom:10px;}
 
@@ -158,3 +143,28 @@ div.display .frameset .display-title { display:none; }
 .frameset div.transclusion div.transclusion { border-style:none; margin-bottom:0px; }
 .frameset div.transclusion div.transclusion .title { display:none; }
 .frameset div.transclusion div.transclusion .body { padding:0px;  }
+
+
+@media only screen and (max-width:1400px) { 
+  #right { width:55vw; }
+}
+@media only screen and (max-width:1200px) { 
+  #top { width:90vw; } 
+  #footer, #left { width:60vw; } 
+  .hide-sm, .display.visible.hide-sm { display:none; }
+  #right { position:initial; width:60vw; padding-bottom:0px; }
+}
+@media only screen and (max-width:1000px) { 
+  #footer, #left, #right { width:90vw; } 
+}
+@media only screen and (max-width:560px) { .welcome img { max-width:85%; float:none; } }
+@media only screen and (max-width:700px) { .catalogue img { max-width:85%; float:none; } }
+@media only screen and (max-width:500px) { 
+  p, li { line-height:28px; font-size:13pt; }
+  .tlink { font-size:11pt; }
+  h1 { font-size:28pt; }
+  h2 { font-size:15pt; }
+  h3 { font-size:15pt; }
+  .frameset div.transclusion .body { padding:15px 15px 20px 20px; }
+  div.display .display-body { padding:15px 15px 20px 20px; }
+}
