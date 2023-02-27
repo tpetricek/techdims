@@ -133,14 +133,20 @@ The main contributions of this project are organized as follows:
 
 ----------------------------------------------------------------------------------------------------
 - id:plot-figure0
-- title:Smalltalk 76 programming environment
+- title:The design space of programming systems
 
 > ![Programming systems positioned in a common two-dimensional space](img/paper/plot-figure0.png)
 > 
 > **Programming systems positioned in a common two-dimensional space.** 
-> One 2-dimensional slice of the space of possible systems, examined in more detail in [Exploring the design space](#*=.;right=exploring-the-design-space),
+> One 2-dimensional slice of the space of possible systems, examined in more detail in 
+> [Exploring the design space](#footer=index,navigation;left=paper,toc;right=paper,exploring-the-design-space;top=paper,index),
 > showing a set of example programming systems (or system families) measured against _self-sustainability_ and _notational diversity_, 
-> revealing an absence of systems with a high degree of both.
+> revealing an absence of systems with a high degree of both. 
+>
+> The numerical scores on each axis are generated systematically 
+> by a method described in [Making dimensions quantitative](#footer=index,navigation;left=paper,toc;right=paper,making-dimensions-quantitative;top=paper,index). 
+> While these results are plausible, they are not definitive as the method could be developed a lot further in future work 
+> (see [Remarks and future work](#footer=index,navigation;left=paper,toc;right=paper,future-work;top=paper,index)).
 
 ----------------------------------------------------------------------------------------------------
 - id:related-work
@@ -226,7 +232,7 @@ We introduce the notion of a _programming system_ through a number of example sy
 
 - Programmable _applications_, typically optimized for a specific domain, offering a limited degree of programmability which may be increased with newer versions.
 
-We will proceed to detail some systems under this grouping. This will provide an intuition for the notion of a programming system and establish a collection of go-to examples for the rest of the paper.
+It must be noted that our selection of systems is not meant to be exhaustive; there will be many past and present systems that we are not aware of or do not know much about, and we obviously cannot cover programming systems that have not been created yet. With that caveat, we will proceed to detail some systems under the above grouping. This will provide an intuition for the notion of a programming system and establish a collection of go-to examples for the rest of the paper. 
 
 ----------------------------------------------------------------------------------------------------
 - id:l-type
@@ -333,11 +339,14 @@ Dark is a programming system for building "serverless backends", i.e. services t
 
 Dark illustrates the need for the broader perspective of programming systems. Of course, it contains a programming language, which is inspired by OCaml and F#. But Dark's distinguishing feature is that it eliminates the many secondary systems needed for deployment of modern cloud-based services. Those exist outside of a typical programming language, yet form a major part of the complexity of the overall development process.
 
-With technical dimensions, we can go beyond the "sales pitch", look behind the scenes, and better understand the interesting technical aspects of Dark as a programming system. Table\ \ref{tab:dark) summarises the more detailed analysis that follows.
+With technical dimensions, we can go beyond the "sales pitch", look behind the scenes, and better understand the interesting technical aspects of Dark as a programming system. The table below summarises the more detailed analysis that follows. Two clear benefits of such an analysis are:
+
+1. It provides a list of topics to investigate when examining a programming system such as Dark.
+2. It give us a common vocabulary for these topics that can be used to compare Dark with other systems on the same terms.
 
 ## Positioning Dark in the design space
 
-The following table provides a concise summary of where Dark lies according to selected dimensions.
+The following table provides a concise summary of where Dark lies on its distinguishing dimensions. For brevity, dimensions where Dark does not differ from ordinary programming are omitted. 
 A more detailed discussion can be found in the [Dimensional analysis of Dark](#*=.;right=paper,dark-dims).
 
 <table>
@@ -409,12 +418,18 @@ There is also a conspicuous blank space at the top-right, representing an unexpl
 
 ----------------------------------------------------------------------------------------------------
 - id:conclusions
-- title:Conclusions
+- title:Conclusions and acknowledgments
 
 # Conclusions
 There is a renewed interest in developing new programming systems. Such systems go beyond the simple model of code written in a programming language using a more or less sophisticated text editor. They combine textual and visual notations, create programs through rich graphical interactions, and challenge accepted assumptions about program editing, execution and debugging. Despite the growing number of novel programming systems, it remains difficult to evaluate the design of programming systems and see how they improve over work done in the past. To address the issue, we proposed a framework of “technical dimensions” that captures essential characteristics of programming systems in a qualitative but rigorous way.
 
 The framework of technical dimensions puts the vast variety of programming systems, past and present, on a common footing of commensurability. This is crucial to enable the strengths of each to be identified and, if possible, combined by designers of the next generation of programming systems. As more and more systems are assessed in the framework, a picture of the space of possibilities will gradually emerge. Some regions will be conspicuously empty, indicating unrealized possibilities that could be worth trying. In this way, a domain of "normal science" is created for the design of programming systems.
+
+## Acknowledgments
+
+We particularly thank Richard Gabriel for shepherding our submission to the 2021 *Pattern Languages of Programming* (PLoP) conference. We thank the participants of the PLoP Writers' Workshop for their feedback, as well as others who have proofread or otherwise given input on the ideas at different stages. These include Luke Church, Filipe Correia, Thomas Green, Brian Hempel, Clemens Klokmose, Geoffery Litt, Mariana Mărășoiu, Stefan Marr, Michael Weiss, and Rebecca and Allen Wirfs-Brock. We also thank the attendees of our Programming 2021 Conversation Starters session and our Programming 2022 tutorial/workshop entitled "Methodology Of Programming Systems" (MOPS).
+
+This work was partially supported by the project of Czech Science Foundation no. 23-06506S.
 
 ----------------------------------------------------------------------------------------------------
 - id:making-dimensions-quantitative
@@ -481,7 +496,7 @@ The following sections discuss the questions, along with a brief rationale for e
 
 1. **Are there multiple syntaxes for textual notation?** Obviously, having more than one textual notation should count for notational diversity. However, for this dimension we want to take into account notations beyond the strictly textual, so we do not want this to be the only relevant question. Ideally, things should be weighted so that having a wide diversity of notations within some *narrow class* is not mistaken for notational diversity in a more global sense. We want to reflect that UNIX, with its vast array of different languages for different situations, can never be as notationally diverse as a system with many languages *and* many graphical notations, for example.
 2. **Does the system make use of GUI elements?** This is a focused class of non-textual notations that many of our example systems exhibit.
-3. **Is it possible to view and edit data as tree structures?** Tree structures are extremely common in programming, but they are usually worked with as text in some way. A few of our examples provide a graphical notation for this common data structure, so this is one way they can be differentiated from the rest.
+3. **Is it possible to view and edit data as tree structures?** Tree structures are common in programming, but they are usually worked with as text in some way. A few of our examples provide a graphical notation for this common data structure, so this is one way they can be differentiated from the rest.
 4. **Does the system allow freeform arrangement and sizing of data items?** We still felt Boxer and spreadsheets exhibited something not covered by the previous three questions, which is this. Within their respective constraints of rendering trees as nested boxes and single-level grids, they both provide for notational variation that can be useful to the user's context. These systems *could* have decided to keep boxes neatly placed or cells all the same size, but the fact that they allow these to vary scores an additional point for notational diversity.
 
 ## System evaluation

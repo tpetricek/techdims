@@ -21,6 +21,9 @@ or overlooked possibilities.
 The 23 technical dimensions are grouped into 7 clusters or topics of interest. 
 Each cluster consists of individual dimensions, examples that capture a particular
 well-known value (or a combination of values), remarks and relations to other dimensions. 
+We do not expect the catalogue to be exhaustive for all aspects of programming systems, 
+past and future, and welcome follow-up work expanding the list.
+
 
 - [<i class="fa fa-hand-pointer"></i> Interaction](-> #*=.;right=dimensions/interaction,index)
 - [<i class="fa fa-code"></i> Notation](-> #*=.;right=dimensions/notation,index)

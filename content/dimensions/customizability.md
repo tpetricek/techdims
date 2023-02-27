@@ -58,9 +58,9 @@ In the context of Web programming, there is traditionally a stage distinction be
 
 ----------------------------------------------------------------------------------------------------
 - id:addressing
-- title:Dimensions: Externalizability and additive authoring
+- title:Dimension: Addressing and externalizability
 
-# Dimensions: Externalizability and additive authoring
+# Dimension: Addressing and externalizability
 Programs in all programming systems have a representation that may be exposed through notation such as source code. When customizing a program, an interesting question is whether a customization needs to be done by modifying the original representation, or whether it can be done by *adding* something alongside the original structure.
 
 In order to support customization through addition, a programming system needs a number of characteristics introduced by Basman et al. [#](Externalize) [#](OpenAuthorial) First, the system needs to support *addressing*: the ability to refer to a part of the program representation from the outside. Next, *externalizability* means that a piece of addressed state can be exhaustively transferred between the system and the outside world. 
