@@ -117,6 +117,17 @@ Read about our motivation, methodology and evaluation?<br />
 <a class="tlink" href="#top=paper,index;left=paper,toc;footer=index,navigation"><i class="fa fa-arrow-right"></i>Start from our paper about technical dimensions</a>
 </li>
 </ul>
+<h2>Related papers and documents</h2>
+<ul>
+<li>
+Read our ‹Programming› 2023 paper in a conventional format<br />
+<a href="pdfs/techdims-paper.pdf" class="tlink"><i class="far fa-file"></i> Technical Dimensions of Programming Systems</a>
+</li>
+<li>
+Check out tutorial slides with a structured summary of dimensions<br />
+<a href="pdfs/mops-tutorial-slides.pdf" class="tlink"><i class="far fa-file"></i> Methodology of Programming Systems</a>
+</li>
+</ul>
 </section>
 <section data-file="index" data-id="smalltalk-76" data-title="Smalltalk 76 programming environment">
 <blockquote>
@@ -174,15 +185,15 @@ or application-focused systems (spreadsheets, Hypercard, Boxer).</p>
 <div class="checksgroup">
 <div class="checks">
 <p>
-<button onclick="[...document.getElementsByClassName('csys')].forEach(function(e) { e.checked=true; if (e.onchange) e.onchange(); });">Select all</button> 
-<button onclick="[...document.getElementsByClassName('csys')].forEach(function(e) { e.checked=false; if (e.onchange) e.onchange(); });">Select none</button> 
+<button onclick="[...document.getElementsByClassName('csys')].forEach(function(e) { e.checked=true; if (e.onchange) e.onchange(); });">Select all</button>
+<button onclick="[...document.getElementsByClassName('csys')].forEach(function(e) { e.checked=false; if (e.onchange) e.onchange(); });">Select none</button>
 </p>
 <label><input type="checkbox" class="csys" id="cslisp-machines" name="cslisp-machines" checked>LISP machines</label><label><input type="checkbox" class="csys" id="cssmalltalk" name="cssmalltalk" checked>Smalltalk</label><label><input type="checkbox" class="csys" id="csunix" name="csunix" checked>UNIX</label><label><input type="checkbox" class="csys" id="csspreadsheets" name="csspreadsheets" checked>Spreadsheets</label><label><input type="checkbox" class="csys" id="csweb" name="csweb" checked>Web platform</label><label><input type="checkbox" class="csys" id="cshypercard" name="cshypercard" checked>Hypercard</label><label><input type="checkbox" class="csys" id="csboxer" name="csboxer" checked>Boxer</label><label><input type="checkbox" class="csys" id="csnotebooks" name="csnotebooks" checked>Notebooks</label><label><input type="checkbox" class="csys" id="cshaskell" name="cshaskell" checked>Haskell</label>
 </div>
 <div class="checks">
 <p>
-<button onclick="[...document.getElementsByClassName('cdim')].forEach(function(e) { e.checked=true; if (e.onchange) e.onchange(); });">Select all</button> 
-<button onclick="[...document.getElementsByClassName('cdim')].forEach(function(e) { e.checked=false; if (e.onchange) e.onchange(); });">Select none</button> 
+<button onclick="[...document.getElementsByClassName('cdim')].forEach(function(e) { e.checked=true; if (e.onchange) e.onchange(); });">Select all</button>
+<button onclick="[...document.getElementsByClassName('cdim')].forEach(function(e) { e.checked=false; if (e.onchange) e.onchange(); });">Select none</button>
 </p>
 <label><input type="checkbox" class="cdim" id="cdinteraction" name="cdinteraction" checked>Interaction</label><label><input type="checkbox" class="cdim" id="cdnotation" name="cdnotation" checked>Notation</label><label><input type="checkbox" class="cdim" id="cdconceptual-structure" name="cdconceptual-structure" checked>Conceptual structure</label><label><input type="checkbox" class="cdim" id="cdcustomizability" name="cdcustomizability" checked>Customizability</label><label><input type="checkbox" class="cdim" id="cdcomplexity" name="cdcomplexity" checked>Complexity</label><label><input type="checkbox" class="cdim" id="cderrors" name="cderrors" checked>Errors</label><label><input type="checkbox" class="cdim" id="cdadoptability" name="cdadoptability" checked>Adoptability</label>
 </div>
@@ -1368,7 +1379,7 @@ Does the notation use a small or a large number of basic concepts?<br />
 <p>Programming systems built around traditional programming languages typically have further notations or structured gestures associated with them. The primary notation in UNIX is the C programming language. Yet this is enclosed in a programming <em>system</em> providing a multi-step mechanism for running C code via the terminal, assisted by secondary notations such as shell scripts.</p>
 <p>Some programming systems attempt to integrate tools that normally rely on secondary notations into the system itself, reducing the number of secondary notations that the programmer needs to master. For example, in the Smalltalk descendant Pharo, versioning and package management is done from within Pharo, removing the need for secondary notation such as <code>git</code> commands and dependency configuration files. (The tool for versioning and package management in Pharo can still be seen as an <em>internal</em> domain-specific language and thus as a secondary notation, but its basic structure is <em>shared</em> with other notations in the Pharo system.)</p>
 <h2>Haskell</h2>
-<p>In Haskell, the primary notation is the programming language, but there are also a number of secondary notations. Those include package managers (e.g. the <code>cabal.project</code> file) or configuration files for Haskell build tools. More interestingly, there is also an informal mathematical notation associated with Haskell that is used when programmers discuss programs on a whiteboard or in academic publications. The idea of having such a mathematical notation dates back to the <em>Report on Algol 58</em> \cite{Alg58}, which explicitly defined a "publication language" for "stating and communicating problems" using Greek letters and subscripts.</p>
+<p>In Haskell, the primary notation is the programming language, but there are also a number of secondary notations. Those include package managers (e.g. the <code>cabal.project</code> file) or configuration files for Haskell build tools. More interestingly, there is also an informal mathematical notation associated with Haskell that is used when programmers discuss programs on a whiteboard or in academic publications. The idea of having such a mathematical notation dates back to the <em>Report on Algol 58</em> <a class="citation" href="#*=.;right=paper,references" title=" Perlis, A. J., and K. Samelson. 1958. “Preliminary Report: InternationalAlgebraic Language.” Commun. ACM 1 (12): 8–22.https://doi.org/10.1145/377924.594925.">73</a>, which explicitly defined a "publication language" for "stating and communicating problems" using Greek letters and subscripts.</p>
 </section>
 <section data-file="dimensions/notation" data-id="expression-geography" data-title="Dimension: Expression geography">
 <h1>Dimension: Expression geography</h1>

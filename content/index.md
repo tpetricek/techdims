@@ -11,11 +11,11 @@
 
 Programming is done in a stateful environment, by interacting with a system through a
 graphical user interface. The stateful, interactive and graphical environment is more
-important than the programming language(s) used through it. Yet, most research focuses on comparing and 
+important than the programming language(s) used through it. Yet, most research focuses on comparing and
 studying _programming languages_ and only little has been said about _programming systems_.
 
 Technical dimensions is a framework that captures the characteristics of programming
-systems. It makes it possible to compare programming systems, better understand them, 
+systems. It makes it possible to compare programming systems, better understand them,
 and to find interesting new points in the design space of programming systems.
 We created technical dimensions to help designers of programming systems to evaluate,
 compare and guide their work and, ultimately, stand on the shoulders of giants.
@@ -31,15 +31,22 @@ compare and guide their work and, ultimately, stand on the shoulders of giants.
 - Read about our motivation, methodology and evaluation?  
   [Start from our paper about technical dimensions](-> #top=paper,index;left=paper,toc;footer=index,navigation)
 
+## Related papers and documents
+
+- Read our ‹Programming› 2023 paper in a conventional format  
+  <a href="pdfs/techdims-paper.pdf" class="tlink"><i class="far fa-file"></i> Technical Dimensions of Programming Systems</a>
+- Check out tutorial slides with a structured summary of dimensions  
+  <a href="pdfs/mops-tutorial-slides.pdf" class="tlink"><i class="far fa-file"></i> Methodology of Programming Systems</a>
+
 ----------------------------------------------------------------------------------------------------
 - id:smalltalk-76
 - title:Smalltalk 76 programming environment
 
 > ![A screenshot of the Smalltalk 76 programming environment](img/smalltalk-76.png)
-> 
-> **Smalltalk 76 programming environment.** An example of a stateful programming environment with 
-> rich graphical user interface. In Smalltalk, the developer environment is a part of an executing 
-> program and the state of the program can be edited through object browser. 
+>
+> **Smalltalk 76 programming environment.** An example of a stateful programming environment with
+> rich graphical user interface. In Smalltalk, the developer environment is a part of an executing
+> program and the state of the program can be edited through object browser.
 
 ----------------------------------------------------------------------------------------------------
 - id:navigation
@@ -67,14 +74,14 @@ compare and guide their work and, ultimately, stand on the shoulders of giants.
 
 # Matrix of systems and dimensions
 
-The matrix shows the differences between [good old programming systems](#top=systems,intro;left=systems,index;footer=index,navigation) 
-along the dimensions identified by our framework. For conciseness, the table shows only one 
+The matrix shows the differences between [good old programming systems](#top=systems,intro;left=systems,index;footer=index,navigation)
+along the dimensions identified by our framework. For conciseness, the table shows only one
 row for each cluster of dimensions, which consists of multiple separate dimensions each.
 
-The header colors are used to mark systems that are similar (in an informal sense) 
+The header colors are used to mark systems that are similar (in an informal sense)
 for a given dimension. Icons indicate a speficic characteristics and should help you
-find connections between systems. You can click on the header to go to a relevant 
-paper section, but note that not all cases are discussed in the paper. 
+find connections between systems. You can click on the header to go to a relevant
+paper section, but note that not all cases are discussed in the paper.
 
 ----------------------------------------------------------------------------------------------------
 - id:matrix-body
@@ -89,7 +96,7 @@ paper section, but note that not all cases are discussed in the paper.
 
 For example, you may want to compare different systems of a certain type such as
 OS-like systems (Lisp machines, Smalltalk, UNIX, Web),
-sysems built around languages (Haskell, Notebooks) 
+sysems built around languages (Haskell, Notebooks)
 or application-focused systems (spreadsheets, Hypercard, Boxer).
 
 </div>
@@ -97,8 +104,8 @@ or application-focused systems (spreadsheets, Hypercard, Boxer).
 <div class="checks">
 
 <p>
-<button onclick="[...document.getElementsByClassName('csys')].forEach(function(e) { e.checked=true; if (e.onchange) e.onchange(); });">Select all</button> 
-<button onclick="[...document.getElementsByClassName('csys')].forEach(function(e) { e.checked=false; if (e.onchange) e.onchange(); });">Select none</button> 
+<button onclick="[...document.getElementsByClassName('csys')].forEach(function(e) { e.checked=true; if (e.onchange) e.onchange(); });">Select all</button>
+<button onclick="[...document.getElementsByClassName('csys')].forEach(function(e) { e.checked=false; if (e.onchange) e.onchange(); });">Select none</button>
 </p>
 
 ![$$](matrix-syschecks)
@@ -107,8 +114,8 @@ or application-focused systems (spreadsheets, Hypercard, Boxer).
 <div class="checks">
 
 <p>
-<button onclick="[...document.getElementsByClassName('cdim')].forEach(function(e) { e.checked=true; if (e.onchange) e.onchange(); });">Select all</button> 
-<button onclick="[...document.getElementsByClassName('cdim')].forEach(function(e) { e.checked=false; if (e.onchange) e.onchange(); });">Select none</button> 
+<button onclick="[...document.getElementsByClassName('cdim')].forEach(function(e) { e.checked=true; if (e.onchange) e.onchange(); });">Select all</button>
+<button onclick="[...document.getElementsByClassName('cdim')].forEach(function(e) { e.checked=false; if (e.onchange) e.onchange(); });">Select none</button>
 </p>
 
 ![$$](matrix-dimchecks)
